@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Collider2D, IPhysics2DContact, Contact2DType, RigidBody2D, Sprite, Color } from 'cc';
+import { GameManager } from './GameManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('Brick')
@@ -59,8 +60,11 @@ export class Brick extends Component {
     }
 
     private destroyBrick(): void {
-        // TODO: Add particle effects, sound effects, power-up drops here
-        // TODO: Notify GameManager about brick destruction
+        const gameManager = GameManager.getInstance();
+        if (gameManager) {
+            gameManager.onBrickDestroyed(this.scoreValue);
+        }
+        
         this.node.destroy();
     }
 

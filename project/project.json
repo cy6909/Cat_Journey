@@ -20,7 +20,15 @@
   },
   "collisionConfig": {
     "enableCollisionMatrix": true,
-    "enableContactListener": true
+    "enableContactListener": true,
+    "collisionMatrix": [
+      [false, false, false, false, false, false],
+      [false, true, true, false, true, false],
+      [false, true, false, true, true, false],
+      [false, false, true, false, false, false],
+      [false, true, true, false, false, false],
+      [false, false, false, false, false, false]
+    ]
   },
   "modules": [
     "2d",
