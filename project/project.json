@@ -1,0 +1,29 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 960,
+      "height": 640,
+      "fitHeight": true,
+      "fitWidth": true
+    }
+  },
+  "physicsConfig": {
+    "gravity": {
+      "x": 0,
+      "y": -320
+    },
+    "allowSleep": true,
+    "sleepThreshold": 0.1,
+    "autoSimulation": true,
+    "fixedTimeStep": 0.016666666666666666,
+    "maxSubSteps": 1
+  },
+  "collisionConfig": {
+    "enableCollisionMatrix": true,
+    "enableContactListener": true
+  },
+  "modules": [
+    "2d",
+    "physics-2d"
+  ]
+}

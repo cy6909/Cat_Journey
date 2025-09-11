@@ -1,0 +1,19 @@
+{
+  "name": "cat-conquest-roguelike-breakout",
+  "version": "1.0.0",
+  "description": "Roguelike Breakout module for Cat-Conquest WeChat Mini Game",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Build script will be configured with Cocos Creator\"",
+    "test": "echo \"No tests specified yet\""
+  },
+  "keywords": ["cocos-creator", "wechat-minigame", "roguelike", "breakout"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.0",
+    "minigame-api-typings": "^3.0.0"
+  },
+  "dependencies": {}
+}
