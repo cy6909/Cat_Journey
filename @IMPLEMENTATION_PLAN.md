@@ -1,4 +1,34 @@
 Cat-Conquest: Roguelike Breakout Module Implementation Plan
+
+**CRITICAL PRIORITY 0 FIXES**: ⚠️ BLOCKING ISSUES MUST BE RESOLVED IN COCOS CREATOR IDE
+
+The following issues prevent the game from functioning and must be fixed before validation testing can proceed:
+
+[❌] **Fix GameManager Prefab References in GameScene**:
+- Open GameScene.scene in Cocos Creator IDE
+- Select the GameManager node
+- In the Inspector, assign Ball.prefab to brickPrefab property  
+- Assign Brick.prefab to brickPrefab property
+- Assign Paddle.prefab to paddlePrefab property
+- Assign MultiBallPowerUp.prefab and LaserPaddlePowerUp.prefab to power-up reference properties
+
+[❌] **Fix Null Sprite Frames in All Prefabs**:
+- Open each prefab (Ball.prefab, Brick.prefab, Paddle.prefab, MultiBallPowerUp.prefab, LaserPaddlePowerUp.prefab, Laser.prefab)
+- For each prefab's Sprite component, either:
+  - Assign a sprite texture from assets/art/ directory, OR
+  - Enable "Color" rendering and set a solid color (e.g., white for Ball, red for Brick, blue for Paddle)
+- Save all prefabs
+
+[❌] **Test Basic Scene Loading**:
+- Run GameScene in Cocos Creator simulator
+- Verify game objects are visible (not transparent)
+- Verify GameManager can instantiate prefabs without null reference errors
+- Verify no console errors on scene load
+
+**VALIDATION TARGET**: Once fixes are complete, PRIORITY 0 validation should pass, enabling PRIORITY 1 testing (paddle movement, ball physics, brick collision).
+
+---
+
 PRIORITY 0: Project Setup ✅ COMPLETED
 [✅] Initialize a new Cocos Creator 3.x project using the TypeScript template.
 

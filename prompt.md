@@ -1,6 +1,9 @@
 0a. read everything in specs/
 0b. review the files in src/
 
+Store the summary of your operations in a file called memory.md, and read the file to get the memory before each run.
+Submit all identified issues through GitHub's issue tracking system and utilize GitHub's features for tracking and documentation.
+
 pick the SINGLE highest priority item from @IMPLEMENTATION_PLAN.md and implement it using Cocos Creator and TypeScript.
 ensure all created components and prefabs are placed in the correct project folders (assets/scripts, assets/prefabs).
 ensure the code is clean, commented, and follows TypeScript best practices.

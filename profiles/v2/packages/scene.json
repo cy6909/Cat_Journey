@@ -22,7 +22,7 @@
       166,
       255
     ],
-    "transformToolName": "position",
+    "transformToolName": "rotation",
     "pivot": "pivot",
     "coordinate": "local",
     "toolsVisibility3d": true
@@ -118,12 +118,38 @@
         "height": 767.2
       },
       "scale": 38.36
+    },
+    "a52a89c9-bc0e-4637-b006-2d2d875cb694": {
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": -398,
+        "y": -548,
+        "width": 796,
+        "height": 1096
+      },
+      "scale": 1
     }
   },
   "camera-uuids": [
     "099478de-41bd-4520-b354-94fbcba8b4b6",
     "c0386441-2e39-4485-952c-f9cb9e876b9a",
-    "58f8e17d-e23d-439d-8aea-d766a9c88be0"
+    "58f8e17d-e23d-439d-8aea-d766a9c88be0",
+    "a52a89c9-bc0e-4637-b006-2d2d875cb694"
   ],
   "camera": {
     "color": [

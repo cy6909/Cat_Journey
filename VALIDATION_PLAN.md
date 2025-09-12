@@ -1,4 +1,40 @@
 Cat-Conquest: Roguelike Breakout Module Validation Plan
+
+**PRIORITY 0 FIXES REQUIRED**: ⚠️ BLOCKING ISSUES IDENTIFIED - MUST BE RESOLVED IN COCOS CREATOR IDE
+
+**CRITICAL FINDINGS**: Validation testing revealed these blocking issues that prevent all gameplay functionality:
+
+✅ **Project Type**: Fixed from "3d" to "2d" in project/version.json  
+❌ **GameManager Prefab References**: NULL values prevent game object instantiation  
+❌ **Sprite Frames**: ALL prefabs have null sprite frames (invisible objects)  
+❌ **Power-up References**: Missing prefab links in GameManager component  
+
+**IMMEDIATE ACTION REQUIRED**: These issues MUST be resolved in Cocos Creator IDE before any validation testing can proceed:
+
+[❌] **STEP 1**: Fix GameManager References in GameScene
+- Open GameScene.scene in Cocos Creator
+- Select GameManager node → Inspector panel  
+- Assign: Ball.prefab → ballPrefab, Brick.prefab → brickPrefab, Paddle.prefab → paddlePrefab
+- Assign power-up prefabs to corresponding properties
+
+[❌] **STEP 2**: Fix Prefab Visibility (Choose Option A or B)
+- **Option A**: Assign Sprite Textures - Add textures to assets/art/, assign to each prefab's Sprite component
+- **Option B**: Enable Solid Colors - For each prefab's Sprite component, enable "Color" mode:
+  - Ball: White (#FFFFFF)  
+  - Brick: Red (#FF0000)
+  - Paddle: Blue (#0000FF)  
+  - PowerUps: Yellow (#FFFF00) or Green (#00FF00)
+
+[❌] **STEP 3**: Validation Testing
+- Run GameScene in Cocos Creator simulator
+- ✅ PASS: Objects are visible on screen
+- ✅ PASS: No null reference errors in console  
+- ✅ PASS: GameManager can instantiate prefabs successfully
+
+**VALIDATION TARGET**: Once these critical fixes are complete, PRIORITY 0 validation will pass, enabling PRIORITY 1 testing.
+
+---
+
 PRIORITY 0: Project Setup Validation ⚠️ ISSUES FOUND
 [✅] validate project setup:
 

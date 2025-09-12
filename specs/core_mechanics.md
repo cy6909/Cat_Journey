@@ -1,4 +1,10 @@
 Specification: Roguelike Breakout Module
+
+**VALIDATION REQUIREMENT**: Before testing any gameplay functionality, these critical setup issues must be resolved:
+- GameManager in GameScene must have valid prefab references (brickPrefab, paddlePrefab, ballPrefab)
+- All prefabs must have visible sprite frames or solid color rendering enabled  
+- Power-up prefab references must be linked in GameManager component
+
 1. General
 Engine: Cocos Creator 3.x.   
 
