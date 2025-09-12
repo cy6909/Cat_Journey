@@ -1,27 +1,27 @@
-12:37:55.802 debug: 2025/9/12 12:37:55
-12:37:55.802 debug: Project: D:\project\claudecode\wx\Cat_Journey
-12:37:55.802 debug: Targets: editor,preview
-12:37:55.806 debug: Incremental file seems great.
-12:37:55.806 debug: Engine path: C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
-12:37:55.822 debug: Initializing target [Editor]
-12:37:55.823 debug: Loading cache
-12:37:55.824 debug: Loading cache costs 1.589600000000246ms.
-12:37:55.825 debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,gfx-webgpu,3d,animation,skeletal-animation,2d,rich-text,mask,graphics,ui-skew,ui,affine-transform,particle,particle-2d,physics-framework,physics-cannon,physics-physx,physics-ammo,physics-builtin,physics-2d-framework,physics-2d-box2d-jsb,physics-2d-box2d,physics-2d-builtin,physics-2d-box2d-wasm,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,vendor-google,spine-3.8,spine-4.2,dragon-bones,marionette,procedural-animation,custom-pipeline,custom-pipeline-builtin-scripts,custom-pipeline-post-process,legacy-pipeline,websocket,websocket-server,meshopt
-12:37:55.825 debug: Our import map(foo:/bar): {
+14:29:11.054 debug: 2025/9/12 14:29:11
+14:29:11.055 debug: Project: D:\project\claudecode\wx\Cat_Journey
+14:29:11.055 debug: Targets: editor,preview
+14:29:11.059 debug: Incremental file seems great.
+14:29:11.061 debug: Engine path: C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
+14:29:11.078 debug: Initializing target [Editor]
+14:29:11.078 debug: Loading cache
+14:29:11.080 debug: Loading cache costs 1.6724999999996726ms.
+14:29:11.080 debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,gfx-webgpu,3d,animation,skeletal-animation,2d,rich-text,mask,graphics,ui-skew,ui,affine-transform,particle,particle-2d,physics-framework,physics-cannon,physics-physx,physics-ammo,physics-builtin,physics-2d-framework,physics-2d-box2d-jsb,physics-2d-box2d,physics-2d-builtin,physics-2d-box2d-wasm,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,vendor-google,spine-3.8,spine-4.2,dragon-bones,marionette,procedural-animation,custom-pipeline,custom-pipeline-builtin-scripts,custom-pipeline-post-process,legacy-pipeline,websocket,websocket-server,meshopt
+14:29:11.081 debug: Our import map(foo:/bar): {
   "imports": {
     "cc": "cce:/internal/x/cc"
   }
 }
-12:37:55.825 debug: Initializing target [Preview]
-12:37:55.826 debug: Loading cache
-12:37:55.828 debug: Loading cache costs 1.6853999999993903ms.
-12:37:55.828 debug: Our import map(foo:/bar): {
+14:29:11.081 debug: Initializing target [Preview]
+14:29:11.082 debug: Loading cache
+14:29:11.088 debug: Loading cache costs 6.3375999999998385ms.
+14:29:11.088 debug: Our import map(foo:/bar): {
   "imports": {
     "cc": "cce:/internal/x/cc"
   }
 }
-12:37:55.876 debug: Sync engine features: 2d,3d,affine-transform,animation,audio,base,custom-pipeline,dragon-bones,gfx-webgl,graphics,intersection-2d,light-probe,marionette,mask,particle,particle-2d,physics-2d-box2d,physics-ammo,primitive,profiler,rich-text,skeletal-animation,spine-3.8,terrain,tiled-map,tween,ui,ui-skew,video,websocket,webview,custom-pipeline
-12:37:55.880 debug: Reset databases. Enumerated domains: [
+14:29:11.156 debug: Sync engine features: 2d,3d,affine-transform,animation,audio,base,custom-pipeline,dragon-bones,gfx-webgl,graphics,intersection-2d,light-probe,marionette,mask,particle,particle-2d,physics-2d-box2d,physics-ammo,primitive,profiler,rich-text,skeletal-animation,spine-3.8,terrain,tiled-map,tween,ui,ui-skew,video,websocket,webview,custom-pipeline
+14:29:11.159 debug: Reset databases. Enumerated domains: [
   {
     "root": "db://internal/",
     "physical": "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets"
@@ -31,365 +31,365 @@
     "physical": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets"
   }
 ]
-12:37:55.880 debug: Our import map(foo:/bar): {
+14:29:11.159 debug: Our import map(foo:/bar): {
   "imports": {
     "cc": "cce:/internal/x/cc",
     "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/",
     "db://assets/": "file:///D:/project/claudecode/wx/Cat_Journey/assets/"
   }
 }
-12:37:55.880 debug: Our import map(foo:/bar): {
+14:29:11.159 debug: Our import map(foo:/bar): {
   "imports": {
     "cc": "cce:/internal/x/cc",
     "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/",
     "db://assets/": "file:///D:/project/claudecode/wx/Cat_Journey/assets/"
   }
 }
-12:37:55.880 debug: Pulling asset-db.
-12:37:55.887 debug: Fetch asset-db cost: 6.83469999999943ms.
-12:37:55.888 debug: Build iteration starts.
+14:29:11.159 debug: Pulling asset-db.
+14:29:11.166 debug: Fetch asset-db cost: 6.728300000000672ms.
+14:29:11.168 debug: Build iteration starts.
 Number of accumulated asset changes: 17
 Feature changed: false
-12:37:55.888 debug: Target(editor) build started.
-12:37:55.897 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:17 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
-12:37:55.898 debug: Inspect cce:/internal/x/cc
-12:37:55.982 debug: transform url: 'cce:/internal/x/cc' costs: 84.30 ms
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/gfx-empty from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-empty.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/gfx-webgpu from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgpu.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
-12:37:55.984 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/ui-skew from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui-skew.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-cannon from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-cannon.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-physx from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-physx.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-ammo from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-ammo.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-builtin.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-jsb from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-jsb.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-2d-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-builtin.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-wasm from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-wasm.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
-12:37:55.985 debug: Resolve cce:/internal/x/cc-fu/geometry-renderer from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/geometry-renderer.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/xr from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/xr.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/vendor-google from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/vendor-google.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline-post-process from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline-post-process.
-12:37:55.986 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
-12:37:55.986 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:22 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
-12:37:55.986 debug: Inspect cce:/internal/x/prerequisite-imports
-12:37:56.013 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 26.10 ms
-12:37:56.014 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
-12:37:56.015 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:56.015 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.015 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.016 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:56.016 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
-12:37:56.016 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
-12:37:56.016 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
-12:37:56.016 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
-12:37:56.017 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.017 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
-12:37:56.017 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
-12:37:56.017 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
-12:37:56.018 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
-12:37:56.018 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.018 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.018 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
-12:37:56.018 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.019 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Fri Sep 12 2025 11:33:05 GMT+0800 (中国标准时间), Current mtime: Fri Sep 12 2025 12:37:50 GMT+0800 (中国标准时间)
-12:37:56.019 debug: Inspect cce:/internal/code-quality/cr.mjs
-12:37:56.034 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 15.10 ms
-12:37:56.036 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.036 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.036 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.036 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
-12:37:56.037 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.037 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:56.037 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:56.038 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
-12:37:56.038 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.038 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.039 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.039 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
-12:37:56.039 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.039 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.039 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.039 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.039 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
-12:37:56.040 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.040 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.040 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.041 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.041 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.041 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.041 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.041 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.041 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.042 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.042 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.043 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.043 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.043 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.043 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.044 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.044 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.045 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.045 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.045 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.045 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.045 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.056 debug: Target(editor) ends with cost 167.08619999999974ms.
-12:37:56.056 debug: Target(preview) build started.
-12:37:56.059 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:17 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
-12:37:56.059 debug: Inspect cce:/internal/x/cc
-12:37:56.093 debug: transform url: 'cce:/internal/x/cc' costs: 34.50 ms
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
-12:37:56.095 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/physics-ammo from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-ammo.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/ui-skew from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui-skew.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
-12:37:56.096 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
-12:37:56.096 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:22 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
-12:37:56.096 debug: Inspect cce:/internal/x/prerequisite-imports
-12:37:56.114 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 17.40 ms
-12:37:56.115 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
-12:37:56.115 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:56.116 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.116 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.116 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:56.116 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
-12:37:56.116 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
-12:37:56.117 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
-12:37:56.118 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
-12:37:56.118 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.118 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.118 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
-12:37:56.118 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.118 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Fri Sep 12 2025 11:33:05 GMT+0800 (中国标准时间), Current mtime: Fri Sep 12 2025 12:37:50 GMT+0800 (中国标准时间)
-12:37:56.119 debug: Inspect cce:/internal/code-quality/cr.mjs
-12:37:56.134 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 15.60 ms
-12:37:56.136 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.136 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.136 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
-12:37:56.136 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
-12:37:56.137 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.137 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:56.137 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:56.138 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
-12:37:56.138 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.138 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
-12:37:56.139 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:56.140 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
-12:37:56.140 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.140 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.140 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.140 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
-12:37:56.140 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
-12:37:56.141 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:56.141 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
-12:37:56.141 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.142 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.142 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
-12:37:56.142 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.143 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:56.143 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.143 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/code-quality/cr.mjs.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
-12:37:56.144 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:56.153 debug: Target(preview) ends with cost 96.57939999999962ms.
-12:37:56.613 debug: Pulling asset-db.
-12:37:57.121 debug: Fetch asset-db cost: 507.66530000000057ms.
-12:37:57.122 debug: Build iteration starts.
+14:29:11.168 debug: Target(editor) build started.
+14:29:11.173 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
+14:29:11.173 debug: Inspect cce:/internal/x/cc
+14:29:11.254 debug: transform url: 'cce:/internal/x/cc' costs: 81.50 ms
+14:29:11.256 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/gfx-empty from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-empty.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/gfx-webgpu from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgpu.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/ui-skew from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui-skew.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-cannon from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-cannon.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-physx from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-physx.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-ammo from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-ammo.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-builtin.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-jsb from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-jsb.
+14:29:11.257 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/physics-2d-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-builtin.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-wasm from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-wasm.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/geometry-renderer from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/geometry-renderer.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/xr from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/xr.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/vendor-google from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/vendor-google.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline-post-process from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline-post-process.
+14:29:11.258 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
+14:29:11.258 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
+14:29:11.258 debug: Inspect cce:/internal/x/prerequisite-imports
+14:29:11.283 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 24.30 ms
+14:29:11.284 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+14:29:11.285 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:11.285 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.285 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.286 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:11.286 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+14:29:11.286 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
+14:29:11.287 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
+14:29:11.287 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+14:29:11.287 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.288 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
+14:29:11.288 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+14:29:11.288 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+14:29:11.289 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+14:29:11.289 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.289 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.289 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+14:29:11.290 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.291 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Fri Sep 12 2025 12:37:50 GMT+0800 (中国标准时间), Current mtime: Fri Sep 12 2025 14:29:05 GMT+0800 (中国标准时间)
+14:29:11.291 debug: Inspect cce:/internal/code-quality/cr.mjs
+14:29:11.305 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 14.30 ms
+14:29:11.307 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.307 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.307 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.307 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
+14:29:11.308 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.308 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:11.309 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:11.309 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.309 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.309 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.309 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.309 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+14:29:11.309 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.310 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.310 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
+14:29:11.311 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.311 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.311 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.311 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.311 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+14:29:11.311 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.312 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.312 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.313 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.313 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.313 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.313 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.313 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.313 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.314 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.314 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.314 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.315 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.315 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.315 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.315 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.315 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.316 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.317 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.317 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.317 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.317 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.317 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.317 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.317 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.318 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.319 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.327 debug: Target(editor) ends with cost 159.1893ms.
+14:29:11.328 debug: Target(preview) build started.
+14:29:11.331 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
+14:29:11.331 debug: Inspect cce:/internal/x/cc
+14:29:11.375 debug: transform url: 'cce:/internal/x/cc' costs: 43.70 ms
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
+14:29:11.376 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/physics-ammo from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-ammo.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/ui-skew from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui-skew.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+14:29:11.377 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+14:29:11.377 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间)
+14:29:11.377 debug: Inspect cce:/internal/x/prerequisite-imports
+14:29:11.395 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 17.80 ms
+14:29:11.396 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+14:29:11.397 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:11.397 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.397 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.397 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:11.397 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+14:29:11.398 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
+14:29:11.398 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
+14:29:11.398 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+14:29:11.398 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.398 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.399 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+14:29:11.400 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.400 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Fri Sep 12 2025 12:37:50 GMT+0800 (中国标准时间), Current mtime: Fri Sep 12 2025 14:29:05 GMT+0800 (中国标准时间)
+14:29:11.400 debug: Inspect cce:/internal/code-quality/cr.mjs
+14:29:11.419 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 18.90 ms
+14:29:11.421 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.421 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.421 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+14:29:11.421 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
+14:29:11.421 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.422 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:11.422 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:11.422 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.422 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.422 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.422 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+14:29:11.422 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+14:29:11.422 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+14:29:11.423 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:11.424 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
+14:29:11.425 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.425 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.425 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.425 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+14:29:11.425 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+14:29:11.425 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:11.425 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+14:29:11.426 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.426 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.426 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.426 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.427 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.428 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as cce:/internal/x/cc.
+14:29:11.428 debug: Resolve ./GameManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:11.429 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve ./PowerUp from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/code-quality/cr.mjs.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.429 debug: Resolve cc from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as cce:/internal/x/cc.
+14:29:11.430 debug: Resolve ./RelicManager from file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:11.438 debug: Target(preview) ends with cost 110.28759999999966ms.
+14:29:11.941 debug: Pulling asset-db.
+14:29:12.466 debug: Fetch asset-db cost: 525.4625000000005ms.
+14:29:12.467 debug: Build iteration starts.
 Number of accumulated asset changes: 17
 Feature changed: false
-12:37:57.122 debug: Target(editor) build started.
-12:37:57.125 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间)
-12:37:57.125 debug: Inspect cce:/internal/x/prerequisite-imports
-12:37:57.141 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 16.10 ms
-12:37:57.142 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
-12:37:57.143 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:57.143 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:57.143 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:57.143 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:57.143 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
-12:37:57.144 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
-12:37:57.144 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
-12:37:57.144 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
-12:37:57.144 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:57.145 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
-12:37:57.145 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
-12:37:57.145 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
-12:37:57.145 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
-12:37:57.146 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:57.146 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:57.146 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
-12:37:57.154 debug: Target(editor) ends with cost 31.263600000000224ms.
-12:37:57.154 debug: Target(preview) build started.
-12:37:57.157 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间)
-12:37:57.157 debug: Inspect cce:/internal/x/prerequisite-imports
-12:37:57.172 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 14.60 ms
-12:37:57.173 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
-12:37:57.174 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
-12:37:57.174 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
-12:37:57.174 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
-12:37:57.175 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
-12:37:57.175 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
-12:37:57.175 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
-12:37:57.175 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
-12:37:57.175 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
-12:37:57.175 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
-12:37:57.176 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
-12:37:57.176 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
-12:37:57.176 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
-12:37:57.176 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
-12:37:57.177 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
-12:37:57.177 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
-12:37:57.177 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
-12:37:57.187 debug: Target(preview) ends with cost 31.878700000000208ms.
+14:29:12.468 debug: Target(editor) build started.
+14:29:12.470 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间)
+14:29:12.470 debug: Inspect cce:/internal/x/prerequisite-imports
+14:29:12.488 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 18.10 ms
+14:29:12.490 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+14:29:12.491 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:12.491 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:12.491 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:12.491 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:12.491 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+14:29:12.491 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
+14:29:12.492 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
+14:29:12.492 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+14:29:12.492 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:12.493 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
+14:29:12.493 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+14:29:12.493 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+14:29:12.493 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+14:29:12.494 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:12.494 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:12.494 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+14:29:12.502 debug: Target(editor) ends with cost 34.01550000000043ms.
+14:29:12.502 debug: Target(preview) build started.
+14:29:12.504 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:05 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (中国标准时间)
+14:29:12.504 debug: Inspect cce:/internal/x/prerequisite-imports
+14:29:12.521 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 16.60 ms
+14:29:12.523 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+14:29:12.523 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+14:29:12.523 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+14:29:12.523 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+14:29:12.525 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+14:29:12.525 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+14:29:12.525 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts.
+14:29:12.526 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts.
+14:29:12.526 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+14:29:12.526 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts.
+14:29:12.526 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts.
+14:29:12.526 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+14:29:12.527 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+14:29:12.527 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+14:29:12.527 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+14:29:12.527 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+14:29:12.527 debug: Resolve file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+14:29:12.536 debug: Target(preview) ends with cost 33.588699999999335ms.
