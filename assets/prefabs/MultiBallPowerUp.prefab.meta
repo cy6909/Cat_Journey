@@ -1,11 +1,13 @@
 {
-  "ver": "4.0.23",
+  "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "multiball-powerup-prefab-uuid",
+  "uuid": "55e1ab56-d880-4407-a9d5-795c509dcee3",
   "files": [
     ".json"
   ],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "syncNodeName": "MultiBallPowerUp"
+  }
 }

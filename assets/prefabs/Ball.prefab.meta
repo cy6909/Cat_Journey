@@ -1,11 +1,13 @@
 {
-  "ver": "4.0.23",
+  "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "ball-prefab-uuid-9012",
+  "uuid": "58f8e17d-e23d-439d-8aea-d766a9c88be0",
   "files": [
     ".json"
   ],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "syncNodeName": "Ball"
+  }
 }

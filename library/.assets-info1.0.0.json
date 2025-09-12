@@ -1,0 +1,167 @@
+{
+  "version": "1.0.0",
+  "map": {
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art": {
+      "time": 1757584938183.924,
+      "uuid": "30575d09-78cd-4393-86cf-b6e2c5a98baf"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs": {
+      "time": 1757641407489.7805,
+      "uuid": "69d34246-67e3-47c1-a855-d26975876954"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources": {
+      "time": 1757584938185.4136,
+      "uuid": "c052bc1d-fdc9-427a-a248-c40082669411"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes": {
+      "time": 1757641667942.883,
+      "uuid": "0590ba0b-482f-48da-b425-fb739f16585d"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts": {
+      "time": 1757641629312.4429,
+      "uuid": "886d6f13-f395-4a7e-a603-8861f50cfffe"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts": {
+      "time": 1757587042644.4758,
+      "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Brick.ts": {
+      "time": 1757641556106.0022,
+      "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\DeathZone.ts": {
+      "time": 1757587219628.875,
+      "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\GameManager.ts": {
+      "time": 1757641593600.3647,
+      "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Laser.ts": {
+      "time": 1757641235927.5496,
+      "uuid": "9cbce2d2-3365-4d36-a9fe-e286d0ab4df1"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\LaserPaddlePowerUp.ts": {
+      "time": 1757641220006.9692,
+      "uuid": "4ec1537e-9cf8-4bd6-9e33-63b95c117749"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\MultiBallPowerUp.ts": {
+      "time": 1757641301568.6367,
+      "uuid": "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.ts": {
+      "time": 1757586921988.2542,
+      "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.ts": {
+      "time": 1757641185799.8513,
+      "uuid": "3cb63be2-0d80-430c-8d7b-44aa16452edd"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\RelicManager.ts": {
+      "time": 1757641527813.936,
+      "uuid": "ebc0c1e7-8814-4bc5-854a-16588373ba8b"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\RelicUI.ts": {
+      "time": 1757641622183.2107,
+      "uuid": "13f22b93-0ab5-4198-9bd6-6a74129d2ba1"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art.meta": {
+      "time": 1757648002932.1548
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs.meta": {
+      "time": 1757648002932.1548
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources.meta": {
+      "time": 1757648002932.1548
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes.meta": {
+      "time": 1757648002932.1548
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts.meta": {
+      "time": 1757648002933.372
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts.meta": {
+      "time": 1757648002939.0718
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Brick.ts.meta": {
+      "time": 1757648002940.0764
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\DeathZone.ts.meta": {
+      "time": 1757648002940.0764
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\GameManager.ts.meta": {
+      "time": 1757648002941.0757
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Laser.ts.meta": {
+      "time": 1757648002941.0757
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\LaserPaddlePowerUp.ts.meta": {
+      "time": 1757648002944.4595
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\MultiBallPowerUp.ts.meta": {
+      "time": 1757648002944.4595
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.ts.meta": {
+      "time": 1757648002945.7063
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.ts.meta": {
+      "time": 1757648002946.7766
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\RelicManager.ts.meta": {
+      "time": 1757648002946.7766
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\RelicUI.ts.meta": {
+      "time": 1757648002947.98
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Ball.prefab": {
+      "time": 1757648007533.7288,
+      "uuid": "58f8e17d-e23d-439d-8aea-d766a9c88be0"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Brick.prefab": {
+      "time": 1757648007533.7288,
+      "uuid": "c7ab9736-f219-419f-9172-9ecc23c3e405"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Laser.prefab": {
+      "time": 1757648007533.7288,
+      "uuid": "bfb94b91-bf3b-4cce-84c2-57f71523c96f"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\LaserPaddlePowerUp.prefab": {
+      "time": 1757648007534.7307,
+      "uuid": "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab": {
+      "time": 1757648007534.7307,
+      "uuid": "55e1ab56-d880-4407-a9d5-795c509dcee3"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Paddle.prefab": {
+      "time": 1757648007538.895,
+      "uuid": "7ec887bc-b20e-429d-8e28-08067520a25c"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene": {
+      "time": 1757648007539.8943,
+      "uuid": "0d4c6901-8005-4382-83d1-6fc331ab3973"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Ball.prefab.meta": {
+      "time": 1757648007535.8904
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Laser.prefab.meta": {
+      "time": 1757648007536.8948
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Brick.prefab.meta": {
+      "time": 1757648007537.8953
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab.meta": {
+      "time": 1757648007537.8953
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\LaserPaddlePowerUp.prefab.meta": {
+      "time": 1757648007538.895
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Paddle.prefab.meta": {
+      "time": 1757648007539.8943
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene.meta": {
+      "time": 1757648007540.8953
+    }
+  },
+  "missing": {}
+}

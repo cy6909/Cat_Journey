@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "powerup-uuid-1234",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "3cb63be2-0d80-430c-8d7b-44aa16452edd",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

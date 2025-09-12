@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "laserpaddle-uuid-9012",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "4ec1537e-9cf8-4bd6-9e33-63b95c117749",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

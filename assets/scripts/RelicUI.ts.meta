@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "relicui-uuid-abcd",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "13f22b93-0ab5-4198-9bd6-6a74129d2ba1",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

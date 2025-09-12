@@ -1,11 +1,13 @@
 {
-  "ver": "4.0.23",
+  "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "laser-prefab-uuid",
+  "uuid": "bfb94b91-bf3b-4cce-84c2-57f71523c96f",
   "files": [
     ".json"
   ],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "syncNodeName": "Laser"
+  }
 }

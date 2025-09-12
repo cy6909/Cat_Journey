@@ -1,11 +1,13 @@
 {
-  "ver": "4.0.23",
+  "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "brick-prefab-uuid-7890",
+  "uuid": "c7ab9736-f219-419f-9172-9ecc23c3e405",
   "files": [
     ".json"
   ],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "syncNodeName": "Brick"
+  }
 }

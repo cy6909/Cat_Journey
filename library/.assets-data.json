@@ -1,0 +1,140 @@
+{
+  "30575d09-78cd-4393-86cf-b6e2c5a98baf": {
+    "url": "db://assets/art",
+    "value": {},
+    "versionCode": 1
+  },
+  "69d34246-67e3-47c1-a855-d26975876954": {
+    "url": "db://assets/prefabs",
+    "value": {},
+    "versionCode": 1
+  },
+  "c052bc1d-fdc9-427a-a248-c40082669411": {
+    "url": "db://assets/resources",
+    "value": {},
+    "versionCode": 1
+  },
+  "0590ba0b-482f-48da-b425-fb739f16585d": {
+    "url": "db://assets/scenes",
+    "value": {},
+    "versionCode": 1
+  },
+  "886d6f13-f395-4a7e-a603-8861f50cfffe": {
+    "url": "db://assets/scripts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa": {
+    "url": "db://assets/scripts/Ball.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "74d2391c-448c-4e12-8af9-f4c2982fd9c1": {
+    "url": "db://assets/scripts/Brick.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "73047f13-6a72-44ef-84d6-162a11e62ad6": {
+    "url": "db://assets/scripts/DeathZone.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1112ea98-2509-431e-b6fa-b2811d6671eb": {
+    "url": "db://assets/scripts/GameManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "9cbce2d2-3365-4d36-a9fe-e286d0ab4df1": {
+    "url": "db://assets/scripts/Laser.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4ec1537e-9cf8-4bd6-9e33-63b95c117749": {
+    "url": "db://assets/scripts/LaserPaddlePowerUp.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0": {
+    "url": "db://assets/scripts/MultiBallPowerUp.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1b2c3d4-e5f6-7890-abcd-ef1234567890": {
+    "url": "db://assets/scripts/PaddleController.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3cb63be2-0d80-430c-8d7b-44aa16452edd": {
+    "url": "db://assets/scripts/PowerUp.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ebc0c1e7-8814-4bc5-854a-16588373ba8b": {
+    "url": "db://assets/scripts/RelicManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "13f22b93-0ab5-4198-9bd6-6a74129d2ba1": {
+    "url": "db://assets/scripts/RelicUI.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "58f8e17d-e23d-439d-8aea-d766a9c88be0": {
+    "url": "db://assets/prefabs/Ball.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "c7ab9736-f219-419f-9172-9ecc23c3e405": {
+    "url": "db://assets/prefabs/Brick.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "bfb94b91-bf3b-4cce-84c2-57f71523c96f": {
+    "url": "db://assets/prefabs/Laser.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e": {
+    "url": "db://assets/prefabs/LaserPaddlePowerUp.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "55e1ab56-d880-4407-a9d5-795c509dcee3": {
+    "url": "db://assets/prefabs/MultiBallPowerUp.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "7ec887bc-b20e-429d-8e28-08067520a25c": {
+    "url": "db://assets/prefabs/Paddle.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "0d4c6901-8005-4382-83d1-6fc331ab3973": {
+    "url": "db://assets/scenes/GameScene.scene",
+    "value": {
+      "depends": [
+        "0d4c6901-8005-4382-83d1-6fc331ab3973"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  }
+}

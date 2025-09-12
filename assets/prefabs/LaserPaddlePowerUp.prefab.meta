@@ -1,11 +1,13 @@
 {
-  "ver": "4.0.23",
+  "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "laser-powerup-prefab-uuid",
+  "uuid": "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e",
   "files": [
     ".json"
   ],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "syncNodeName": "LaserPaddlePowerUp"
+  }
 }

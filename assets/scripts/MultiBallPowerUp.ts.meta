@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "multiball-uuid-5678",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

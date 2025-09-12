@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "gamemanager-uuid-abcd",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

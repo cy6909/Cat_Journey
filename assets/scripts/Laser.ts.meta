@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "laser-uuid-3456",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "9cbce2d2-3365-4d36-a9fe-e286d0ab4df1",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

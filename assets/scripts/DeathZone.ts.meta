@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "deathzone-uuid-efgh",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

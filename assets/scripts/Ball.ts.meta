@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "ball-script-uuid-5678",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

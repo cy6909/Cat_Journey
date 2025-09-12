@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "brick-script-uuid-3456",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }

@@ -1,12 +1,9 @@
 {
-  "ver": "4.0.23",
+  "ver": "4.0.24",
   "importer": "typescript",
   "imported": true,
-  "uuid": "relicmanager-uuid-7890",
-  "files": [
-    ".js",
-    ".js.map"
-  ],
+  "uuid": "ebc0c1e7-8814-4bc5-854a-16588373ba8b",
+  "files": [],
   "subMetas": {},
   "userData": {}
 }
