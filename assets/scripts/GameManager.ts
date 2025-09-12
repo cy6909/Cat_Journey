@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, director } from 'cc';
+import { RelicManager } from './RelicManager';
 const { ccclass, property } = _decorator;
 
 export enum GameState {
@@ -214,10 +215,15 @@ export class GameManager extends Component {
         this.setState(GameState.LEVEL_COMPLETE);
         this.level++;
         
+        const relicManager = RelicManager.getInstance();
+        if (relicManager) {
+            relicManager.grantRandomRelic();
+        }
+        
         this.scheduleOnce(() => {
             this.setupLevel();
             this.setState(GameState.PLAYING);
-        }, 2.0);
+        }, 3.0);
     }
 
     public setState(newState: GameState): void {

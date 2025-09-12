@@ -1,5 +1,6 @@
-import { _decorator, Component, Node, Collider2D, IPhysics2DContact, Contact2DType, RigidBody2D, Sprite, Color } from 'cc';
+import { _decorator, Component, Node, Collider2D, IPhysics2DContact, Contact2DType, RigidBody2D, Sprite, Color, Vec3 } from 'cc';
 import { GameManager } from './GameManager';
+import { RelicManager, RelicType } from './RelicManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('Brick')
@@ -64,8 +65,36 @@ export class Brick extends Component {
         if (gameManager) {
             gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone());
         }
+
+        const relicManager = RelicManager.getInstance();
+        if (relicManager && relicManager.hasRelic(RelicType.EXPLOSIVE_BRICKS)) {
+            this.explodeBrick();
+        }
         
         this.node.destroy();
+    }
+
+    private explodeBrick(): void {
+        const gameManager = GameManager.getInstance();
+        if (!gameManager || !gameManager.brickContainer) return;
+
+        const explosionRadius = 100;
+        const brickPosition = this.node.position;
+        const bricks = gameManager.brickContainer.children;
+
+        for (const brick of bricks) {
+            if (brick === this.node) continue;
+
+            const distance = Vec3.distance(brickPosition, brick.position);
+            if (distance <= explosionRadius) {
+                const brickScript = brick.getComponent('Brick');
+                if (brickScript) {
+                    (brickScript as any).takeDamage(1);
+                }
+            }
+        }
+
+        console.log(`Explosive brick detonated! Damaged bricks within ${explosionRadius} units.`);
     }
 
     public setHealth(health: number): void {
