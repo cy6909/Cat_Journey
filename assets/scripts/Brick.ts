@@ -62,7 +62,7 @@ export class Brick extends Component {
     private destroyBrick(): void {
         const gameManager = GameManager.getInstance();
         if (gameManager) {
-            gameManager.onBrickDestroyed(this.scoreValue);
+            gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone());
         }
         
         this.node.destroy();

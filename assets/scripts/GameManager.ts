@@ -19,6 +19,15 @@ export class GameManager extends Component {
     @property(Prefab)
     public ballPrefab: Prefab | null = null;
 
+    @property(Prefab)
+    public multiBallPowerUpPrefab: Prefab | null = null;
+
+    @property(Prefab)
+    public laserPaddlePowerUpPrefab: Prefab | null = null;
+
+    @property
+    public powerUpDropChance: number = 0.2;
+
     @property(Node)
     public brickContainer: Node | null = null;
 
@@ -154,13 +163,31 @@ export class GameManager extends Component {
         this._bricks = [];
     }
 
-    public onBrickDestroyed(scoreValue: number = 10): void {
+    public onBrickDestroyed(scoreValue: number = 10, brickPosition?: Vec3): void {
         this.score += scoreValue;
+        
+        if (brickPosition && Math.random() < this.powerUpDropChance) {
+            this.dropPowerUp(brickPosition);
+        }
         
         this._bricks = this._bricks.filter(brick => brick && brick.isValid);
         
         if (this._bricks.length === 0) {
             this.onLevelComplete();
+        }
+    }
+
+    private dropPowerUp(position: Vec3): void {
+        const powerUps = [this.multiBallPowerUpPrefab, this.laserPaddlePowerUpPrefab];
+        const availablePowerUps = powerUps.filter(prefab => prefab !== null);
+        
+        if (availablePowerUps.length === 0) return;
+        
+        const randomPowerUp = availablePowerUps[Math.floor(Math.random() * availablePowerUps.length)];
+        if (randomPowerUp) {
+            const powerUpNode = instantiate(randomPowerUp);
+            powerUpNode.setPosition(position);
+            this.node.addChild(powerUpNode);
         }
     }
 
@@ -200,6 +227,10 @@ export class GameManager extends Component {
 
     public getCurrentState(): GameState {
         return this._currentState;
+    }
+
+    public getBallPrefab(): Prefab | null {
+        return this.ballPrefab;
     }
 
     public getScore(): number {
