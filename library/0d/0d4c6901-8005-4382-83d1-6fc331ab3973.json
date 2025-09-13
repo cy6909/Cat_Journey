@@ -77,7 +77,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 40
+      "__id__": 25
     },
     "_id": "0d4c6901-8005-4382-83d1-6fc331ab3973"
   },
@@ -845,25 +845,25 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 9
+      "__id__": 26
     },
     "shadows": {
-      "__id__": 10
+      "__id__": 27
     },
     "_skybox": {
-      "__id__": 11
+      "__id__": 28
     },
     "fog": {
-      "__id__": 12
+      "__id__": 29
     },
     "octree": {
-      "__id__": 13
+      "__id__": 30
     },
     "skin": {
-      "__id__": 14
+      "__id__": 31
     },
     "lightProbeInfo": {
-      "__id__": 15
+      "__id__": 32
     },
     "_id": "16rUagOTBBEqJbdu3RgAcV"
   },

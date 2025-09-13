@@ -33,11 +33,32 @@ Cat-Conquest: Roguelike Breakout Module - WeChat Mini Game built with Cocos Crea
 - **RelicManager.ts**: Singleton tracking 5 persistent upgrade types
 - Explosive Bricks relic implemented with area damage
 
+## Error Resolution Log
+
+### Issue: Scene Deserialization Error (2025-09-12) ✅ RESOLVED
+
+**Problem**: Cocos Creator project failing to load with error:
+```
+[Scene] Cannot read properties of undefined (reading '__type__')
+[Scene] Open scene failed: 0d4c6901-8005-4382-83d1-6fc331ab3973
+```
+
+**Root Cause**: GameScene JSON serialization had corrupted object references:
+- Main Scene `_globals` referenced non-existent `__id__: 40` 
+- SceneGlobals object referenced wrong indices for child objects (9-15 instead of 26-32)
+
+**Resolution**: Fixed object reference indices in `library/0d/0d4c6901-8005-4382-83d1-6fc331ab3973.json`:
+- Scene `_globals.__id__`: 40 → 25 (actual SceneGlobals index)
+- SceneGlobals child references: 9-15 → 26-32 (actual component indices)
+
+**Status**: ✅ Scene deserialization error resolved, JSON validation passed
+
 ## Validation Status
 **VALIDATION COMPLETED**: Code-level validation of all systems through VALIDATION_PLAN.md
 
 ### PRIORITY 0 Validation Results ⚠️ CRITICAL ISSUES FOUND
 - ✅ Project type fixed (3d → 2d)
+- ✅ **Scene deserialization error resolved (2025-09-12)**
 - ❌ **BLOCKING**: GameManager has null prefab references in GameScene
 - ❌ **BLOCKING**: All prefabs have "_spriteFrame": null (invisible objects)
 - ❌ **BLOCKING**: Missing power-up prefab references

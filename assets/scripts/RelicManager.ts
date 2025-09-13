@@ -138,7 +138,7 @@ export class RelicManager extends Component {
 
     public grantRandomRelic(): void {
         const allRelicTypes = Object.values(RelicType);
-        const availableRelics = allRelicTypes.filter(type => !this.hasRelic(type));
+        const availableRelics = allRelicTypes.filter((type: RelicType) => !this.hasRelic(type));
         
         if (availableRelics.length > 0) {
             const randomRelic = availableRelics[Math.floor(Math.random() * availableRelics.length)];

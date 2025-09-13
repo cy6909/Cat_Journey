@@ -83,7 +83,9 @@
     "url": "db://assets/prefabs/Ball.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
+      ]
     },
     "versionCode": 1
   },
@@ -91,7 +93,9 @@
     "url": "db://assets/prefabs/Brick.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
+      ]
     },
     "versionCode": 1
   },
@@ -99,7 +103,9 @@
     "url": "db://assets/prefabs/Laser.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "9cbce2d2-3365-4d36-a9fe-e286d0ab4df1"
+      ]
     },
     "versionCode": 1
   },
@@ -107,7 +113,9 @@
     "url": "db://assets/prefabs/LaserPaddlePowerUp.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "4ec1537e-9cf8-4bd6-9e33-63b95c117749"
+      ]
     },
     "versionCode": 1
   },
@@ -115,7 +123,9 @@
     "url": "db://assets/prefabs/MultiBallPowerUp.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0"
+      ]
     },
     "versionCode": 1
   },
@@ -123,7 +133,9 @@
     "url": "db://assets/prefabs/Paddle.prefab",
     "value": {
       "depends": [],
-      "dependScripts": []
+      "dependScripts": [
+        "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      ]
     },
     "versionCode": 1
   },

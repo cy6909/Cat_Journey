@@ -3,6 +3,7 @@
     "__type__": "cc.Prefab",
     "_name": "Laser",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_native": "",
     "data": {
       "__id__": 1
@@ -14,6 +15,7 @@
     "__type__": "cc.Node",
     "_name": "Laser",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [],
     "_active": true,
@@ -64,12 +66,13 @@
       "y": 0,
       "z": 0
     },
-    "_id": "laser-node-id"
+    "_id": ""
   },
   {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -87,7 +90,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "laser-uitransform-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -97,6 +100,7 @@
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -128,7 +132,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "laser-sprite-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -138,6 +142,7 @@
     "__type__": "cc.RigidBody2D",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -147,20 +152,21 @@
     },
     "enabledContactListener": true,
     "bullet": true,
-    "type": 2,
-    "allowSleep": false,
-    "gravityScale": 0,
-    "linearDamping": 0,
-    "angularDamping": 0,
-    "linearVelocity": {
+    "awakeOnLoad": true,
+    "_group": 1,
+    "_type": 2,
+    "_allowSleep": true,
+    "_gravityScale": 1,
+    "_linearDamping": 0,
+    "_angularDamping": 0,
+    "_linearVelocity": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "angularVelocity": 0,
-    "fixedRotation": true,
-    "awakeOnLoad": true,
-    "_id": "laser-rigidbody-id"
+    "_angularVelocity": 0,
+    "_fixedRotation": false,
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -170,6 +176,7 @@
     "__type__": "cc.BoxCollider2D",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -193,16 +200,17 @@
       "width": 5,
       "height": 20
     },
-    "_id": "laser-collider-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "laser-collider-id"
   },
   {
-    "__type__": "Laser",
+    "__type__": "9cbceLSM2VNNqn+4obQq03x",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -212,11 +220,11 @@
     },
     "speed": 800,
     "damage": 1,
-    "_id": "laser-script-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "laser-script-id"
+    "fileId": "5bL4PmoMxGbLLUepc5FVew"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -228,7 +236,6 @@
     },
     "fileId": "laser-node-id",
     "instance": null,
-    "targetOverrides": null,
-    "nestedPrefabInstanceRoots": null
+    "targetOverrides": null
   }
 ]
