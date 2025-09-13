@@ -1,0 +1,132 @@
+# LevelManager.ts Description
+
+## Purpose
+Manages different level types, difficulty progression, and the brick pressure system that creates time pressure for players by making bricks move down toward the paddle.
+
+## Key Features
+
+### Level Types
+- **NORMAL**: Standard breakout levels with pressure system
+- **BOSS**: Boss fight levels with no regular bricks
+- **ELITE**: Enhanced difficulty levels with tougher configurations  
+- **TIME_ATTACK**: Special levels with accelerated pressure mechanics
+
+### Level Type Selection Logic
+```typescript
+// Boss levels every 10 levels (10, 20, 30, etc.)
+if (level % 10 === 0) return LevelType.BOSS;
+
+// Elite levels every 5 levels (5, 15, 25, etc.)
+if (level % 5 === 0) return LevelType.ELITE;
+
+// Random time attack levels after level 5 (15% chance)
+if (level > 5 && Math.random() < 0.15) return LevelType.TIME_ATTACK;
+```
+
+### Pressure System
+- **Brick movement**: Bricks gradually move downward during gameplay
+- **Speed scaling**: Pressure speed increases with level difficulty
+- **Damage calculation**: When bricks reach paddle level, damage equals remaining brick rows
+- **Reset mechanism**: Bricks reset to higher position after dealing damage
+- **Timer system**: Pressure starts after configurable delay (default: 30 seconds)
+
+### Boss Management
+- **Boss spawning**: Instantiates boss prefab for boss levels
+- **Health scaling**: Boss health and damage scale with level progression
+- **Boss positioning**: Places boss at top of screen for optimal gameplay
+- **Victory conditions**: Handles boss defeat and level completion
+
+### Difficulty Progression
+- **Speed acceleration**: Pressure speed *= pressureAcceleration^(level/5)
+- **Timer reduction**: Pressure delay decreases as levels increase
+- **Boss scaling**: Boss stats multiply by (1 + level/10) for health, (1 + level/20) for damage
+
+## How to Use in Cocos Creator
+
+### 1. Setup LevelManager Node
+```
+1. Create empty Node in GameScene
+2. Attach LevelManager.ts script to the node
+3. Configure properties in Inspector:
+   - Pressure Move Speed: 10.0 (base speed)
+   - Pressure Start Delay: 30.0 (seconds)
+   - Pressure Acceleration: 1.5 (multiplier)
+```
+
+### 2. Assign Required References
+```
+Inspector Settings:
+- Boss Prefab: Drag boss prefab with BossController script
+- Brick Container: Reference to node containing all brick objects
+```
+
+### 3. Integration with GameManager
+```typescript
+// In GameManager, add LevelManager integration:
+const levelManager = LevelManager.getInstance();
+if (levelManager) {
+    levelManager.initializeLevel();
+}
+```
+
+### 4. Physics Configuration
+```
+Boss Collision Setup:
+- Boss collider should interact with Ball and Laser groups
+- Boss should not collide with Brick or Paddle groups
+- Use STATIC or KINEMATIC RigidBody2D for controlled movement
+```
+
+## Level Design Guidelines
+
+### Normal Levels
+- Enable pressure system for time pressure
+- Standard brick layouts with increasing complexity
+- Pressure timer provides strategic timing element
+
+### Boss Levels
+- Clear all regular bricks before boss spawn
+- Focus on sustained combat rather than brick destruction
+- No pressure system - allows focused boss combat
+- Boss health should require 50-100 hits to defeat
+
+### Elite Levels
+- Enhanced brick configurations
+- Faster pressure system activation
+- Higher brick health values
+- More complex layout patterns
+
+### Time Attack Levels
+- Accelerated pressure mechanics
+- Dense brick layouts
+- Reduced pressure delay timer
+- Bonus scoring for quick completion
+
+## Pressure System Mechanics
+
+### Damage Calculation
+```typescript
+// Damage equals number of brick rows remaining
+const remainingBricks = this.countRemainingBricks();
+const rowsRemaining = Math.ceil(remainingBricks / 8);
+const damage = Math.max(1, rowsRemaining);
+```
+
+### Speed Scaling Formula
+```typescript
+const adjustedSpeed = baseSpeed * Math.pow(acceleration, level / 5);
+// Example: Level 10 = 10 * (1.5^2) = 22.5 speed
+// Example: Level 20 = 10 * (1.5^4) = 50.6 speed
+```
+
+### Strategic Implications
+- Players must balance offense (destroying bricks) with defense (managing pressure)
+- Higher levels require faster brick clearing to avoid pressure damage
+- Creates natural difficulty curve without artificial health/damage scaling
+- Encourages aggressive, skillful play over defensive strategies
+
+## Future Enhancements
+- Environmental hazards that move with pressure system
+- Power-ups that affect pressure mechanics (slow time, freeze bricks)
+- Boss levels with environmental pressure elements
+- Special brick types that resist or accelerate pressure effects

@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "ironskeleton (5)",
+      "b86f2fe8-f77c-4abc-a10e-997c438b502e@61e32",
+      "ironskeleton (6)",
+      "b86f2fe8-f77c-4abc-a10e-997c438b502e@1452e",
+      "ironskeleton (7)",
+      "b86f2fe8-f77c-4abc-a10e-997c438b502e@e195b",
+      "ironskeleton (8)",
+      "b86f2fe8-f77c-4abc-a10e-997c438b502e@dc122"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "death (100)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@37c52",
+      "death (90)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@6d010",
+      "death (91)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@77266",
+      "death (92)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@2fb40",
+      "death (93)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@52bf5",
+      "death (94)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@faf16",
+      "death (95)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@9325b",
+      "death (96)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@5d01f",
+      "death (97)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@77f37",
+      "death (98)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@025b8",
+      "death (99)",
+      "ea65ea39-46d2-43aa-abbb-ade1da899f80@1c8f4"
+    ]
+  }
+}

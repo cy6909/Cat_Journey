@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "blockturnright",
+    "spriteFrames": [
+      "blockturn (21)",
+      "e2425347-8f52-4c12-9692-a0ac04233fe5@7a7c8",
+      "blockturn (22)",
+      "e2425347-8f52-4c12-9692-a0ac04233fe5@f93ec",
+      "blockturn (23)",
+      "e2425347-8f52-4c12-9692-a0ac04233fe5@78209",
+      "blockturn (24)",
+      "e2425347-8f52-4c12-9692-a0ac04233fe5@17e67"
+    ]
+  }
+}

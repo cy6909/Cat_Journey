@@ -1,0 +1,36 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "death (1)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@1d547",
+      "death (10)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@906ab",
+      "death (11)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@027c7",
+      "death (12)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@41aa6",
+      "death (13)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@126ba",
+      "death (14)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@794c6",
+      "death (2)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@efd5c",
+      "death (3)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@8115c",
+      "death (4)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@282b6",
+      "death (5)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@fa5ee",
+      "death (6)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@4cac4",
+      "death (7)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@64b8d",
+      "death (8)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@6f286",
+      "death (9)",
+      "9fd83283-24e5-4239-8232-b60bd91dff9e@f31f0"
+    ]
+  }
+}

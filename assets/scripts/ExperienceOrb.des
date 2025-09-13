@@ -1,0 +1,132 @@
+# ExperienceOrb.ts Description
+
+## Purpose
+Manages experience orbs that drop from special bricks and provide XP to upgrade the core when collected by the paddle or core directly.
+
+## Key Features
+
+### Drop Mechanics
+- **Falling Physics**: Orbs fall downward with slight random horizontal drift
+- **Lifetime**: Auto-destroy after 8 seconds if not collected
+- **Drop Source**: Special bricks have 10% chance to drop experience orbs
+- **Visual Design**: Should be distinct from power-ups (suggested: blue/purple glow)
+
+### Magnetism System
+- **Detection Range**: Orbs are attracted when within 150 units of paddle or core
+- **Target Priority**: Automatically targets the closest valid collector (paddle or core)
+- **Attraction Force**: Strong magnetic pull (500 force) once in range
+- **Smart Collection**: Works with both paddle interception and core collection
+
+### Experience Value
+- **Base Value**: 10 XP per orb (configurable)
+- **Scaling Potential**: Different orb types could provide varying XP amounts
+- **Core Integration**: Automatically adds XP to CoreController when collected
+- **Collection Feedback**: Visual and console feedback on collection
+
+### Physics Behavior
+- **RigidBody2D**: Dynamic physics for realistic falling motion
+- **Collision Detection**: Triggers on contact with paddle or core
+- **Velocity Control**: Initial downward velocity with random horizontal component
+- **Magnetic Override**: Attraction system overrides gravity when activated
+
+## How to Use in Cocos Creator
+
+### 1. Create Experience Orb Prefab
+```
+1. Create new Node in Scene
+2. Add Sprite component with distinctive visual (blue/purple orb recommended)
+3. Add RigidBody2D component (Type: DYNAMIC)
+4. Add CircleCollider2D component (IsTrigger: true for collection)
+5. Attach ExperienceOrb.ts script to the node
+6. Save as ExperienceOrb.prefab in assets/prefabs/
+```
+
+### 2. Configure Orb Properties
+```
+Inspector Settings:
+- Fall Speed: 200.0 (downward movement speed)
+- Experience Value: 10 (XP granted on collection)
+- Life Time: 8.0 (seconds before auto-destruction)
+- Magnet Range: 150.0 (attraction activation distance)
+```
+
+### 3. Physics Setup
+```
+Collision Groups:
+- Experience Orb should be in "EXPERIENCE_ORB" group
+- Enable collision detection with:
+  * "PADDLE" group (for paddle collection)
+  * "CORE" group (for direct core collection)
+- Disable collision with "BRICK", "BALL", and "WALL" groups
+```
+
+### 4. Visual Design Guidelines
+```
+Sprite Requirements:
+- Distinct color scheme (blue/purple to contrast with yellow power-ups)
+- Glowing or pulsing effect to indicate value
+- Size smaller than power-ups but larger than typical particles
+- Optional: Animated sprite showing energy swirling or rotation
+```
+
+### 5. Integration with Brick System
+```
+Brick.ts Integration:
+- Add dropsExperience boolean property to Brick.ts
+- 10% of bricks set to drop experience in GameManager.createBricksFromLayout()
+- Call GameManager.onBrickDestroyed() with dropsExperience parameter
+- GameManager handles orb instantiation at brick position
+```
+
+### 6. Collection Mechanics
+```
+Collection Targets:
+- Paddle: Players can actively collect orbs by moving paddle
+- Core: Missed orbs can still be collected by core (safety net)
+- Magnetism: Both targets attract orbs within range for easier collection
+```
+
+## Game Balance Considerations
+
+### Experience Economy
+- **Collection Rate**: ~1 orb per 10 bricks destroyed (10% drop rate)
+- **XP per Level**: 100 XP needed for core level up = ~100 bricks = ~10 levels
+- **Risk/Reward**: Players must position to collect, creating strategic movement
+- **Safety Net**: Core collection prevents total XP loss from missed orbs
+
+### Magnetism Balance
+- **Range (150)**: Large enough for forgiving collection, small enough to require positioning
+- **Attraction Force (500)**: Strong enough to reliably collect, not so strong as to break physics
+- **Target Priority**: Closest target prevents confusion in multi-target scenarios
+
+### Lifetime Balance
+- **Duration (8 seconds)**: Enough time for strategic collection, short enough to create urgency
+- **Fall Speed (200)**: Crosses screen in ~3-4 seconds, leaving time for magnetic collection
+- **Auto-Destruction**: Prevents screen clutter and performance issues
+
+## Strategic Gameplay Elements
+
+### Collection Strategy
+- **Active Collection**: Players move paddle to intercept falling orbs
+- **Passive Collection**: Core acts as backup collector for missed orbs
+- **Risk Management**: Aggressive collection may expose paddle to danger
+- **Timing Windows**: Magnetism provides forgiveness for imperfect timing
+
+### Progression Impact
+- **Core Upgrades**: XP directly improves survivability through core levels
+- **Health Scaling**: Each core level increases maximum health and regeneration
+- **Long-term Benefit**: Experience collection provides permanent character progression
+- **Skill Reward**: Better players collect more XP through superior positioning
+
+### Visual Feedback
+- **Collection Effect**: Bright flash or particle burst on collection
+- **Value Indication**: Different colored orbs could indicate different XP values
+- **Magnetism Visual**: Trail or glow when being attracted to targets
+- **Lifetime Warning**: Flashing or color change when about to expire
+
+## Future Enhancement Ideas
+- **Orb Types**: Different values, colors, and special effects
+- **XP Multipliers**: Power-ups that increase XP gain temporarily
+- **Magnetic Upgrades**: Relics that increase magnetism range or force
+- **Collection Bonuses**: Streak bonuses for consecutive collections
+- **Elite Orbs**: Rare, high-value orbs from elite bricks or bosses

@@ -1,0 +1,26 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "smoke (28)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@aca38",
+      "smoke (29)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@bc45b",
+      "smoke (30)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@ca1d7",
+      "smoke (31)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@7e735",
+      "smoke (32)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@860d3",
+      "smoke (33)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@b5e11",
+      "smoke (34)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@3e268",
+      "smoke (35)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@b0cae",
+      "smoke (36)",
+      "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c@5a0c7"
+    ]
+  }
+}

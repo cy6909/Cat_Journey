@@ -13,6 +13,9 @@ export class Brick extends Component {
 
     @property
     public scoreValue: number = 10;
+    
+    @property
+    public dropsExperience: boolean = false;
 
     private _sprite: Sprite | null = null;
     private _originalColor: Color = new Color();
@@ -63,7 +66,7 @@ export class Brick extends Component {
     private destroyBrick(): void {
         const gameManager = GameManager.getInstance();
         if (gameManager) {
-            gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone());
+            gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone(), this.dropsExperience);
         }
 
         const relicManager = RelicManager.getInstance();
@@ -101,5 +104,9 @@ export class Brick extends Component {
         this.health = health;
         this.maxHealth = health;
         this.updateVisual();
+    }
+    
+    public setDropsExperience(drops: boolean): void {
+        this.dropsExperience = drops;
     }
 }

@@ -1,0 +1,18 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "texture",
+    "spriteFrames": [
+      "ComfyUI_00004_",
+      "104daebd-5903-4488-8a7c-86cc0740738e@63f01",
+      "ComfyUI_00005_",
+      "104daebd-5903-4488-8a7c-86cc0740738e@af77c",
+      "ComfyUI_00006_",
+      "104daebd-5903-4488-8a7c-86cc0740738e@8a874",
+      "ComfyUI_00007_",
+      "104daebd-5903-4488-8a7c-86cc0740738e@91ec0",
+      "ComfyUI_00008_",
+      "104daebd-5903-4488-8a7c-86cc0740738e@693fc"
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "path": {
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.png"
+    ],
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.plist": [
+      "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.png"
+    ]
+  }
+}

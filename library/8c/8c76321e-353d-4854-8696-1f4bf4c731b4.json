@@ -1,0 +1,36 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "woodenskeleton (100)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@32c2e",
+      "woodenskeleton (101)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@76197",
+      "woodenskeleton (102)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@b7dc3",
+      "woodenskeleton (103)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@3a61a",
+      "woodenskeleton (104)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@e8c19",
+      "woodenskeleton (91)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@a948d",
+      "woodenskeleton (92)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@80638",
+      "woodenskeleton (93)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@b2fb0",
+      "woodenskeleton (94)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@b6e7a",
+      "woodenskeleton (95)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@1ee3b",
+      "woodenskeleton (96)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@effc3",
+      "woodenskeleton (97)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@1c8cc",
+      "woodenskeleton (98)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@3b381",
+      "woodenskeleton (99)",
+      "8c76321e-353d-4854-8696-1f4bf4c731b4@664fe"
+    ]
+  }
+}

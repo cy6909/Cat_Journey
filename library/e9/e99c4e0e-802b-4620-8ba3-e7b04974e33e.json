@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "woodenskeleton (1)",
+      "e99c4e0e-802b-4620-8ba3-e7b04974e33e@2f0ab",
+      "woodenskeleton (2)",
+      "e99c4e0e-802b-4620-8ba3-e7b04974e33e@d54dd",
+      "woodenskeleton (3)",
+      "e99c4e0e-802b-4620-8ba3-e7b04974e33e@e7a14",
+      "woodenskeleton (4)",
+      "e99c4e0e-802b-4620-8ba3-e7b04974e33e@e1acc"
+    ]
+  }
+}

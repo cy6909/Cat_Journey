@@ -6,7 +6,15 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(npx tsc:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(while :)",
+      "Bash(do cat prompt.md)",
+      "Bash(claude:*)",
+      "Bash(done)",
+      "Bash(grep:*)",
+      "Bash(while read script)",
+      "Bash(do if [ ! -f \"$script.des\" ])",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

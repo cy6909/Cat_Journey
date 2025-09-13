@@ -1,0 +1,30 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "death (79)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@d91cc",
+      "death (80)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@42634",
+      "death (81)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@45ba7",
+      "death (82)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@1b3c5",
+      "death (83)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@3b4b8",
+      "death (84)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@25754",
+      "death (85)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@b091c",
+      "death (86)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@9191e",
+      "death (87)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@83a19",
+      "death (88)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@a20b9",
+      "death (89)",
+      "6efd3e74-91db-4088-af06-c9dad16a1247@384d2"
+    ]
+  }
+}

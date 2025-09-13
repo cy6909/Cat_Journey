@@ -1,0 +1,10 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "door (2)",
+      "96817283-01f9-43f6-9dc5-d31b8ed67581@b079a"
+    ]
+  }
+}

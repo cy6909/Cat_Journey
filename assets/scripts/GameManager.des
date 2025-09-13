@@ -1,0 +1,56 @@
+## GameManager.ts 脚本逻辑描述
+
+### 核心功能
+GameManager是游戏的核心管理器，采用单例模式，负责管理整个游戏的状态、关卡、分数、生命值等核心逻辑。
+
+### 主要组件
+1. **游戏状态管理**: 管理PRE_START、PLAYING、LEVEL_COMPLETE、GAME_OVER等状态
+2. **关卡生成**: 基于预定义布局生成砖块网格(6x8)
+3. **分数系统**: 跟踪玩家分数和砖块销毁
+4. **生命值管理**: 管理玩家生命值和游戏结束条件
+5. **Power-up系统**: 管理道具掉落和激活
+6. **物理初始化**: 配置碰撞矩阵和物理设置
+
+### 关键属性
+```typescript
+public brickPrefab: Prefab         // 砖块预制体
+public paddlePrefab: Prefab        // 挡板预制体  
+public ballPrefab: Prefab          // 球预制体
+public powerUpDropChance: number   // 道具掉落概率
+public score: number               // 当前分数
+public lives: number               // 剩余生命值
+```
+
+### 关键方法
+- `getInstance()`: 获取单例实例
+- `initializeLevel()`: 初始化关卡砖块布局
+- `onBrickDestroyed()`: 处理砖块销毁事件
+- `onBallLost()`: 处理球丢失事件
+- `dropPowerUp()`: 在指定位置掉落道具
+
+### Cocos Creator绑定说明
+
+#### 1. 场景设置
+- 在GameScene中创建空节点，命名为"GameManager"
+- 将GameManager.ts脚本添加到该节点
+
+#### 2. 预制体引用设置
+在GameManager组件的Inspector面板中设置：
+- **Brick Prefab**: 拖拽assets/prefabs/Brick.prefab
+- **Paddle Prefab**: 拖拽assets/prefabs/Paddle.prefab  
+- **Ball Prefab**: 拖拽assets/prefabs/Ball.prefab
+- **Multi Ball Power Up Prefab**: 拖拽assets/prefabs/MultiBallPowerUp.prefab
+- **Laser Paddle Power Up Prefab**: 拖拽assets/prefabs/LaserPaddlePowerUp.prefab
+
+#### 3. 参数调整
+- **Power Up Drop Chance**: 设置为0.3 (30%道具掉落率)
+- **Lives**: 设置为3 (初始生命值)
+
+#### 4. 物理配置
+确保项目物理设置中已配置：
+- 重力: (0, -320)
+- 碰撞组: Ball, Paddle, Brick, Wall, PowerUp
+- 碰撞矩阵: Ball可与其他所有组碰撞
+
+#### 5. UI绑定
+如需UI显示分数和生命值，可在GameManager中添加Label引用并在相应方法中更新文本。

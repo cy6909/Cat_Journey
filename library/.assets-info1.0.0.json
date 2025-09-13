@@ -129,10 +129,6 @@
       "time": 1757648007538.895,
       "uuid": "7ec887bc-b20e-429d-8e28-08067520a25c"
     },
-    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene": {
-      "time": 1757648007539.8943,
-      "uuid": "0d4c6901-8005-4382-83d1-6fc331ab3973"
-    },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Ball.prefab.meta": {
       "time": 1757648007535.8904
     },
@@ -155,11 +151,11 @@
       "time": 1757648007540.8953
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs": {
-      "time": 1757681247108.4565,
+      "time": 1757741665390.334,
       "uuid": "69d34246-67e3-47c1-a855-d26975876954"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes": {
-      "time": 1757681247109.4568,
+      "time": 1757739183384.172,
       "uuid": "0590ba0b-482f-48da-b425-fb739f16585d"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts": {
@@ -276,10 +272,6 @@
       "time": 1757686171315.7332,
       "uuid": "7ec887bc-b20e-429d-8e28-08067520a25c"
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene": {
-      "time": 1757681247109.4568,
-      "uuid": "0d4c6901-8005-4382-83d1-6fc331ab3973"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\Brick.prefab.meta": {
       "time": 1757681247080.285
     },
@@ -295,11 +287,2325 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab.meta": {
       "time": 1757681247086.284
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene.meta": {
-      "time": 1757681247109.4568
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\Paddle.prefab.meta": {
       "time": 1757681247108.4565
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene.meta": {
+      "time": 1757737983814.0515
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene": {
+      "time": 1757755551488.555,
+      "uuid": "71e1758f-1876-43b5-935d-bc2e35d0d6e1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources.meta": {
+      "time": 1757681247108.4565
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture.meta": {
+      "time": 1757753109579.9797
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst.meta": {
+      "time": 1757753109580.4985
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl.meta": {
+      "time": 1757753109580.4985
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door.meta": {
+      "time": 1757753109581.0132
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton.meta": {
+      "time": 1757753109582.564
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player.meta": {
+      "time": 1757753109583.6038
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke.meta": {
+      "time": 1757753109584.762
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes.meta": {
+      "time": 1757753109585.6357
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile.meta": {
+      "time": 1757753109586.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton.meta": {
+      "time": 1757753109588.6355
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack.meta": {
+      "time": 1757753109589.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death.meta": {
+      "time": 1757753109590.6353
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle.meta": {
+      "time": 1757753109591.6338
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death.meta": {
+      "time": 1757753109592.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle.meta": {
+      "time": 1757753109593.6365
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death.meta": {
+      "time": 1757753109594.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle.meta": {
+      "time": 1757753109595.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath.meta": {
+      "time": 1757753109596.6353
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack.meta": {
+      "time": 1757753109597.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback.meta": {
+      "time": 1757753109598.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront.meta": {
+      "time": 1757753109598.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft.meta": {
+      "time": 1757753109599.6365
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright.meta": {
+      "time": 1757753109600.637
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft.meta": {
+      "time": 1757753109601.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright.meta": {
+      "time": 1757753109603.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death.meta": {
+      "time": 1757753109604.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle.meta": {
+      "time": 1757753109605.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft.meta": {
+      "time": 1757753109606.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright.meta": {
+      "time": 1757753109607.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\death.meta": {
+      "time": 1757753109609.6348
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle.meta": {
+      "time": 1757753109610.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour.meta": {
+      "time": 1757753109611.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone.meta": {
+      "time": 1757753109612.6353
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree.meta": {
+      "time": 1757753109612.6353
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo.meta": {
+      "time": 1757753109614.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack.meta": {
+      "time": 1757753109614.635
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death.meta": {
+      "time": 1757753109616.2085
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle.meta": {
+      "time": 1757753109617.2073
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left.meta": {
+      "time": 1757753109618.2068
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top.meta": {
+      "time": 1757753109619.2063
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom.meta": {
+      "time": 1757753109620.207
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left.meta": {
+      "time": 1757753109620.207
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right.meta": {
+      "time": 1757753109622.2563
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top.meta": {
+      "time": 1757753109623.3054
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom.meta": {
+      "time": 1757753109624.8755
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left.meta": {
+      "time": 1757753109625.3945
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right.meta": {
+      "time": 1757753109625.9136
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top.meta": {
+      "time": 1757753109626.9644
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom.meta": {
+      "time": 1757753109628.0112
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left.meta": {
+      "time": 1757753109630.7004
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right.meta": {
+      "time": 1757753109631.7397
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top.meta": {
+      "time": 1757753109632.2605
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom.meta": {
+      "time": 1757753109633.3062
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left.meta": {
+      "time": 1757753109633.8264
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right.meta": {
+      "time": 1757753109634.8694
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top.meta": {
+      "time": 1757753109635.9285
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom.meta": {
+      "time": 1757753109636.9727
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left.meta": {
+      "time": 1757753109637.4895
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right.meta": {
+      "time": 1757753109638.008
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top.meta": {
+      "time": 1757753109639.0828
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom.meta": {
+      "time": 1757753109640.133
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left.meta": {
+      "time": 1757753109640.657
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right.meta": {
+      "time": 1757753109641.6956
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top.meta": {
+      "time": 1757753109642.2131
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom.meta": {
+      "time": 1757753109643.292
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left.meta": {
+      "time": 1757753109644.3364
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right.meta": {
+      "time": 1757753109644.8584
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top.meta": {
+      "time": 1757753109646.0596
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom.meta": {
+      "time": 1757753109646.5881
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left.meta": {
+      "time": 1757753109648.6929
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right.meta": {
+      "time": 1757753109649.7393
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top.meta": {
+      "time": 1757753109650.2688
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom.meta": {
+      "time": 1757753109651.2534
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left.meta": {
+      "time": 1757753109652.2527
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right.meta": {
+      "time": 1757753109653.2769
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top.meta": {
+      "time": 1757753109654.2527
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom.meta": {
+      "time": 1757753109655.2537
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left.meta": {
+      "time": 1757753109656.2522
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right.meta": {
+      "time": 1757753109657.252
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top.meta": {
+      "time": 1757753109658.2522
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom.meta": {
+      "time": 1757753109659.253
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left.meta": {
+      "time": 1757753109660.2524
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right.meta": {
+      "time": 1757753109660.2524
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top.meta": {
+      "time": 1757753109662.2527
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom.meta": {
+      "time": 1757753109663.8032
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left.meta": {
+      "time": 1757753109664.8027
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right.meta": {
+      "time": 1757753109665.8025
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top.meta": {
+      "time": 1757753109665.8025
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom.meta": {
+      "time": 1757753109666.8027
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left.meta": {
+      "time": 1757753109668.8022
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right.meta": {
+      "time": 1757753109669.8022
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top.meta": {
+      "time": 1757753109669.8022
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom.meta": {
+      "time": 1757753109670.803
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left.meta": {
+      "time": 1757753109671.8025
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right.meta": {
+      "time": 1757753109672.8015
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top.meta": {
+      "time": 1757753109673.8027
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom.meta": {
+      "time": 1757753109674.8027
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left.meta": {
+      "time": 1757753109675.8022
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right.meta": {
+      "time": 1757753109675.8022
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top.meta": {
+      "time": 1757753109677.803
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five.meta": {
+      "time": 1757753109678.8037
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four.meta": {
+      "time": 1757753109678.8037
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one.meta": {
+      "time": 1757753109680.8025
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three.meta": {
+      "time": 1757753109680.8025
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two.meta": {
+      "time": 1757753109682.8032
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero.meta": {
+      "time": 1757753109683.8994
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one.meta": {
+      "time": 1757753109684.422
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two.meta": {
+      "time": 1757753109685.4727
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero.meta": {
+      "time": 1757753109686.5225
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four.meta": {
+      "time": 1757753109690.166
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one.meta": {
+      "time": 1757753109691.2185
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three.meta": {
+      "time": 1757753109691.8396
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two.meta": {
+      "time": 1757753109692.751
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero.meta": {
+      "time": 1757753109693.7336
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one.meta": {
+      "time": 1757753109694.7336
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three.meta": {
+      "time": 1757753109694.7336
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two.meta": {
+      "time": 1757753109695.7349
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero.meta": {
+      "time": 1757753109696.7336
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom.meta": {
+      "time": 1757753109697.7334
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left.meta": {
+      "time": 1757753109699.735
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right.meta": {
+      "time": 1757753109700.7346
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top.meta": {
+      "time": 1757753109700.7346
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom.meta": {
+      "time": 1757753109701.735
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left.meta": {
+      "time": 1757753109702.7356
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right.meta": {
+      "time": 1757753109703.7344
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top.meta": {
+      "time": 1757753109704.7341
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom.meta": {
+      "time": 1757753109705.7344
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left.meta": {
+      "time": 1757753109706.7334
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right.meta": {
+      "time": 1757753109708.734
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top.meta": {
+      "time": 1757753109709.734
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources": {
+      "time": 1757753095585.7324,
+      "uuid": "c052bc1d-fdc9-427a-a248-c40082669411"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture": {
+      "time": 1757755440420.8657,
+      "uuid": "ff79dbae-2137-46b1-9b34-96575b8c7a1a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst": {
+      "time": 1757753095637.4373,
+      "uuid": "df257117-8531-41c3-8c8a-a44312158c84"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl": {
+      "time": 1757753345242.283,
+      "uuid": "5050dd89-3ec6-4bda-9c10-1b1a9f83475f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door": {
+      "time": 1757753095663.1873,
+      "uuid": "729ae195-06d0-47b4-86ae-01cf0c384566"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton": {
+      "time": 1757753095761.1208,
+      "uuid": "d1e1b3ca-b9c8-406e-91aa-fe14e8369598"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player": {
+      "time": 1757753096644.4568,
+      "uuid": "5fcf402f-b037-42d9-a060-bfb749efe53f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke": {
+      "time": 1757753096736.2483,
+      "uuid": "d1ff8d9a-4a24-41c0-9608-5a1fa1deae4a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes": {
+      "time": 1757753096993.8958,
+      "uuid": "238dc72e-2bc4-4c2c-9f23-796e96301990"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile": {
+      "time": 1757753097033.8953,
+      "uuid": "0d59cd85-088c-4ac0-bdec-bb43ceeb1d2f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton": {
+      "time": 1757753097132.6997,
+      "uuid": "82ef35d9-2da1-45e6-a4ed-13cc24b2bec8"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack": {
+      "time": 1757753095628.4373,
+      "uuid": "c98f94a2-8352-4226-a441-88b2d86a433e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death": {
+      "time": 1757753095635.4368,
+      "uuid": "b2b8b42e-f3c4-4db3-ae83-a002c045ac20"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle": {
+      "time": 1757753095642.4373,
+      "uuid": "076b54a0-4480-4a0c-8b3f-58f3a7b82cad"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death": {
+      "time": 1757753095661.6436,
+      "uuid": "0ca565a1-71d6-4530-9feb-6989fe2dac7a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle": {
+      "time": 1757753095674.727,
+      "uuid": "f4ef8dae-553c-4955-aafa-825ed14a9aca"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death": {
+      "time": 1757753095733.2559,
+      "uuid": "b1d79fab-b0da-4829-b77b-8f4d02992772"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle": {
+      "time": 1757753095799.266,
+      "uuid": "25974c6c-b3a5-4d3e-a9c6-5a56793bd2d0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath": {
+      "time": 1757753095877.7954,
+      "uuid": "3115cf21-0714-46c3-90d8-77f6e61be247"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack": {
+      "time": 1757753095940.9673,
+      "uuid": "fa80a6f2-ddbe-4586-8931-1ab48c8ddb7f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback": {
+      "time": 1757753096025.3394,
+      "uuid": "ba805e19-0d1e-420a-8bad-d5a38bd589fd"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront": {
+      "time": 1757753096109.4434,
+      "uuid": "94a244c5-821f-41a1-a902-7899f84d43a7"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft": {
+      "time": 1757753096185.1614,
+      "uuid": "46aebad8-9ced-4788-aab1-dff5aa1850c9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright": {
+      "time": 1757753096254.3774,
+      "uuid": "f2a2d28d-14e4-446a-be9b-46aa8d850238"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft": {
+      "time": 1757753096327.9744,
+      "uuid": "586f179b-feb9-4a85-8f0c-5e5ed38b0c3a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright": {
+      "time": 1757753096393.3137,
+      "uuid": "92066f26-c601-4ebe-8b2f-517bd91c5f21"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death": {
+      "time": 1757753096444.969,
+      "uuid": "1e4df7e0-14d6-4877-8e36-92651801376d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle": {
+      "time": 1757753096554.94,
+      "uuid": "a77d4a37-3543-4d63-a7d2-740c89adc7fc"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft": {
+      "time": 1757753096632.4563,
+      "uuid": "3ed08d29-54ba-48d7-bb47-1cdf66349d0a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright": {
+      "time": 1757753096677.4565,
+      "uuid": "0520cd6f-3427-4c2d-addc-2b7f67cb5696"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\death": {
+      "time": 1757753096735.2026,
+      "uuid": "05a0c693-3de0-47d0-bdca-50307156e5e9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle": {
+      "time": 1757753096799.2964,
+      "uuid": "4838f403-bf9d-4dd0-86bd-3380693f6a00"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour": {
+      "time": 1757753096897.093,
+      "uuid": "ca351f44-e0a1-4471-a6e1-1ed7e9255ea1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone": {
+      "time": 1757753096944.3193,
+      "uuid": "16dcfc89-7679-4a21-9d2d-0ad3e18d25a3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree": {
+      "time": 1757753096986.3855,
+      "uuid": "b7831d1f-3074-4538-8c95-ba25bb5100ee"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo": {
+      "time": 1757753097021.8953,
+      "uuid": "ba66875d-9aa4-4d68-b287-0f7241c3793c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack": {
+      "time": 1757753097075.8953,
+      "uuid": "e06fe29e-926a-41c4-9aff-69fd272b350e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death": {
+      "time": 1757753097124.9055,
+      "uuid": "07165659-07f8-4e9e-872a-050248ef7271"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle": {
+      "time": 1757753097160.9746,
+      "uuid": "79994793-2393-4f97-b151-3e748c240efa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left": {
+      "time": 1757753095672.9812,
+      "uuid": "14c6c0c8-72c9-490f-b8a0-2845e12e7c65"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top": {
+      "time": 1757753095680.3982,
+      "uuid": "71357945-8e8f-44dc-9b8b-1e27bc30b1fc"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom": {
+      "time": 1757753095701.1843,
+      "uuid": "1c48effc-52f3-4dea-b049-fac6bf2f4582"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left": {
+      "time": 1757753095708.9265,
+      "uuid": "98665758-f0ba-48c0-aa0b-5a898bb4a554"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right": {
+      "time": 1757753095731.6494,
+      "uuid": "fb14c060-ccd0-4749-826d-2e05ddcd0f9b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top": {
+      "time": 1757753095759.0552,
+      "uuid": "c0c123ba-bead-4b72-bd06-91c99b725f58"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom": {
+      "time": 1757753095783.1326,
+      "uuid": "78b91f3f-2b5e-4861-86fe-b9a040cbe151"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left": {
+      "time": 1757753095790.342,
+      "uuid": "fa47b15f-0dce-45ac-94c2-90b67c9e1209"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right": {
+      "time": 1757753095797.719,
+      "uuid": "dd1ab0cf-e2d8-4a18-8d7f-37d9d7bf2ee9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top": {
+      "time": 1757753095831.3699,
+      "uuid": "1f44276b-9dee-43ed-8bea-58e51efc03e3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom": {
+      "time": 1757753095861.9275,
+      "uuid": "7d4c46a3-e369-4c8f-93ee-3a003745dccb"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left": {
+      "time": 1757753095869.4558,
+      "uuid": "dd5a21c4-ec96-460b-a361-1dcf25432c76"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right": {
+      "time": 1757753095876.769,
+      "uuid": "f4bfdf4a-3ee3-4c31-a83a-eab7e3089a7e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top": {
+      "time": 1757753095883.478,
+      "uuid": "c426ef32-2ebc-4f85-90cc-3b7a4c916296"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom": {
+      "time": 1757753095906.8108,
+      "uuid": "0dbeef88-8855-4d01-a70e-91f286936cf8"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left": {
+      "time": 1757753095922.406,
+      "uuid": "22f5a935-663a-40ad-b0a8-f165ab222c12"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right": {
+      "time": 1757753095938.9683,
+      "uuid": "c842e3a8-45ae-4ed1-b9f5-caadbc2c5db3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top": {
+      "time": 1757753095961.9055,
+      "uuid": "d5ef1d71-1394-4659-a10c-098af1c3d54f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom": {
+      "time": 1757753095981.3413,
+      "uuid": "24b82bd7-1a3b-4d5f-8396-4258a0e7e639"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left": {
+      "time": 1757753096001.3406,
+      "uuid": "00393a04-8db8-4cb6-a6a6-d9d6e4a3f0e1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right": {
+      "time": 1757753096009.341,
+      "uuid": "ace69bd2-6c2d-46ba-837f-de7f22d78db7"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top": {
+      "time": 1757753096044.01,
+      "uuid": "4505fd0e-320b-43d2-b558-d64df60e9b0d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom": {
+      "time": 1757753096067.0195,
+      "uuid": "1ed4bd47-4952-441a-a9de-f8abd83fb26a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left": {
+      "time": 1757753096074.0254,
+      "uuid": "87c8ffa7-b5c9-4af9-a3ce-b39574d01efa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right": {
+      "time": 1757753096107.3826,
+      "uuid": "63f8d7b5-5d12-4930-91fd-8f0b28804e1a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top": {
+      "time": 1757753096117.738,
+      "uuid": "11bb1570-d389-4fd9-aa92-941666d4bc9d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom": {
+      "time": 1757753096148.424,
+      "uuid": "9f6e87c8-2699-4aa0-9452-f96de051e3ed"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left": {
+      "time": 1757753096158.7117,
+      "uuid": "893a8f6e-d0ea-4591-a170-503d7b262c47"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right": {
+      "time": 1757753096183.6182,
+      "uuid": "ab390129-5ea0-4be7-825a-4945a1030562"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top": {
+      "time": 1757753096190.8545,
+      "uuid": "0c2c780a-d01f-461c-9f35-4e5347b6c3f0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom": {
+      "time": 1757753096221.392,
+      "uuid": "21a258cc-dad1-4f15-aeaf-e05d9ac6cd43"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left": {
+      "time": 1757753096235.254,
+      "uuid": "a3816462-fb93-48d6-a553-dea2e46aeead"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right": {
+      "time": 1757753096253.3037,
+      "uuid": "bc8b45e8-2c04-47b5-b248-b632ccf679da"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top": {
+      "time": 1757753096263.2227,
+      "uuid": "851ef456-9965-4c4b-9d57-48e2abc6ce04"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom": {
+      "time": 1757753096282.876,
+      "uuid": "a849e685-7261-410a-9c27-8aa9aafa6915"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left": {
+      "time": 1757753096289.4082,
+      "uuid": "e7f4db32-50e2-47c7-8701-ef946baf6673"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right": {
+      "time": 1757753096316.9753,
+      "uuid": "3cf74f09-753f-40d5-81ae-20e68f27cba6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top": {
+      "time": 1757753096341.9763,
+      "uuid": "12b2aca4-0fa0-4fbd-8198-caf11d4bff15"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom": {
+      "time": 1757753096361.6003,
+      "uuid": "1f03ed0a-ff35-44b3-a61d-8aa12291d788"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left": {
+      "time": 1757753096375.5366,
+      "uuid": "5dfa765b-dfad-4536-befb-77a8fbec126b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right": {
+      "time": 1757753096392.0854,
+      "uuid": "486042f6-228f-4d7a-985c-167c72ad4dcf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top": {
+      "time": 1757753096397.8193,
+      "uuid": "0f3bd01c-1601-402e-9100-3d85d2547baf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom": {
+      "time": 1757753096422.5205,
+      "uuid": "ecb690cd-9a94-41aa-ae0f-26339e9ac6d0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left": {
+      "time": 1757753096435.6714,
+      "uuid": "e2d76522-3721-40a7-9ee5-f58e87fb9b8c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right": {
+      "time": 1757753096443.4048,
+      "uuid": "cbe44f8f-5868-4d30-8171-cd359d348ef3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top": {
+      "time": 1757753096456.555,
+      "uuid": "45083301-0bdc-4dea-8275-c4103df17c41"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom": {
+      "time": 1757753096501.8677,
+      "uuid": "0c251cb4-7c8f-4f38-a996-6f0239a6eeca"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left": {
+      "time": 1757753096526.3967,
+      "uuid": "30ea9f17-6510-493c-91f7-88a1ecc3849a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right": {
+      "time": 1757753096551.9397,
+      "uuid": "da7f2a09-2442-423a-bd8c-e18748d962c3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top": {
+      "time": 1757753096563.9402,
+      "uuid": "c791d3c1-972b-4cca-ad59-22fcb1a3c1ed"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom": {
+      "time": 1757753096595.9414,
+      "uuid": "b1f76e37-124c-41e4-85f5-8b7d2bac89c5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left": {
+      "time": 1757753096604.9397,
+      "uuid": "e9ce2b17-4882-40e4-a8e1-27b0ccaa360d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right": {
+      "time": 1757753096628.4563,
+      "uuid": "8c51013e-f8a2-4583-97ee-0bc506edcb48"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top": {
+      "time": 1757753096641.4587,
+      "uuid": "8e81c95e-7bb3-45ae-a97f-f1e992c37ae2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom": {
+      "time": 1757753096657.4563,
+      "uuid": "f7a60e34-cb3c-4e3f-99ee-e6a80ac48f6a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left": {
+      "time": 1757753096667.4575,
+      "uuid": "29cfca8c-a101-4e4b-ac19-89bfce8bff3a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right": {
+      "time": 1757753096676.4563,
+      "uuid": "9619e63f-9322-410e-93ef-8887bb7a6cee"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top": {
+      "time": 1757753096704.1946,
+      "uuid": "88dbfc96-6922-4d16-aa15-1a59ceced645"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom": {
+      "time": 1757753096758.6375,
+      "uuid": "f07384e1-a3c4-44f5-9847-496e41c9df09"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left": {
+      "time": 1757753096766.9768,
+      "uuid": "86449a77-3e87-4ce2-a558-e5b62ef5522e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right": {
+      "time": 1757753096797.168,
+      "uuid": "46313550-11f9-42d9-b049-4004e4f842ed"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top": {
+      "time": 1757753096816.1265,
+      "uuid": "7ab1901e-ce23-4ba7-92a7-d71bab4f00d7"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five": {
+      "time": 1757753096850.6997,
+      "uuid": "03942af1-b13e-424b-adcc-6d8e7c6682d5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four": {
+      "time": 1757753096857.7004,
+      "uuid": "dc5ea1ba-a331-4879-be78-6c4a8cc62ad3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one": {
+      "time": 1757753096881.4707,
+      "uuid": "572cad2b-eff9-4603-a374-db555cbb7539"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three": {
+      "time": 1757753096888.711,
+      "uuid": "af702ab0-bd92-4aa6-b2ea-51292a6c2b39"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two": {
+      "time": 1757753096895.5862,
+      "uuid": "77df9a62-9c87-477b-a720-40ec91db79d2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero": {
+      "time": 1757753096902.6504,
+      "uuid": "b04905ef-7cae-4b35-8155-489c984574ab"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one": {
+      "time": 1757753096934.3198,
+      "uuid": "28257742-c782-4d25-88f7-86de273a6c1c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two": {
+      "time": 1757753096942.321,
+      "uuid": "4154b157-8e6e-4275-abb6-ba88bc8d5ffc"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero": {
+      "time": 1757753096950.3203,
+      "uuid": "7dd91bbd-0225-4cbe-8836-dbfe289b0832"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four": {
+      "time": 1757753096965.3196,
+      "uuid": "7c428e26-e129-4ce7-be23-91df7a9d29db"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one": {
+      "time": 1757753096971.3196,
+      "uuid": "d194d677-dcac-4a97-b487-8001de2f62d3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three": {
+      "time": 1757753096978.319,
+      "uuid": "19951031-c86a-4488-aa21-8e84e56a0e0f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two": {
+      "time": 1757753096984.3198,
+      "uuid": "c76da16f-5913-4fc7-b821-941ee2e5ac4c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero": {
+      "time": 1757753096991.8955,
+      "uuid": "38647b70-dda9-4572-a896-208338964b79"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one": {
+      "time": 1757753097005.896,
+      "uuid": "07b4bd8b-eda5-422b-9890-171d73d40671"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three": {
+      "time": 1757753097013.8982,
+      "uuid": "0473c0fd-dbe5-4c0a-946c-f16b9b328c38"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two": {
+      "time": 1757753097020.8948,
+      "uuid": "8b64fdeb-761d-46ac-89e5-23f483bfe579"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero": {
+      "time": 1757753097026.895,
+      "uuid": "21204d10-466d-4e8d-8929-d623798fb614"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom": {
+      "time": 1757753097059.8958,
+      "uuid": "02bb207e-e5b1-4e68-9e23-c064c6223420"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left": {
+      "time": 1757753097066.8958,
+      "uuid": "ab4a8135-4556-46e9-9a51-2add21f81235"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right": {
+      "time": 1757753097074.8955,
+      "uuid": "4df2765e-ed87-4ce1-a68d-ed357e62cd27"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top": {
+      "time": 1757753097082.32,
+      "uuid": "15745871-a84a-46ca-910a-faad4a84b725"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom": {
+      "time": 1757753097099.1675,
+      "uuid": "420da276-a164-40c4-9bd2-ac4566ffbfd5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left": {
+      "time": 1757753097114.3394,
+      "uuid": "b54c1029-b698-4f57-906b-3988195d6431"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right": {
+      "time": 1757753097122.8252,
+      "uuid": "75d55cc6-35e4-468e-b27b-89c3a6c3ac1d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top": {
+      "time": 1757753097131.1565,
+      "uuid": "629abe2e-0114-4b55-b279-e677466ebdd6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom": {
+      "time": 1757753097145.8384,
+      "uuid": "8a6e655c-c3b4-4830-a9ba-5f5e66612bda"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left": {
+      "time": 1757753097152.9866,
+      "uuid": "46f29900-d229-40b2-92b4-18404f4a2cf9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right": {
+      "time": 1757753097159.975,
+      "uuid": "3d91cc32-0987-48c1-9792-d052334017cd"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top": {
+      "time": 1757753097166.9766,
+      "uuid": "101e8188-473b-40b5-906a-b3acb08833c9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist.meta": {
+      "time": 1757753109872.658
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.png.meta": {
+      "time": 1757753109853.6907
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.plist.meta": {
+      "time": 1757753109942.1387
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.png.meta": {
+      "time": 1757753109851.591
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.plist.meta": {
+      "time": 1757753109848.9695
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.png.meta": {
+      "time": 1757753109862.4836
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.plist.meta": {
+      "time": 1757753109870.6577
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.png.meta": {
+      "time": 1757753109864.5889
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.plist.meta": {
+      "time": 1757753109874.8198
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.png.meta": {
+      "time": 1757753109880.829
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.plist.meta": {
+      "time": 1757753109885.8298
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.png.meta": {
+      "time": 1757753109894.2488
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.plist.meta": {
+      "time": 1757753109888.8293
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.png.meta": {
+      "time": 1757753109897.4106
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.plist.meta": {
+      "time": 1757753109900.08
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.png.meta": {
+      "time": 1757753109907.014
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.plist.meta": {
+      "time": 1757753109951.2073
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.png.meta": {
+      "time": 1757753109912.2458
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.plist.meta": {
+      "time": 1757753109953.843
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.png.meta": {
+      "time": 1757753109920.5996
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.plist.meta": {
+      "time": 1757753109972.4495
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.png.meta": {
+      "time": 1757753109932.598
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.plist.meta": {
+      "time": 1757753109993.668
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.png.meta": {
+      "time": 1757753109958.5862
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.plist.meta": {
+      "time": 1757753109975.6855
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.png.meta": {
+      "time": 1757753109969.2832
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.plist.meta": {
+      "time": 1757753109981.6697
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.png.meta": {
+      "time": 1757753109988.6682
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.plist.meta": {
+      "time": 1757753109997.6685
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.png.meta": {
+      "time": 1757753109991.6685
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.plist.meta": {
+      "time": 1757753110006.5151
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.png.meta": {
+      "time": 1757753110003.8833
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.plist.meta": {
+      "time": 1757753110061.6624
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.png.meta": {
+      "time": 1757753110020.2317
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.plist.meta": {
+      "time": 1757753110067.967
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.png.meta": {
+      "time": 1757753110028.5496
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.plist.meta": {
+      "time": 1757753110072.2231
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.png.meta": {
+      "time": 1757753110051.4243
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.plist.meta": {
+      "time": 1757753110088.8113
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.png.meta": {
+      "time": 1757753110065.8623
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.plist.meta": {
+      "time": 1757753110096.0532
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.png.meta": {
+      "time": 1757753110080.1228
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.plist.meta": {
+      "time": 1757753110101.8452
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.png.meta": {
+      "time": 1757753110083.8208
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.plist.meta": {
+      "time": 1757753110115.8472
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.png.meta": {
+      "time": 1757753110098.1753
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.plist.meta": {
+      "time": 1757753110126.869
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.png.meta": {
+      "time": 1757753110110.0735
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.plist.meta": {
+      "time": 1757753110124.2234
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.png.meta": {
+      "time": 1757753110120.5366
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.plist.meta": {
+      "time": 1757753110137.098
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.png.meta": {
+      "time": 1757753110134.098
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.plist.meta": {
+      "time": 1757753110141.0974
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.png.meta": {
+      "time": 1757753110138.0974
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.plist.meta": {
+      "time": 1757753110144.097
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.png.meta": {
+      "time": 1757753110145.0964
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.plist.meta": {
+      "time": 1757753110153.3958
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.png.meta": {
+      "time": 1757753110149.048
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.plist.meta": {
+      "time": 1757753110159.7144
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.png.meta": {
+      "time": 1757753110155.513
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.plist.meta": {
+      "time": 1757753110162.884
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.png.meta": {
+      "time": 1757753110165.6943
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.plist.meta": {
+      "time": 1757753110174.1355
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.png.meta": {
+      "time": 1757753110172.0342
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.plist.meta": {
+      "time": 1757753110180.656
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.png.meta": {
+      "time": 1757753110176.7725
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.plist.meta": {
+      "time": 1757753110185.9304
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.png.meta": {
+      "time": 1757753110188.5764
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.plist.meta": {
+      "time": 1757753110194.1428
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.png.meta": {
+      "time": 1757753110189.6301
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.plist.meta": {
+      "time": 1757753110201.1409
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.png.meta": {
+      "time": 1757753110199.1404
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.plist.meta": {
+      "time": 1757753110209.1414
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.png.meta": {
+      "time": 1757753110205.1406
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.plist.meta": {
+      "time": 1757753110215.8936
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.png.meta": {
+      "time": 1757753110213.1418
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.plist.meta": {
+      "time": 1757753110221.7876
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.png.meta": {
+      "time": 1757753110218.533
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.plist.meta": {
+      "time": 1757753110227.7866
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.png.meta": {
+      "time": 1757753110229.5044
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.plist.meta": {
+      "time": 1757753110234.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.png.meta": {
+      "time": 1757753110230.5059
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.plist.meta": {
+      "time": 1757753110239.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.png.meta": {
+      "time": 1757753110245.5078
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.plist.meta": {
+      "time": 1757753110251.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.png.meta": {
+      "time": 1757753110243.5073
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.plist.meta": {
+      "time": 1757753110252.5054
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.png.meta": {
+      "time": 1757753110255.506
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.plist.meta": {
+      "time": 1757753110265.5068
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.png.meta": {
+      "time": 1757753110261.5073
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.plist.meta": {
+      "time": 1757753110275.5063
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.png.meta": {
+      "time": 1757753110270.508
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.plist.meta": {
+      "time": 1757753110278.5059
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.png.meta": {
+      "time": 1757753110280.5059
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.plist.meta": {
+      "time": 1757753110295.5051
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.png.meta": {
+      "time": 1757753110292.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.plist.meta": {
+      "time": 1757753110342.506
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.png.meta": {
+      "time": 1757753110307.5042
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.plist.meta": {
+      "time": 1757753110348.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.png.meta": {
+      "time": 1757753110313.5054
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.plist.meta": {
+      "time": 1757753110359.5066
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.png.meta": {
+      "time": 1757753110320.5083
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.plist.meta": {
+      "time": 1757753110369.505
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.png.meta": {
+      "time": 1757753110332.506
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.plist.meta": {
+      "time": 1757753110355.5063
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.png.meta": {
+      "time": 1757753110360.505
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.plist.meta": {
+      "time": 1757753110371.507
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.png.meta": {
+      "time": 1757753110368.5059
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.plist.meta": {
+      "time": 1757753110383.9434
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.png.meta": {
+      "time": 1757753110377.5044
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.plist.meta": {
+      "time": 1757753110392.9004
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.png.meta": {
+      "time": 1757753110385.5195
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.plist.meta": {
+      "time": 1757753110391.8535
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.png.meta": {
+      "time": 1757753110395.7063
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.plist.meta": {
+      "time": 1757753110402.566
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.png.meta": {
+      "time": 1757753110400.4624
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.plist.meta": {
+      "time": 1757753110407.3079
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.png.meta": {
+      "time": 1757753110405.7246
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.plist.meta": {
+      "time": 1757753110410.3838
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.png.meta": {
+      "time": 1757753110413.3809
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.plist.meta": {
+      "time": 1757753110418.3823
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.png.meta": {
+      "time": 1757753110419.381
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.plist.meta": {
+      "time": 1757753110423.3809
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.png.meta": {
+      "time": 1757753110425.0505
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.plist.meta": {
+      "time": 1757753110429.0498
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.png.meta": {
+      "time": 1757753110433.0498
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.plist.meta": {
+      "time": 1757753110436.184
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.png.meta": {
+      "time": 1757753110439.3628
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.plist.meta": {
+      "time": 1757753110460.1084
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.png.meta": {
+      "time": 1757753110443.68
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.plist.meta": {
+      "time": 1757753110464.6316
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.png.meta": {
+      "time": 1757753110449.537
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.plist.meta": {
+      "time": 1757753110471.6313
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.png.meta": {
+      "time": 1757753110456.01
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.plist.meta": {
+      "time": 1757753110484.629
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.png.meta": {
+      "time": 1757753110469.6284
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.plist.meta": {
+      "time": 1757753110478.6292
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.png.meta": {
+      "time": 1757753110476.63
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.plist.meta": {
+      "time": 1757753110479.6296
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.png.meta": {
+      "time": 1757753110483.63
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.plist.meta": {
+      "time": 1757753110488.2563
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.png.meta": {
+      "time": 1757753110493.0256
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.plist.meta": {
+      "time": 1757753110490.9104
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.png.meta": {
+      "time": 1757753110498.861
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.plist.meta": {
+      "time": 1757753110496.2102
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.png.meta": {
+      "time": 1757753110501.4946
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.plist.meta": {
+      "time": 1757753110500.4382
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.png.meta": {
+      "time": 1757753110506.9583
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.plist.meta": {
+      "time": 1757753110505.8943
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.png.meta": {
+      "time": 1757753110514.913
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.plist.meta": {
+      "time": 1757753110519.9517
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.png.meta": {
+      "time": 1757753110514.382
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.plist.meta": {
+      "time": 1757753110513.297
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.png.meta": {
+      "time": 1757753110517.9612
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.plist.meta": {
+      "time": 1757753110532.9514
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.png.meta": {
+      "time": 1757753110526.9524
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.plist.meta": {
+      "time": 1757753110523.9526
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.png.meta": {
+      "time": 1757753110530.9512
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.plist.meta": {
+      "time": 1757753110526.9524
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.png.meta": {
+      "time": 1757753110534.953
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.plist.meta": {
+      "time": 1757753110535.9507
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.png.meta": {
+      "time": 1757753110538.9512
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.plist.meta": {
+      "time": 1757753110540.952
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.png.meta": {
+      "time": 1757753110544.9514
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.plist.meta": {
+      "time": 1757753110542.9517
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.png.meta": {
+      "time": 1757753110546.9526
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.plist.meta": {
+      "time": 1757753110557.9507
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.png.meta": {
+      "time": 1757753110551.9512
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.plist.meta": {
+      "time": 1757753110549.951
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.png.meta": {
+      "time": 1757753110559.9512
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.plist.meta": {
+      "time": 1757753110553.9524
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.png.meta": {
+      "time": 1757753110562.9507
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.plist.meta": {
+      "time": 1757753110579.9517
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.png.meta": {
+      "time": 1757753110566.9514
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.plist.meta": {
+      "time": 1757753110584.9521
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.png.meta": {
+      "time": 1757753110570.9534
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.plist.meta": {
+      "time": 1757753110592.9514
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.png.meta": {
+      "time": 1757753110577.9521
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.plist.meta": {
+      "time": 1757753110603.2476
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.png.meta": {
+      "time": 1757753110590.9514
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.plist.meta": {
+      "time": 1757753110628.1995
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.png.meta": {
+      "time": 1757753110598.4934
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.plist.meta": {
+      "time": 1757753110638.1992
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.png.meta": {
+      "time": 1757753110606.4226
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.plist.meta": {
+      "time": 1757753110643.1794
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.png.meta": {
+      "time": 1757753110615.0254
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.plist.meta": {
+      "time": 1757753110653.2031
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.png.meta": {
+      "time": 1757753110626.6787
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.plist.meta": {
+      "time": 1757753110642.651
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.png.meta": {
+      "time": 1757753110637.1992
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.plist.meta": {
+      "time": 1757753110657.6213
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.png.meta": {
+      "time": 1757753110650.5652
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.plist.meta": {
+      "time": 1757753110660.7732
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.png.meta": {
+      "time": 1757753110656.0247
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.plist.meta": {
+      "time": 1757753110665.5342
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.png.meta": {
+      "time": 1757753110663.4177
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "078d1b30-1aa1-4e17-8e39-f97fc48d93e1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.png": {
+      "time": 1647767044000,
+      "uuid": "b2612a55-d2ad-47a0-a34d-517bcbd2386c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.png": {
+      "time": 1647767044000,
+      "uuid": "b46e6855-bf0d-4343-97d8-b5d4b6323501"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\attack\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "c852154a-1ded-4a74-bb83-3a43d8ba63dd"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "1a079863-215f-4b7c-83d9-2633f2412fd5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\death\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "919797f5-657b-43b7-9db8-8761687824d6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist": {
+      "time": 1647767044000,
+      "uuid": "0d4bbcc3-f346-4cac-9424-63144a385768"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "372a30b9-2c2c-400a-9907-bc667a7aaba6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\burst\\idle\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "9706a534-7eb7-4e65-b307-239d405c6b04"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "bb79db3e-f3f1-4996-903f-a1e79103bc3c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "96817283-01f9-43f6-9dc5-d31b8ed67581"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\death\\death.png": {
+      "time": 1647767044000,
+      "uuid": "a881ee54-5281-40fc-b7c8-692273b006c5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\left\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "81e0e0ff-10db-40b6-9fc4-0a08ca2fe0a2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "a0291cb4-d737-4dbc-bcc8-1a34c8303be6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\door\\idle\\top\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "36e0d14e-931f-4821-8665-33c46251a1fa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.png": {
+      "time": 1647767044000,
+      "uuid": "48ee5939-6cb8-43e4-b2fa-a314a3146e62"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.png": {
+      "time": 1647767044000,
+      "uuid": "5ebc1fdf-a5db-47b8-be13-22d29caa8b43"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.png": {
+      "time": 1647767044000,
+      "uuid": "546ae41d-f7be-4100-be38-4925bc87dbcf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\tile\\tile.plist": {
+      "time": 1647767044000,
+      "uuid": "e1fd0b7b-557b-4916-954d-e28193cff620"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\bottom\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "f80ccb3a-7489-48a9-8eac-3adc79053c8d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\left\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "968946d9-1032-43f6-939b-381ff0089b08"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.png": {
+      "time": 1647767044000,
+      "uuid": "54cbe7e0-e376-404d-b3eb-4577dc08e008"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "b09cc749-ea22-45d6-9a46-b2efd1b25532"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\right\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "391786df-2c8b-417e-aeb5-94f507af2c96"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\bottom\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "264a1d6b-e3fd-4f3d-8ecf-aec682c35b76"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "9fccc2ff-7e15-4834-8598-19ec37e981f4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\left\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "0cff2e2c-a415-46e2-b835-c9468a6dfdb5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "7f61e510-929f-4d74-890a-7af04c794162"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\death\\top\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "5e0cb268-95b1-4c83-992b-5b7c3a411575"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\right\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "b86f2fe8-f77c-4abc-a10e-997c438b502e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "6e0191e9-f28b-4e0a-8cb6-5a0f564118cd"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ironskeleton\\idle\\top\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "54c5d79c-3fe7-42be-b986-9d60af12fb66"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.png": {
+      "time": 1647767044000,
+      "uuid": "8d3022df-573e-4da7-8776-b3ff10ae00c5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.png": {
+      "time": 1647767044000,
+      "uuid": "ae347201-a021-48b2-b264-8efb6eb74ed3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.png": {
+      "time": 1647767044000,
+      "uuid": "a6badd2b-4e29-4369-bc21-4d1da7f73826"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\bottom\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "6efd3e74-91db-4088-af06-c9dad16a1247"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.png": {
+      "time": 1647767044000,
+      "uuid": "c8777e1e-ae58-4e55-9940-ee8d87cbcff5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\left\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "8450e845-67c0-441d-9694-ea535fe8f781"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\right\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "ea65ea39-46d2-43aa-abbb-ade1da899f80"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "bbea5a53-0128-4bc9-8424-dfb8285a9f80"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "bc31bf02-13e5-4c9c-9918-928072ec6c2c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\airdeath\\top\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "4f388892-e630-4d43-9a03-fe96cd2ef513"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\bottom\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "5772e697-94b3-4422-a73c-9474864d26d9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "a2ea894a-b1a5-4c1c-bdcc-c0b9929f3528"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\left\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "504b6b50-bd7c-41ec-901d-69a5763257ce"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "a3003a24-e744-4d74-bba7-236cd4841d17"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\right\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "c31a0229-cb68-4b1f-91be-457a7d2ccdbc"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.png": {
+      "time": 1647767044000,
+      "uuid": "a5a006a0-45ff-4e6e-879e-1cb6181cc8d8"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\bottom\\blockback.plist": {
+      "time": 1647767044000,
+      "uuid": "cccee566-5bea-4d23-9ad8-687de0e648c9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\attack\\top\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.png": {
+      "time": 1647767044000,
+      "uuid": "979f9c3d-f5e7-457b-b4f5-e6bdb043d77b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\left\\blockback.plist": {
+      "time": 1647767044000,
+      "uuid": "a9b7933a-f445-462d-a9a0-80c2b0d20ba0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.png": {
+      "time": 1647767044000,
+      "uuid": "02b7f1a6-8026-49c7-9196-905ee5608527"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\right\\blockback.plist": {
+      "time": 1647767044000,
+      "uuid": "3b47725d-bc33-4b7a-b6f8-3b98d3b4f92b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.plist": {
+      "time": 1647767044000,
+      "uuid": "d129ed3f-1efb-4048-a0bf-32c903328aed"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockback\\top\\blockback.png": {
+      "time": 1647767044000,
+      "uuid": "e0831215-bdf6-4c32-8a23-37a2f8d59d5d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.png": {
+      "time": 1647767044000,
+      "uuid": "ada6ed76-870b-45b1-87ba-1248bc77fc52"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\bottom\\blockfront.plist": {
+      "time": 1647767044000,
+      "uuid": "9ae79d13-4776-47d9-87e2-dccb9a494890"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.png": {
+      "time": 1647767044000,
+      "uuid": "fe9fc5cc-4144-4024-b360-1ab1ecfa3239"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\left\\blockfront.plist": {
+      "time": 1647767044000,
+      "uuid": "e170cabd-21ba-4df2-a985-dac3fd2a882a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.plist": {
+      "time": 1647767044000,
+      "uuid": "aee7b7bd-a225-48fc-b306-c6f8f2e0143b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\right\\blockfront.png": {
+      "time": 1647767044000,
+      "uuid": "5bd5d291-01d7-443c-86f9-d2e49582bc82"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.png": {
+      "time": 1647767044000,
+      "uuid": "b97f1dd2-1de1-494a-a015-362df68db4e9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockfront\\top\\blockfront.plist": {
+      "time": 1647767044000,
+      "uuid": "e9463f94-9cf7-48af-8b5f-e37b7c704f97"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.png": {
+      "time": 1647767044000,
+      "uuid": "5027fda5-b4fd-43d9-aca5-10ee5a05ca84"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\bottom\\blockleft.plist": {
+      "time": 1647767044000,
+      "uuid": "4203adb1-d14e-4d44-bf17-c6b2b6de384b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.plist": {
+      "time": 1647767044000,
+      "uuid": "c22fd300-193f-479b-bdf4-117c878bfe12"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\left\\blockleft.png": {
+      "time": 1647767044000,
+      "uuid": "c01864bb-6fe1-48f9-a1a8-9a1548201969"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.png": {
+      "time": 1647767044000,
+      "uuid": "6536a28f-cd59-46bf-9f3d-619fbbbc5519"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\right\\blockleft.plist": {
+      "time": 1647767044000,
+      "uuid": "8744551f-9253-46b2-aebd-ce43c9840e2d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.png": {
+      "time": 1647767044000,
+      "uuid": "b0be4892-479e-4ca4-8397-0c1dc426b4c2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockleft\\top\\blockleft.plist": {
+      "time": 1647767044000,
+      "uuid": "dd6b8b41-59ff-4f5d-8c1c-172189e12227"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.png": {
+      "time": 1647767044000,
+      "uuid": "2843127c-f8c4-4ff9-9066-d1399d87c5bf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\bottom\\blockright.plist": {
+      "time": 1647767044000,
+      "uuid": "d05ba9c1-ca05-4844-aef7-4914ddeb7f62"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.png": {
+      "time": 1647767044000,
+      "uuid": "ac5ce64d-cecc-4f39-8a06-f0d6b3128928"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\left\\blockright.plist": {
+      "time": 1647767044000,
+      "uuid": "d3589225-366a-45c6-92a0-5b46ec8afc7a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.png": {
+      "time": 1647767044000,
+      "uuid": "4ea8a053-cd59-4093-a430-947f3b373cd5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\right\\blockright.plist": {
+      "time": 1647767044000,
+      "uuid": "36fb2bd0-e4e8-4f12-8529-d934c37c1008"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.plist": {
+      "time": 1647767044000,
+      "uuid": "200f2a96-da21-4286-933c-0437182e21d1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockright\\top\\blockright.png": {
+      "time": 1647767044000,
+      "uuid": "671107b3-483a-4fcc-8e70-2222e1273f65"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.png": {
+      "time": 1647767044000,
+      "uuid": "37f5e633-e502-4bcc-a52e-f8a919eff6a6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\bottom\\blockturnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "7418d2ae-ae75-42b2-8df0-645d43a45f23"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "4bcb2c70-ebf4-41a8-b258-f07efbb2b24e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.png": {
+      "time": 1647767044000,
+      "uuid": "ad6fd80b-fa8c-40f2-a5ce-3d315a272bb3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\left\\blockturnleft.png": {
+      "time": 1647767044000,
+      "uuid": "216a84b9-d67d-462d-88f6-453d9842810d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\right\\blockturnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "d52de85c-2bf3-41bb-a8a2-fe8935749f42"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "9f3e4f03-0ca4-4e46-a632-aba1504ead55"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnleft\\top\\blockturnleft.png": {
+      "time": 1647767044000,
+      "uuid": "065fff35-8338-4de8-b2dd-26afc40abf36"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.png": {
+      "time": 1647767044000,
+      "uuid": "b6682a2e-2894-4aa8-b920-7f387f775376"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\bottom\\blockturnright.plist": {
+      "time": 1647767044000,
+      "uuid": "fd374ded-9bbc-42b8-83e1-f1da94f26457"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.png": {
+      "time": 1647767044000,
+      "uuid": "7ca52dbb-d34c-4fdb-aa5f-3764d7aa11b9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\left\\blockturnright.plist": {
+      "time": 1647767044000,
+      "uuid": "e2425347-8f52-4c12-9692-a0ac04233fe5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.plist": {
+      "time": 1647767044000,
+      "uuid": "dbf0e53e-65ea-4993-b9a6-8902c6ca68b3"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\right\\blockturnright.png": {
+      "time": 1647767044000,
+      "uuid": "b72e0c11-216d-48f5-b6a5-a471429d4c86"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.png": {
+      "time": 1647767044000,
+      "uuid": "0d274969-ea23-4b60-9dc4-c1ae30cf57a4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\blockturnright\\top\\blockturnright.plist": {
+      "time": 1647767044000,
+      "uuid": "fe28e12f-9460-4208-88c7-0847e493bf86"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.png": {
+      "time": 1647767044000,
+      "uuid": "3600c9da-8f96-4584-9859-68574dec749a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.png": {
+      "time": 1647767044000,
+      "uuid": "93128878-b5d4-40a7-b633-5a6fccbff58e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.png": {
+      "time": 1647767044000,
+      "uuid": "dfd957f6-2918-4e10-a191-ce64ef4f9578"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.png": {
+      "time": 1647767044000,
+      "uuid": "b087f45f-22ee-4035-87d2-731cce96046f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\bottom\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "90ea1211-e30e-4772-9369-ab7369f3429c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\left\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "071f6e03-71ad-47b4-b0c8-1a5ea7ebde3b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "0394b5c9-8e68-4869-984a-77f0e105ed6f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\right\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "9fd83283-24e5-4239-8232-b60bd91dff9e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\bottom\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "c185edc2-c3a7-4bed-b43b-9b8626335cb4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "4587d893-cdca-4964-b6cd-5e3d6c4ed5c1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\death\\top\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "0c940be2-d9e2-4ce4-a5e1-8bbc49b8e801"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\left\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "b7b564bd-77e5-4ef2-95be-6c92f4862592"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "ee1b3846-0a46-4746-b7c6-37f024eb8c95"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\right\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "c439fcf9-34e4-4750-a0b3-03b568388616"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "dde7c784-70a5-4d40-a95b-39f3085e4acf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "62848eb2-58ba-44b7-b74d-94f42c183624"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\idle\\top\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "e266ec6f-22fc-44a7-ab34-2091dc3b96b4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\bottom\\turnleft.png": {
+      "time": 1647767044000,
+      "uuid": "1f133f1d-fe97-4062-ab1e-f188bf8cf896"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.png": {
+      "time": 1647767044000,
+      "uuid": "34de8fc7-ebc4-4cc8-ad0c-ecb85451bf68"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\left\\turnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "93f05d33-587c-4883-955a-68599c99af6a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.png": {
+      "time": 1647767044000,
+      "uuid": "e1f884e2-9cd1-4d13-90c3-67d52c9446aa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\right\\turnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "13623d20-f12e-432f-99af-e15676a96866"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.plist": {
+      "time": 1647767044000,
+      "uuid": "0e9215fb-316d-4c7a-b95a-f840280eec6d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnleft\\top\\turnleft.png": {
+      "time": 1647767044000,
+      "uuid": "c4f2ef87-25e1-4db9-ad42-257623bdde2c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.plist": {
+      "time": 1647767044000,
+      "uuid": "8cbc63bc-63d2-4ead-a03c-3aa1b2814358"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\bottom\\turnright.png": {
+      "time": 1647767044000,
+      "uuid": "b13a7f31-9ebf-4085-8dc2-12f094b9776a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.plist": {
+      "time": 1647767044000,
+      "uuid": "d5b48725-75ae-4168-8629-cb479e276978"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\left\\turnright.png": {
+      "time": 1647767044000,
+      "uuid": "1e95cb83-767a-48a6-9b5b-56f02346379c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.plist": {
+      "time": 1647767044000,
+      "uuid": "9148e96f-fb29-44e2-94b9-447b6f68efd4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\right\\turnright.png": {
+      "time": 1647767044000,
+      "uuid": "168e0668-32ae-467b-b27b-ed9731258a03"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.plist": {
+      "time": 1647767044000,
+      "uuid": "0b4373d5-fc3d-47b1-8ab4-1448669078c6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\player\\turnright\\top\\turnright.png": {
+      "time": 1647767044000,
+      "uuid": "459f7f63-0e4d-4e44-a23e-61284c50de9a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "1b5e7928-e56d-4eaf-9a0e-a3e996b2f6ef"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "731824c1-432a-42c1-acf7-467703ff0261"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "46786279-203f-4398-ac84-2c129bb7c712"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\bottom\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "763b6698-6865-4049-a14a-0e46f997d7c5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\left\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "54c17eb3-38f4-4ace-aa5d-5ccc3bce3bf9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "b676cd00-a168-4810-a7d1-e4cf46dbe32f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\right\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "6103501e-2905-4ebb-8f4e-c55f19178f22"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.png": {
+      "time": 1647767044000,
+      "uuid": "54b36b6e-f97b-4dae-9898-6ce06342ed33"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\five\\five.plist": {
+      "time": 1647767044000,
+      "uuid": "53707ab8-7929-4c73-87e4-9328a7b247e5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.plist": {
+      "time": 1647767044000,
+      "uuid": "298190fd-f483-4c1e-9376-829921331aa0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\four\\four.png": {
+      "time": 1647767044000,
+      "uuid": "5783895e-2802-4abc-a97e-58745a73358f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\smoke\\idle\\top\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "f7a996dd-26f7-4ad9-8a6e-2a7b5a4c4f0c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.plist": {
+      "time": 1647767044000,
+      "uuid": "0e197964-f8f7-4304-bbd3-d49463b259bb"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.plist": {
+      "time": 1647767044000,
+      "uuid": "3a25a98f-0898-4d18-b3c4-a2992269c742"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\one\\one.png": {
+      "time": 1647767044000,
+      "uuid": "32fe68cc-665b-4545-99d3-b79214a83021"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.plist": {
+      "time": 1647767044000,
+      "uuid": "97a8fbbc-1ca6-468d-a9db-c0afdfa48096"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\three\\three.png": {
+      "time": 1647767044000,
+      "uuid": "653cfe47-3199-4f5f-837c-00a55bb0f0f1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.plist": {
+      "time": 1647767044000,
+      "uuid": "6083b165-d32f-43ff-aae1-525860bae16d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\two\\two.png": {
+      "time": 1647767044000,
+      "uuid": "5ddb2fd4-5a2f-4b22-85ab-aeeb0642e1ae"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.plist": {
+      "time": 1647767044000,
+      "uuid": "82ba1c19-c874-401b-84d8-f1fb6a7e25b6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesfour\\zero\\zero.png": {
+      "time": 1647767044000,
+      "uuid": "9fad8ffd-b5e6-408f-93a8-e23887ed61ca"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.plist": {
+      "time": 1647767044000,
+      "uuid": "d8c93eb0-a32f-43d0-b4c9-f5ca3f8e1d7b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.png": {
+      "time": 1647767044000,
+      "uuid": "616391f1-2ede-4d23-a2fa-d70c5fefa322"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\one\\one.png": {
+      "time": 1647767044000,
+      "uuid": "7c80c3bc-9cb9-4bd3-90bf-6cd0473196d7"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\zero\\zero.png": {
+      "time": 1647767044000,
+      "uuid": "e8549e00-cd66-4099-97be-b6af28cc8006"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesone\\two\\two.plist": {
+      "time": 1647767044000,
+      "uuid": "c7ffdd4d-48d6-4f30-86a3-609e17aa3689"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.plist": {
+      "time": 1647767044000,
+      "uuid": "3260810e-eb95-4757-b469-b9021dc9a3c6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.plist": {
+      "time": 1647767044000,
+      "uuid": "d3dc4196-bb83-43e2-b7dc-839e5f629a0e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.png": {
+      "time": 1647767044000,
+      "uuid": "5f1a8cf6-62f9-4f60-9fd6-20d6cb4343c5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\one\\one.png": {
+      "time": 1647767044000,
+      "uuid": "07d752fe-fed5-413d-90f7-865e76294e62"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\four\\four.plist": {
+      "time": 1647767044000,
+      "uuid": "7b0ca2a0-1fd0-403e-8117-6234698a877f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\three\\three.png": {
+      "time": 1647767044000,
+      "uuid": "0b248f91-56c9-4115-8282-9927f3dd07a4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.plist": {
+      "time": 1647767044000,
+      "uuid": "d1c1e4e4-8f21-4c59-b333-b354a20e87c1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\two\\two.png": {
+      "time": 1647767044000,
+      "uuid": "c2eea861-11c7-40ba-87c1-eaa1d5e6427c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.plist": {
+      "time": 1647767044000,
+      "uuid": "e80f5554-1dc8-4111-9d3d-fd9ee2891a15"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.plist": {
+      "time": 1647767044000,
+      "uuid": "ae4387ff-6e76-4feb-8085-5e71ec54f92f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikesthree\\zero\\zero.png": {
+      "time": 1647767044000,
+      "uuid": "cc0a5460-6056-4b15-b095-f6694c327b9d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\one\\one.png": {
+      "time": 1647767044000,
+      "uuid": "40d9acdc-cdc6-467e-9892-3c10d32db80f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.plist": {
+      "time": 1647767044000,
+      "uuid": "9077f514-31f3-4fac-9bad-e73091049b8b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.png": {
+      "time": 1647767044000,
+      "uuid": "6eb39132-5388-4f03-a649-0cf23bbc6b95"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.plist": {
+      "time": 1647767044000,
+      "uuid": "e93fd8b9-51f6-4e0f-8f0d-3f563a0762a2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\three\\three.plist": {
+      "time": 1647767044000,
+      "uuid": "90a66264-e6e4-437b-b4ac-4df509220270"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\two\\two.png": {
+      "time": 1647767044000,
+      "uuid": "04b97190-e458-45e7-b088-caf2cc7e41d2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\spikes\\spikestwo\\zero\\zero.png": {
+      "time": 1647767044000,
+      "uuid": "89bdadaa-c90d-43bb-a52a-12e2052a16bf"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "ab0649bf-5ac0-4641-9bdb-7e5dda923fb8"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "abb40c9d-1c6f-4f5b-8f32-e6048bc21281"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "3fa2153f-a602-41e1-b310-7139e83eb2b4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\bottom\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "429757a5-5a24-4609-b452-fe06c64bfcd0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\left\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "86460bec-5a19-4b34-9d81-dcbf1d527cf0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.png": {
+      "time": 1647767044000,
+      "uuid": "d4b07579-b865-4f6b-abf3-d6b5f2c65a0d"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\right\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "d2099569-1814-481f-81d0-95e41089f1a6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.png": {
+      "time": 1647767044000,
+      "uuid": "2318785d-7256-455d-8e98-c1e12c32a010"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\attack\\top\\attack.plist": {
+      "time": 1647767044000,
+      "uuid": "8e739a04-dde6-4147-832a-e41fd67b4faa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.png": {
+      "time": 1647767044000,
+      "uuid": "237de2ed-b615-482c-a1bb-4e9dbf3dbd3f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.png": {
+      "time": 1647767044000,
+      "uuid": "2002c059-8f01-42e3-b5b8-3fcb1288473a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.png": {
+      "time": 1647767044000,
+      "uuid": "1647bfd1-0923-48da-8219-4749cedfbaaa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\bottom\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "eee40743-c8bc-4041-9856-0b875f7383a2"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "d1606578-8a03-4522-984f-63bc89378f76"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\left\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "993ad0d4-5eb0-4029-b507-e5bee7eb6554"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\bottom\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "e99c4e0e-802b-4620-8ba3-e7b04974e33e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\right\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "8c76321e-353d-4854-8696-1f4bf4c731b4"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "3c87b97e-538c-4609-82a3-a370e1c11ee0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\death\\top\\death.plist": {
+      "time": 1647767044000,
+      "uuid": "640a418f-2782-4b1a-8604-294223377771"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "0df8ca16-80dc-4bd2-8e52-21c87073fd28"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\left\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "ecaa3cbf-5441-4985-b50f-467c99bad203"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\right\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "a631f8e2-a67c-4013-a0c4-e9aca4ba6f6a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.png": {
+      "time": 1647767044000,
+      "uuid": "294ce9bb-3c88-4d1d-ac73-07f17133d5a0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\woodenskeleton\\idle\\top\\idle.plist": {
+      "time": 1647767044000,
+      "uuid": "9ed6355f-b42a-45bf-89b3-0a254ede5008"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle.meta": {
+      "time": 1757755440421.8665
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle": {
+      "time": 1757755440422.8672,
+      "uuid": "2d87e192-9a66-454b-9f93-ff7bf13f67ca"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.plist.meta": {
+      "time": 1757755440475.866
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.png.meta": {
+      "time": 1757755440471.8667
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.png": {
+      "time": 1757755435978.705,
+      "uuid": "a3ecb3b7-b312-4200-a47a-c679bd0d26b8"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.plist": {
+      "time": 1757755435978.705,
+      "uuid": "104daebd-5903-4488-8a7c-86cc0740738e"
     }
   },
   "missing": {
@@ -312,6 +2618,31 @@
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources",
       "time": 1757584938185.4136,
       "removeTime": 1757681734687
+    },
+    "0d4c6901-8005-4382-83d1-6fc331ab3973": {
+      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\GameScene.scene",
+      "time": 1757648007539.8943,
+      "removeTime": 1757760389130
+    },
+    "66853772-7601-474a-b604-ba9739067100": {
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\test.prefab",
+      "time": 1757741627915.341,
+      "removeTime": 1757741635703
+    },
+    "a96a5c61-c1d5-47b3-9a0a-6f04ebbaad11": {
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\test.prefab",
+      "time": 1757741649135.33,
+      "removeTime": 1757741665397
+    },
+    "60b6b001-577f-41e7-84a8-db793223bc64": {
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\auto-atlas.pac",
+      "time": 1757681593591.1558,
+      "removeTime": 1757753299848
+    },
+    "ebe3550b-a0c6-439a-a40a-e3871a728813": {
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\label-atlas.labelatlas",
+      "time": 1757681593595.1555,
+      "removeTime": 1757753345249
     }
   }
 }

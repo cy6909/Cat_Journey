@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "idle (5)",
+      "c439fcf9-34e4-4750-a0b3-03b568388616@29aae",
+      "idle (6)",
+      "c439fcf9-34e4-4750-a0b3-03b568388616@7fce0",
+      "idle (7)",
+      "c439fcf9-34e4-4750-a0b3-03b568388616@77faa",
+      "idle (8)",
+      "c439fcf9-34e4-4750-a0b3-03b568388616@e6cc6"
+    ]
+  }
+}

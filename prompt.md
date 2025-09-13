@@ -11,7 +11,7 @@ run the Cocos Creator simulator to ensure the project runs without errors after 
 
 update the @IMPLEMENTATION_PLAN.md with your progress and commit all changes with git add -A && git commit -m "..."
 
-if there is a discrepancy in the @IMPLEMENTATION_PLAN.md and the spec, always update the @IMPLEMENTATION_PLAN.md to match the spec.
+if there is a discrepancy in the @IMPLEMENTATION_PLAN.md and the spec, always update the @IMPLEMENTATION_PLAN.md to match the spec, or update spec match the @IMPLEMENTATION_PLAN.md.
 
 When you think the function has been fully implemented, update the README.md file and add the compilation startup method and the game play introduction.
 

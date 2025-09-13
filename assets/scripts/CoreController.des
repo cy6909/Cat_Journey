@@ -1,0 +1,138 @@
+# CoreController.ts Description
+
+## Purpose
+Manages the player's core health system - the vital component beneath the paddle that represents the player's actual life force. The core has independent health, regeneration, and leveling mechanics.
+
+## Key Features
+
+### Health System
+- **Core Health**: Separate from traditional "lives" system - represents actual survivability
+- **Maximum Health**: Increases with core level (base: 10, +2 per level)
+- **Current Health**: Tracks real-time health status with visual feedback
+- **Death Condition**: Game over when core health reaches 0
+
+### Regeneration Mechanics
+- **Regeneration Rate**: Passive healing over time (default: 0.1 HP/second)
+- **Regeneration Delay**: Must wait 5 seconds after taking damage before healing starts
+- **Visual Feedback**: Core glows cyan during regeneration
+- **Strategic Timing**: Encourages defensive positioning after taking damage
+
+### Experience & Leveling
+- **Experience Points**: Collected from special experience orbs dropped by certain bricks
+- **Level Progression**: Core gains levels to improve stats
+- **Capacity Scaling**: 100 XP needed per level (could be modified for progression)
+- **Level Benefits**: Each level increases max health (+2) and regen rate (+0.05/sec)
+
+### Damage Sources
+- **Direct Ball Impact**: When ball bypasses paddle and hits core
+- **Boss Attacks**: Boss abilities deal damage directly to core  
+- **Pressure Damage**: When bricks reach paddle level (via LevelManager)
+- **Environmental Hazards**: Future-proofed for additional damage sources
+
+### Visual Feedback System
+- **Health Colors**: Green (>70%), Yellow (30-70%), Red (<30%)
+- **Damage Flash**: Red flash when taking damage
+- **Regeneration Glow**: Cyan glow during healing
+- **Level Up Effect**: Bright pulsing effect on level advancement
+
+## How to Use in Cocos Creator
+
+### 1. Create Core GameObject
+```
+1. Create new Node in GameScene (position below paddle area)
+2. Add Sprite component for visual representation
+3. Add RigidBody2D component (Type: STATIC)
+4. Add BoxCollider2D component for collision detection
+5. Set as Trigger for experience orb collection
+6. Attach CoreController.ts script to the node
+```
+
+### 2. Configure Core Properties
+```
+Inspector Settings:
+- Max Core Health: 10 (starting health)
+- Regen Rate: 0.1 (HP per second)
+- Regen Delay: 5.0 (seconds after damage)
+- Experience Capacity: 100 (XP needed per level)
+```
+
+### 3. Physics Setup
+```
+Collision Groups:
+- Core should be in "CORE" group
+- Enable collision detection with:
+  * "BALL" group (for missed ball damage)
+  * "EXPERIENCE_ORB" group (for XP collection)
+  * "BOSS_ATTACK" group (for boss damage)
+- Disable collision with "BRICK" and "PADDLE" groups
+```
+
+### 4. Visual Design
+```
+Sprite Requirements:
+- Core should be visually distinct (gem, crystal, or energy core)
+- Size should be proportional to importance (larger than ball, smaller than paddle)
+- Base color should allow for health-based color changes
+- Consider animated sprite for enhanced visual appeal
+```
+
+### 5. Integration Points
+```
+GameManager Integration:
+- Add onCoreDestroyed() method to GameManager
+- Add onCoreAttacked(damage) method to GameManager
+- Connect with lives system (core death = game over regardless of lives)
+
+UI Integration:
+- Health bar displaying current/max core health
+- XP bar showing progress to next level
+- Core level indicator
+- Regeneration status indicator
+```
+
+## Game Balance Considerations
+
+### Health Scaling
+- Starting health (10) should survive 10 ball impacts
+- Health growth (+2 per level) provides meaningful progression
+- Maximum achievable health should be balanced against damage sources
+
+### Regeneration Balance
+- Base regen (0.1/sec) heals 1 HP every 10 seconds
+- 5-second delay prevents regeneration during active combat
+- Regen rate growth (+0.05/sec per level) provides scaling survivability
+
+### Experience Requirements
+- 100 XP per level creates consistent progression goals
+- Experience orbs should be rare enough to make leveling meaningful
+- Consider exponential XP requirements for higher levels
+
+### Damage Integration
+- Ball damage should be 1 HP (standard impact)
+- Boss attacks should be 2+ HP (increased threat)
+- Pressure damage should scale with remaining brick count
+- Critical hits or special attacks could deal bonus damage
+
+## Strategic Gameplay Elements
+
+### Risk/Reward Mechanics
+- Players must balance aggressive play (more ball speed/risk) vs defensive play (safer positioning)
+- Experience orb collection requires positioning near missed balls
+- Regeneration creates tactical retreats and positioning decisions
+
+### Difficulty Progression
+- Early levels: Regeneration easily sustains minor damage
+- Mid levels: Damage frequency challenges regeneration capacity
+- Late levels: Burst damage threatens core survival despite regeneration
+
+### Power-Up Integration
+- Healing power-ups become valuable for instant health restoration
+- XP multiplier power-ups accelerate core leveling
+- Damage resistance power-ups reduce core damage temporarily
+
+## Future Enhancement Ideas
+- Core abilities unlocked at specific levels
+- Different core types with unique regeneration patterns
+- Core energy system for special abilities
+- Core armor upgrades reducing incoming damage
+- Prestige system for core reincarnation with bonuses
