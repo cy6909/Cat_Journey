@@ -170,9 +170,16 @@ PRIORITY 3: Roguelike Elements - Power-ups ✅ COMPLETED
 [✅] 请确保所有des、gameflow、workflow文档都是中文
 [✅] 查看到AI音效生成方式不够详细和缺失，补充生成完整各类音效的流程文档
 [✅] 查看到美术资源的生成也不够详细，给出更多更详细的美术资源生成流程，例如各种模型的推荐，各种类似场景comfyui的工作流模板推荐等等
- 
+
+优先级12.1 - 紧急修复:
+[✅] 修复AdManager.ts和MonetizationManager.ts中"找不到命名空间WechatMinigame"的TypeScript错误
+[✅] 在两个文件中添加类型引用指令: /// <reference types="minigame-api-typings" />
+[✅] 在tsconfig.json中添加minigame-api-typings到types数组
+[✅] 验证微信API (wx.createRewardedVideoAd, wx.requestPayment等) 可正常使用
+[✅] 提交修复并在commit中记录issue详情
+
 Current Status
-🎉 ALL PRIORITIES 0-10 COMPLETED! 🎉
+🎉 ALL PRIORITIES 0-12.1 COMPLETED! 🎉
 
 **STATUS**: Complete roguelike breakout game with advanced monetization systems and comprehensive documentation ✅
 
