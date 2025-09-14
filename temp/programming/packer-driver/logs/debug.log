@@ -393,3 +393,389 @@ Feature changed: false
 18:46:29.710 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
 18:46:29.710 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts.
 18:46:29.717 debug: Target(preview) ends with cost 32.58350000000064ms.
+10:19:30.716 debug: Dispatch build request for time accumulated 14 asset changes.
+10:19:30.725 debug: Build iteration starts.
+Number of accumulated asset changes: 14
+Feature changed: false
+10:19:30.727 debug: Target(editor) build started.
+10:19:30.734 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (香港标准时间), Current mtime: Thu Jan 01 1970 23:33:07 GMT+0800 (香港标准时间)
+10:19:30.735 debug: Inspect cce:/internal/x/prerequisite-imports
+10:19:30.793 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 56.70 ms
+10:19:30.795 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+10:19:30.796 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+10:19:30.796 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+10:19:30.796 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+10:19:30.797 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+10:19:30.797 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+10:19:30.797 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts.
+10:19:30.797 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts
+10:19:30.908 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts' costs: 110.60 ms
+10:19:30.911 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts.
+10:19:30.911 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:30.911 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts
+10:19:30.977 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts' costs: 65.40 ms
+10:19:30.978 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts.
+10:19:30.978 debug: Detected change: file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts. Last mtime: Fri Sep 12 2025 20:47:27 GMT+0800 (香港标准时间)@74d2391c-448c-4e12-8af9-f4c2982fd9c1, Current mtime: Sat Sep 13 2025 20:33:41 GMT+0800 (香港标准时间)@74d2391c-448c-4e12-8af9-f4c2982fd9c1
+10:19:30.978 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts
+10:19:31.019 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts' costs: 40.50 ms
+10:19:31.034 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:31.034 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts
+10:19:31.130 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts' costs: 95.40 ms
+10:19:31.132 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+10:19:31.132 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:31.133 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts
+10:19:31.341 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts' costs: 208.60 ms
+10:19:31.344 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts.
+10:19:31.344 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts
+10:19:31.471 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts' costs: 126.80 ms
+10:19:31.474 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:31.474 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts
+10:19:31.628 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts' costs: 154.00 ms
+10:19:31.630 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:31.630 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts
+10:19:31.720 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts' costs: 89.70 ms
+10:19:31.722 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts.
+10:19:31.722 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts
+10:19:31.787 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts' costs: 64.20 ms
+10:19:31.789 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts.
+10:19:31.789 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts
+10:19:31.854 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts' costs: 65.00 ms
+10:19:31.856 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:31.856 debug: Detected change: file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts. Last mtime: Fri Sep 12 2025 20:47:27 GMT+0800 (香港标准时间)@1112ea98-2509-431e-b6fa-b2811d6671eb, Current mtime: Sat Sep 13 2025 20:31:46 GMT+0800 (香港标准时间)@1112ea98-2509-431e-b6fa-b2811d6671eb
+10:19:31.856 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts
+10:19:31.933 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts' costs: 76.40 ms
+10:19:31.935 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts.
+10:19:31.935 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+10:19:31.935 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:31.935 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts
+10:19:31.994 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts' costs: 59.10 ms
+10:19:32.018 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts.
+10:19:32.018 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts
+10:19:32.196 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts' costs: 177.90 ms
+10:19:32.199 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:32.199 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts
+10:19:32.293 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts' costs: 94.20 ms
+10:19:32.296 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+10:19:32.296 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+10:19:32.296 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+10:19:32.296 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts.
+10:19:32.297 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts
+10:19:32.455 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts' costs: 158.10 ms
+10:19:32.457 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:32.457 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+10:19:32.457 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts.
+10:19:32.457 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts
+10:19:32.596 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts' costs: 139.10 ms
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:32.600 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:32.600 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:32.601 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.601 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.601 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:32.601 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:32.601 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:32.601 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:32.601 debug: Resolve ./LevelManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:32.602 debug: Resolve ./CoreController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:32.602 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:32.602 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.602 debug: Resolve ./BossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:32.602 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:32.602 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:32.603 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.603 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.603 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:32.603 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:32.603 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:32.603 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.603 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:32.603 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.604 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:32.604 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:32.605 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:32.605 debug: Resolve ./EnhancedBossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:32.605 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:32.605 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.605 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:32.605 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:32.605 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:32.606 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.606 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:32.606 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.606 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:32.606 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:32.606 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:32.606 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.606 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:32.607 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.607 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:32.607 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:32.608 debug: Resolve ./CoreController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:32.608 debug: Resolve ./EliteAndHiddenBossManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:32.609 debug: Resolve ./EnhancedBossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:32.609 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:32.609 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:32.610 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:32.611 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:32.611 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:32.611 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:32.611 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:32.611 debug: Resolve ./MonetizationManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:32.628 debug: Dispatch build request for time accumulated 2 asset changes.
+10:19:32.632 debug: Target(editor) ends with cost 1904.972999997437ms.
+10:19:32.632 debug: Target(preview) build started.
+10:19:32.637 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:06 GMT+0800 (香港标准时间), Current mtime: Thu Jan 01 1970 23:33:09 GMT+0800 (香港标准时间)
+10:19:32.637 debug: Inspect cce:/internal/x/prerequisite-imports
+10:19:32.655 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 17.40 ms
+10:19:32.656 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+10:19:32.657 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+10:19:32.657 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+10:19:32.657 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+10:19:32.658 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+10:19:32.658 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+10:19:32.658 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts.
+10:19:32.658 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts
+10:19:32.745 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts' costs: 86.90 ms
+10:19:32.753 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts.
+10:19:32.753 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:32.753 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts
+10:19:32.805 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts' costs: 51.30 ms
+10:19:32.807 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts.
+10:19:32.807 debug: Detected change: file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts. Last mtime: Fri Sep 12 2025 20:47:27 GMT+0800 (香港标准时间)@74d2391c-448c-4e12-8af9-f4c2982fd9c1, Current mtime: Sat Sep 13 2025 20:33:41 GMT+0800 (香港标准时间)@74d2391c-448c-4e12-8af9-f4c2982fd9c1
+10:19:32.807 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts
+10:19:32.892 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts' costs: 85.40 ms
+10:19:32.894 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:32.894 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts
+10:19:32.955 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts' costs: 61.10 ms
+10:19:32.957 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+10:19:32.957 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:32.957 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts
+10:19:33.189 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts' costs: 232.00 ms
+10:19:33.192 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts.
+10:19:33.192 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts
+10:19:33.333 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts' costs: 140.50 ms
+10:19:33.336 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:33.336 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts
+10:19:33.467 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts' costs: 131.40 ms
+10:19:33.470 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:33.470 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts
+10:19:33.605 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts' costs: 135.30 ms
+10:19:33.607 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts.
+10:19:33.607 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts
+10:19:33.671 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts' costs: 63.30 ms
+10:19:33.673 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts.
+10:19:33.673 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts
+10:19:33.713 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts' costs: 40.00 ms
+10:19:33.716 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:33.716 debug: Detected change: file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts. Last mtime: Fri Sep 12 2025 20:47:27 GMT+0800 (香港标准时间)@1112ea98-2509-431e-b6fa-b2811d6671eb, Current mtime: Sat Sep 13 2025 20:31:46 GMT+0800 (香港标准时间)@1112ea98-2509-431e-b6fa-b2811d6671eb
+10:19:33.716 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts
+10:19:33.849 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts' costs: 133.60 ms
+10:19:33.851 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts.
+10:19:33.852 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+10:19:33.852 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:33.852 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts
+10:19:33.913 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts' costs: 61.40 ms
+10:19:33.915 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts.
+10:19:33.916 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts
+10:19:34.118 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts' costs: 202.10 ms
+10:19:34.122 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:34.122 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts
+10:19:34.216 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts' costs: 93.90 ms
+10:19:34.219 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+10:19:34.219 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+10:19:34.220 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+10:19:34.220 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts.
+10:19:34.220 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts
+10:19:34.341 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts' costs: 121.10 ms
+10:19:34.344 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.344 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+10:19:34.344 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts.
+10:19:34.344 debug: Inspect file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts
+10:19:34.512 debug: transform url: 'file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts' costs: 167.90 ms
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts as cce:/internal/x/cc.
+10:19:34.515 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:34.515 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as cce:/internal/x/cc.
+10:19:34.516 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.516 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.516 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:34.516 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:34.516 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as cce:/internal/x/cc.
+10:19:34.516 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.517 debug: Resolve ./LevelManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:34.517 debug: Resolve ./CoreController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:34.517 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.517 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:34.517 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:34.517 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as cce:/internal/x/cc.
+10:19:34.518 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.518 debug: Resolve ./BossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:34.518 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.518 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:34.518 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:34.518 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as cce:/internal/x/cc.
+10:19:34.519 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.519 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.519 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:34.519 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:34.519 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as cce:/internal/x/cc.
+10:19:34.520 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.520 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.521 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.521 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:34.521 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:34.521 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as cce:/internal/x/cc.
+10:19:34.521 debug: Resolve ./EnhancedBossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:34.521 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:34.521 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as cce:/internal/x/cc.
+10:19:34.522 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.522 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:34.522 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:34.522 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as cce:/internal/x/cc.
+10:19:34.523 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.523 debug: Resolve ./RelicManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.523 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.523 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:34.523 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:34.523 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as cce:/internal/x/cc.
+10:19:34.523 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.524 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.524 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:34.524 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:34.524 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as cce:/internal/x/cc.
+10:19:34.524 debug: Resolve ./GameManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.525 debug: Resolve ./CoreController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as cce:/internal/x/cc.
+10:19:34.525 debug: Resolve ./EliteAndHiddenBossManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:34.525 debug: Resolve ./EnhancedBossController from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as cce:/internal/x/cc.
+10:19:34.526 debug: Resolve ./EnhancedBrick from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:34.526 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/code-quality/cr.mjs.
+10:19:34.526 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:34.527 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:34.527 debug: Resolve cc from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as cce:/internal/x/cc.
+10:19:34.527 debug: Resolve ./MonetizationManager from file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:34.538 debug: Target(preview) ends with cost 1905.6083000004292ms.
+10:19:34.539 debug: Build iteration starts.
+Number of accumulated asset changes: 2
+Feature changed: false
+10:19:34.539 debug: Target(editor) build started.
+10:19:34.542 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 23:33:07 GMT+0800 (香港标准时间), Current mtime: Thu Jan 01 1970 23:33:11 GMT+0800 (香港标准时间)
+10:19:34.542 debug: Inspect cce:/internal/x/prerequisite-imports
+10:19:34.556 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 13.40 ms
+10:19:34.558 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+10:19:34.558 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+10:19:34.558 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+10:19:34.558 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+10:19:34.559 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+10:19:34.559 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+10:19:34.559 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts.
+10:19:34.559 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:34.560 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.561 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts.
+10:19:34.562 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+10:19:34.562 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:34.562 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts.
+10:19:34.562 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:34.562 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+10:19:34.563 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts.
+10:19:34.573 debug: Target(editor) ends with cost 33.79219999909401ms.
+10:19:34.573 debug: Target(preview) build started.
+10:19:34.575 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 23:33:09 GMT+0800 (香港标准时间), Current mtime: Thu Jan 01 1970 23:33:11 GMT+0800 (香港标准时间)
+10:19:34.575 debug: Inspect cce:/internal/x/prerequisite-imports
+10:19:34.588 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 13.30 ms
+10:19:34.589 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+10:19:34.590 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+10:19:34.590 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+10:19:34.591 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+10:19:34.591 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+10:19:34.592 debug: Resolve file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+10:19:34.592 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts.
+10:19:34.592 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts.
+10:19:34.592 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts.
+10:19:34.592 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts.
+10:19:34.593 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts.
+10:19:34.593 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts.
+10:19:34.593 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts.
+10:19:34.593 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts.
+10:19:34.593 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts.
+10:19:34.594 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts.
+10:19:34.594 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts.
+10:19:34.594 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts.
+10:19:34.594 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts.
+10:19:34.595 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts.
+10:19:34.595 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts.
+10:19:34.595 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts.
+10:19:34.595 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts.
+10:19:34.595 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts.
+10:19:34.596 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts.
+10:19:34.596 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts.
+10:19:34.596 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts.
+10:19:34.596 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts.
+10:19:34.596 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts.
+10:19:34.597 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts.
+10:19:34.597 debug: Resolve file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts from cce:/internal/x/prerequisite-imports as file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts.
+10:19:34.606 debug: Target(preview) ends with cost 32.3783999979496ms.

@@ -166,10 +166,10 @@ PRIORITY 3: Roguelike Elements - Power-ups ✅ COMPLETED
 [✅] 修改完成之后更新memroy.md，并按要求提交到github
 
 优先级12:
-[] 请确保assets\scripts\AdManager.ts中的declare const wx: WechatMinigame.Wx;是真实存在的，并且你写的逻辑是可以正确生效的
-[] 请确保所有des、gameflow、workflow文档都是中文
-[] 查看到AI音效生成方式不够详细和缺失，补充生成完整各类音效的流程文档
-[] 查看到美术资源的生成也不够详细，给出更多更详细的美术资源生成流程，例如各种模型的推荐，各种类似场景comfyui的工作流模板推荐等等
+[✅] 请确保assets\scripts\AdManager.ts中的declare const wx: WechatMinigame.Wx;是真实存在的，并且你写的逻辑是可以正确生效的
+[✅] 请确保所有des、gameflow、workflow文档都是中文
+[✅] 查看到AI音效生成方式不够详细和缺失，补充生成完整各类音效的流程文档
+[✅] 查看到美术资源的生成也不够详细，给出更多更详细的美术资源生成流程，例如各种模型的推荐，各种类似场景comfyui的工作流模板推荐等等
  
 Current Status
 🎉 ALL PRIORITIES 0-10 COMPLETED! 🎉
