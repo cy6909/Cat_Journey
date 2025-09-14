@@ -414,13 +414,13 @@ export class EnhancedBossController extends Component {
     
     private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null): void {
         // Handle collision with ball or projectiles
-        const ball = otherCollider.getComponent('EnhancedBall');
+        const ball = otherCollider.getComponent('EnhancedBall') as any;
         if (ball) {
             this.takeDamage(ball.damage || 1);
         }
         
         // Handle collision with laser or other attacks
-        const laser = otherCollider.getComponent('Laser');
+        const laser = otherCollider.getComponent('Laser') as any;
         if (laser) {
             this.takeDamage(laser.damage || 5);
         }
@@ -613,7 +613,7 @@ export class EnhancedBossController extends Component {
     
     private lightningStrike(): void {
         // Create lightning at random positions
-        const paddleController = this.node.parent?.getComponentInChildren('EnhancedPaddleController');
+        const paddleController = this.node.parent?.getComponentInChildren('EnhancedPaddleController') as any;
         if (paddleController) {
             paddleController.takeDamage(this.attackPower);
         }

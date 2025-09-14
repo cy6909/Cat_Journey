@@ -2,6 +2,7 @@ import { _decorator, Component, Node, Prefab, instantiate, Vec3, math } from 'cc
 import { EnhancedBossController, BossType } from './EnhancedBossController';
 import { ProceduralLevelGenerator, LevelType } from './ProceduralLevelGenerator';
 import { EnhancedBrick, BrickType } from './EnhancedBrick';
+import { EnhancedBall } from './EnhancedBall';
 
 const { ccclass, property } = _decorator;
 
@@ -257,7 +258,7 @@ export class EliteAndHiddenBossManager extends Component {
             difficultyMultiplier: 1.3,
             specialBrickRatio: 0.8,
             primaryBrickType: BrickType.RUBBER,
-            secondaryBrickTypes: [BrickType.BOUNCY, BrickType.MAGNETIC],
+            secondaryBrickTypes: [BrickType.RUBBER, BrickType.MAGNETIC],
             specialMechanic: "hyper_bounce"
         });
         

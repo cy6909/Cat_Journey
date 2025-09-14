@@ -15,7 +15,8 @@
       "Bash(while read script)",
       "Bash(do if [ ! -f \"$script.des\" ])",
       "Bash(fi)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(gh auth:*)"
     ],
     "deny": [],
     "ask": []

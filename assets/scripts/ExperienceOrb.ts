@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, RigidBody2D, Vec3, Collider2D, Contact2DType, IPhysics2DContact } from 'cc';
+import { _decorator, Component, Node, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, IPhysics2DContact } from 'cc';
 
 const { ccclass, property } = _decorator;
 
@@ -59,7 +59,7 @@ export class ExperienceOrb extends Component {
         if (this._rigidBody) {
             // Start falling down with slight random horizontal movement
             const randomX = (Math.random() - 0.5) * 50;
-            this._rigidBody.linearVelocity = new Vec3(randomX, -this.fallSpeed, 0);
+            this._rigidBody.linearVelocity = new Vec2(randomX, -this.fallSpeed);
         }
     }
     
@@ -108,8 +108,8 @@ export class ExperienceOrb extends Component {
         
         // Apply attraction force
         const attractionForce = 500; // Strong attraction
-        const attractionVelocity = direction.multiplyScalar(attractionForce);
-        this._rigidBody.linearVelocity = attractionVelocity;
+        const attractionVelocity = Vec3.multiplyScalar(new Vec3(), direction, attractionForce);
+        this._rigidBody.linearVelocity = new Vec2(attractionVelocity.x, attractionVelocity.y);
     }
     
     private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null): void {

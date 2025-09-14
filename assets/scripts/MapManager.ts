@@ -116,6 +116,7 @@ export class MapManager extends Component {
     private _currentFloor: number = 0;
     private _currentNodeId: string = '';
     private _mapNodes: Map<string, MapNode> = new Map();
+    private _completedNodes: MapNode[] = [];
     private _chapterTheme: ChapterTheme = ChapterTheme.FOREST;
     
     // Map generation parameters
@@ -882,5 +883,36 @@ export class MapManager extends Component {
     
     public getNextChapterAvailable(): boolean {
         return this.isChapterComplete() && this._currentChapter < 3;
+    }
+    
+    private calculateAvailableNodes(): void {
+        // Calculate which nodes are available based on current progress
+        // Initially only starting nodes are available
+        for (const [nodeId, node] of this._mapNodes) {
+            if (node.type === NodeType.START) {
+                node.isAvailable = true;
+            } else {
+                node.isAvailable = false;
+            }
+        }
+        
+        // Update available nodes based on completed nodes
+        this.updateAvailableNodes();
+    }
+    
+    private updateAvailableNodes(): void {
+        // Unlock nodes that are connected to completed nodes
+        for (const completedNode of this._completedNodes) {
+            for (const connectionId of completedNode.connections) {
+                const connectedNode = this.getNodeById(connectionId);
+                if (connectedNode) {
+                    connectedNode.isAvailable = true;
+                }
+            }
+        }
+    }
+    
+    private getNodeById(nodeId: string): MapNode | undefined {
+        return this._mapNodes.get(nodeId);
     }
 }

@@ -308,7 +308,7 @@ export class EnhancedBrick extends Component {
         if (!ballRigidBody) return;
         
         const direction = Vec3.subtract(new Vec3(), this.node.getWorldPosition(), ballCollider.node.getWorldPosition()).normalize();
-        const force = Vec2.multiplyScalar(new Vec2(), direction.x, direction.y, this.magneticForce);
+        const force = Vec2.multiplyScalar(new Vec2(), new Vec2(direction.x, direction.y), this.magneticForce);
         
         ballRigidBody.applyForceToCenter(force, true);
         console.log('Magnetic force applied to ball');

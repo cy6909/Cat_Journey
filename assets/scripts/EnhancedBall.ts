@@ -498,6 +498,10 @@ export class EnhancedBall extends Component {
         return this._rigidBody?.linearVelocity.length() || 0;
     }
     
+    public get rigidBody(): RigidBody2D | null {
+        return this._rigidBody;
+    }
+    
     public changeBallType(newType: BallType): void {
         this.ballType = newType;
         this.initializeBallType();

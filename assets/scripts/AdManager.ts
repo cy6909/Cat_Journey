@@ -240,7 +240,8 @@ export class AdManager extends Component {
                 style: {
                     left: 0,
                     top: 0,
-                    width: 320
+                    width: 320,
+                    height: 100  // 添加必需的height属性
                 }
             });
             
