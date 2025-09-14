@@ -458,56 +458,224 @@ export class EliteAndHiddenBossManager extends Component {
                 console.log(`Elite mechanic not implemented: ${mechanic}`);
         }
     }
-    
+    //TODO:完成一个特殊效果的编写
     // Elite mechanic implementations
     private activateFortressDefense(difficulty: number): void {
         console.log('Fortress Defense mechanics activated');
-        // Implement fortress defense logic
+        
+        // Fortress Defense: Periodically creates shield barriers around remaining bricks
+        this.schedule(() => {
+            const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+            const activeBricks = allBricks.filter(brick => brick.node.active && brick.health > 0);
+            
+            // Create shield effect for 30% of remaining bricks
+            const shieldCount = Math.floor(activeBricks.length * 0.3);
+            for (let i = 0; i < shieldCount; i++) {
+                const randomBrick = activeBricks[Math.floor(Math.random() * activeBricks.length)];
+                if (randomBrick) {
+                    // Add temporary shield (implementation would add visual effect and damage immunity)
+                    this.addShieldEffect(randomBrick, 5000); // 5 seconds shield
+                }
+            }
+        }, 8, 10, 2); // Every 8 seconds, max 10 times, start after 2 seconds
     }
     
     private activateSpeedPressure(difficulty: number): void {
         console.log('Speed Pressure mechanics activated');
-        // Increase ball speed and add time pressure
+        
+        // Speed Pressure: Gradually increases ball speed and adds time pressure
+        let speedMultiplier = 1.0;
+        const maxSpeedMultiplier = 1.5 + (difficulty * 0.1);
+        
+        this.schedule(() => {
+            speedMultiplier = Math.min(speedMultiplier + 0.1, maxSpeedMultiplier);
+            
+            // Apply speed boost to all balls
+            const allBalls = this.node.parent?.getComponentsInChildren(EnhancedBall) || [];
+            allBalls.forEach(ball => {
+                if (ball.rigidBody) {
+                    const currentVelocity = ball.rigidBody.linearVelocity;
+                    currentVelocity.multiplyScalar(1.1); // 10% speed increase
+                    ball.rigidBody.linearVelocity = currentVelocity;
+                }
+            });
+            
+            // Add time pressure visual effect
+            this.addTimePressureEffect(speedMultiplier);
+        }, 3, 15, 1); // Every 3 seconds, increase speed
     }
     
     private activateRegenerationField(difficulty: number): void {
         console.log('Regeneration Field mechanics activated');
-        // All bricks slowly regenerate health
+        
+        // Regeneration Field: Damaged bricks slowly regenerate health
+        const regenRate = Math.floor(1 + difficulty * 0.5); // Health points per interval
+        
+        this.schedule(() => {
+            const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+            allBricks.forEach(brick => {
+                if (brick.node.active && brick.health > 0 && brick.health < brick.maxHealth) {
+                    brick.health = Math.min(brick.health + regenRate, brick.maxHealth);
+                    
+                    // Add regeneration visual effect
+                    this.addRegenerationEffect(brick);
+                }
+            });
+        }, 2, Number.MAX_VALUE, 0); // Every 2 seconds, indefinitely
     }
     
     private activateElementalChaos(difficulty: number): void {
         console.log('Elemental Chaos mechanics activated');
-        // Random elemental effects every few seconds
+        
+        // Elemental Chaos: Random elemental effects applied to random areas
+        const elements = ['fire', 'ice', 'electric', 'poison'];
+        
+        this.schedule(() => {
+            const randomElement = elements[Math.floor(Math.random() * elements.length)];
+            const effectRadius = 100 + (difficulty * 20);
+            
+            // Random position in game area
+            const randomX = (Math.random() - 0.5) * 700; // Assume game width ~700
+            const randomY = Math.random() * 400 + 100;    // Height range
+            const effectPos = { x: randomX, y: randomY };
+            
+            // Apply elemental effect to nearby bricks and balls
+            this.applyElementalEffect(randomElement, effectPos, effectRadius, difficulty);
+            
+        }, 5, 20, 3); // Every 5 seconds, max 20 times, start after 3 seconds
     }
     
     private activateGravityChaos(difficulty: number): void {
         console.log('Gravity Chaos mechanics activated');
-        // Gravity direction changes randomly
+        
+        // Gravity Chaos: Periodically changes gravity direction and strength
+        const gravityDirections = [
+            { x: 0, y: -320 },    // Normal down
+            { x: 0, y: 320 },     // Up
+            { x: -320, y: 0 },    // Left
+            { x: 320, y: 0 },     // Right
+            { x: 0, y: -160 }     // Reduced down
+        ];
+        
+        this.schedule(() => {
+            const randomGravity = gravityDirections[Math.floor(Math.random() * gravityDirections.length)];
+            
+            // Apply gravity change (would need physics world access)
+            this.applyGravityChange(randomGravity, 3000); // 3 seconds duration
+            
+            // Visual indicator of gravity change
+            this.showGravityChangeEffect(randomGravity);
+            
+        }, 8, 10, 4); // Every 8 seconds, max 10 changes
     }
     
     private activateTimeChaos(difficulty: number): void {
         console.log('Time Chaos mechanics activated');
-        // Game speed fluctuates randomly
+        
+        // Time Chaos: Game speed fluctuates randomly
+        const speedVariations = [0.5, 0.7, 1.0, 1.3, 1.5];
+        
+        this.schedule(() => {
+            const newTimeScale = speedVariations[Math.floor(Math.random() * speedVariations.length)];
+            
+            // Apply time scale change (would affect all game objects)
+            this.applyTimeScale(newTimeScale, 4000); // 4 seconds duration
+            
+            // Visual time distortion effect
+            this.showTimeDistortionEffect(newTimeScale);
+            
+        }, 6, 15, 2); // Every 6 seconds
     }
     
     private activatePhaseShifting(difficulty: number): void {
         console.log('Phase Shifting mechanics activated');
-        // Bricks randomly become intangible
+        
+        // Phase Shifting: Bricks randomly become intangible for short periods
+        this.schedule(() => {
+            const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+            const phaseCount = Math.floor(allBricks.length * 0.2); // 20% of bricks
+            
+            for (let i = 0; i < phaseCount; i++) {
+                const randomBrick = allBricks[Math.floor(Math.random() * allBricks.length)];
+                if (randomBrick && randomBrick.node.active) {
+                    // Make brick intangible
+                    this.makePhaseShifted(randomBrick, 3000); // 3 seconds intangible
+                }
+            }
+        }, 7, 12, 3); // Every 7 seconds
     }
     
     private activateMagneticChaos(difficulty: number): void {
         console.log('Magnetic Chaos mechanics activated');
-        // Strong magnetic fields affect ball trajectory
+        
+        // Magnetic Chaos: Creates magnetic fields that affect ball trajectory
+        this.schedule(() => {
+            const magneticStrength = 50 + (difficulty * 20);
+            const fieldCount = 2 + Math.floor(difficulty * 0.5);
+            
+            for (let i = 0; i < fieldCount; i++) {
+                const fieldX = (Math.random() - 0.5) * 600;
+                const fieldY = Math.random() * 300 + 150;
+                
+                // Create magnetic field effect
+                this.createMagneticField(fieldX, fieldY, magneticStrength, 5000); // 5 seconds
+            }
+        }, 10, 8, 2); // Every 10 seconds
     }
     
     private activateShieldNetwork(difficulty: number): void {
         console.log('Shield Network mechanics activated');
-        // Bricks share shield protection
+        
+        // Shield Network: Bricks share shield protection with nearby bricks
+        const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+        const networkRange = 150; // Distance for shield sharing
+        
+        // Create shield networks
+        const networks: EnhancedBrick[][] = [];
+        allBricks.forEach(brick => {
+            if (!brick.node.active) return;
+            
+            // Find nearby bricks
+            const nearbyBricks = allBricks.filter(otherBrick => {
+                if (otherBrick === brick || !otherBrick.node.active) return false;
+                const distance = this.getDistance(brick.node.position, otherBrick.node.position);
+                return distance <= networkRange;
+            });
+            
+            if (nearbyBricks.length > 0) {
+                networks.push([brick, ...nearbyBricks]);
+            }
+        });
+        
+        // Apply shield network effects
+        networks.forEach(network => {
+            this.createShieldNetwork(network, difficulty);
+        });
     }
     
     private activateVoidSpread(difficulty: number): void {
         console.log('Void Spread mechanics activated');
-        // Void bricks convert adjacent bricks
+        
+        // Void Spread: Void effect spreads to adjacent bricks over time
+        const spreadInterval = Math.max(3, 6 - difficulty); // Faster spread with higher difficulty
+        
+        this.schedule(() => {
+            const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+            const voidBricks = allBricks.filter(brick => 
+                brick.node.active && brick.brickType === BrickType.VOID
+            );
+            
+            voidBricks.forEach(voidBrick => {
+                // Find adjacent bricks to corrupt
+                const adjacentBricks = this.getAdjacentBricks(voidBrick, allBricks, 120);
+                adjacentBricks.forEach(adjacentBrick => {
+                    if (adjacentBrick.brickType !== BrickType.VOID && Math.random() < 0.3) {
+                        // Convert to void brick with corruption effect
+                        this.corruptToVoid(adjacentBrick);
+                    }
+                });
+            });
+        }, spreadInterval, 20, 1); // Spread every few seconds
     }
     
     // Hidden Boss Management
@@ -698,5 +866,143 @@ export class EliteAndHiddenBossManager extends Component {
     
     public getPlayerStats() {
         return { ...this._playerStats };
+    }
+    
+    // Helper methods for elite mechanics
+    private addShieldEffect(brick: EnhancedBrick, duration: number): void {
+        // Add visual shield effect and temporary damage immunity
+        console.log(`Adding shield to brick ${brick.node.name} for ${duration}ms`);
+        // Implementation would add particle effect and modify damage handling
+    }
+    
+    private addTimePressureEffect(speedMultiplier: number): void {
+        // Add visual indicators for increased speed/pressure
+        console.log(`Time pressure effect: ${speedMultiplier}x speed`);
+        // Implementation would add screen effects, UI warnings
+    }
+    
+    private addRegenerationEffect(brick: EnhancedBrick): void {
+        // Add healing particle effect
+        console.log(`Regenerating brick ${brick.node.name}`);
+        // Implementation would show green healing particles
+    }
+    
+    private applyElementalEffect(element: string, position: {x: number, y: number}, radius: number, difficulty: number): void {
+        console.log(`Applying ${element} effect at (${position.x}, ${position.y}) with radius ${radius}`);
+        
+        // Find all bricks and balls within radius
+        const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
+        const allBalls = this.node.parent?.getComponentsInChildren(EnhancedBall) || [];
+        
+        // Apply effects based on element type
+        [...allBricks, ...allBalls].forEach(target => {
+            const distance = Math.sqrt(
+                Math.pow(target.node.position.x - position.x, 2) + 
+                Math.pow(target.node.position.y - position.y, 2)
+            );
+            
+            if (distance <= radius) {
+                switch (element) {
+                    case 'fire':
+                        // Apply fire damage over time
+                        this.applyBurnEffect(target, difficulty * 2, 3000);
+                        break;
+                    case 'ice':
+                        // Apply slow effect
+                        this.applyFreezeEffect(target, 0.5, 2000);
+                        break;
+                    case 'electric':
+                        // Apply chain lightning
+                        this.applyElectricEffect(target, difficulty, radius);
+                        break;
+                    case 'poison':
+                        // Apply poison damage
+                        this.applyPoisonEffect(target, difficulty, 4000);
+                        break;
+                }
+            }
+        });
+    }
+    
+    private applyGravityChange(newGravity: {x: number, y: number}, duration: number): void {
+        console.log(`Changing gravity to (${newGravity.x}, ${newGravity.y}) for ${duration}ms`);
+        // Implementation would access physics world and change gravity
+    }
+    
+    private showGravityChangeEffect(gravity: {x: number, y: number}): void {
+        console.log(`Showing gravity change effect for direction (${gravity.x}, ${gravity.y})`);
+        // Implementation would show directional arrows and visual effects
+    }
+    
+    private applyTimeScale(timeScale: number, duration: number): void {
+        console.log(`Changing time scale to ${timeScale} for ${duration}ms`);
+        // Implementation would affect all scheduled actions and animations
+    }
+    
+    private showTimeDistortionEffect(timeScale: number): void {
+        console.log(`Showing time distortion effect: ${timeScale}x speed`);
+        // Implementation would add visual warping effects
+    }
+    
+    private makePhaseShifted(brick: EnhancedBrick, duration: number): void {
+        console.log(`Making brick ${brick.node.name} phase-shifted for ${duration}ms`);
+        // Implementation would disable collider and add transparency effect
+        const collider = brick.getComponent('Collider2D');
+        if (collider) {
+            collider.enabled = false;
+            this.scheduleOnce(() => {
+                if (collider && brick.node.isValid) {
+                    collider.enabled = true;
+                }
+            }, duration / 1000);
+        }
+    }
+    
+    private createMagneticField(x: number, y: number, strength: number, duration: number): void {
+        console.log(`Creating magnetic field at (${x}, ${y}) with strength ${strength} for ${duration}ms`);
+        // Implementation would create invisible node that affects nearby balls
+    }
+    
+    private getDistance(pos1: any, pos2: any): number {
+        return Math.sqrt(Math.pow(pos1.x - pos2.x, 2) + Math.pow(pos1.y - pos2.y, 2));
+    }
+    
+    private createShieldNetwork(network: EnhancedBrick[], difficulty: number): void {
+        console.log(`Creating shield network with ${network.length} bricks`);
+        // Implementation would create shared damage reduction system
+    }
+    
+    private getAdjacentBricks(centerBrick: EnhancedBrick, allBricks: EnhancedBrick[], maxDistance: number): EnhancedBrick[] {
+        return allBricks.filter(brick => {
+            if (brick === centerBrick || !brick.node.active) return false;
+            const distance = this.getDistance(centerBrick.node.position, brick.node.position);
+            return distance <= maxDistance;
+        });
+    }
+    
+    private corruptToVoid(brick: EnhancedBrick): void {
+        console.log(`Corrupting brick ${brick.node.name} to void type`);
+        brick.brickType = BrickType.VOID;
+        // Implementation would change brick appearance and behavior
+    }
+    
+    private applyBurnEffect(target: any, damage: number, duration: number): void {
+        console.log(`Applying burn effect: ${damage} damage over ${duration}ms`);
+        // Implementation would apply damage over time
+    }
+    
+    private applyFreezeEffect(target: any, slowFactor: number, duration: number): void {
+        console.log(`Applying freeze effect: ${slowFactor}x speed for ${duration}ms`);
+        // Implementation would reduce movement/animation speed
+    }
+    
+    private applyElectricEffect(target: any, damage: number, radius: number): void {
+        console.log(`Applying electric effect: ${damage} damage with ${radius} chain radius`);
+        // Implementation would create chain lightning to nearby targets
+    }
+    
+    private applyPoisonEffect(target: any, damage: number, duration: number): void {
+        console.log(`Applying poison effect: ${damage} damage over ${duration}ms`);
+        // Implementation would apply continuous poison damage
     }
 }

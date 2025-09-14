@@ -1,5 +1,8 @@
 import { _decorator, Component, Node, sys } from 'cc';
 
+// WeChat Mini Game API types
+declare const wx: WechatMinigame.Wx;
+
 const { ccclass, property } = _decorator;
 
 export enum CurrencyType {
@@ -353,7 +356,6 @@ export class MonetizationManager extends Component {
         return new Promise((resolve) => {
             // 微信小游戏支付集成
             if (sys.platform === sys.Platform.WECHAT_GAME) {
-                // @ts-ignore - WeChat API
                 wx.requestPayment({
                     timeStamp: Date.now().toString(),
                     nonceStr: this.generateNonceStr(),
@@ -427,7 +429,6 @@ export class MonetizationManager extends Component {
         
         return new Promise((resolve) => {
             if (sys.platform === sys.Platform.WECHAT_GAME) {
-                // @ts-ignore - WeChat API
                 wx.createRewardedVideoAd({
                     adUnitId: this.getAdUnitId(adType)
                 }).show().then(() => {

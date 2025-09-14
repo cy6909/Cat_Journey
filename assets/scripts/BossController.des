@@ -1,93 +1,93 @@
-# BossController.ts Description
+# BossController.ts 说明
 
-## Purpose
-Manages BOSS enemies that appear at the end of major levels, providing challenging encounters that require sustained combat rather than simple brick destruction.
+## 目的
+管理主要关卡末尾出现的BOSS敌人，提供需要持续战斗而非简单击碎砖块的挑战性遭遇战。
 
-## Key Features
+## 关键特性
 
-### Health System
-- **maxHealth**: Total boss health points (default: 100)
-- **takeDamage()**: Reduces health when hit by balls or lasers
-- **Visual feedback**: Boss flashes red when taking damage
-- **Health tracking**: getCurrentHealth() and getMaxHealth() for UI display
+### 生命值系统
+- **maxHealth**：BOSS总生命值（默认：100）
+- **takeDamage()**：被球体或激光击中时减少生命值
+- **视觉反馈**：受损时BOSS闪现红色
+- **生命值追踪**：通过getCurrentHealth()和getMaxHealth()实现界面显示
 
-### Movement Behavior  
-- **Horizontal movement**: Boss moves left and right across the screen
-- **Edge bouncing**: Reverses direction when hitting screen boundaries
-- **Configurable speed**: moveSpeed property controls movement rate
+### 移动行为
+- **水平移动**：BOSS在屏幕左右横向移动
+- **边界反弹**：触碰屏幕边界时改变移动方向
+- **可配置速度**：通过moveSpeed属性控制移动速率
 
-### Attack System
-- **Periodic attacks**: Boss attacks every attackInterval seconds (default: 5.0)
-- **Core damage**: Boss attacks deal damage directly to the player's core
-- **Attack damage**: Configurable damage per attack (default: 1)
-- **Attack warning**: Console logs provide attack feedback
+### 攻击系统
+- **周期性攻击**：Boss每隔attackInterval秒发动攻击（默认：5.0）
+- **核心伤害**：Boss攻击直接对玩家核心造成伤害
+- **攻击伤害值**：每次攻击的可配置伤害值（默认：1）
+- **攻击预警**：控制台日志提供攻击反馈
 
-### Combat Mechanics
-- **Ball collision**: Takes damage from ball impacts
-- **Laser vulnerability**: Takes increased damage from laser shots (2 damage)
-- **Damage calculation**: Supports variable damage from different sources
-- **Death condition**: Destroyed when health reaches 0
+### 战斗机制
+- **球体碰撞**：承受球体撞击造成的伤害
+- **激光弱点**：承受激光射击时伤害加成（2点伤害）
+- **伤害计算**：支持不同来源的可变伤害
+- **死亡条件**：生命值归零时被摧毁
 
-### Integration Points
-- **GameManager integration**: Calls onBossDefeated() when destroyed
-- **Score system**: Grants scoreValue points when defeated (default: 500)
-- **Core attack system**: Integrates with new core damage mechanics
+### 集成要点
+- **游戏管理器集成**：被摧毁时调用onBossDefeated()
+- **计分系统**：击败时授予scoreValue分数（默认：500）
+- **核心攻击系统**：集成全新核心伤害机制
 
-## How to Use in Cocos Creator
+## 在Cocos Creator中的使用方法
 
-### 1. Create Boss Prefab
+### 1. 创建Boss预制件
 ```
-1. Create new Node in Scene
-2. Add Sprite component for visual representation
-3. Add RigidBody2D component (Type: STATIC or KINEMATIC)
-4. Add BoxCollider2D component for collision detection
-5. Attach BossController.ts script to the node
-```
-
-### 2. Configure Boss Properties
-```
-Inspector Settings:
-- Max Health: 100-300 (depending on difficulty)
-- Attack Damage: 1-2 (core damage per attack)
-- Attack Interval: 3.0-7.0 seconds
-- Move Speed: 30-100 (horizontal movement speed)
-- Score Value: 300-1000 (points awarded on defeat)
+1. 在场景中创建新节点
+2. 添加Sprite组件实现视觉呈现
+3. 添加RigidBody2D组件（类型：静态或运动学）
+4. 添加BoxCollider2D组件用于碰撞检测
+5. 将BossController.ts脚本附加至该节点
 ```
 
-### 3. Physics Setup
+### 2. 配置Boss属性
 ```
-Collision Groups:
-- Boss should be in "BOSS" group
-- Enable collision with "BALL" and "LASER" groups
-- Disable collision with "BRICK" and "PADDLE" groups
+检查器设置：
+- 最大生命值：100-300（根据难度调整）
+- 攻击伤害：1-2（每次核心攻击伤害）
+- 攻击间隔：3.0-7.0秒
+- 移动速度：30-100（水平移动速度）
+- 击杀奖励值：300-1000（击败后获得的积分）
 ```
 
-### 4. Visual Requirements
-- Boss sprite should be larger than regular bricks
-- Distinct visual design to indicate boss status
-- Consider animated sprite for enhanced visual appeal
-- Health bar UI element recommended for player feedback
+### 3. 物理设置
+```
+碰撞组：
+- 头目应归入“BOSS”组
+- 启用与“BALL”和“LASER”组的碰撞
+- 禁用与“BRICK”和“PADDLE”组的碰撞
+```
 
-### 5. Level Integration
-- Place boss in level layouts using LevelManager
-- Boss levels should have fewer or no regular bricks
-- Consider boss-specific level backgrounds or effects
+### 4. 视觉要求
+- 头目精灵图需大于普通砖块
+- 采用独特视觉设计彰显头目身份
+- 考虑使用动画精灵提升视觉吸引力
+- 建议添加生命值条UI元素反馈玩家状态
 
-## Boss Design Considerations
+### 5. 关卡整合
+- 通过关卡管理器将头目置入关卡布局
+- 头目关卡应减少或移除普通砖块
+- 考虑设计专属头目关卡背景或特效
 
-### Difficulty Scaling
-- Early bosses: Lower health, slower attacks, predictable movement
-- Later bosses: Higher health, faster attacks, complex movement patterns
-- Final bosses: Multiple attack types, phases, environmental hazards
+## 头目设计要点
 
-### Balance Recommendations
-- Boss health should require 50-100 ball hits to defeat
-- Attack frequency should pressure but not overwhelm players
-- Movement should be predictable enough to allow skillful play
-- Score rewards should justify the increased challenge
+### 难度递进机制
+- 前期头目：血量较低，攻击速度慢，移动轨迹可预测
+- 中后期头目：血量较高，攻击速度快，移动模式复杂
+- 最终头目：多种攻击类型，阶段性变换，环境伤害机制
 
-### Future Enhancements
-- Multiple attack patterns (projectiles, area effects, summons)
-- Boss phases with changing behavior at different health thresholds
-- Special boss abilities that interact with core mechanics
-- Unique boss-specific power-ups or rewards
+### 平衡性建议
+- 头目血量需承受50-100次球体攻击方可击败
+- 攻击频率应形成压力但不致压倒玩家
+- 移动轨迹需具备可预测性，便于玩家施展技巧
+- 挑战难度提升应与得分奖励相匹配
+
+### 未来增强方向
+- 多重攻击模式（远程攻击、范围伤害、召唤物）
+- 血量阈值触发行为变化的阶段机制
+- 与核心机制互动的特殊首领能力
+- 首领专属强化道具或奖励

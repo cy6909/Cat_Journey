@@ -1,5 +1,8 @@
 import { _decorator, Component, Node, sys } from 'cc';
 
+// WeChat Mini Game API types
+declare const wx: WechatMinigame.Wx;
+
 const { ccclass, property } = _decorator;
 
 export enum AdRewardType {
@@ -196,7 +199,6 @@ export class AdManager extends Component {
         }
         
         try {
-            // @ts-ignore - WeChat API
             // 激励视频广告
             this._rewardedVideoAd = wx.createRewardedVideoAd({
                 adUnitId: this._adUnitIds.rewardVideo

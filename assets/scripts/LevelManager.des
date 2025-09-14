@@ -1,132 +1,132 @@
-# LevelManager.ts Description
+# LevelManager.ts 说明
 
-## Purpose
-Manages different level types, difficulty progression, and the brick pressure system that creates time pressure for players by making bricks move down toward the paddle.
+## 目的
+管理不同关卡类型、难度递进机制，以及通过让砖块向拍板移动来制造时间压力的砖块压力系统。
 
-## Key Features
+## 核心功能
 
-### Level Types
-- **NORMAL**: Standard breakout levels with pressure system
-- **BOSS**: Boss fight levels with no regular bricks
-- **ELITE**: Enhanced difficulty levels with tougher configurations  
-- **TIME_ATTACK**: Special levels with accelerated pressure mechanics
+### 关卡类型
+- **普通**：带压力系统的标准打砖块关卡
+- **BOSS**：无常规砖块的BOSS战关卡
+- **精英**：难度强化关卡，砖块排列更具挑战性
+- **限时挑战**：特殊关卡，压力机制加速运行
 
-### Level Type Selection Logic
+### 关卡类型选择逻辑
 ```typescript
-// Boss levels every 10 levels (10, 20, 30, etc.)
+// 每10关触发BOSS关卡（10、20、30等）
 if (level % 10 === 0) return LevelType.BOSS;
 
-// Elite levels every 5 levels (5, 15, 25, etc.)
+// 每5关出现精英关卡（5,15,25等）
 if (level % 5 === 0) return LevelType.ELITE;
 
-// Random time attack levels after level 5 (15% chance)
+// 第5关后随机触发限时关卡（15%概率）
 if (level > 5 && Math.random() < 0.15) return LevelType.TIME_ATTACK;
 ```
 
-### Pressure System
-- **Brick movement**: Bricks gradually move downward during gameplay
-- **Speed scaling**: Pressure speed increases with level difficulty
-- **Damage calculation**: When bricks reach paddle level, damage equals remaining brick rows
-- **Reset mechanism**: Bricks reset to higher position after dealing damage
-- **Timer system**: Pressure starts after configurable delay (default: 30 seconds)
+### 压力系统
+- **砖块移动**：游戏过程中砖块持续向下移动
+- **速度递增**：压力速度随关卡难度提升
+- **伤害计算**：砖块抵达拍板高度时，伤害值等于剩余砖块行数
+- **重置机制**：造成伤害后砖块将重置至更高位置
+- **计时系统**：延迟启动压力机制（默认延迟30秒）
 
-### Boss Management
-- **Boss spawning**: Instantiates boss prefab for boss levels
-- **Health scaling**: Boss health and damage scale with level progression
-- **Boss positioning**: Places boss at top of screen for optimal gameplay
-- **Victory conditions**: Handles boss defeat and level completion
+### 头目管理
+- **头目生成**：为头目关卡实例化头目预制件
+- **生命值缩放**：头目生命值与伤害随关卡等级递增
+- **头目定位**：将头目置于屏幕顶部以优化游戏体验
+- **胜利条件**：处理头目击败与关卡完成
 
-### Difficulty Progression
-- **Speed acceleration**: Pressure speed *= pressureAcceleration^(level/5)
-- **Timer reduction**: Pressure delay decreases as levels increase
-- **Boss scaling**: Boss stats multiply by (1 + level/10) for health, (1 + level/20) for damage
+### 难度递进机制
+- **速度加速**：压力速度 *= 压力加速^(关卡数/5)
+- **计时器缩短**：关卡提升时压力延迟缩短
+- **BOSS数值调整**：BOSS生命值乘以(1 + 关卡数/10)，伤害乘以(1 + 关卡数/20)
 
-## How to Use in Cocos Creator
+## Cocos Creator使用指南
 
-### 1. Setup LevelManager Node
+### 1. 创建LevelManager节点
 ```
-1. Create empty Node in GameScene
-2. Attach LevelManager.ts script to the node
-3. Configure properties in Inspector:
-   - Pressure Move Speed: 10.0 (base speed)
-   - Pressure Start Delay: 30.0 (seconds)
-   - Pressure Acceleration: 1.5 (multiplier)
+1. 在游戏场景中创建空节点
+2. 为节点附加LevelManager.ts脚本
+3. 在检查器中配置属性：
+   - 压力移动速度：10.0（基础速度）
+   - 压力启动延迟：30.0（秒）
+   - 压力加速度：1.5（倍数）
+```
+### 2. 赋予必要引用
+```
+检查器设置：
+- 头目预制件：拖入带有BossController脚本的头目预制件
+- 砖块容器：引用包含所有砖块对象的节点
 ```
 
-### 2. Assign Required References
-```
-Inspector Settings:
-- Boss Prefab: Drag boss prefab with BossController script
-- Brick Container: Reference to node containing all brick objects
-```
-
-### 3. Integration with GameManager
+### 3. 与游戏管理器的集成
 ```typescript
-// In GameManager, add LevelManager integration:
+// 在游戏管理器中添加关卡管理器集成：
 const levelManager = LevelManager.getInstance();
 if (levelManager) {
     levelManager.initializeLevel();
 }
 ```
 
-### 4. Physics Configuration
+### 4. 物理配置
 ```
-Boss Collision Setup:
-- Boss collider should interact with Ball and Laser groups
-- Boss should not collide with Brick or Paddle groups
-- Use STATIC or KINEMATIC RigidBody2D for controlled movement
+Boss碰撞设置：
+- Boss碰撞体需与球体组和激光组交互
+- Boss不得与砖块组或拍板组碰撞
+- 使用STATIC或KINEMATIC RigidBody2D实现受控移动
 ```
 
-## Level Design Guidelines
+## 关卡设计规范
 
-### Normal Levels
-- Enable pressure system for time pressure
-- Standard brick layouts with increasing complexity
-- Pressure timer provides strategic timing element
+### 普通关卡
+- 启用压力系统实现时间限制
+- 采用标准砖块布局并逐步增加复杂度
+- 压力计时器提供策略性时机要素
 
-### Boss Levels
-- Clear all regular bricks before boss spawn
-- Focus on sustained combat rather than brick destruction
-- No pressure system - allows focused boss combat
-- Boss health should require 50-100 hits to defeat
 
-### Elite Levels
-- Enhanced brick configurations
-- Faster pressure system activation
-- Higher brick health values
-- More complex layout patterns
+### 头目关卡
+- 头目出现前清除所有普通砖块
+- 侧重持续战斗而非砖块破坏
+- 无压力系统——便于专注对抗头目
+- 头目血量需50-100次攻击方可击败
 
-### Time Attack Levels
-- Accelerated pressure mechanics
-- Dense brick layouts
-- Reduced pressure delay timer
-- Bonus scoring for quick completion
+### 精锐关卡
+- 强化砖块布局
+- 压力系统更快激活
+- 砖块血量值更高
+- 布局模式更复杂
 
-## Pressure System Mechanics
+### 限时关卡
+- 加速压力机制
+- 砖块密集布局
+- 压力延迟计时缩短
+- 快速通关额外加分
 
-### Damage Calculation
+## 压力系统机制
+
+### 伤害计算
 ```typescript
-// Damage equals number of brick rows remaining
+// 伤害值等于剩余砖块行数
 const remainingBricks = this.countRemainingBricks();
 const rowsRemaining = Math.ceil(remainingBricks / 8);
 const damage = Math.max(1, rowsRemaining);
 ```
 
-### Speed Scaling Formula
+### 速度缩放公式
 ```typescript
 const adjustedSpeed = baseSpeed * Math.pow(acceleration, level / 5);
-// Example: Level 10 = 10 * (1.5^2) = 22.5 speed
-// Example: Level 20 = 10 * (1.5^4) = 50.6 speed
+// 示例：第10级 = 10 * (1.5^2) = 22.5倍速度
+// 示例：第20级 = 10 * (1.5^4) = 50.6倍速度
 ```
 
-### Strategic Implications
-- Players must balance offense (destroying bricks) with defense (managing pressure)
-- Higher levels require faster brick clearing to avoid pressure damage
-- Creates natural difficulty curve without artificial health/damage scaling
-- Encourages aggressive, skillful play over defensive strategies
+### 战略意义
+- 玩家需平衡进攻（摧毁砖块）与防守（应对压力）
+- 高难度关卡需加速清除砖块以规避压力伤害
+- 通过自然难度曲线替代人工生命值/伤害调整机制
+- 鼓励玩家采用积极进取的操作技巧而非保守策略
 
-## Future Enhancements
-- Environmental hazards that move with pressure system
-- Power-ups that affect pressure mechanics (slow time, freeze bricks)
-- Boss levels with environmental pressure elements
-- Special brick types that resist or accelerate pressure effects
+## 未来增强方向
+- 随压力系统动态变化的环境威胁
+- 影响压力机制的强化道具（时间减缓、砖块冻结）
+- 融入环境压力元素的BOSS关卡
+- 具备抗压或加速压力效果的特殊砖块类型
