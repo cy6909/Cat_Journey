@@ -1,53 +1,53 @@
-# Cat-Conquest Roguelike Breakout - Complete Development Workflow
+# Cat-Conquest Roguelike Breakout - 完整开发工作流程
 
-## Overview
-Complete workflow for developing Cat-Conquest Roguelike Breakout using Cocos Creator 3.8.6, ComfyUI for art generation, and WeChat Mini Game deployment.
+## 概述
+使用 Cocos Creator 3.8.6、ComfyUI 美术生成和微信小游戏部署开发 Cat-Conquest Roguelike Breakout 的完整工作流程。
 
-## Art Asset Pipeline
+## 美术资源管线
 
-### 1. Asset Requirements Analysis
+### 1. 资源需求分析
 
-#### Paddle Assets
-- **Base Sprite**: 120x20 px paddle sprite
-- **Upgrade States**: 5 visual progression states showing wear and enhancement
-- **Visual Effects**: Glow, shield, laser attachment overlays
-- **Required Files**:
+#### 挡板资源
+- **基础精灵**：120x20 px 挡板精灵
+- **升级状态**：5个展示磨损和强化的视觉进度状态
+- **视觉效果**：发光、护盾、激光附件覆盖层
+- **必需文件**：
   - `paddle_base.png` (120x20)
-  - `paddle_enhanced_1.png` through `paddle_enhanced_5.png`
-  - `paddle_shield_overlay.png` (transparency enabled)
+  - `paddle_enhanced_1.png` 到 `paddle_enhanced_5.png`
+  - `paddle_shield_overlay.png` (启用透明度)
   - `paddle_laser_attachment.png`
-  - `paddle_damage_crack_1.png` through `paddle_damage_3.png`
+  - `paddle_damage_crack_1.png` 到 `paddle_damage_3.png`
 
-#### Ball Assets
-- **Base Balls**: 25 different ball types (24x24 px each)
-- **Particle Trails**: Fire, ice, electric, poison effect trails
-- **Special Effects**: Explosion, split, phase visual indicators
-- **Required Files**:
-  - 25 individual ball sprites: `ball_{type}.png` (e.g., `ball_fire.png`, `ball_heavy.png`)
-  - Particle textures: `trail_{effect}.png`
-  - Impact effects: `impact_{type}.png`
-  - Status overlays: `effect_overlay_{type}.png`
+#### 弹球资源
+- **基础弹球**：25种不同弹球类型（每个24x24 px）
+- **粒子轨迹**：火焰、冰霜、电击、毒性效果轨迹
+- **特殊效果**：爆炸、分裂、相位视觉指示器
+- **必需文件**：
+  - 25个独立弹球精灵：`ball_{type}.png`（如 `ball_fire.png`、`ball_heavy.png`）
+  - 粒子纹理：`trail_{effect}.png`
+  - 撞击效果：`impact_{type}.png`
+  - 状态覆盖层：`effect_overlay_{type}.png`
 
-#### Brick Assets
-- **Basic Bricks**: 25 brick types with distinct visual identity (60x30 px)
-- **Damage States**: Each brick needs 3 damage states (100%, 66%, 33% health)
-- **Special Effects**: Glowing, pulsing, cracking animations
-- **Required Files**:
-  - 75 brick state sprites: `brick_{type}_state_{1-3}.png`
-  - Effect overlays: `brick_overlay_{effect}.png`
-  - Destruction particles: `brick_destroy_{type}.png`
+#### 砖块资源
+- **基础砖块**：25种具有独特视觉标识的砖块类型（60x30 px）
+- **伤害状态**：每个砖块需要3种伤害状态（100%、66%、33% 生命值）
+- **特殊效果**：发光、脉冲、裂纹动画
+- **必需文件**：
+  - 75个砖块状态精灵：`brick_{type}_state_{1-3}.png`
+  - 效果覆盖层：`brick_overlay_{effect}.png`
+  - 破坏粒子：`brick_destroy_{type}.png`
 
-#### UI Assets
-- **HUD Elements**: Health bars, score displays, pause menu
-- **Shop Interface**: Category tabs, item frames, purchase buttons
-- **Map Screen**: Node icons, connection lines, chapter backgrounds
-- **Required Files**:
-  - UI frames: `ui_frame_{style}.9.png` (9-slice sprites)
-  - Icons: 50+ individual icons for items, abilities, statuses
-  - Backgrounds: Chapter-themed backgrounds for each area
-  - Buttons: Various button states (normal, pressed, disabled)
+#### UI 资源
+- **HUD 元素**：生命条、分数显示、暂停菜单
+- **商店界面**：分类标签、物品框架、购买按钮
+- **地图界面**：节点图标、连接线、章节背景
+- **必需文件**：
+  - UI框架：`ui_frame_{style}.9.png`（九宫格精灵）
+  - 图标：50+ 个物品、能力、状态的独立图标
+  - 背景：各区域的章节主题背景
+  - 按钮：各种按钮状态（正常、按下、禁用）
 
-#### Background Assets
+#### 背景资源
 - **Chapter Backgrounds**: 3 distinct environments (Forest, Mountain, Abyss)
 - **Level Variations**: Multiple background variants per chapter
 - **Animated Elements**: Parallax layers, ambient animations

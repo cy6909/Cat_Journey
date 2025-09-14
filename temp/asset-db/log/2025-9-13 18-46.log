@@ -161,3 +161,52 @@
 2025-9-13 19:10:35-debug: Run asset db hook engine-extends:afterRefresh ...
 2025-9-13 19:10:35-debug: Run asset db hook engine-extends:afterRefresh success!
 2025-9-13 19:10:35-debug: asset-db:refresh-all-database (163ms)
+2025-9-14 10:19:30-debug: refresh db internal success
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\AdManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\CoreController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\BossController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EliteAndHiddenBossManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBall.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBossController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBrick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedPaddleController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ExperienceOrb.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\LevelManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\MapManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\MonetizationManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ProceduralLevelGenerator.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ShopManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\AdManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\BossController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\Ball.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\Brick.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\CoreController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EliteAndHiddenBossManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBall.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBossController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedBrick.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\EnhancedPaddleController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ExperienceOrb.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\GameManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\LevelManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\MapManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\MonetizationManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\PaddleController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\PowerUp.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ProceduralLevelGenerator.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\RelicManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\ShopManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scriptsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\Brick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-14 10:19:30-debug: refresh db assets success
+2025-9-14 10:19:30-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-14 10:19:30-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-14 10:19:30-debug: asset-db:refresh-all-database (249ms)
+2025-9-14 10:19:30-debug: asset-db:worker-effect-data-processing (2ms)
+2025-9-14 10:19:30-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-9-14 10:20:11-debug: refresh db internal success
+2025-9-14 10:20:11-debug: refresh db assets success
+2025-9-14 10:20:11-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-14 10:20:11-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-14 10:20:11-debug: asset-db:refresh-all-database (109ms)

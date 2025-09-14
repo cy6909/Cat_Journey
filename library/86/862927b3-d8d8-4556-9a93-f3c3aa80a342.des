@@ -1,0 +1,497 @@
+## ShopManager.ts 脚本逻辑描述
+
+### 核心功能
+ShopManager是完整的游戏内商店系统，管理商品分类、定价策略、购买限制、VIP专享、限时特惠和每日刷新，为玩家提供多样化的购买选择和付费转化路径。
+
+### 商店分类系统
+
+#### 商品分类 (6种)
+```typescript
+export enum ShopCategory {
+    CURRENCY = 'currency',           // 货币包 - 宝石金币等
+    EQUIPMENT = 'equipment',         // 装备商店 - 挡板球核心
+    CONSUMABLES = 'consumables',     // 消耗品 - 药水卡片等
+    VIP = 'vip',                    // VIP服务 - 会员特权
+    SPECIAL = 'special',            // 特惠活动 - 限时折扣
+    LEGENDARY = 'legendary'         // 传说商店 - 高端商品
+}
+```
+
+#### 商品稀有度系统
+```typescript
+export enum ItemRarity {
+    COMMON = 'common',              // 普通 - 白色
+    RARE = 'rare',                  // 稀有 - 蓝色
+    EPIC = 'epic',                  // 史诗 - 紫色
+    LEGENDARY = 'legendary'         // 传说 - 橙色
+}
+```
+
+### 定价策略
+
+#### 货币包定价
+- **小宝石包**: 100宝石 ¥6 (6分/宝石)
+- **中宝石包**: 700宝石 ¥30 (4.3分/宝石，16%折扣)
+- **大宝石包**: 2500宝石 ¥98 (3.9分/宝石，35%折扣)
+- **组合包**: 包含多种货币+道具，提高性价比
+
+#### 装备定价
+- **传说挡板**: 800宝石 (相当于¥35-50)
+- **传说弹球**: 1000宝石 (相当于¥43-60)
+- **传说核心**: 1200宝石 (相当于¥50-70)
+- **稀有装备包**: 300宝石 (随机获得)
+
+#### 消耗品定价
+- **小体力药水**: 20宝石 (30点体力)
+- **大体力药水**: 50宝石 (满体力恢复)
+- **双倍卡**: 30-50宝石 (1小时效果)
+- **复活币**: 80宝石 (关卡复活)
+
+### 购买限制系统
+
+#### 限制类型
+```typescript
+interface ShopItem {
+    purchaseLimit?: number;         // 每日购买限制
+    oneTimePurchase?: boolean;      // 一次性购买
+    vipOnly?: boolean;             // VIP专属
+    levelRequirement?: number;      // 等级要求
+}
+```
+
+#### 限制策略
+- **货币包**: 无限制，鼓励重复购买
+- **传说装备**: 一次性购买，避免重复
+- **消耗品**: 每日限购，控制获取速度
+- **VIP专享**: 限制访问，增加VIP价值
+
+### 折扣系统
+
+#### 折扣类型
+```typescript
+interface ShopItem {
+    originalPrice?: number;         // 原价
+    discountPercent?: number;       // 折扣百分比
+    discountEndTime?: number;       // 折扣结束时间
+}
+```
+
+#### 折扣策略
+- **新手礼包**: 80%折扣，降低付费门槛
+- **组合包**: 25-40%折扣，提高性价比
+- **季度VIP**: 11%折扣，鼓励长期订阅
+- **周末特惠**: 限时40%折扣，营造紧迫感
+
+### VIP专享系统
+
+#### VIP专享商品
+```typescript
+this._shopItems.set('vip_exclusive_pack', {
+    vipOnly: true,
+    name: 'VIP专享礼包',
+    description: '稀有遗物x2 + 传说装备碎片x10',
+    currencyAmount: 500,
+    purchaseLimit: 1
+});
+```
+
+#### VIP特权
+- 专属商品访问权限
+- 更优惠的价格
+- 优先购买权
+- 专属商品标识
+
+### 每日刷新系统
+
+#### 刷新机制
+```typescript
+private generateDailyRefreshItems(): void {
+    this._dailyRefreshItems.clear();
+    
+    // 随机选择4个每日刷新物品
+    const availableItems = Array.from(this._shopItems.keys()).filter(itemId => {
+        const item = this._shopItems.get(itemId)!;
+        return !item.oneTimePurchase && item.category !== ShopCategory.VIP;
+    });
+    
+    for (let i = 0; i < 4; i++) {
+        const randomIndex = Math.floor(Math.random() * availableItems.length);
+        const selectedItem = availableItems[randomIndex];
+        this._dailyRefreshItems.add(selectedItem);
+        availableItems.splice(randomIndex, 1);
+    }
+}
+```
+
+#### 手动刷新
+- 消耗50宝石手动刷新
+- 每日自动刷新一次
+- 增加商品多样性和新鲜感
+
+### 商品内容系统
+
+#### 内容类型
+```typescript
+interface ShopItemContent {
+    type: 'currency' | 'item' | 'boost' | 'unlock';
+    subType: string;                // 具体类型
+    amount: number;                 // 数量
+    data?: any;                    // 额外数据
+}
+```
+
+#### 内容示例
+- **货币**: `{type: 'currency', subType: 'gems', amount: 100}`
+- **装备**: `{type: 'item', subType: 'paddle', data: {stats: {...}}}`
+- **增益**: `{type: 'boost', subType: 'exp_multiplier', amount: 2}`
+- **解锁**: `{type: 'unlock', subType: 'vip_status', amount: 30}`
+
+### Cocos Creator绑定说明
+
+#### 1. 组件设置
+```typescript
+// 在ShopManager节点或GameManager上添加ShopManager组件
+@property({type: MonetizationManager})
+public monetizationManager: MonetizationManager | null = null;
+
+// 监听购买完成事件
+protected start(): void {
+    this.node.on('item-purchased', this.onItemPurchased, this);
+}
+```
+
+#### 2. 商店UI初始化
+```typescript
+// 商店界面初始化
+public initializeShopUI(): void {
+    const shopManager = this.getComponent(ShopManager);
+    
+    // 获取各分类商品
+    const currencyItems = shopManager.getShopItems(ShopCategory.CURRENCY);
+    const equipmentItems = shopManager.getShopItems(ShopCategory.EQUIPMENT);
+    const consumableItems = shopManager.getShopItems(ShopCategory.CONSUMABLES);
+    const vipItems = shopManager.getShopItems(ShopCategory.VIP);
+    
+    // 填充各个分类页面
+    this.populateCategory('currency', currencyItems);
+    this.populateCategory('equipment', equipmentItems);
+    this.populateCategory('consumables', consumableItems);
+    this.populateCategory('vip', vipItems);
+}
+```
+
+#### 3. 商品展示
+```typescript
+// 创建商品UI元素
+private createShopItemUI(item: ShopItem): Node {
+    const itemUI = instantiate(this.shopItemPrefab);
+    
+    // 设置基本信息
+    const nameLabel = itemUI.getChildByName('Name').getComponent(Label);
+    nameLabel.string = item.name;
+    
+    const descLabel = itemUI.getChildByName('Description').getComponent(Label);
+    descLabel.string = item.description;
+    
+    // 设置稀有度颜色
+    const bgSprite = itemUI.getComponent(Sprite);
+    bgSprite.color = this.getRarityColor(item.rarity);
+    
+    // 设置价格显示
+    const priceLabel = itemUI.getChildByName('Price').getComponent(Label);
+    if (item.realPrice) {
+        priceLabel.string = `¥${(item.realPrice / 100).toFixed(2)}`;
+    } else if (item.currencyType && item.currencyAmount) {
+        priceLabel.string = `${item.currencyAmount} ${this.getCurrencyIcon(item.currencyType)}`;
+    }
+    
+    // 设置折扣标识
+    if (item.discountPercent) {
+        const discountTag = itemUI.getChildByName('DiscountTag');
+        discountTag.active = true;
+        const discountLabel = discountTag.getComponentInChildren(Label);
+        discountLabel.string = `${item.discountPercent}% OFF`;
+        
+        // 显示原价
+        if (item.originalPrice) {
+            const originalPriceLabel = itemUI.getChildByName('OriginalPrice').getComponent(Label);
+            originalPriceLabel.string = `¥${(item.originalPrice / 100).toFixed(2)}`;
+            originalPriceLabel.node.active = true;
+        }
+    }
+    
+    // 设置特色标签
+    if (item.featured) {
+        itemUI.getChildByName('FeaturedTag').active = true;
+    }
+    if (item.hot) {
+        itemUI.getChildByName('HotTag').active = true;
+    }
+    if (item.new) {
+        itemUI.getChildByName('NewTag').active = true;
+    }
+    
+    // 设置VIP标识
+    if (item.vipOnly) {
+        itemUI.getChildByName('VIPTag').active = true;
+    }
+    
+    // 设置购买按钮
+    const buyButton = itemUI.getChildByName('BuyButton').getComponent(Button);
+    const canPurchase = this.shopManager.canPurchaseItem(item.id);
+    buyButton.interactable = canPurchase.canPurchase;
+    
+    if (!canPurchase.canPurchase) {
+        const buttonLabel = buyButton.getComponentInChildren(Label);
+        buttonLabel.string = canPurchase.reason || '无法购买';
+    }
+    
+    buyButton.node.on(Button.EventType.CLICK, () => {
+        this.onPurchaseButtonClicked(item.id);
+    }, this);
+    
+    return itemUI;
+}
+```
+
+#### 4. 购买处理
+```typescript
+// 处理购买按钮点击
+public onPurchaseButtonClicked(itemId: string): void {
+    const shopManager = this.getComponent(ShopManager);
+    const item = shopManager.getShopItem(itemId);
+    
+    if (!item) return;
+    
+    // 显示购买确认对话框
+    this.showPurchaseConfirmDialog(item, (confirmed: boolean) => {
+        if (confirmed) {
+            this.processPurchase(itemId);
+        }
+    });
+}
+
+// 执行购买
+private async processPurchase(itemId: string): Promise<void> {
+    const shopManager = this.getComponent(ShopManager);
+    
+    // 显示购买加载界面
+    this.showPurchaseLoading(true);
+    
+    try {
+        const result = await shopManager.purchaseItem(itemId);
+        
+        if (result.success) {
+            this.showPurchaseSuccess(result.message);
+            this.updateShopUI(); // 更新商店界面
+            this.updateCurrencyUI(); // 更新货币显示
+        } else {
+            this.showPurchaseError(result.message);
+        }
+    } catch (error) {
+        console.error('Purchase failed:', error);
+        this.showPurchaseError('购买失败，请重试');
+    } finally {
+        this.showPurchaseLoading(false);
+    }
+}
+```
+
+#### 5. 购买完成处理
+```typescript
+// 处理购买完成事件
+private onItemPurchased(event: any): void {
+    const { itemId, contents } = event.detail;
+    
+    // 逐个处理购买内容
+    for (const content of contents) {
+        switch (content.type) {
+            case 'currency':
+                this.addCurrency(content.subType, content.amount);
+                break;
+            case 'item':
+                this.grantItem(content.subType, content.amount, content.data);
+                break;
+            case 'boost':
+                this.applyBoost(content.subType, content.amount, content.data);
+                break;
+            case 'unlock':
+                this.unlockFeature(content.subType, content.amount, content.data);
+                break;
+        }
+    }
+    
+    // 显示获得物品的动画和UI
+    this.showItemsReceived(contents);
+}
+```
+
+#### 6. 每日刷新UI
+```typescript
+// 每日刷新商品展示
+public initializeDailyRefreshSection(): void {
+    const shopManager = this.getComponent(ShopManager);
+    const dailyItems = shopManager.getDailyRefreshItems();
+    
+    // 清除旧的每日商品
+    this.clearDailyRefreshItems();
+    
+    // 添加新的每日商品
+    for (const item of dailyItems) {
+        const itemUI = this.createShopItemUI(item);
+        this.dailyRefreshContainer.addChild(itemUI);
+    }
+    
+    // 设置刷新按钮
+    this.refreshButton.node.on(Button.EventType.CLICK, () => {
+        this.onRefreshButtonClicked();
+    }, this);
+    
+    // 更新刷新按钮状态
+    this.updateRefreshButtonState();
+}
+
+// 手动刷新处理
+private onRefreshButtonClicked(): void {
+    const shopManager = this.getComponent(ShopManager);
+    const refreshCost = 50;
+    
+    this.showConfirmDialog(
+        '刷新每日商品', 
+        `花费${refreshCost}宝石刷新今日商品？`,
+        (confirmed: boolean) => {
+            if (confirmed) {
+                shopManager.refreshDailyItems().then(result => {
+                    if (result.success) {
+                        this.initializeDailyRefreshSection(); // 重新初始化
+                        this.showMessage('商品已刷新！');
+                    } else {
+                        this.showMessage('宝石不足，无法刷新');
+                    }
+                });
+            }
+        }
+    );
+}
+```
+
+#### 7. 限时特惠UI
+```typescript
+// 限时特惠倒计时
+private updateLimitedOfferCountdown(): void {
+    for (const itemUI of this.limitedOfferItems) {
+        const itemId = itemUI.name; // 假设UI节点名称为itemId
+        const item = this.shopManager.getShopItem(itemId);
+        
+        if (item && item.discountEndTime) {
+            const remainingTime = item.discountEndTime - Date.now();
+            
+            if (remainingTime > 0) {
+                const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                
+                const countdownLabel = itemUI.getChildByName('Countdown').getComponent(Label);
+                countdownLabel.string = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            } else {
+                // 特惠已结束，移除商品
+                itemUI.removeFromParent();
+            }
+        }
+    }
+}
+
+// 启动倒计时定时器
+protected start(): void {
+    this.schedule(this.updateLimitedOfferCountdown, 1, Number.MAX_VALUE);
+}
+```
+
+#### 8. 统计和分析
+```typescript
+// 商店数据分析
+public analyzeShopPerformance(): any {
+    const shopManager = this.getComponent(ShopManager);
+    const stats = shopManager.getShopStatistics();
+    
+    const analysis = {
+        totalRevenue: this.calculateTotalRevenue(),
+        topSellingItems: this.getTopSellingItems(),
+        categoryPerformance: this.getCategoryPerformance(),
+        conversionRate: this.calculateConversionRate(),
+        recommendations: []
+    };
+    
+    // 基于数据生成优化建议
+    if (analysis.conversionRate < 0.05) {
+        analysis.recommendations.push('考虑降低高价商品价格或增加折扣');
+    }
+    
+    if (stats.vipExclusiveItems === 0) {
+        analysis.recommendations.push('添加更多VIP专享商品增加VIP价值');
+    }
+    
+    return analysis;
+}
+```
+
+### 商业化策略
+
+#### 转化漏斗设计
+1. **吸引**: 新手礼包80%折扣
+2. **尝试**: 小额货币包建立付费习惯
+3. **转化**: VIP订阅提供持续价值
+4. **留存**: 传说装备和限时特惠
+
+#### 定价心理学
+- **锚点效应**: 大宝石包作为价格锚点
+- **损失厌恶**: 限时特惠营造紧迫感
+- **社会认同**: 热门标签和推荐商品
+- **心理账户**: 游戏币购买降低付费痛感
+
+#### 用户分群策略
+- **新手**: 特惠礼包和引导购买
+- **休闲玩家**: 消耗品和小额购买
+- **核心玩家**: VIP服务和传说装备
+- **鲸鱼用户**: 高端商品和专属服务
+
+### 数据监控指标
+
+#### 关键指标 (KPI)
+- **ARPU**: 人均收入
+- **付费率**: 付费用户占比
+- **复购率**: 重复购买比例
+- **客单价**: 单次购买金额
+- **LTV**: 用户生命周期价值
+
+#### 商品表现指标
+- **商品转化率**: 查看->购买转化
+- **收入占比**: 各商品收入贡献
+- **库存周转**: 限量商品销售速度
+- **折扣敏感度**: 折扣对销量的影响
+
+### 运营活动支持
+
+#### 节日活动
+```typescript
+// 添加节日特惠商品
+public addHolidaySpecial(itemConfig: ShopItem): void {
+    itemConfig.category = ShopCategory.SPECIAL;
+    itemConfig.hot = true;
+    itemConfig.discountPercent = 50;
+    itemConfig.discountEndTime = Date.now() + 7 * 24 * 60 * 60 * 1000;
+    
+    this._shopItems.set(itemConfig.id, itemConfig);
+    this.savePurchaseRecords();
+}
+```
+
+#### 用户回流
+- 离线一周后特惠商品
+- 老用户专属折扣
+- 回归玩家欢迎包
+
+#### A/B测试支持
+- 不同定价方案测试
+- 商品描述优化测试
+- UI布局效果测试

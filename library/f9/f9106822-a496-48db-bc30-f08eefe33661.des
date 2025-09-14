@@ -1,0 +1,86 @@
+## PowerUp.ts 脚本逻辑描述
+
+### 核心功能
+PowerUp是所有道具的抽象基类，定义了道具的基础行为：掉落物理、碰撞检测、效果激活和生命周期管理。
+
+### 主要组件
+1. **物理掉落**: 道具从砖块位置掉落到挡板位置
+2. **碰撞检测**: 检测与挡板的碰撞并激活效果
+3. **效果激活**: 抽象方法，由派生类实现具体效果
+4. **生命周期**: 自动销毁机制和掉出屏幕检测
+
+### 关键属性
+```typescript
+public fallSpeed: number = 200        // 掉落速度
+public effectDuration: number = 10.0  // 效果持续时间
+protected _rigidBody: RigidBody2D     // 刚体组件
+protected _sprite: Sprite             // 视觉组件
+```
+
+### 关键方法
+- `onLoad()`: 初始化物理组件和碰撞监听
+- `start()`: 开始掉落
+- `onBeginContact()`: 处理与挡板碰撞
+- `activateEffect()`: 抽象方法，激活道具效果
+- `destroy()`: 清理和销毁道具
+
+### 派生类系统
+- **MultiBallPowerUp**: 多球效果
+- **LaserPaddlePowerUp**: 激光发射效果
+- 扩展性强，支持添加更多道具类型
+
+### Cocos Creator绑定说明
+
+#### 1. 基础预制体创建
+- 创建空节点，命名为"PowerUp"
+- 添加Sprite组件用于视觉呈现
+- 添加RigidBody2D组件，类型为DYNAMIC
+- 添加BoxCollider2D组件用于碰撞检测
+- 将PowerUp.ts脚本添加到节点
+
+#### 2. 物理设置
+在RigidBody2D组件中：
+- **Type**: Dynamic (受重力影响)
+- **Gravity Scale**: 1.0 (正常重力)
+- **Collision Group**: PowerUp
+- **Collision Mask**: Paddle (只与挡板碰撞)
+
+#### 3. 碰撞器设置
+在BoxCollider2D组件中：
+- **Size**: 根据道具大小调整，建议(30, 30)
+- **Is Sensor**: false (实体碰撞)
+
+#### 4. Sprite设置
+在Sprite组件中：
+- 设置道具图标或颜色
+- **Size Mode**: Custom
+- **Custom Size**: (30, 30)
+
+#### 5. 参数配置
+在PowerUp组件中：
+- **Fall Speed**: 200 (掉落速度)
+- **Effect Duration**: 10.0 (效果持续时间)
+
+#### 6. 派生类使用方法
+创建新道具类型：
+```typescript
+@ccclass('NewPowerUp')
+export class NewPowerUp extends PowerUp {
+    protected activateEffect(): void {
+        // 实现具体效果逻辑
+        console.log('New power-up activated!');
+    }
+}
+```
+
+#### 7. GameManager集成
+在GameManager中配置道具掉落：
+- 设置道具掉落概率(建议30%)
+- 配置不同道具的掉落权重
+- 确保道具预制体正确引用
+
+#### 8. 注意事项
+- 道具会自动检测掉出屏幕并销毁
+- 碰撞后道具立即销毁，避免重复激活
+- 效果持续时间由具体派生类控制
+- 支持视觉和音频反馈集成

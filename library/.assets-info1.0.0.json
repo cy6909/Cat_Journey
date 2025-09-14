@@ -159,7 +159,7 @@
       "uuid": "0590ba0b-482f-48da-b425-fb739f16585d"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts": {
-      "time": 1757682113906.2322,
+      "time": 1757816370686.2969,
       "uuid": "886d6f13-f395-4a7e-a603-8861f50cfffe"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts": {
@@ -167,7 +167,7 @@
       "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Brick.ts": {
-      "time": 1757681247123.3608,
+      "time": 1757766821221.7893,
       "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\DeathZone.ts": {
@@ -175,7 +175,7 @@
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\GameManager.ts": {
-      "time": 1757681247124.3608,
+      "time": 1757766706674.304,
       "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Laser.ts": {
@@ -2606,6 +2606,244 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\resources\\texture\\paddle\\texture.plist": {
       "time": 1757755435978.705,
       "uuid": "104daebd-5903-4488-8a7c-86cc0740738e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.ts.meta": {
+      "time": 1757816370667.295
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.ts.meta": {
+      "time": 1757816370668.2961
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CoreController.ts.meta": {
+      "time": 1757816370668.2961
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.ts.meta": {
+      "time": 1757816370669.2957
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBall.ts.meta": {
+      "time": 1757816370669.2957
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBossController.ts.meta": {
+      "time": 1757816370672.2942
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBrick.ts.meta": {
+      "time": 1757816370673.2942
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedPaddleController.ts.meta": {
+      "time": 1757816370674.2942
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ExperienceOrb.ts.meta": {
+      "time": 1757816370674.2942
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\LevelManager.ts.meta": {
+      "time": 1757816370675.2944
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MapManager.ts.meta": {
+      "time": 1757816370676.295
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.ts.meta": {
+      "time": 1757816370676.295
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ProceduralLevelGenerator.ts.meta": {
+      "time": 1757816370678.2937
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.ts.meta": {
+      "time": 1757816370678.2937
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.ts": {
+      "time": 1757778924914.022,
+      "uuid": "5ab194a2-f89a-4525-9550-f372a0166a0f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.ts": {
+      "time": 1757766510554.8735,
+      "uuid": "cb177592-4af2-4364-aa4f-151cf2468684"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CoreController.ts": {
+      "time": 1757766630224.3066,
+      "uuid": "b64384bb-73e5-44e7-97ab-dde11b2c0873"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.ts": {
+      "time": 1757779169035.5808,
+      "uuid": "b292370e-104f-4642-9f1b-2018c49d54ae"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBall.ts": {
+      "time": 1757767553453.032,
+      "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBossController.ts": {
+      "time": 1757768561446.1167,
+      "uuid": "27557649-ef41-41bd-8182-c1f866e06f1c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBrick.ts": {
+      "time": 1757767633775.2495,
+      "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedPaddleController.ts": {
+      "time": 1757767611983.7068,
+      "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ExperienceOrb.ts": {
+      "time": 1757766745681.4915,
+      "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\LevelManager.ts": {
+      "time": 1757766570752.8523,
+      "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MapManager.ts": {
+      "time": 1757769033755.3645,
+      "uuid": "04ad1764-0c43-4052-83ae-2a379e962c0f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.ts": {
+      "time": 1757778918173.3,
+      "uuid": "8efbb6dc-d267-4d8e-8fe4-4e45fada804f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ProceduralLevelGenerator.ts": {
+      "time": 1757768247554.9429,
+      "uuid": "21fce139-201d-4e35-b134-cd69356c8991"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.ts": {
+      "time": 1757769759156.7927,
+      "uuid": "ee9197dd-fbcc-48de-8b72-9ed5f1aa2caa"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.des.meta": {
+      "time": 1757816370716.8113
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.des.meta": {
+      "time": 1757816370713.8108
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.des.meta": {
+      "time": 1757816370714.8125
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Brick.des.meta": {
+      "time": 1757816370716.8113
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CoreController.des.meta": {
+      "time": 1757816370715.8125
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.des.meta": {
+      "time": 1757816370739.8115
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBall.des.meta": {
+      "time": 1757816370741.811
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBossController.des.meta": {
+      "time": 1757816370742.8123
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBrick.des.meta": {
+      "time": 1757816370742.8123
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedPaddleController.des.meta": {
+      "time": 1757816370743.812
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ExperienceOrb.des.meta": {
+      "time": 1757816370745.812
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\GameManager.des.meta": {
+      "time": 1757816370748.8108
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\LevelManager.des.meta": {
+      "time": 1757816370746.812
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MapManager.des.meta": {
+      "time": 1757816370747.812
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.des.meta": {
+      "time": 1757816370749.8113
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.des.meta": {
+      "time": 1757816370751.8132
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.des.meta": {
+      "time": 1757816370756.812
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ProceduralLevelGenerator.des.meta": {
+      "time": 1757816370758.8135
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\RelicManager.des.meta": {
+      "time": 1757816370759.8127
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.des.meta": {
+      "time": 1757816370759.8127
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.des": {
+      "time": 1757766981066.9446,
+      "uuid": "e01b4cd3-fec4-47b4-b078-2d36c18f7a59"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.des": {
+      "time": 1757771581445.9395,
+      "uuid": "425842cc-7cbb-449c-a501-8f2ca1738860"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CoreController.des": {
+      "time": 1757772750793.339,
+      "uuid": "0bbd4585-b172-44ba-aafd-fdc87df994ef"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.des": {
+      "time": 1757769853046.166,
+      "uuid": "9de2dcc6-41dd-4d0a-9d89-80eb5d3a7a2f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Brick.des": {
+      "time": 1757767015111.368,
+      "uuid": "7b9a6d27-dcfb-427a-98eb-094f06616a6a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.des": {
+      "time": 1757768836101.345,
+      "uuid": "ea8faa6a-d962-4f4e-a12a-8e4ed06811c1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBall.des": {
+      "time": 1757767455750.8914,
+      "uuid": "d036b0d8-b45a-4bd6-8c5d-2a155f5b4f87"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBrick.des": {
+      "time": 1757767304695.8794,
+      "uuid": "1b61936f-ec53-4d91-8841-05af44692a9e"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBossController.des": {
+      "time": 1757768624373.7666,
+      "uuid": "33f2b7b1-8b93-43fd-836f-76d9ef3242e5"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedPaddleController.des": {
+      "time": 1757767182122.6626,
+      "uuid": "9e10476f-4699-49b1-9e93-c257efc89ff6"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ExperienceOrb.des": {
+      "time": 1757775459761.1936,
+      "uuid": "e197edb6-f29d-4059-a9d0-0e95b96f501a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\LevelManager.des": {
+      "time": 1757775953758.9517,
+      "uuid": "96a0724d-a22c-4296-8994-d94edc619267"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MapManager.des": {
+      "time": 1757769234027.6074,
+      "uuid": "b5e45616-16d5-421c-8bfd-c9d8fb19a716"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\GameManager.des": {
+      "time": 1757766918515.9194,
+      "uuid": "dc05afb6-181b-46d1-916b-7db9d99748dc"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.des": {
+      "time": 1757769460234.151,
+      "uuid": "d8144d91-88d1-4446-bea9-01d73b7d6533"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.des": {
+      "time": 1757766948974.0066,
+      "uuid": "25799f56-843b-4bfa-9104-cd6cc632836f"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.des": {
+      "time": 1757768109880.1377,
+      "uuid": "f9106822-a496-48db-bc30-f08eefe33661"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ProceduralLevelGenerator.des": {
+      "time": 1757768314000.9888,
+      "uuid": "8f2f2c8d-9427-46e8-acf5-076baad25420"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\RelicManager.des": {
+      "time": 1757768145024.1836,
+      "uuid": "fd50a31c-7380-4ee9-bdee-43103a44bcb1"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.des": {
+      "time": 1757770025791.7742,
+      "uuid": "862927b3-d8d8-4556-9a93-f3c3aa80a342"
     }
   },
   "missing": {

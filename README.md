@@ -1,141 +1,141 @@
-# Cat-Conquest: Roguelike Breakout Module
+# Cat-Conquest: 猫咪征服 - Roguelike 弹球模块
 
-A WeChat Mini Game built with Cocos Creator 3.x and TypeScript that combines classic Breakout/Arkanoid gameplay with roguelike elements including power-ups and passive relics.
+一个使用 Cocos Creator 3.x 和 TypeScript 构建的微信小游戏，将经典的打砖块/Arkanoid 玩法与Roguelike元素相结合，包含能力道具和被动遗物系统。
 
-## 🚀 Compilation & Startup
+## 🚀 编译和启动
 
-### Prerequisites
-- Cocos Creator 3.x (recommended: 3.8.0 or later)
-- WeChat Developer Tools for Mini Game development
-- Node.js and npm for dependency management
+### 前置要求
+- Cocos Creator 3.x（推荐：3.8.0 或更高版本）
+- 微信开发者工具（用于小游戏开发）
+- Node.js 和 npm（用于依赖管理）
 
-### Build Process
+### 构建流程
 
-1. **Install Dependencies**
+1. **安装依赖**
    ```bash
    npm install
    ```
 
-2. **Open in Cocos Creator**
-   - Launch Cocos Creator 3.x
-   - Open the project directory: `D:\project\claudecode\wx\Cat_Journey`
-   - The main scene will load automatically: `assets/scenes/GameScene.scene`
+2. **在 Cocos Creator 中打开**
+   - 启动 Cocos Creator 3.x
+   - 打开项目目录：`D:\project\claudecode\wx\Cat_Journey`
+   - 主场景将自动加载：`assets/scenes/GameScene.scene`
 
-3. **Build for WeChat Mini Game**
-   - In Cocos Creator: Project → Build
-   - Select Platform: "WeChat Mini Game"
-   - Configure build settings:
-     - Title: "Cat-Conquest: Roguelike Breakout"
-     - Orientation: Landscape
-     - Resolution: 960x640 (fit width/height enabled)
-   - Click "Build"
+3. **构建微信小游戏**
+   - 在 Cocos Creator 中：项目 → 构建
+   - 选择平台："微信小游戏"
+   - 配置构建设置：
+     - 标题："Cat-Conquest: Roguelike Breakout"
+     - 屏幕方向：横屏
+     - 分辨率：960x640（启用适配宽高）
+   - 点击"构建"
 
-4. **Deploy to WeChat Developer Tools**
-   - Open WeChat Developer Tools
-   - Import the built project from `build/wechatgame/`
-   - Preview and test on device/simulator
+4. **部署到微信开发者工具**
+   - 打开微信开发者工具
+   - 从 `build/wechatgame/` 导入构建后的项目
+   - 在设备/模拟器上预览和测试
 
-## 🎮 Gameplay Introduction
+## 🎮 游戏玩法介绍
 
-### Core Mechanics
-**Breakout with a Twist** - Control a paddle to keep the ball in play while destroying all bricks to complete levels. But this isn't your ordinary breakout game!
+### 核心机制
+**创新弹球游戏** - 控制挡板保持弹球在场内，通过摧毁所有砖块来完成关卡。但这不是普通的弹球游戏！
 
-### Controls
-- **Touch/Mouse**: Move paddle horizontally by touching or dragging
-- **Laser Power-up**: Touch/click to fire lasers when laser paddle power-up is active
-- **Boundary Constraints**: Paddle automatically stays within screen bounds
+### 操作控制
+- **触摸/鼠标**：通过触摸或拖拽水平移动挡板
+- **激光能力**：当激光挡板能力激活时，触摸/点击发射激光
+- **边界约束**：挡板自动保持在屏幕范围内
 
-### Roguelike Elements
+### Roguelike 元素
 
-#### 🔋 Power-ups (Temporary Effects)
-Power-ups drop randomly from destroyed bricks (20% chance) and activate when collected by the paddle:
+#### 🔋 能力道具（临时效果）
+能力道具从被摧毁的砖块随机掉落（20%概率），被挡板收集后激活：
 
-- **MultiBall Power-up** (Yellow)
-  - Spawns 2 additional balls in a spread pattern
-  - Instant effect, no duration limit
+- **多球能力道具**（黄色）
+  - 以扇形模式生成2个额外弹球
+  - 瞬时效果，无持续时间限制
   
-- **Laser Paddle Power-up** (Red)
-  - Duration: 10 seconds
-  - Enables paddle to shoot lasers upward
-  - Fire rate: 0.5 seconds between shots
-  - Lasers deal 1 damage to bricks
+- **激光挡板能力道具**（红色）
+  - 持续时间：10秒
+  - 使挡板能够向上发射激光
+  - 发射频率：射击间隔0.5秒
+  - 激光对砖块造成1点伤害
 
-#### 🛡️ Relics (Permanent Upgrades)
-Relics are passive upgrades that persist across levels. One random relic is granted after completing each level:
+#### 🛡️ 遗物（永久升级）
+遗物是持续跨关卡的被动升级。每完成一个关卡后将获得一个随机遗物：
 
-- **Explosive Bricks** 💥
-  - When any brick is destroyed, it deals 1 damage to all bricks within 100 units
-  - Creates satisfying chain reactions
+- **爆炸砖块** 💥
+  - 任何砖块被摧毁时，对100单位范围内的所有砖块造成1点伤害
+  - 创造令人满意的连锁反应
 
-- **Multi Ball Start** (Future expansion)
-  - Start each level with 3 balls instead of 1
+- **多球开局**（未来扩展）
+  - 每关卡开始时拥有3个弹球而不是1个
 
-- **Laser Power** (Future expansion)  
-  - Laser power-up deals double damage
+- **激光强化**（未来扩展）  
+  - 激光能力道具造成双倍伤害
 
-- **Penetrating Shots** (Future expansion)
-  - Ball can pass through bricks, destroying multiple in a row
+- **穿透射击**（未来扩展）
+  - 弹球可以穿过砖块，连续摧毁多个
 
-- **Speed Boost** (Future expansion)
-  - Ball moves 25% faster
+- **速度提升**（未来扩展）
+  - 弹球移动速度提高25%
 
-### Game Flow
-1. **Pre-Start Phase** (2 seconds)
-   - Level initializes with brick layout
-   - Ball and paddle spawn in starting positions
+### 游戏流程
+1. **准备阶段**（2秒）
+   - 关卡初始化砖块布局
+   - 弹球和挡板生成在起始位置
 
-2. **Playing Phase**
-   - Ball launches automatically at angle
-   - Destroy all bricks to complete level
-   - Collect power-ups for temporary advantages
+2. **游玩阶段**
+   - 弹球自动以一定角度发射
+   - 摧毁所有砖块以完成关卡
+   - 收集能力道具获得临时优势
 
-3. **Level Complete Phase** (3 seconds)
-   - Random relic is awarded
-   - Next level generates with increased difficulty
+3. **关卡完成阶段**（3秒）
+   - 获得随机遗物奖励
+   - 下一关卡生成并提高难度
 
-4. **Game Over Phase**
-   - Triggered when all lives are lost
-   - Ball falls into bottom death zone
+4. **游戏结束阶段**
+   - 当所有生命耗尽时触发
+   - 弹球掉入底部死亡区域
 
-### Progression System
-- **Lives**: Start with 3 lives, lose 1 when ball hits death zone
-- **Score**: 10 points per brick destroyed
-- **Levels**: Procedurally generated layouts, higher levels include multi-hit bricks
-- **Difficulty**: Later levels feature bricks with 2 hit points (50% chance)
+### 进度系统
+- **生命值**：开始时拥有3条生命，弹球撞击死亡区域时失去1条
+- **分数**：每摧毁一个砖块获得10分
+- **关卡**：程序生成的布局，更高关卡包含多重击砖块
+- **难度**：后期关卡中的砖块有2点生命值（50%概率）
 
-## 🏗️ Technical Architecture
+## 🏗️ 技术架构
 
-### Core Components
-- **GameManager.ts**: Singleton managing game states and level progression
-- **PaddleController.ts**: Touch/mouse input handling with boundary constraints  
-- **Ball.ts**: Physics-based movement with perfect bounce mechanics
-- **Brick.ts**: Health system and collision detection with power-up drops
-- **DeathZone.ts**: Bottom boundary trigger for life loss
+### 核心组件
+- **GameManager.ts**：管理游戏状态和关卡进度的单例
+- **PaddleController.ts**：带边界约束的触摸/鼠标输入处理  
+- **Ball.ts**：基于物理的完美弹跳机制运动
+- **Brick.ts**：生命系统和碰撞检测，带能力道具掉落
+- **DeathZone.ts**：底部边界触发器，用于生命损失
 
-### Power-up System
-- **PowerUp.ts**: Abstract base class for all power-up effects
-- **MultiBallPowerUp.ts**: Multi-ball spawning implementation
-- **LaserPaddlePowerUp.ts**: Laser shooting mechanics
-- **Laser.ts**: Projectile physics and brick damage
+### 能力道具系统
+- **PowerUp.ts**：所有能力道具效果的抽象基类
+- **MultiBallPowerUp.ts**：多球生成实现
+- **LaserPaddlePowerUp.ts**：激光射击机制
+- **Laser.ts**：弹丸物理和砖块伤害
 
-### Relic System  
-- **RelicManager.ts**: Singleton tracking persistent upgrades
-- **RelicUI.ts**: Display component for active relics
-- **Explosive Bricks**: Implemented AoE damage system
+### 遗物系统  
+- **RelicManager.ts**：追踪持续升级的单例
+- **RelicUI.ts**：激活遗物的显示组件
+- **爆炸砖块**：已实现的AOE伤害系统
 
-### Physics Configuration
-- **Gravity**: (0, -320) for realistic power-up falling
-- **Collision Matrix**: Configured for Ball ↔ Paddle, Ball ↔ Bricks, Ball ↔ Walls
-- **Materials**: Perfect bounce (restitution=1.0, friction=0.0) for consistent gameplay
+### 物理配置
+- **重力**：(0, -320) 实现真实的能力道具掉落
+- **碰撞矩阵**：配置弹球 ↔ 挡板、弹球 ↔ 砖块、弹球 ↔ 墙壁
+- **材质**：完美弹跳（恢复系数=1.0，摩擦力=0.0）确保一致的游戏性
 
-## 📱 Platform Optimization
-- **WeChat Mini Game**: Fully configured for WeChat ecosystem
-- **Resolution**: 960x640 with responsive scaling
-- **Performance**: Optimized physics timestep and collision detection
-- **Input**: Touch and mouse support for broad device compatibility
+## 📱 平台优化
+- **微信小游戏**：完全配置适配微信生态系统
+- **分辨率**：960x640，支持响应式缩放
+- **性能**：优化的物理时间步长和碰撞检测
+- **输入**：支持触摸和鼠标，兼容广泛设备
 
 ---
 
-**Ready to test the addictive combination of classic breakout action with modern roguelike progression!** 🎯
+**准备好体验经典弹球动作与现代Roguelike进度系统的令人上瘾的组合！** 🎯
 
-*Generated with [Claude Code](https://claude.ai/code)*
+*使用 [Claude Code](https://claude.ai/code) 生成*

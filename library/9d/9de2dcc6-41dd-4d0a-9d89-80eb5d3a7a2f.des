@@ -1,0 +1,417 @@
+## AdManager.ts 脚本逻辑描述
+
+### 核心功能
+AdManager是专门的广告管理系统，实现了微信小游戏广告集成、多场景广告投放、奖励发放、频率控制和数据统计，旨在通过广告为玩家提供免费获取游戏内容的途径。
+
+### 广告类型系统
+
+#### 广告类型
+```typescript
+export enum AdType {
+    REWARD_VIDEO = 'reward_video',     // 激励视频广告 - 主要收入来源
+    INTERSTITIAL = 'interstitial',    // 插屏广告 - 场景切换时显示
+    BANNER = 'banner'                  // 横幅广告 - 常驻显示
+}
+```
+
+#### 广告投放场景 (10种)
+- **LEVEL_FAILED**: 关卡失败复活 - 最高价值广告位
+- **LEVEL_COMPLETE**: 关卡完成奖励翻倍
+- **SHOP_BOOST**: 商店临时增益获取
+- **ENERGY_SHORTAGE**: 体力不足时免费恢复
+- **DAILY_REWARD**: 每日免费宝石获取
+- **UPGRADE_STATION**: 升级费用折扣
+- **TREASURE_DOUBLE**: 宝箱奖励翻倍
+- **BOSS_PREPARATION**: Boss战前额外生命
+- **MAIN_MENU**: 主菜单稀有遗物获取
+- **PAUSE_MENU**: 暂停菜单速度提升
+
+### 奖励系统
+
+#### 奖励类型 (10种)
+```typescript
+export enum AdRewardType {
+    DOUBLE_COINS = 'double_coins',           // 双倍金币
+    EXTRA_LIFE = 'extra_life',              // 额外生命
+    DAMAGE_BOOST = 'damage_boost',          // 攻击力提升
+    SPEED_BOOST = 'speed_boost',            // 速度提升
+    ENERGY_REFILL = 'energy_refill',        // 体力恢复
+    RARE_RELIC = 'rare_relic',              // 稀有遗物
+    CONTINUE_GAME = 'continue_game',         // 复活继续
+    UPGRADE_DISCOUNT = 'upgrade_discount',   // 升级折扣
+    MYSTERY_BOX = 'mystery_box',            // 神秘宝箱
+    FREE_GEMS = 'free_gems'                 // 免费宝石
+}
+```
+
+### 频率控制系统
+
+#### 冷却时间机制
+```typescript
+interface AdConfig {
+    cooldownSeconds: number;        // 冷却时间
+    maxPerDay: number;             // 每日最大观看次数
+}
+```
+
+#### 控制策略
+- **关卡失败**: 无冷却，每日5次 (鼓励继续游戏)
+- **关卡完成**: 无冷却，每日10次 (高频奖励)
+- **能力提升**: 10分钟冷却，每日8次 (防止滥用)
+- **体力恢复**: 30分钟冷却，每日6次 (限制免费体力)
+- **每日奖励**: 24小时冷却，每日1次 (每日登录奖励)
+
+### 微信小游戏集成
+
+#### 广告初始化
+```typescript
+private initializeWeChatAds(): void {
+    // 激励视频广告
+    this._rewardedVideoAd = wx.createRewardedVideoAd({
+        adUnitId: this._adUnitIds.rewardVideo
+    });
+    
+    // 插屏广告
+    this._interstitialAd = wx.createInterstitialAd({
+        adUnitId: this._adUnitIds.interstitial
+    });
+    
+    // 横幅广告
+    this._bannerAd = wx.createBannerAd({
+        adUnitId: this._adUnitIds.banner
+    });
+}
+```
+
+#### 广告事件处理
+- **onLoad**: 广告加载成功
+- **onError**: 广告加载失败处理
+- **onClose**: 广告关闭回调，判断是否完整观看
+
+### 统计系统
+
+#### 统计数据
+```typescript
+interface AdStats {
+    totalShown: number;        // 总展示次数
+    totalWatched: number;      // 完整观看次数
+    totalSkipped: number;      // 跳过次数
+    lastShownTime: number;     // 最后展示时间
+    dailyCount: number;        // 今日观看次数
+    lastResetDate: string;     // 上次重置日期
+}
+```
+
+#### 数据分析
+- **观看率**: 完整观看 / 总展示 * 100%
+- **跳过率**: 跳过次数 / 总展示 * 100%
+- **场景效率**: 不同场景的转化率对比
+- **时段分析**: 用户活跃时段的广告表现
+
+### 广告免除机制
+
+#### 付费移除广告
+```typescript
+public setAdsRemoved(removed: boolean): void {
+    this._adsRemoved = removed;
+    if (removed) {
+        this.hideBannerAd();  // 隐藏横幅广告
+        // 激励视频改为直接给予奖励
+    }
+}
+```
+
+#### 移除广告后的行为
+- 激励视频：直接给予奖励，无需观看
+- 插屏广告：完全不显示
+- 横幅广告：自动隐藏
+
+### Cocos Creator绑定说明
+
+#### 1. 组件设置
+在GameManager或专用AdManager节点添加：
+```typescript
+// 获取广告管理器
+const adManager = this.getComponent(AdManager);
+
+// 监听广告奖励事件
+adManager.node.on('ad-reward-granted', this.onAdRewardGranted, this);
+```
+
+#### 2. 关卡失败复活
+```typescript
+// 关卡失败时显示复活广告
+public onLevelFailed(): void {
+    const adManager = this.getComponent(AdManager);
+    
+    if (adManager.canShowAd(AdPlacement.LEVEL_FAILED)) {
+        this.showReviveDialog(() => {
+            adManager.showRewardedAd(AdPlacement.LEVEL_FAILED).then(watched => {
+                if (watched) {
+                    this.revivePlayer();
+                    this.continueLevel();
+                } else {
+                    this.endLevel();
+                }
+            });
+        });
+    } else {
+        this.endLevel(); // 无法观看广告，直接结束
+    }
+}
+```
+
+#### 3. 关卡完成奖励翻倍
+```typescript
+// 关卡完成时显示双倍奖励广告
+public onLevelComplete(): void {
+    const baseReward = this.calculateLevelReward();
+    this.grantReward(baseReward);
+    
+    const adManager = this.getComponent(AdManager);
+    if (adManager.canShowAd(AdPlacement.LEVEL_COMPLETE)) {
+        this.showDoubleRewardDialog(() => {
+            adManager.showRewardedAd(AdPlacement.LEVEL_COMPLETE).then(watched => {
+                if (watched) {
+                    this.grantReward(baseReward); // 再给一次，实现翻倍
+                    this.showRewardDoubled();
+                }
+            });
+        });
+    }
+}
+```
+
+#### 4. 体力不足广告
+```typescript
+// 体力不足时显示恢复广告
+public onEnergyShortage(): void {
+    const adManager = this.getComponent(AdManager);
+    
+    if (adManager.canShowAd(AdPlacement.ENERGY_SHORTAGE)) {
+        const remaining = adManager.getRemainingDailyCount(AdPlacement.ENERGY_SHORTAGE);
+        const cooldown = adManager.getRemainingCooldown(AdPlacement.ENERGY_SHORTAGE);
+        
+        if (cooldown > 0) {
+            this.showMessage(`广告冷却中，${cooldown}秒后可用`);
+            return;
+        }
+        
+        this.showEnergyAdDialog(remaining, () => {
+            adManager.showRewardedAd(AdPlacement.ENERGY_SHORTAGE).then(watched => {
+                if (watched) {
+                    this.addEnergy(30);
+                    this.updateEnergyUI();
+                }
+            });
+        });
+    } else {
+        this.showMessage('今日免费体力已用完，请明天再来或购买体力');
+    }
+}
+```
+
+#### 5. 商店增益广告
+```typescript
+// 商店中的增益广告
+public onRequestBoostAd(boostType: string): void {
+    const adManager = this.getComponent(AdManager);
+    const placement = AdPlacement.SHOP_BOOST;
+    
+    if (adManager.canShowAd(placement)) {
+        const config = adManager.getAdConfig(placement);
+        this.showBoostAdDialog(config, () => {
+            adManager.showRewardedAd(placement).then(watched => {
+                if (watched) {
+                    this.applyTemporaryBoost(boostType, config!.rewardAmount, 600); // 10分钟
+                    this.showBoostActivated(boostType);
+                }
+            });
+        });
+    }
+}
+```
+
+#### 6. 广告奖励处理
+```typescript
+// 统一的广告奖励处理
+private onAdRewardGranted(event: any): void {
+    const { placement, rewardType, amount } = event.detail;
+    
+    switch (rewardType) {
+        case AdRewardType.DOUBLE_COINS:
+            this.multiplyRecentReward(amount);
+            break;
+        case AdRewardType.EXTRA_LIFE:
+            this.addExtraLife(amount);
+            break;
+        case AdRewardType.DAMAGE_BOOST:
+            this.applyDamageBoost(amount / 100, 600); // 转换为倍率，持续10分钟
+            break;
+        case AdRewardType.SPEED_BOOST:
+            this.applySpeedBoost(amount / 100, 300); // 转换为倍率，持续5分钟
+            break;
+        case AdRewardType.ENERGY_REFILL:
+            this.addEnergy(amount);
+            break;
+        case AdRewardType.RARE_RELIC:
+            this.grantRandomRelic('rare');
+            break;
+        case AdRewardType.CONTINUE_GAME:
+            this.continueGame();
+            break;
+        case AdRewardType.UPGRADE_DISCOUNT:
+            this.setUpgradeDiscount(amount / 100); // 转换为折扣比例
+            break;
+        case AdRewardType.MYSTERY_BOX:
+            this.multiplyTreasureReward(amount);
+            break;
+        case AdRewardType.FREE_GEMS:
+            this.addCurrency(CurrencyType.GEMS, amount);
+            break;
+    }
+}
+```
+
+#### 7. UI集成
+```typescript
+// 广告按钮状态更新
+public updateAdButtonStates(): void {
+    const adManager = this.getComponent(AdManager);
+    
+    // 更新各个广告按钮的可用状态
+    this.doubleRewardButton.interactable = adManager.canShowAd(AdPlacement.LEVEL_COMPLETE);
+    this.energyAdButton.interactable = adManager.canShowAd(AdPlacement.ENERGY_SHORTAGE);
+    this.boostAdButton.interactable = adManager.canShowAd(AdPlacement.SHOP_BOOST);
+    
+    // 显示冷却时间
+    const energyCooldown = adManager.getRemainingCooldown(AdPlacement.ENERGY_SHORTAGE);
+    if (energyCooldown > 0) {
+        this.energyAdButtonLabel.string = `体力恢复(${energyCooldown}s)`;
+    } else {
+        const remaining = adManager.getRemainingDailyCount(AdPlacement.ENERGY_SHORTAGE);
+        this.energyAdButtonLabel.string = `体力恢复(${remaining}/${6})`;
+    }
+}
+```
+
+#### 8. 插屏广告投放
+```typescript
+// 在适当时机显示插屏广告
+public onSceneTransition(): void {
+    const adManager = this.getComponent(AdManager);
+    
+    // 避免过于频繁的插屏广告
+    if (this.shouldShowInterstitial()) {
+        adManager.showInterstitialAd().then(shown => {
+            if (shown) {
+                console.log('Interstitial ad shown during scene transition');
+            }
+        });
+    }
+}
+
+private shouldShowInterstitial(): boolean {
+    // 控制插屏广告显示频率的逻辑
+    const lastInterstitialTime = this.getLastInterstitialTime();
+    const minInterval = 5 * 60 * 1000; // 最少间隔5分钟
+    
+    return Date.now() - lastInterstitialTime > minInterval;
+}
+```
+
+#### 9. 横幅广告管理
+```typescript
+// 在主界面显示横幅广告
+public onEnterMainMenu(): void {
+    const adManager = this.getComponent(AdManager);
+    if (!adManager.isAdsRemoved()) {
+        adManager.showBannerAd();
+    }
+}
+
+// 在游戏中隐藏横幅广告
+public onEnterGameLevel(): void {
+    const adManager = this.getComponent(AdManager);
+    adManager.hideBannerAd();
+}
+```
+
+### 数据分析和优化
+
+#### 广告效果监控
+```typescript
+// 获取广告统计数据
+public analyzeAdPerformance(): any {
+    const adManager = this.getComponent(AdManager);
+    const stats = adManager.getAdStats();
+    
+    const analysis = {
+        topPerformingPlacements: [],
+        lowPerformingPlacements: [],
+        overallWatchRate: 0,
+        recommendations: []
+    };
+    
+    // 分析各个广告位表现
+    for (const [placement, stat] of Object.entries(stats)) {
+        const watchRate = parseFloat(stat.watchRate);
+        if (watchRate > 80) {
+            analysis.topPerformingPlacements.push({ placement, watchRate });
+        } else if (watchRate < 30) {
+            analysis.lowPerformingPlacements.push({ placement, watchRate });
+        }
+    }
+    
+    return analysis;
+}
+```
+
+#### 优化建议
+- **高观看率场景**: 增加展示频率，提高奖励价值
+- **低观看率场景**: 优化奖励内容，调整展示时机
+- **用户体验**: 平衡广告频率与游戏体验
+- **收益优化**: 重点投入高价值广告位
+
+### 平衡性设计
+
+#### 免费vs付费平衡
+- 广告提供充足的免费获取途径
+- 付费移除广告后直接给予奖励
+- 不强制观看，保持用户选择权
+- 奖励价值适中，不影响付费意愿
+
+#### 频率控制原则
+- 关键时刻（失败复活）不限制冷却
+- 日常增益控制频率防止滥用
+- 高价值奖励（宝石）严格限制
+- 考虑用户疲劳度，避免过度打扰
+
+### 扩展性设计
+
+#### 新增广告场景
+1. 在AdPlacement枚举中添加新场景
+2. 在initializeAdConfigs()中配置奖励
+3. 实现对应的UI和逻辑
+4. 添加统计追踪
+
+#### A/B测试支持
+```typescript
+// 支持不同奖励配置的A/B测试
+interface AdABTestConfig {
+    testGroup: 'A' | 'B';
+    rewardMultiplier: number;
+    cooldownModifier: number;
+}
+```
+
+#### 动态配置
+- 远程配置广告奖励数值
+- 动态调整展示频率
+- 根据用户行为优化投放策略
+
+### 合规性要求
+- 遵循微信小游戏广告规范
+- 确保广告内容健康向上
+- 保护未成年人，限制过度观看
+- 提供清晰的广告标识和跳过选项
