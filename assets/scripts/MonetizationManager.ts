@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, sys } from 'cc';
 
 // WeChat Mini Game API types
+/// <reference types="minigame-api-typings" />
 declare const wx: WechatMinigame.Wx;
 
 const { ccclass, property } = _decorator;

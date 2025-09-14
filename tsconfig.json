@@ -19,7 +19,8 @@
       "./temp/declarations/jsb",
       "./temp/declarations/cc.custom-macro",
       "./temp/declarations/cc",
-      "./temp/declarations/cc.env"
+      "./temp/declarations/cc.env",
+      "minigame-api-typings"
     ],
     "paths": {
       "db://internal/*": [
