@@ -1,0 +1,24 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "attack",
+    "spriteFrames": [
+      "attack (17)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@1d9ca",
+      "attack (18)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@b0e8a",
+      "attack (19)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@b0dd3",
+      "attack (20)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@c75ee",
+      "attack (21)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@5a5ac",
+      "attack (22)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@eaa9b",
+      "attack (23)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@42682",
+      "attack (24)",
+      "2b32f8be-e1b8-4ed3-8c7a-6b85f0f34b89@dce9b"
+    ]
+  }
+}

@@ -3,17 +3,18 @@
     "__type__": "cc.Prefab",
     "_name": "Paddle",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_native": "",
     "data": {
       "__id__": 1
     },
-    "optimizationPolicy": 0,
     "persistent": false
   },
   {
     "__type__": "cc.Node",
     "_name": "Paddle",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [],
     "_active": true,
@@ -31,11 +32,11 @@
         "__id__": 8
       },
       {
-        "__id__": 11
+        "__id__": 10
       }
     ],
     "_prefab": {
-      "__id__": 10
+      "__id__": 12
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -64,12 +65,13 @@
       "y": 0,
       "z": 0
     },
-    "_id": "paddle-node-id"
+    "_id": ""
   },
   {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -87,7 +89,7 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_id": "paddle-uitransform-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -97,6 +99,7 @@
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -128,7 +131,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": null,
-    "_id": "paddle-sprite-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -138,6 +141,7 @@
     "__type__": "cc.RigidBody2D",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -147,20 +151,21 @@
     },
     "enabledContactListener": false,
     "bullet": false,
-    "type": 1,
-    "allowSleep": true,
-    "gravityScale": 0,
-    "linearDamping": 0,
-    "angularDamping": 0,
-    "linearVelocity": {
+    "awakeOnLoad": true,
+    "_group": 1,
+    "_type": 2,
+    "_allowSleep": true,
+    "_gravityScale": 1,
+    "_linearDamping": 0,
+    "_angularDamping": 0,
+    "_linearVelocity": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "angularVelocity": 0,
-    "fixedRotation": true,
-    "awakeOnLoad": true,
-    "_id": "paddle-rigidbody-id"
+    "_angularVelocity": 0,
+    "_fixedRotation": false,
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -170,6 +175,7 @@
     "__type__": "cc.BoxCollider2D",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
@@ -193,29 +199,30 @@
       "width": 120,
       "height": 20
     },
-    "_id": "paddle-collider-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "paddle-collider-id"
   },
   {
-    "__type__": "PaddleController",
+    "__type__": "a1b2cPU5fZ4kKvN7xI0VniQ",
     "_name": "",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "node": {
       "__id__": 1
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 12
+      "__id__": 11
     },
     "moveSpeed": 500,
-    "_id": "paddle-controller-id"
+    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "paddle-controller-id"
+    "fileId": "3b6jwzGUVIkq7LJ89yt0Vr"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -225,9 +232,6 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "paddle-node-id",
-    "instance": null,
-    "targetOverrides": null,
-    "nestedPrefabInstanceRoots": null
+    "instance": null
   }
 ]

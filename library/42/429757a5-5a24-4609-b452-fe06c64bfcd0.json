@@ -1,0 +1,24 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "attack",
+    "spriteFrames": [
+      "woodenskeleton (33)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@b42ae",
+      "woodenskeleton (34)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@96db9",
+      "woodenskeleton (35)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@3b028",
+      "woodenskeleton (36)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@0363d",
+      "woodenskeleton (37)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@2d83a",
+      "woodenskeleton (38)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@d05ef",
+      "woodenskeleton (39)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@42074",
+      "woodenskeleton (40)",
+      "429757a5-5a24-4609-b452-fe06c64bfcd0@6cdb2"
+    ]
+  }
+}

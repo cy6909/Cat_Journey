@@ -1,0 +1,10 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "idle",
+    "spriteFrames": [
+      "burst (1)",
+      "372a30b9-2c2c-400a-9907-bc667a7aaba6@eec38"
+    ]
+  }
+}

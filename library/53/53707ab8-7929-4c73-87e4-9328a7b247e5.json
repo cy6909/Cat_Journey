@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "five",
+    "spriteFrames": [
+      "spikes (27)",
+      "53707ab8-7929-4c73-87e4-9328a7b247e5@c9dd5",
+      "spikes (28)",
+      "53707ab8-7929-4c73-87e4-9328a7b247e5@4455e",
+      "spikes (29)",
+      "53707ab8-7929-4c73-87e4-9328a7b247e5@3e6ac",
+      "spikes (30)",
+      "53707ab8-7929-4c73-87e4-9328a7b247e5@b96aa"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "ironskeleton (31)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@55f3f",
+      "ironskeleton (32)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@39d30",
+      "ironskeleton (33)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@6b05f",
+      "ironskeleton (34)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@674d9",
+      "ironskeleton (35)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@cfdff",
+      "ironskeleton (36)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@f1776",
+      "ironskeleton (37)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@b276f",
+      "ironskeleton (38)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@68d59",
+      "ironskeleton (39)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@5e7dd",
+      "ironskeleton (40)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@fc100",
+      "ironskeleton (41)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@5732e",
+      "ironskeleton (42)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@3d251",
+      "ironskeleton (43)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@f8803",
+      "ironskeleton (44)",
+      "391786df-2c8b-417e-aeb5-94f507af2c96@70c68"
+    ]
+  }
+}

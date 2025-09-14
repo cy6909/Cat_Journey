@@ -1,0 +1,107 @@
+## EnhancedPaddleController.ts 脚本逻辑描述
+
+### 核心功能
+EnhancedPaddleController是增强版挡板控制器，在基础移动控制基础上添加了耐久度系统、等级系统、经验值收集和视觉反馈等高级功能。
+
+### 主要系统
+1. **耐久度系统**: 挡板具有生命值，受到攻击时会损失耐久度
+2. **自动修复**: 停止受伤后自动开始修复耐久度
+3. **等级系统**: 通过收集经验球提升挡板等级和属性
+4. **视觉反馈**: 根据耐久度状态改变颜色和闪烁效果
+5. **核心保护**: 挡板被摧毁后核心暴露并持续受伤
+
+### 关键属性
+```typescript
+public maxDurability: number = 100          // 最大耐久度
+public durabilityLossPerHit: number = 5     // 每次碰撞损失的耐久度
+public repairRate: number = 2               // 每秒修复速率
+public repairDelay: number = 3              // 受伤后开始修复的延迟
+public criticalDurabilityThreshold: number = 25  // 危险状态阈值
+```
+
+### 耐久度状态系统
+- **健康状态 (75%-100%)**: 原色显示，正常功能
+- **轻微损伤 (50%-75%)**: 浅黄色显示
+- **警告状态 (25%-50%)**: 黄色显示
+- **危险状态 (0%-25%)**: 红色闪烁，即将被摧毁
+- **摧毁状态 (0%)**: 透明显示，核心暴露
+
+### 等级系统
+每次升级获得以下提升：
+- **移动速度**: +10% 速度加成
+- **最大耐久度**: +20% 耐久度加成  
+- **修复效率**: +15% 修复速度加成
+- **伤害减免**: 每级减少0.5点伤害
+- **升级治疗**: 升级时恢复50%最大耐久度
+
+### 经验值系统
+- **经验来源**: 收集经验球(+10 XP)、摧毁砖块奖励
+- **升级需求**: 每级所需经验递增50% 
+- **等级1→2**: 100 XP
+- **等级2→3**: 150 XP
+- **等级3→4**: 225 XP (依此类推)
+
+### Cocos Creator绑定说明
+
+#### 1. 预制体升级
+从原Paddle预制体升级：
+- 保留原有的Sprite、RigidBody2D、BoxCollider2D组件
+- 移除原PaddleController.ts脚本
+- 添加EnhancedPaddleController.ts脚本
+
+#### 2. 碰撞标签配置
+确保以下标签正确设置：
+- **Ball**: Tag = 1000 (球碰撞会造成耐久度损失)
+- **Boss Attack**: Tag = 3000 (Boss攻击造成双倍伤害)
+- **Experience Orb**: Tag = 4000 (经验球可被收集)
+
+#### 3. UI组件绑定
+在EnhancedPaddleController组件中：
+- **Durability Label**: 拖拽UI Label用于显示耐久度信息
+- 如无UI需求，可设置为null
+
+#### 4. 参数调整建议
+基于难度平衡的推荐设置：
+- **Max Durability**: 100 (简单), 75 (普通), 50 (困难)
+- **Durability Loss Per Hit**: 5 (简单), 8 (普通), 12 (困难)  
+- **Repair Rate**: 3 (简单), 2 (普通), 1 (困难)
+- **Repair Delay**: 2秒 (简单), 3秒 (普通), 5秒 (困难)
+
+#### 5. CoreController集成
+确保场景中存在CoreController组件：
+- 挡板摧毁时会自动寻找CoreController
+- 挡板摧毁后核心每秒受到5点伤害
+- 需要在CoreController.ts中添加takeDamage方法支持
+
+#### 6. GameManager集成
+在GameManager.ts中添加以下方法：
+```typescript
+public onPaddleDestroyed(): void {
+    console.log('Paddle destroyed! Game becomes much harder.');
+    // 可添加额外的游戏逻辑，如警告UI、难度调整等
+}
+```
+
+#### 7. 视觉效果要求
+- 挡板需要支持颜色变化的Sprite组件
+- 建议使用纯白色sprite，通过脚本控制颜色
+- 危险状态时的闪烁效果会自动添加
+
+#### 8. 经验球创建
+创建ExperienceOrb预制体：
+- Tag设置为4000
+- 添加RigidBody2D (Dynamic)和CircleCollider2D
+- 添加向下掉落的物理行为
+- 被挡板收集时自动销毁并提供经验值
+
+### 高级功能
+1. **instantRepair(amount)**: 立即修复指定耐久度
+2. **fullRepair()**: 完全修复挡板
+3. **isDestroyed**: 检查挡板是否已被摧毁
+4. **level**: 获取当前挡板等级
+
+### 平衡性考虑
+- 挡板摧毁是严重后果，但不是立即失败
+- 等级系统提供长期进步感
+- 修复机制避免挫败感过强
+- 危险状态的视觉警告给玩家反应时间

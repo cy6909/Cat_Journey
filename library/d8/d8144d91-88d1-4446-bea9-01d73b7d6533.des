@@ -1,0 +1,443 @@
+## MonetizationManager.ts 脚本逻辑描述
+
+### 核心功能
+MonetizationManager是完整的付费系统管理器，实现了多货币系统、微信支付集成、广告奖励、VIP系统和游戏数值平衡，旨在创造"前期爽、中期难、后期付费"的商业化体验。
+
+### 货币系统 (4种)
+
+#### 货币类型
+```typescript
+enum CurrencyType {
+    COINS = 'coins',          // 金币 - 主要游戏货币
+    GEMS = 'gems',            // 宝石 - 付费货币  
+    ENERGY = 'energy',        // 体力 - 限制游戏次数
+    EXPERIENCE = 'experience' // 经验 - 用于升级
+}
+```
+
+#### 货币特性
+- **金币**: 通过游戏获得，用于常规购买，VIP有1.5倍加成
+- **宝石**: 付费货币，用于高级购买，稀有获得
+- **体力**: 限制游戏次数，每小时恢复20点，VIP恢复速度翻倍
+- **经验**: 升级系统，影响难度和奖励，VIP有2倍加成
+
+#### 体力恢复机制
+```typescript
+// 每分钟检查，每小时恢复
+regenRate: 20,              // 基础每小时恢复20点
+vipEnergyRegenBonus: 2.0    // VIP玩家恢复速度翻倍
+```
+
+### 购买系统
+
+#### 购买类型 (11种)
+1. **功能性购买**:
+   - `REMOVE_ADS`: 移除广告 (¥12)
+   - `VIP_MONTHLY`: 月度VIP (¥30)
+   - `ENERGY_REFILL`: 体力恢复 (50宝石)
+
+2. **货币包**:
+   - `GEMS_SMALL`: 小宝石包 100宝石 (¥6)
+   - `GEMS_MEDIUM`: 中宝石包 700宝石 (¥30)
+   - `GEMS_LARGE`: 大宝石包 2500宝石 (¥98)
+
+3. **装备购买**:
+   - `LEGENDARY_PADDLE`: 传说挡板 (800宝石)
+   - `LEGENDARY_BALL`: 传说弹球 (1000宝石)
+   - `LEGENDARY_CORE`: 传说核心 (1200宝石)
+   - `LEGENDARY_RELIC`: 传说遗物 (600宝石)
+
+4. **特惠包**:
+   - `STARTER_PACK`: 新手礼包 (¥6, 80%折扣)
+
+#### 购买验证系统
+```typescript
+public canAfford(purchaseType: PurchaseType): boolean
+```
+- 检查货币是否充足
+- 验证VIP权限要求
+- 确认一次性购买限制
+
+### 微信支付集成
+
+#### 支付流程
+```typescript
+private processRealMoneyPurchase(item: PurchaseItem): Promise<boolean> {
+    // 调用微信支付API
+    wx.requestPayment({
+        timeStamp: Date.now().toString(),
+        nonceStr: this.generateNonceStr(),
+        package: `prepay_id=${this.generatePrepayId(item)}`,
+        signType: 'MD5',
+        paySign: this.generatePaySign(item)
+    });
+}
+```
+
+#### 支付安全
+- 生成随机数防重放
+- MD5签名验证
+- 预支付ID机制
+- 开发环境模拟购买
+
+### 广告系统
+
+#### 广告类型
+```typescript
+enum AdType {
+    REWARD_VIDEO = 'reward_video',     // 奖励视频
+    INTERSTITIAL = 'interstitial',    // 插屏广告
+    BANNER = 'banner'                 // 横幅广告
+}
+```
+
+#### 广告奖励机制
+```typescript
+interface AdReward {
+    type: CurrencyType | 'item';
+    amount?: number;
+    itemType?: string;
+    itemData?: any;
+}
+```
+
+#### 广告增益效果
+- **伤害提升**: 1.5倍攻击力，持续时间可配置
+- **速度提升**: 1.3倍移动速度
+- **货币翻倍**: 2倍金币收益
+- **临时道具**: 各种Buff效果
+
+#### 广告免除机制
+- 购买移除广告后，直接给予奖励无需观看
+- VIP玩家广告奖励有额外加成
+
+### VIP系统
+
+#### VIP特权
+```typescript
+private _monetizationBoosts = {
+    vipExpBonus: 2.0,            // 经验加成200%
+    vipCurrencyBonus: 1.5,       // 货币加成150%
+    vipEnergyRegenBonus: 2.0     // 体力恢复翻倍
+}
+```
+
+#### VIP管理
+- **时间验证**: 自动检查VIP过期时间
+- **月度订阅**: 30天VIP时长
+- **特权继承**: VIP时长可累积
+- **专属商店**: VIP专属购买项目
+
+### 数值平衡设计
+
+#### 难度曲线
+```typescript
+private _difficultyScaling = {
+    chapter1: { easy: 1.0, medium: 1.2, hard: 1.5 },    // 前期爽快
+    chapter2: { easy: 1.3, medium: 1.6, hard: 2.0 },    // 中期挑战
+    chapter3: { easy: 1.8, medium: 2.3, hard: 3.0 }     // 后期困难
+}
+```
+
+#### 平衡分析结果
+```typescript
+public analyzeDifficultyBalancing(): any {
+    return {
+        earlyGame: {
+            difficultyMultiplier: 1.0,     // 基础难度
+            currencyGainRate: 1.5,         // 高收益率
+            energyCost: 10,                // 低体力消耗
+            paymentPressure: "无"           // 无付费压力
+        },
+        midGame: {
+            difficultyMultiplier: 1.8,     // 难度提升
+            currencyGainRate: 1.0,         // 标准收益
+            energyCost: 20,                // 中等消耗
+            paymentPressure: "引导购买VIP/宝石包"
+        },
+        lateGame: {
+            difficultyMultiplier: 3.0,     // 高难度
+            currencyGainRate: 0.6,         // 低收益率
+            energyCost: 30,                // 高消耗
+            paymentPressure: "传说装备/大量资源需求"
+        }
+    }
+}
+```
+
+### 传说装备系统
+
+#### 传说挡板 - "神话破坏者"
+```typescript
+value: {
+    paddleType: 'legendary_destroyer',
+    stats: { 
+        damage: 1.5,        // +50%攻击力
+        durability: 2.0,    // +100%耐久度
+        autoRepair: true    // 自动修复
+    }
+}
+```
+
+#### 传说弹球 - "混沌之球"
+```typescript
+value: {
+    ballType: 'legendary_chaos',
+    effects: ['piercing', 'infinite_bounce', 'random_effects']
+}
+```
+
+#### 传说核心 - "永恒之心"
+```typescript
+value: {
+    coreType: 'legendary_eternal',
+    stats: { 
+        health: 3.0,           // +200%生命值
+        damageReduction: 0.25  // 25%免伤几率
+    }
+}
+```
+
+### 数据持久化
+
+#### 保存数据结构
+```typescript
+private savePlayerData(): void {
+    const data = {
+        currencies: Array.from(this._currencies.entries()),
+        isVIP: this._isVIP,
+        vipExpireTime: this._vipExpireTime,
+        adsRemoved: this._adsRemoved,
+        lastAdTimes: Array.from(this._lastAdTime.entries())
+    };
+}
+```
+
+#### 购买历史记录
+- 防止一次性商品重复购买
+- 追踪用户购买行为
+- 支持数据分析和优化
+
+### Cocos Creator绑定说明
+
+#### 1. 组件设置
+在GameManager或独立节点上添加MonetizationManager：
+```typescript
+// 初始化货币系统
+const monetization = this.getComponent(MonetizationManager);
+monetization.addCurrency(CurrencyType.COINS, 100);
+```
+
+#### 2. 购买流程集成
+```typescript
+// 商店购买按钮
+public onPurchaseButtonClicked(purchaseType: PurchaseType): void {
+    const monetization = this.getComponent(MonetizationManager);
+    
+    if (monetization.canAfford(purchaseType)) {
+        monetization.purchaseItem(purchaseType).then(success => {
+            if (success) {
+                this.showPurchaseSuccess();
+                this.updateUI();
+            } else {
+                this.showPurchaseError();
+            }
+        });
+    } else {
+        this.showInsufficientCurrency();
+    }
+}
+```
+
+#### 3. 广告集成
+```typescript
+// 奖励广告按钮
+public onWatchAdForReward(): void {
+    const monetization = this.getComponent(MonetizationManager);
+    const reward: AdReward = {
+        type: CurrencyType.COINS,
+        amount: 100
+    };
+    
+    monetization.showRewardedAd(AdType.REWARD_VIDEO, reward).then(watched => {
+        if (watched) {
+            this.showAdReward();
+            this.updateCurrencyDisplay();
+        }
+    });
+}
+
+// 临时增益广告
+public onRequestDamageBoost(): void {
+    const monetization = this.getComponent(MonetizationManager);
+    monetization.requestTemporaryBoost('damage', 300); // 5分钟增益
+}
+```
+
+#### 4. VIP系统集成
+```typescript
+// VIP状态检查
+public updateVIPStatus(): void {
+    const monetization = this.getComponent(MonetizationManager);
+    const isVIP = monetization.isVIP();
+    
+    this.vipIcon.active = isVIP;
+    this.vipLabel.string = isVIP ? 
+        `VIP到期: ${new Date(monetization.getVIPExpireTime()).toLocaleDateString()}` : 
+        "普通用户";
+    
+    // 应用VIP特权
+    if (isVIP) {
+        this.enableVIPFeatures();
+    }
+}
+```
+
+#### 5. 体力系统集成
+```typescript
+// 体力检查
+public canStartLevel(): boolean {
+    const monetization = this.getComponent(MonetizationManager);
+    const energyCost = this.getCurrentLevelEnergyCost();
+    
+    return monetization.getCurrency(CurrencyType.ENERGY) >= energyCost;
+}
+
+// 开始关卡
+public startLevel(): void {
+    if (this.canStartLevel()) {
+        const monetization = this.getComponent(MonetizationManager);
+        const energyCost = this.getCurrentLevelEnergyCost();
+        monetization.subtractCurrency(CurrencyType.ENERGY, energyCost);
+        
+        this.launchGameLevel();
+    } else {
+        this.showEnergyShortage();
+    }
+}
+```
+
+#### 6. 商店UI集成
+```typescript
+// 商店物品显示
+public populateShop(): void {
+    const monetization = this.getComponent(MonetizationManager);
+    const items = monetization.getPurchaseItems();
+    
+    for (const item of items) {
+        const shopItem = this.createShopItem(item);
+        
+        // 设置价格显示
+        if (item.currency) {
+            shopItem.priceLabel.string = `${item.currencyAmount} ${item.currency}`;
+            shopItem.canAfford = monetization.canAfford(item.id);
+        } else {
+            shopItem.priceLabel.string = `¥${(item.price / 100).toFixed(2)}`;
+        }
+        
+        // VIP标识
+        if (item.vipOnly) {
+            shopItem.vipTag.active = true;
+        }
+        
+        // 折扣标识
+        if (item.discountPercent) {
+            shopItem.discountTag.active = true;
+            shopItem.discountLabel.string = `${item.discountPercent}% OFF`;
+        }
+    }
+}
+```
+
+#### 7. 货币显示更新
+```typescript
+// 货币UI更新
+public updateCurrencyUI(): void {
+    const monetization = this.getComponent(MonetizationManager);
+    
+    this.coinsLabel.string = monetization.getCurrency(CurrencyType.COINS).toString();
+    this.gemsLabel.string = monetization.getCurrency(CurrencyType.GEMS).toString();
+    
+    const energy = monetization.getCurrency(CurrencyType.ENERGY);
+    const maxEnergy = 100; // 从配置获取
+    this.energyLabel.string = `${energy}/${maxEnergy}`;
+    this.energyBar.fillRange = energy / maxEnergy;
+}
+```
+
+#### 8. 难度系统集成
+```typescript
+// 动态难度调整
+public calculateLevelDifficulty(chapter: number, level: number): number {
+    const monetization = this.getComponent(MonetizationManager);
+    const playerLevel = this.getPlayerLevel();
+    
+    const baseDifficulty = 1.0 + chapter * 0.5 + level * 0.1;
+    const difficultyMultiplier = monetization.getDifficultyMultiplier(chapter, playerLevel);
+    
+    return baseDifficulty * difficultyMultiplier;
+}
+```
+
+### 商业化策略
+
+#### 付费转化路径
+1. **新手期(1-10关)**: 免费爽快体验，建立游戏习惯
+2. **成长期(11-25关)**: 逐步增加难度，引导首次付费
+3. **挑战期(26关+)**: 高难度关卡，强化付费需求
+
+#### 定价策略
+- **低价位**: ¥6新手包，¥12移除广告 (降低付费门槛)
+- **中价位**: ¥30月度VIP，宝石中包 (核心付费用户)  
+- **高价位**: ¥98大宝石包，传说装备 (重度付费用户)
+
+#### 留存优化
+- VIP特权增强游戏体验
+- 体力系统控制游戏节奏
+- 广告奖励提供免费获取途径
+- 传说装备提供长期目标
+
+#### 数据监控指标
+- **留存率**: 目标70%+次日留存
+- **付费率**: 目标5%用户付费转化
+- **ARPU**: 人均收入30-50元
+- **LTV**: 用户生命周期价值
+
+### 扩展性设计
+
+#### 季卡系统
+```typescript
+// 未来可添加季卡、年卡等
+SEASON_PASS: {
+    name: "赛季通行证",
+    duration: 90, // 90天
+    rewards: ["exclusive_items", "bonus_currency"]
+}
+```
+
+#### 限时活动
+```typescript
+// 支持限时商品和活动
+interface TimeLimitedOffer {
+    startTime: number;
+    endTime: number;
+    discountPercent: number;
+}
+```
+
+#### 社交功能
+- 好友间赠送体力
+- VIP用户专属聊天室
+- 付费用户排行榜特权
+
+### 合规性考虑
+- 未成年人付费限制
+- 游戏时长提醒
+- 概率公示(开箱系统)
+- 退款处理机制
+
+### 性能优化
+- 货币数据本地缓存
+- 购买状态异步更新
+- 广告预加载机制
+- VIP状态延迟检查

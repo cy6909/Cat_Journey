@@ -1,0 +1,231 @@
+## EnhancedBall.ts 脚本逻辑描述
+
+### 核心功能
+EnhancedBall是增强版球系统，支持25种不同类型的球，每种都有独特的物理属性、伤害机制、特殊效果和视觉表现，为游戏提供极其丰富的策略玩法。
+
+### 球类型系统 (25种)
+
+#### 1. 基础类型
+- **NORMAL (0)**: 普通球，白色，标准属性
+- **HEAVY (1)**: 超重球，暗灰色，伤害3，速度200，重量2.5倍
+- **SOFT (2)**: 超软球，粉色，重量0.5倍，反弹系数1.5倍
+
+#### 2. 元素类型
+- **FIRE (3)**: 火焰球，橙红色，范围火焰持续伤害3次
+- **ICE (4)**: 冰冻球，浅蓝色，减速周围球和冻结砖块
+- **ELECTRIC (5)**: 电击球，黄色，连锁闪电攻击范围内目标
+- **POISON (6)**: 毒性球，紫色，毒素扩散每秒伤害5次
+
+#### 3. 爆炸与穿透类型
+- **EXPLOSIVE (7)**: 爆炸球，红色，大范围爆炸伤害递减
+- **PIERCING (8)**: 穿透球，青色，可穿透3个砖块
+- **SPLITTING (9)**: 分裂球，白色，击中后分裂成3个子球
+
+#### 4. 特殊机制类型
+- **MAGNETIC (10)**: 磁性球，改变自身轨迹
+- **PHASE (11)**: 相位球，半透明蓝色，30%概率穿透物体
+- **GRAVITY (12)**: 重力球，影响游戏重力场
+- **TIME (13)**: 时间球，减慢游戏时间流速
+
+#### 5. 增益与减益类型
+- **HEALING (14)**: 治疗球，修复挡板15点耐久度
+- **CURSED (15)**: 诅咒球，施加10秒负面状态
+- **LIGHT (16)**: 光明球，照亮游戏区域
+- **DARK (17)**: 黑暗球，降低能见度
+
+#### 6. 高级类型
+- **CRYSTAL (18)**: 水晶球，触发连锁反应
+- **RUBBER (19)**: 橡胶球，超强反弹效果
+- **METAL (20)**: 金属球，坚硬不变形特性
+- **VOID (21)**: 虚空球，吞噬接触物体
+- **PLASMA (22)**: 等离子球，高伤害4，高速400
+- **QUANTUM (23)**: 量子球，叠加态效果
+- **CHAOS (24)**: 混沌球，随机效果和属性
+
+### 关键属性系统
+
+#### 物理属性
+```typescript
+damage: number           // 伤害值 (1-4)
+weight: number          // 重量系数 (0.5-2.5)
+bounciness: number      // 反弹系数 (0.75-1.5)
+initialSpeed: number    // 初始速度 (200-400)
+penetrationCount: number // 穿透次数 (0-3)
+```
+
+#### 效果属性
+```typescript
+effectDuration: number   // 效果持续时间 (3-10秒)
+areaRadius: number      // 范围效果半径 (50-100像素)
+speedMultiplier: number // 速度修正系数 (0.5-2.0)
+```
+
+### 特殊效果系统
+
+#### 1. 火焰系统
+- **持续伤害**: 3次，每0.5秒1点伤害
+- **范围效果**: 50像素半径
+- **视觉效果**: 橙红色火焰粒子轨迹
+
+#### 2. 冰冻系统
+- **减速效果**: 50%速度，持续3秒
+- **冻结效果**: 临时停止砖块功能
+- **视觉效果**: 浅蓝色冰晶轨迹
+
+#### 3. 电击系统
+- **连锁攻击**: 75像素范围内所有目标
+- **伤害递减**: 随距离减少
+- **视觉效果**: 黄色闪电连线
+
+#### 4. 穿透系统
+- **穿透计数**: 可穿透3个砖块
+- **无反射**: 穿透时不改变方向
+- **递减伤害**: 每穿透一次伤害-1
+
+#### 5. 分裂系统
+- **子球生成**: 击中时产生3个小球
+- **继承属性**: 子球保持部分母球特性
+- **分散发射**: 不同角度发射
+
+#### 6. 诅咒系统
+支持4种诅咒效果：
+- **slow_paddle**: 挡板移动减速50%
+- **damage_paddle**: 挡板持续受伤
+- **reverse_controls**: 控制反向
+- **reduce_score**: 分数获得减半
+
+### Cocos Creator绑定说明
+
+#### 1. 预制体创建
+基础球预制体配置：
+- **Sprite**: 球形图像，支持颜色变化
+- **RigidBody2D**: Dynamic类型，支持重量调节
+- **CircleCollider2D**: 圆形碰撞器，可调半径
+- **EnhancedBall**: 主脚本组件
+
+#### 2. 物理材质配置
+```typescript
+// 每种球类型的物理材质
+friction: 0.0           // 无摩擦力
+restitution: 0.75-1.5   // 根据球类型调整
+density: 0.5-2.5        // 根据重量调整
+```
+
+#### 3. 碰撞标签系统
+确保以下标签正确配置：
+- **Ball**: Tag = 1000
+- **Brick**: Tag = 2000  
+- **Paddle**: Tag = 3000
+- **Wall**: Tag = 4000
+
+#### 4. 类型配置参数
+
+##### 重型球配置 (适合Boss战)
+```typescript
+ballType: BallType.HEAVY
+damage: 3
+weight: 2.5
+initialSpeed: 200
+color: (128, 128, 128)
+```
+
+##### 软球配置 (适合连击)
+```typescript
+ballType: BallType.SOFT  
+damage: 1
+weight: 0.5
+bounciness: 1.5
+color: (255, 192, 203)
+```
+
+##### 火焰球配置 (范围伤害)
+```typescript
+ballType: BallType.FIRE
+damage: 2
+effectDuration: 5.0
+areaRadius: 50
+color: (255, 100, 0)
+```
+
+#### 5. GameManager集成
+需要在GameManager中添加：
+```typescript
+public createSplitBall(position: Vec3, parentType: BallType): void
+public applyCurse(effect: string, duration: number): void  
+public addScore(points: number): void
+```
+
+#### 6. 视觉效果配置
+每种球建议的视觉特效：
+- **轨迹效果**: 0.1秒间隔创建粒子
+- **光晕效果**: 特殊球类型的发光边缘
+- **碰撞特效**: 击中时的爆炸/闪光效果
+- **颜色变化**: 基于生命值/状态的颜色渐变
+
+#### 7. 平衡性参数建议
+
+##### 简单难度
+```typescript
+damage: 1-2
+speed: 250-350
+effectDuration: 5-8秒
+```
+
+##### 普通难度  
+```typescript
+damage: 2-3
+speed: 300-400
+effectDuration: 3-5秒
+```
+
+##### 困难难度
+```typescript
+damage: 1-4 (高差异化)
+speed: 200-450 (极端化)
+effectDuration: 2-3秒
+```
+
+### 高级功能
+
+#### 1. 动态类型转换
+```typescript
+changeBallType(newType: BallType): void
+// 游戏中实时改变球的类型和属性
+```
+
+#### 2. 速度控制系统
+```typescript
+setSpeedMultiplier(multiplier: number, duration: number): void
+// 临时修改球速，支持加速/减速效果
+```
+
+#### 3. 效果调度器
+- **scheduleFireDamage**: 火焰持续伤害
+- **schedulePoisonDamage**: 毒素扩散伤害
+- **定时器管理**: 自动清理过期效果
+
+#### 4. 物理交互
+- **重量影响**: 重球更难改变方向
+- **反弹特性**: 软球有额外反弹次数
+- **穿透判定**: 精确的穿透计数和方向保持
+
+### 战略深度设计
+
+#### Build组合示例
+1. **火毒流**: FIRE + POISON球连击
+2. **穿透流**: PIERCING + HEAVY高伤穿透
+3. **分裂流**: SPLITTING + ICE控制分场  
+4. **混沌流**: CHAOS + 随机遗物增幅
+5. **元素流**: ELECTRIC + FIRE + ICE三元素
+
+#### 反制机制
+- 重球克制反弹砖块
+- 相位球克制护盾砖块  
+- 穿透球克制多血砖块
+- 治疗球平衡诅咒效果
+
+### 扩展性
+- **模块化效果**: 新效果只需添加枚举和对应方法
+- **可配置参数**: 所有数值都可通过Inspector调整
+- **视觉插件**: 支持第三方粒子特效系统
+- **AI兼容**: 为AI玩家预留决策接口

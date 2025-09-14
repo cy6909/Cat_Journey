@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "blockleft",
+    "spriteFrames": [
+      "blockside (10)",
+      "4203adb1-d14e-4d44-bf17-c6b2b6de384b@9b652",
+      "blockside (11)",
+      "4203adb1-d14e-4d44-bf17-c6b2b6de384b@9d27c",
+      "blockside (12)",
+      "4203adb1-d14e-4d44-bf17-c6b2b6de384b@bcc1b",
+      "blockside (9)",
+      "4203adb1-d14e-4d44-bf17-c6b2b6de384b@762c2"
+    ]
+  }
+}

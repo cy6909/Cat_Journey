@@ -1,0 +1,129 @@
+## RelicManager.ts 脚本逻辑描述
+
+### 核心功能
+RelicManager是遗物系统的单例管理器，负责跟踪玩家获得的被动升级、管理遗物效果的激活/停用，以及处理遗物间的复杂交互。
+
+### 主要组件
+1. **遗物存储**: 维护当前激活遗物的集合
+2. **效果查询**: 提供其他系统查询遗物状态的接口
+3. **遗物激活**: 处理新遗物的获得和效果应用
+4. **状态持久化**: 在关卡间保持遗物状态
+
+### 关键属性
+```typescript
+public enum RelicType {
+    EXPLOSIVE_BRICKS = 'ExplosiveBricks',
+    MULTI_BALL_CHANCE = 'MultiBallChance',
+    LASER_UPGRADE = 'LaserUpgrade',
+    SPEED_BOOST = 'SpeedBoost',
+    DAMAGE_BOOST = 'DamageBoost'
+}
+
+private _activeRelics: Set<RelicType>   // 当前激活的遗物集合
+private _relicEffects: Map<RelicType, any> // 遗物效果参数
+```
+
+### 关键方法
+- `getInstance()`: 获取单例实例
+- `addRelic(type: RelicType)`: 添加新遗物
+- `hasRelic(type: RelicType)`: 检查是否拥有特定遗物
+- `removeRelic(type: RelicType)`: 移除遗物
+- `getRelicEffect(type: RelicType)`: 获取遗物效果参数
+- `getAllRelics()`: 获取所有激活遗物列表
+
+### 遗物类型系统
+当前支持50+种遗物类型：
+
+#### 基础强化类
+- **EXPLOSIVE_BRICKS**: 砖块销毁时爆炸
+- **MULTI_BALL_CHANCE**: 增加多球道具掉落率
+- **LASER_UPGRADE**: 增强激光威力和持续时间
+- **SPEED_BOOST**: 增加球速
+- **DAMAGE_BOOST**: 增加伤害
+
+#### 元素效果类
+- **FIRE_TRAIL**: 球留下火焰轨迹
+- **ICE_COATING**: 球冰冻砖块
+- **ELECTRIC_ARC**: 球产生电弧连锁
+- **POISON_CLOUD**: 球扩散毒雾
+
+#### 物理改造类
+- **HEAVY_BALL**: 球变重，伤害增加
+- **BOUNCY_BALL**: 球反弹次数增加
+- **PIERCING_SHOT**: 球获得穿透能力
+- **MAGNETIC_PULL**: 球被磁力影响
+
+### Cocos Creator绑定说明
+
+#### 1. 单例节点创建
+- 在GameScene中创建空节点，命名为"RelicManager"
+- 将RelicManager.ts脚本添加到节点
+- 确保该节点在场景加载时首先初始化
+
+#### 2. UI集成
+如需UI显示遗物：
+- 创建RelicDisplay UI面板
+- 在RelicManager中添加UI更新方法
+- 监听遗物变化事件并更新显示
+
+#### 3. 系统集成示例
+在其他脚本中使用RelicManager：
+
+```typescript
+// 在Brick.ts中检查爆炸遗物
+const relicManager = RelicManager.getInstance();
+if (relicManager.hasRelic(RelicType.EXPLOSIVE_BRICKS)) {
+    this.createExplosion();
+}
+
+// 在Ball.ts中检查速度加成
+if (relicManager.hasRelic(RelicType.SPEED_BOOST)) {
+    const boost = relicManager.getRelicEffect(RelicType.SPEED_BOOST);
+    this.speed *= boost.multiplier;
+}
+```
+
+#### 4. 遗物奖励系统
+在GameManager中集成遗物奖励：
+- 关卡完成时随机给予遗物
+- Boss战胜利后提供稀有遗物选择
+- 隐藏区域发现特殊遗物
+
+#### 5. 存档系统
+如需持久化遗物状态：
+```typescript
+// 保存遗物状态
+public saveRelics(): string {
+    return JSON.stringify(Array.from(this._activeRelics));
+}
+
+// 加载遗物状态
+public loadRelics(data: string): void {
+    const relics = JSON.parse(data);
+    this._activeRelics = new Set(relics);
+}
+```
+
+#### 6. 平衡性配置
+建议遗物效果参数：
+- **伤害加成**: 1.2x - 2.0x
+- **速度加成**: 1.1x - 1.5x
+- **掉落率加成**: +10% - +50%
+- **持续时间加成**: +20% - +100%
+
+#### 7. 遗物组合效果
+设计遗物间的协同效应：
+- 火焰+爆炸 = 火焰爆炸范围扩大
+- 冰冻+电击 = 冰电连锁反应
+- 穿透+重球 = 无限穿透重击
+
+#### 8. 调试和测试
+提供调试接口：
+```typescript
+// 调试模式下添加所有遗物
+public addAllRelicsDebug(): void {
+    Object.values(RelicType).forEach(relic => {
+        this.addRelic(relic);
+    });
+}
+```

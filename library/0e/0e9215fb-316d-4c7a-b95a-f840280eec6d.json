@@ -1,0 +1,14 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "turnleft",
+    "spriteFrames": [
+      "turn (1)",
+      "0e9215fb-316d-4c7a-b95a-f840280eec6d@e96a9",
+      "turn (2)",
+      "0e9215fb-316d-4c7a-b95a-f840280eec6d@1500a",
+      "turn (3)",
+      "0e9215fb-316d-4c7a-b95a-f840280eec6d@d3e58"
+    ]
+  }
+}

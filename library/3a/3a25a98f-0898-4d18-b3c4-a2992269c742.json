@@ -1,0 +1,10 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "three",
+    "spriteFrames": [
+      "spikes (25)",
+      "3a25a98f-0898-4d18-b3c4-a2992269c742@c0302"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "death",
+    "spriteFrames": [
+      "death",
+      "bb79db3e-f3f1-4996-903f-a1e79103bc3c@2bd38"
+    ]
+  }
+}

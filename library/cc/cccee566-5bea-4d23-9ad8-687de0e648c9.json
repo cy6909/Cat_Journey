@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "content": {
+    "name": "blockback",
+    "spriteFrames": [
+      "blockface (13)",
+      "cccee566-5bea-4d23-9ad8-687de0e648c9@ee278",
+      "blockface (14)",
+      "cccee566-5bea-4d23-9ad8-687de0e648c9@c99cd",
+      "blockface (15)",
+      "cccee566-5bea-4d23-9ad8-687de0e648c9@67c43",
+      "blockface (16)",
+      "cccee566-5bea-4d23-9ad8-687de0e648c9@39b94"
+    ]
+  }
+}

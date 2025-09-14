@@ -1,5 +1,8 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, director } from 'cc';
 import { RelicManager } from './RelicManager';
+import { LevelManager, LevelType } from './LevelManager';
+import { CoreController } from './CoreController';
+import { BossController } from './BossController';
 const { ccclass, property } = _decorator;
 
 export enum GameState {
@@ -32,6 +35,12 @@ export class GameManager extends Component {
     @property(Node)
     public brickContainer: Node | null = null;
 
+    @property(Node)
+    public coreNode: Node | null = null;
+
+    @property(Prefab)
+    public experienceOrbPrefab: Prefab | null = null;
+
     @property
     public lives: number = 3;
 
@@ -46,6 +55,8 @@ export class GameManager extends Component {
     private _bricks: Node[] = [];
     private _ballNode: Node | null = null;
     private _paddleNode: Node | null = null;
+    private _coreController: CoreController | null = null;
+    private _levelManager: LevelManager | null = null;
 
     public static getInstance(): GameManager | null {
         return GameManager._instance;
@@ -69,6 +80,8 @@ export class GameManager extends Component {
 
     protected start(): void {
         this.initializeGame();
+        this.initializeCore();
+        this.initializeLevelManager();
     }
 
     private initializeGame(): void {
@@ -79,6 +92,22 @@ export class GameManager extends Component {
         this.scheduleOnce(() => {
             this.setState(GameState.PLAYING);
         }, 2.0);
+    }
+
+    private initializeCore(): void {
+        if (this.coreNode) {
+            this._coreController = this.coreNode.getComponent(CoreController);
+            if (!this._coreController) {
+                console.warn('CoreController not found on coreNode');
+            }
+        }
+    }
+
+    private initializeLevelManager(): void {
+        this._levelManager = LevelManager.getInstance();
+        if (!this._levelManager) {
+            console.warn('LevelManager instance not found');
+        }
     }
 
     private createPaddle(): void {
@@ -99,8 +128,19 @@ export class GameManager extends Component {
 
     private setupLevel(): void {
         this.clearBricks();
-        const layout = this.getLevelLayout(this.level);
-        this.createBricksFromLayout(layout);
+        
+        if (this._levelManager) {
+            this._levelManager.initializeLevel();
+            
+            const levelType = this._levelManager.getCurrentLevelType();
+            if (levelType !== LevelType.BOSS) {
+                const layout = this.getLevelLayout(this.level);
+                this.createBricksFromLayout(layout);
+            }
+        } else {
+            const layout = this.getLevelLayout(this.level);
+            this.createBricksFromLayout(layout);
+        }
     }
 
     private getLevelLayout(level: number): number[][] {
@@ -147,6 +187,11 @@ export class GameManager extends Component {
                 const brickScript = brick.getComponent('Brick');
                 if (brickScript) {
                     (brickScript as any).setHealth(brickType);
+                    
+                    // Some bricks drop experience orbs
+                    if (Math.random() < 0.1) { // 10% chance
+                        (brickScript as any).setDropsExperience(true);
+                    }
                 }
 
                 this.brickContainer.addChild(brick);
@@ -164,17 +209,25 @@ export class GameManager extends Component {
         this._bricks = [];
     }
 
-    public onBrickDestroyed(scoreValue: number = 10, brickPosition?: Vec3): void {
+    public onBrickDestroyed(scoreValue: number = 10, brickPosition?: Vec3, dropsExperience: boolean = false): void {
         this.score += scoreValue;
         
-        if (brickPosition && Math.random() < this.powerUpDropChance) {
-            this.dropPowerUp(brickPosition);
+        if (brickPosition) {
+            // Drop power-ups
+            if (Math.random() < this.powerUpDropChance) {
+                this.dropPowerUp(brickPosition);
+            }
+            
+            // Drop experience orbs
+            if (dropsExperience) {
+                this.dropExperienceOrb(brickPosition);
+            }
         }
         
         this._bricks = this._bricks.filter(brick => brick && brick.isValid);
         
         if (this._bricks.length === 0) {
-            this.onLevelComplete();
+            this.checkLevelComplete();
         }
     }
 
@@ -195,11 +248,47 @@ export class GameManager extends Component {
     public onBallLost(): void {
         this.lives--;
         
+        // Ball hitting core also deals damage
+        if (this._coreController) {
+            this._coreController.takeDamage(1, 'Ball lost');
+        }
+        
         if (this.lives <= 0) {
             this.setState(GameState.GAME_OVER);
         } else {
             this.resetBall();
         }
+    }
+    
+    public onCoreAttacked(damage: number): void {
+        console.log(`Core attacked for ${damage} damage`);
+        
+        if (this._coreController) {
+            this._coreController.takeDamage(damage, 'External attack');
+        }
+    }
+    
+    public onCoreDestroyed(): void {
+        console.log('Core destroyed! Immediate game over!');
+        this.lives = 0;
+        this.setState(GameState.GAME_OVER);
+    }
+    
+    public onBossDefeated(scoreValue: number): void {
+        console.log(`Boss defeated! Awarded ${scoreValue} points`);
+        this.score += scoreValue;
+        
+        // Boss defeat triggers level completion
+        this.onLevelComplete();
+    }
+    
+    private dropExperienceOrb(position: Vec3): void {
+        if (!this.experienceOrbPrefab) return;
+        
+        const orbNode = instantiate(this.experienceOrbPrefab);
+        orbNode.setPosition(position);
+        this.node.addChild(orbNode);
+        console.log('Experience orb dropped');
     }
 
     private resetBall(): void {
@@ -211,13 +300,30 @@ export class GameManager extends Component {
         }
     }
 
-    private onLevelComplete(): void {
+    private checkLevelComplete(): void {
+        const levelType = this._levelManager ? this._levelManager.getCurrentLevelType() : LevelType.NORMAL;
+        
+        if (levelType === LevelType.BOSS) {
+            // Boss levels complete when boss is defeated (handled in onBossDefeated)
+            return;
+        }
+        
+        this.onLevelComplete();
+    }
+
+    public onLevelComplete(): void {
         this.setState(GameState.LEVEL_COMPLETE);
         this.level++;
         
         const relicManager = RelicManager.getInstance();
         if (relicManager) {
             relicManager.grantRandomRelic();
+        }
+        
+        // Reset level manager for next level
+        if (this._levelManager) {
+            this._levelManager.resetLevel();
+            this._levelManager.adjustDifficulty(this.level);
         }
         
         this.scheduleOnce(() => {

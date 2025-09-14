@@ -1,0 +1,369 @@
+## MapManager.ts 脚本逻辑描述
+
+### 核心功能
+MapManager实现了类似《杀戮尖塔》的分支路径地图系统，管理3个大章节的关卡选择和进度，提供多样化的节点类型和战略性路径规划。
+
+### 地图系统结构
+
+#### 章节主题 (3个)
+```typescript
+enum ChapterTheme {
+    FOREST = 'forest',      // 第一章：森林
+    MOUNTAIN = 'mountain',  // 第二章：山脉  
+    ABYSS = 'abyss'        // 第三章：深渊
+}
+```
+
+#### 节点类型系统 (12种)
+- **START**: 起始节点 - 每章开始点
+- **COMBAT**: 普通战斗 - 45%概率，基础战斗关卡
+- **ELITE**: 精英战斗 - 15%概率，高难度特殊敌人
+- **BOSS**: Boss战斗 - 章节最终Boss，固定在第15层
+- **HIDDEN_BOSS**: 隐藏Boss - 特殊解锁条件
+- **EVENT**: 随机事件 - 15%概率，选择驱动的故事事件
+- **SHOP**: 商店 - 8%概率，购买道具和强化
+- **TREASURE**: 宝藏 - 7%概率，免费奖励获取
+- **CAMPFIRE**: 篝火休息 - 5%概率，恢复生命值
+- **UPGRADE**: 升级台 - 3%概率，装备强化服务
+- **MYSTERY**: 神秘节点 - 2%概率，未知效果随机事件
+- **END**: 结束节点 - 章节完成标记
+
+### 地图生成算法
+
+#### 结构参数
+```typescript
+@property nodesPerFloor: number = 4        // 每层节点数
+@property floorsPerChapter: number = 15    // 每章层数
+@property nodeSpacing: number = 150        // 节点间距
+@property floorSpacing: number = 100       // 层间距
+```
+
+#### 生成流程
+1. **楼层生成**: 15层结构，第0层起始，第14层Boss
+2. **节点分布**: 根据概率权重随机分配节点类型
+3. **连接算法**: 每个节点连接1-3个下层节点
+4. **可达性保证**: 确保所有节点都能从上层到达
+
+#### 连接生成策略
+```typescript
+private selectConnectionTargets(sourceIndex: number, targetCount: number, connectionCount: number): number[]
+```
+- **邻近优先**: 优先连接位置相近的节点
+- **随机分支**: 增加路径多样性
+- **平衡分布**: 避免某些节点无法到达
+
+### 节点状态管理
+
+#### 节点状态
+```typescript
+interface MapNode {
+    isVisited: boolean      // 是否已访问
+    isAvailable: boolean    // 是否可选择
+    isCurrentPath: boolean  // 是否在当前路径上
+}
+```
+
+#### 状态更新规则
+- **初始状态**: 只有起始节点可用
+- **访问后**: 连接的下层节点变为可用
+- **已访问节点**: 视觉上显示为暗色半透明
+- **当前节点**: 高亮显示为白色
+
+### 特殊节点机制
+
+#### 预Boss层机制 (第13层)
+- **固定配置**: 必定包含篝火和商店
+- **少量节点**: 比普通层少1个节点
+- **战略准备**: 为Boss战做最后准备
+
+#### Boss层机制 (第14层)
+- **单一Boss**: 每章只有一个Boss节点
+- **Boss类型**: 从该章节Boss池中随机选择
+- **难度缩放**: 根据章节应用难度倍率
+
+### 节点数据系统
+
+#### 战斗节点数据
+```typescript
+combatData: {
+    difficulty: number;          // 难度系数
+    brickCount: number;          // 砖块数量
+    specialBrickRatio: number;   // 特殊砖块比例
+}
+```
+
+#### 精英节点数据
+```typescript
+eliteData: {
+    eliteType: EliteType;       // 精英类型
+    difficulty: number;         // 精英难度倍率
+}
+```
+
+#### Boss节点数据
+```typescript
+bossData: {
+    bossType: BossType;         // Boss类型
+    chapter: number;            // 所属章节
+}
+```
+
+#### 事件节点数据
+```typescript
+eventData: {
+    eventType: string;          // 事件类型
+    choices: EventChoice[];     // 选择选项
+}
+```
+
+#### 商店节点数据
+```typescript
+shopData: {
+    items: ShopItem[];          // 商店物品
+    currency: number;           // 货币检查
+}
+```
+
+### 视觉系统
+
+#### 节点视觉
+- **颜色编码**: 每种节点类型有独特颜色
+  - 战斗: 灰色, 精英: 橙色, Boss: 红色
+  - 事件: 青色, 商店: 黄色, 宝藏: 金色
+  - 篝火: 橙红色, 升级: 紫色, 神秘: 浅蓝色
+- **状态指示**: 可用/不可用/已访问的视觉反馈
+- **连接线**: 显示节点间的可行路径
+
+#### 节点交互
+```typescript
+public onNodeClicked(nodeId: string): void
+```
+- **可用性检查**: 只能选择可用节点
+- **状态更新**: 标记为已访问，更新可用性
+- **动作执行**: 根据节点类型触发对应行为
+
+### 章节Boss配置
+
+#### 第一章Boss (森林)
+- GUARDIAN_WALL: 守护墙Boss
+- STORM_CALLER: 风暴召唤者
+- BRICK_SPAWNER: 砖块生成器
+
+#### 第二章Boss (山脉)  
+- GRAVITY_MASTER: 重力主宰
+- TIME_MANIPULATOR: 时间操控者
+- SHIELD_GENERATOR: 护盾生成器
+
+#### 第三章Boss (深渊)
+- MULTI_PHASE: 多相位Boss
+- TELEPORTER: 传送者Boss
+- ELEMENTAL_CHAOS: 元素混沌Boss
+- MIRROR_BOSS: 镜像Boss
+
+### 难度缩放系统
+
+#### 基础难度计算
+```typescript
+baseDifficulty = 1 + (chapter - 1) * 0.5 + level * 0.1
+```
+
+#### 应用场景
+- **战斗节点**: 影响砖块数量和特殊砖块比例
+- **精英节点**: 精英难度倍率1.4倍
+- **Boss节点**: 章节难度倍率应用
+
+### Cocos Creator绑定说明
+
+#### 1. 组件设置
+在场景中添加MapManager：
+- 创建空节点命名为"MapManager"
+- 添加MapManager脚本组件
+- 设置预制体引用和参数
+
+#### 2. 预制体配置
+```typescript
+@property({type: Prefab})
+public mapNodePrefab: Prefab | null = null;      // 地图节点预制体
+
+@property({type: Prefab})  
+public connectionLinePrefab: Prefab | null = null; // 连接线预制体
+```
+
+##### 节点预制体要求
+- **Sprite组件**: 显示节点外观，支持颜色变化
+- **Button组件**: 处理点击交互
+- **Label子节点**: 显示节点类型文字
+
+##### 连接线预制体要求
+- **Sprite组件**: 显示连接线
+- **UITransform组件**: 支持长度和角度调整
+
+#### 3. 地图生成
+```typescript
+// 生成指定章节的地图
+public generateChapterMap(chapter: number): void
+
+// 示例使用
+const mapManager = this.getComponent(MapManager);
+mapManager.generateChapterMap(1); // 生成第一章地图
+```
+
+#### 4. 节点交互处理
+```typescript
+// 节点点击事件自动绑定
+// 在createNodeVisual()中设置:
+button.node.on(Button.EventType.CLICK, () => this.onNodeClicked(node.id), this);
+```
+
+#### 5. GameManager集成
+```typescript
+// 在GameManager中集成地图系统
+public startMapMode(): void {
+    const mapManager = this.getComponent(MapManager);
+    mapManager.generateChapterMap(this.currentChapter);
+    
+    // 切换到地图选择UI
+    this.showMapUI();
+}
+
+// 处理节点选择结果
+public onNodeSelected(nodeType: NodeType, nodeData: any): void {
+    switch(nodeType) {
+        case NodeType.COMBAT:
+            this.startCombatLevel(nodeData.combatData);
+            break;
+        case NodeType.SHOP:
+            this.openShop(nodeData.shopData);
+            break;
+        // 其他节点类型处理...
+    }
+}
+```
+
+#### 6. 进度保存
+```typescript
+// 保存地图进度
+private saveMapProgress(): void {
+    const progressData = {
+        currentChapter: this._currentChapter,
+        currentNodeId: this._currentNodeId,
+        visitedNodes: Array.from(this._mapNodes.values())
+            .filter(node => node.isVisited)
+            .map(node => node.id),
+        nodeStates: this._mapNodes
+    };
+    
+    cc.sys.localStorage.setItem('map_progress', JSON.stringify(progressData));
+}
+
+// 加载地图进度
+private loadMapProgress(): void {
+    const saved = cc.sys.localStorage.getItem('map_progress');
+    if (saved) {
+        const data = JSON.parse(saved);
+        this._currentChapter = data.currentChapter;
+        this._currentNodeId = data.currentNodeId;
+        // 恢复节点状态...
+    }
+}
+```
+
+#### 7. UI集成示例
+```typescript
+// 地图UI控制器
+export class MapUIController extends Component {
+    private mapManager: MapManager;
+    
+    protected start(): void {
+        this.mapManager = this.getComponent(MapManager);
+    }
+    
+    // 显示当前节点信息
+    public showNodeInfo(nodeId: string): void {
+        const node = this.mapManager.getCurrentNode();
+        if (node) {
+            this.nodeNameLabel.string = this.getNodeDisplayName(node.type);
+            this.nodeDescLabel.string = this.getNodeDescription(node);
+        }
+    }
+    
+    // 章节切换
+    public switchChapter(chapter: number): void {
+        this.mapManager.generateChapterMap(chapter);
+    }
+}
+```
+
+#### 8. 事件系统集成
+```typescript
+// 自定义事件发送
+private executeNodeAction(node: MapNode): void {
+    // 发送节点选择事件
+    this.node.emit('node-selected', node.type, node);
+    
+    switch (node.type) {
+        case NodeType.EVENT:
+            this.node.emit('trigger-event', node.eventData);
+            break;
+        case NodeType.SHOP:
+            this.node.emit('open-shop', node.shopData);
+            break;
+        // 其他事件...
+    }
+}
+
+// 在其他组件中监听
+protected onLoad(): void {
+    const mapManager = this.node.getComponent(MapManager);
+    mapManager.node.on('node-selected', this.onNodeSelected, this);
+    mapManager.node.on('trigger-event', this.onEventTriggered, this);
+    mapManager.node.on('open-shop', this.onShopOpened, this);
+}
+```
+
+### 扩展性设计
+
+#### 添加新节点类型
+1. 在NodeType枚举中添加新类型
+2. 更新节点概率分布
+3. 实现对应的执行逻辑
+4. 添加颜色和显示名称
+5. 创建节点数据结构
+
+#### 添加新章节
+1. 扩展ChapterTheme枚举
+2. 更新getChapterTheme()方法
+3. 配置新章节的Boss类型
+4. 添加新的事件和商店物品
+
+#### 自定义地图布局
+```typescript
+// 支持自定义地图生成器
+public setCustomGenerator(generator: (chapter: number) => void): void {
+    this.customGenerator = generator;
+}
+```
+
+### 性能优化
+
+#### 对象池管理
+- 节点视觉对象使用对象池
+- 连接线对象重复使用
+- 及时清理不需要的视觉元素
+
+#### 内存管理
+- 合理控制地图节点数量
+- 按需加载节点数据
+- 清理旧章节的地图数据
+
+### 平衡性考虑
+
+#### 路径选择
+- 确保每条路径都有战略价值
+- 风险与回报的平衡设计
+- 避免明显的"最优路径"
+
+#### 节点分布
+- 商店和篝火的合理分布
+- 精英关卡的挑战性定位
+- 事件节点的影响力平衡
