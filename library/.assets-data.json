@@ -153,6 +153,10 @@
         "7ec887bc-b20e-429d-8e28-08067520a25c",
         "104daebd-5903-4488-8a7c-86cc0740738e@8a874",
         "104daebd-5903-4488-8a7c-86cc0740738e",
+        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
       ],
@@ -9052,6 +9056,11 @@
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "d38601e9-2bee-4fb4-af7e-00d3fccec3b9": {
+    "url": "db://assets/scripts/StarFieldBackground.ts",
+    "value": {},
     "versionCode": 1
   }
 }

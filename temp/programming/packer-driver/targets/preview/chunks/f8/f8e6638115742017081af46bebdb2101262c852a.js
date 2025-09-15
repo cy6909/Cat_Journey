@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, Sprite, Color, Vec3, GameManager, RelicManager, RelicType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, Brick;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, Sprite, Color, Vec3, GameManager, RelicManager, RelicType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, Brick;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -63,6 +63,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _initializerDefineProperty(this, "scoreValue", _descriptor3, this);
 
+          _initializerDefineProperty(this, "dropsExperience", _descriptor4, this);
+
           this._sprite = null;
           this._originalColor = new Color();
         }
@@ -120,7 +122,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), GameManager) : GameManager).getInstance();
 
           if (gameManager) {
-            gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone());
+            gameManager.onBrickDestroyed(this.scoreValue, this.node.position.clone(), this.dropsExperience);
           }
 
           var relicManager = (_crd && RelicManager === void 0 ? (_reportPossibleCrUseOfRelicManager({
@@ -167,6 +169,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.updateVisual();
         }
 
+        setDropsExperience(drops) {
+          this.dropsExperience = drops;
+        }
+
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "health", [property], {
         configurable: true,
         enumerable: true,
@@ -187,6 +193,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         writable: true,
         initializer: function initializer() {
           return 10;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "dropsExperience", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return false;
         }
       })), _class2)) || _class));
 

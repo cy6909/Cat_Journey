@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 4598.7075,
+      "mTimestamp": 6109.1301,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -682,11 +682,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 55991271.1085,
+      "mTimestamp": 42287759.6311,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -695,12 +695,12 @@
             },
             "end": {
               "line": 4,
-              "column": 126
+              "column": 146
             }
           }
         },
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
@@ -709,12 +709,12 @@
             },
             "end": {
               "line": 5,
-              "column": 131
+              "column": 151
             }
           }
         },
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
@@ -723,12 +723,12 @@
             },
             "end": {
               "line": 6,
-              "column": 135
+              "column": 155
             }
           }
         },
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
@@ -737,12 +737,12 @@
             },
             "end": {
               "line": 7,
-              "column": 132
+              "column": 152
             }
           }
         },
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
@@ -751,12 +751,12 @@
             },
             "end": {
               "line": 8,
-              "column": 126
+              "column": 146
             }
           }
         },
         {
-          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
@@ -765,12 +765,12 @@
             },
             "end": {
               "line": 9,
-              "column": 119
+              "column": 139
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/AdManager.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -779,12 +779,12 @@
             },
             "end": {
               "line": 10,
-              "column": 73
+              "column": 81
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -793,12 +793,12 @@
             },
             "end": {
               "line": 11,
-              "column": 68
+              "column": 76
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/BossController.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -807,12 +807,12 @@
             },
             "end": {
               "line": 12,
-              "column": 78
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -821,12 +821,12 @@
             },
             "end": {
               "line": 13,
-              "column": 69
+              "column": 77
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/CoreController.ts",
           "resolved": "__unresolved_10",
           "loc": {
             "start": {
@@ -835,12 +835,12 @@
             },
             "end": {
               "line": 14,
-              "column": 78
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
@@ -849,12 +849,12 @@
             },
             "end": {
               "line": 15,
-              "column": 73
+              "column": 81
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
@@ -863,12 +863,12 @@
             },
             "end": {
               "line": 16,
-              "column": 89
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBall.ts",
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
@@ -877,12 +877,12 @@
             },
             "end": {
               "line": 17,
-              "column": 76
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts",
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
@@ -891,12 +891,12 @@
             },
             "end": {
               "line": 18,
-              "column": 86
+              "column": 94
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts",
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
@@ -905,12 +905,12 @@
             },
             "end": {
               "line": 19,
-              "column": 77
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts",
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
@@ -919,12 +919,12 @@
             },
             "end": {
               "line": 20,
-              "column": 88
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts",
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
@@ -933,12 +933,12 @@
             },
             "end": {
               "line": 21,
-              "column": 77
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts",
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
@@ -947,12 +947,12 @@
             },
             "end": {
               "line": 22,
-              "column": 75
+              "column": 83
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -961,12 +961,12 @@
             },
             "end": {
               "line": 23,
-              "column": 69
+              "column": 77
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
@@ -975,12 +975,12 @@
             },
             "end": {
               "line": 24,
-              "column": 82
+              "column": 90
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LevelManager.ts",
           "resolved": "__unresolved_21",
           "loc": {
             "start": {
@@ -989,12 +989,12 @@
             },
             "end": {
               "line": 25,
-              "column": 76
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MapManager.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -1003,12 +1003,12 @@
             },
             "end": {
               "line": 26,
-              "column": 74
+              "column": 82
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MonetizationManager.ts",
           "resolved": "__unresolved_23",
           "loc": {
             "start": {
@@ -1017,12 +1017,12 @@
             },
             "end": {
               "line": 27,
-              "column": 83
+              "column": 91
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts",
           "resolved": "__unresolved_24",
           "loc": {
             "start": {
@@ -1031,12 +1031,12 @@
             },
             "end": {
               "line": 28,
-              "column": 80
+              "column": 88
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts",
           "resolved": "__unresolved_25",
           "loc": {
             "start": {
@@ -1045,12 +1045,12 @@
             },
             "end": {
               "line": 29,
-              "column": 80
+              "column": 88
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts",
           "resolved": "__unresolved_26",
           "loc": {
             "start": {
@@ -1059,12 +1059,12 @@
             },
             "end": {
               "line": 30,
-              "column": 71
+              "column": 79
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts",
           "resolved": "__unresolved_27",
           "loc": {
             "start": {
@@ -1073,12 +1073,12 @@
             },
             "end": {
               "line": 31,
-              "column": 88
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts",
           "resolved": "__unresolved_28",
           "loc": {
             "start": {
@@ -1087,12 +1087,12 @@
             },
             "end": {
               "line": 32,
-              "column": 76
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts",
           "resolved": "__unresolved_29",
           "loc": {
             "start": {
@@ -1101,12 +1101,12 @@
             },
             "end": {
               "line": 33,
-              "column": 71
+              "column": 79
             }
           }
         },
         {
-          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ShopManager.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
@@ -1115,7 +1115,21 @@
             },
             "end": {
               "line": 34,
-              "column": 75
+              "column": 83
+            }
+          }
+        },
+        {
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/StarFieldBackground.ts",
+          "resolved": "__unresolved_31",
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 7
+            },
+            "end": {
+              "line": 35,
+              "column": 91
             }
           }
         }
@@ -1125,217 +1139,224 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/AdManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/AdManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Ball.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Ball.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/BossController.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/BossController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Brick.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/CoreController.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/CoreController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/DeathZone.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/DeathZone.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBall.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBall.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/GameManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/Laser.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Laser.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LaserPaddlePowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/LevelManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LevelManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MapManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MapManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MonetizationManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MultiBallPowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/PaddleController.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PaddleController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/PowerUp.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/PowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/RelicUI.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicUI.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ShopManager.ts"
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ShopManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/StarFieldBackground.ts"
           },
           "messages": []
         }
@@ -1957,7 +1978,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/Brick.ts": {
       "mTimestamp": {
-        "mtime": 1757641556106.0022,
+        "mtime": 1757894233930.545,
         "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
       },
       "chunkId": "f8e6638115742017081af46bebdb2101262c852a",
@@ -2146,7 +2167,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1757641593600.3647,
+        "mtime": 1757894233944.0615,
         "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
       },
       "chunkId": "00aed60ed5a19d68dc32f189818db7e731666811",
@@ -2187,6 +2208,34 @@
               "column": 45
             }
           }
+        },
+        {
+          "value": "./LevelManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 40
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./CoreController",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 31
+            },
+            "end": {
+              "line": 4,
+              "column": 49
+            }
+          }
         }
       ],
       "type": "esm",
@@ -2223,6 +2272,20 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LevelManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/CoreController.ts"
           },
           "messages": []
         }
@@ -2586,7 +2649,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts": {
       "mTimestamp": {
-        "mtime": 1757641527813.936,
+        "mtime": 1757894233955.3887,
         "uuid": "ebc0c1e7-8814-4bc5-854a-16588373ba8b"
       },
       "chunkId": "c033817b33e71a5d2e2e35c03399178e755a9aca",
@@ -2721,7 +2784,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1757760383345,
+      "mTimestamp": 1757896669202,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -5349,6 +5412,1285 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/MonetizationManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/AdManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233925.2878,
+        "uuid": "5ab194a2-f89a-4525-9550-f372a0166a0f"
+      },
+      "chunkId": "4796eead13f5f22e303b968b8dbe1540e7bab62d",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 49
+            },
+            "end": {
+              "line": 1,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/BossController.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233928.0164,
+        "uuid": "cb177592-4af2-4364-aa4f-151cf2468684"
+      },
+      "chunkId": "6a237dad64496b1baa0f66764abffc0d7fa72f69",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 115
+            },
+            "end": {
+              "line": 1,
+              "column": 119
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/CoreController.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233931.544,
+        "uuid": "b64384bb-73e5-44e7-97ab-dde11b2c0873"
+      },
+      "chunkId": "8335b29f842633ed64ce3c2e73898c0ab542a7aa",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 109
+            },
+            "end": {
+              "line": 1,
+              "column": 113
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233933.5452,
+        "uuid": "b292370e-104f-4642-9f1b-2018c49d54ae"
+      },
+      "chunkId": "15ac3719465d9f70a6ffcd7b7ec0391c73e9bf74",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 77
+            },
+            "end": {
+              "line": 1,
+              "column": 81
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBossController",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 49
+            },
+            "end": {
+              "line": 2,
+              "column": 75
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBrick",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 41
+            },
+            "end": {
+              "line": 4,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBall",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBall.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBall.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233935.5442,
+        "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
+      },
+      "chunkId": "aa3c61ea00a04e562c692d67c9b26d26596d360b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 154
+            },
+            "end": {
+              "line": 1,
+              "column": 158
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233937.0535,
+        "uuid": "27557649-ef41-41bd-8182-c1f866e06f1c"
+      },
+      "chunkId": "57ce52f1ecacd43f479a39744bd311f256dbbf10",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 164
+            },
+            "end": {
+              "line": 1,
+              "column": 168
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBrick",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 41
+            },
+            "end": {
+              "line": 3,
+              "column": 58
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233938.062,
+        "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
+      },
+      "chunkId": "2aab4e8995073a90cb9d6ffaa8dcf4de7c9a7d53",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 158
+            },
+            "end": {
+              "line": 1,
+              "column": 162
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "./RelicManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/RelicManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedPaddleController.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233940.063,
+        "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
+      },
+      "chunkId": "849644a3e8cf3721580ae00b12935ad3037cfa7d",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 186
+            },
+            "end": {
+              "line": 1,
+              "column": 190
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "./CoreController",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 31
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/CoreController.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ExperienceOrb.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233941.0632,
+        "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
+      },
+      "chunkId": "1d65fb640dd9f9072b6406b08d8561c699fc255c",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 115
+            },
+            "end": {
+              "line": 1,
+              "column": 119
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/LevelManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233945.867,
+        "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
+      },
+      "chunkId": "6b49b51d2b56d9f9db805c6e7a66b02dc85cf0bf",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 81
+            },
+            "end": {
+              "line": 1,
+              "column": 85
+            }
+          }
+        },
+        {
+          "value": "./GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 39
+            },
+            "end": {
+              "line": 2,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./BossController",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 31
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/BossController.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MapManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233947.8735,
+        "uuid": "04ad1764-0c43-4052-83ae-2a379e962c0f"
+      },
+      "chunkId": "5428e5977789e5e6af92f7f3e2b4bbcee11699b1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 114
+            },
+            "end": {
+              "line": 1,
+              "column": 118
+            }
+          }
+        },
+        {
+          "value": "./EliteAndHiddenBossManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 42
+            },
+            "end": {
+              "line": 2,
+              "column": 71
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBossController",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 25
+            },
+            "end": {
+              "line": 3,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EliteAndHiddenBossManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBossController.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MonetizationManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233950.3872,
+        "uuid": "8efbb6dc-d267-4d8e-8fe4-4e45fada804f"
+      },
+      "chunkId": "00275611a7fea1e0cba77231607e1c37341f12f0",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 49
+            },
+            "end": {
+              "line": 1,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ProceduralLevelGenerator.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233952.3862,
+        "uuid": "21fce139-201d-4e35-b134-cd69356c8991"
+      },
+      "chunkId": "e730dd63ff0d44647ceddddf0e0d4fa9a387b0ba",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 77
+            },
+            "end": {
+              "line": 1,
+              "column": 81
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBrick",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 41
+            },
+            "end": {
+              "line": 2,
+              "column": 58
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/EnhancedBrick.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ShopManager.ts": {
+      "mTimestamp": {
+        "mtime": 1757894233956.385,
+        "uuid": "ee9197dd-fbcc-48de-8b72-9ed5f1aa2caa"
+      },
+      "chunkId": "a0766e7a898d5287ed8383dc1c281edbd7f95d1b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 49
+            },
+            "end": {
+              "line": 1,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./MonetizationManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 64
+            },
+            "end": {
+              "line": 2,
+              "column": 87
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/MonetizationManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/StarFieldBackground.ts": {
+      "mTimestamp": {
+        "mtime": 1757937976141.742,
+        "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
+      },
+      "chunkId": "e39ab8b76d604f9e56450447feefdfb5ca946eeb",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 90
+            },
+            "end": {
+              "line": 1,
+              "column": 94
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

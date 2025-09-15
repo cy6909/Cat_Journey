@@ -3,10 +3,17 @@
   "general": {
     "designResolution": {
       "width": 960,
-      "height": 640
+      "height": 640,
+      "fitHeight": true
     }
   },
   "script": {
     "preserveSymlinks": true
-  }
+  },
+  "layer": [
+    {
+      "name": "BG",
+      "value": 1
+    }
+  ]
 }
