@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec3, RigidBody2D, Collider2D, Contact2DType, IPhysics2DContact, Sprite, Color, tween, Prefab, instantiate, math, Vec2 } from 'cc';
+import { _decorator, Component, Node, Vec3, RigidBody2D, Collider2D, Contact2DType, IPhysics2DContact, Sprite, Color, tween, Prefab, instantiate, math, Vec2, Enum } from 'cc';
 import { GameManager } from './GameManager';
 import { EnhancedBrick, BrickType } from './EnhancedBrick';
 
@@ -34,7 +34,7 @@ interface BossAttackPattern {
 
 @ccclass('EnhancedBossController')
 export class EnhancedBossController extends Component {
-    @property({type: BossType})
+    @property({type: Enum(BossType)})
     public bossType: BossType = BossType.GUARDIAN_WALL;
     
     @property

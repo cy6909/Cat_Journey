@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, RigidBody2D, PhysicsMaterial, Collider2D, Contact2DType, IPhysics2DContact, Vec3, Color, Sprite, tween, Vec2 } from 'cc';
+import { _decorator, Component, Node, RigidBody2D, PhysicsMaterial, Collider2D, Contact2DType, IPhysics2DContact, Vec3, Color, Sprite, tween, Vec2, Enum } from 'cc';
 import { GameManager } from './GameManager';
 
 const { ccclass, property } = _decorator;
@@ -33,7 +33,7 @@ export enum BallType {
 
 @ccclass('EnhancedBall')
 export class EnhancedBall extends Component {
-    @property({type: BallType})
+    @property({type: Enum(BallType)})
     public ballType: BallType = BallType.NORMAL;
     
     @property

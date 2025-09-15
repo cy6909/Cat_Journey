@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Collider2D, Contact2DType, IPhysics2DContact, Color, Sprite, tween, Vec3, Prefab, instantiate, RigidBody2D, Vec2 } from 'cc';
+import { _decorator, Component, Node, Collider2D, Contact2DType, IPhysics2DContact, Color, Sprite, tween, Vec3, Prefab, instantiate, RigidBody2D, Vec2, Enum } from 'cc';
 import { GameManager } from './GameManager';
 import { RelicManager } from './RelicManager';
 
@@ -34,7 +34,7 @@ export enum BrickType {
 
 @ccclass('EnhancedBrick')
 export class EnhancedBrick extends Component {
-    @property({type: BrickType})
+    @property({type: Enum(BrickType)})
     public brickType: BrickType = BrickType.NORMAL;
     
     @property
