@@ -162,7 +162,8 @@
       ],
       "dependScripts": [
         "1112ea98-2509-431e-b6fa-b2811d6671eb",
-        "CC3eba29-7abb-723a-f7ab-ae275e2277e8"
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
+        "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
       ]
     },
     "versionCode": 1
@@ -9060,6 +9061,46 @@
   },
   "d38601e9-2bee-4fb4-af7e-00d3fccec3b9": {
     "url": "db://assets/scripts/StarFieldBackground.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4ecfef89-991d-4ea5-9613-a6e86461f17a": {
+    "url": "db://assets/scripts/SimpleBackgroundTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "d05b6b38-db35-4925-bfa1-d103bb143040": {
+    "url": "db://assets/scripts/StarFieldBackgroundFixed.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3c0052d3-5ef3-4a3f-b4d8-0d5d2669c07c": {
+    "url": "db://assets/scripts/QuickBackgroundFix.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "7c70f2b9-c487-4ed3-a9e3-c4b3e86b4c5b": {
+    "url": "db://assets/scripts/BackgroundDiagnostic.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3c94306c-c195-4858-bc40-0b204ba772f9": {
+    "url": "db://assets/scripts/CanvasBackgroundTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "d45c3693-63f5-4d7f-a9ac-5a309db24468": {
+    "url": "db://assets/scripts/CanvasLayerFixer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3048b321-b844-45ca-8fe4-f5ccf124ded0": {
+    "url": "db://assets/scripts/CameraVisibilityAnalyzer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "522ea151-a18c-4cf4-8c74-4d6b01939b6a": {
+    "url": "db://assets/scripts/FinalBackgroundFix.ts",
     "value": {},
     "versionCode": 1
   }

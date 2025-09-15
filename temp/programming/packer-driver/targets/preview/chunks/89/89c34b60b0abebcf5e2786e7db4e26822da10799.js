@@ -20,6 +20,7 @@ System.register(["cc"], function (_export, _context) {
       _cclegacy._RF.push({}, "5ab19Si+JpFJZVQ83KgFmoP", "AdManager", undefined);
 
       // WeChat Mini Game API types
+      /// <reference types="minigame-api-typings" />
       __checkObsolete__(['_decorator', 'Component', 'Node', 'sys']);
 
       ({
@@ -250,7 +251,9 @@ System.register(["cc"], function (_export, _context) {
               style: {
                 left: 0,
                 top: 0,
-                width: 320
+                width: 320,
+                height: 100 // 添加必需的height属性
+
               }
             });
           } catch (error) {

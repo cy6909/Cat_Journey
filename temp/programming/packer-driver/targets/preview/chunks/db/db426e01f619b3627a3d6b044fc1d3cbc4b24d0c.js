@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Prefab, instantiate, math, EnhancedBossController, BossType, EnhancedBrick, BrickType, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _crd, ccclass, property, EliteType, HiddenBossType, EliteAndHiddenBossManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Prefab, instantiate, math, EnhancedBossController, BossType, EnhancedBrick, BrickType, EnhancedBall, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _crd, ccclass, property, EliteType, HiddenBossType, EliteAndHiddenBossManager;
 
   function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -27,6 +27,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("BrickType", "./EnhancedBrick", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfEnhancedBall(extras) {
+    _reporterNs.report("EnhancedBall", "./EnhancedBall", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -45,6 +49,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     }, function (_unresolved_3) {
       EnhancedBrick = _unresolved_3.EnhancedBrick;
       BrickType = _unresolved_3.BrickType;
+    }, function (_unresolved_4) {
+      EnhancedBall = _unresolved_4.EnhancedBall;
     }],
     execute: function () {
       _crd = true;
@@ -397,7 +403,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             }), BrickType) : BrickType).RUBBER,
             secondaryBrickTypes: [(_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
               error: Error()
-            }), BrickType) : BrickType).BOUNCY, (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+            }), BrickType) : BrickType).RUBBER, (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
               error: Error()
             }), BrickType) : BrickType).MAGNETIC],
             specialMechanic: "hyper_bounce"
@@ -671,7 +677,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
             speedMultiplier = Math.min(speedMultiplier + 0.1, maxSpeedMultiplier); // Apply speed boost to all balls
 
-            var allBalls = ((_this$node$parent2 = this.node.parent) == null ? void 0 : _this$node$parent2.getComponentsInChildren(EnhancedBall)) || [];
+            var allBalls = ((_this$node$parent2 = this.node.parent) == null ? void 0 : _this$node$parent2.getComponentsInChildren(_crd && EnhancedBall === void 0 ? (_reportPossibleCrUseOfEnhancedBall({
+              error: Error()
+            }), EnhancedBall) : EnhancedBall)) || [];
             allBalls.forEach(ball => {
               if (ball.rigidBody) {
                 var currentVelocity = ball.rigidBody.linearVelocity;
@@ -1139,7 +1147,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var allBricks = ((_this$node$parent7 = this.node.parent) == null ? void 0 : _this$node$parent7.getComponentsInChildren(_crd && EnhancedBrick === void 0 ? (_reportPossibleCrUseOfEnhancedBrick({
             error: Error()
           }), EnhancedBrick) : EnhancedBrick)) || [];
-          var allBalls = ((_this$node$parent8 = this.node.parent) == null ? void 0 : _this$node$parent8.getComponentsInChildren(EnhancedBall)) || []; // Apply effects based on element type
+          var allBalls = ((_this$node$parent8 = this.node.parent) == null ? void 0 : _this$node$parent8.getComponentsInChildren(_crd && EnhancedBall === void 0 ? (_reportPossibleCrUseOfEnhancedBall({
+            error: Error()
+          }), EnhancedBall) : EnhancedBall)) || []; // Apply effects based on element type
 
           [...allBricks, ...allBalls].forEach(target => {
             var distance = Math.sqrt(Math.pow(target.node.position.x - position.x, 2) + Math.pow(target.node.position.y - position.y, 2));

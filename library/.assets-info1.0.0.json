@@ -155,11 +155,11 @@
       "uuid": "69d34246-67e3-47c1-a855-d26975876954"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes": {
-      "time": 1757739183384.172,
+      "time": 1757947853402.8457,
       "uuid": "0590ba0b-482f-48da-b425-fb739f16585d"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts": {
-      "time": 1757816370686.2969,
+      "time": 1757952665306.292,
       "uuid": "886d6f13-f395-4a7e-a603-8861f50cfffe"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts": {
@@ -294,7 +294,7 @@
       "time": 1757737983814.0515
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene": {
-      "time": 1757755551488.555,
+      "time": 1757953521593.2676,
       "uuid": "71e1758f-1876-43b5-935d-bc2e35d0d6e1"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\resources.meta": {
@@ -2650,7 +2650,7 @@
       "time": 1757816370678.2937
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.ts": {
-      "time": 1757778924914.022,
+      "time": 1757849763705.8982,
       "uuid": "5ab194a2-f89a-4525-9550-f372a0166a0f"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.ts": {
@@ -2662,19 +2662,19 @@
       "uuid": "b64384bb-73e5-44e7-97ab-dde11b2c0873"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.ts": {
-      "time": 1757779169035.5808,
+      "time": 1757849908582.2295,
       "uuid": "b292370e-104f-4642-9f1b-2018c49d54ae"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBall.ts": {
-      "time": 1757767553453.032,
+      "time": 1757952665286.2915,
       "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBossController.ts": {
-      "time": 1757768561446.1167,
+      "time": 1757952651978.4832,
       "uuid": "27557649-ef41-41bd-8182-c1f866e06f1c"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedBrick.ts": {
-      "time": 1757767633775.2495,
+      "time": 1757952636179.3262,
       "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EnhancedPaddleController.ts": {
@@ -2682,7 +2682,7 @@
       "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ExperienceOrb.ts": {
-      "time": 1757766745681.4915,
+      "time": 1757850290255.8188,
       "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\LevelManager.ts": {
@@ -2690,11 +2690,11 @@
       "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MapManager.ts": {
-      "time": 1757769033755.3645,
+      "time": 1757850458496.1226,
       "uuid": "04ad1764-0c43-4052-83ae-2a379e962c0f"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.ts": {
-      "time": 1757778918173.3,
+      "time": 1757850254626.1592,
       "uuid": "8efbb6dc-d267-4d8e-8fe4-4e45fada804f"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ProceduralLevelGenerator.ts": {
@@ -2844,10 +2844,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.des": {
       "time": 1757770025791.7742,
       "uuid": "862927b3-d8d8-4556-9a93-f3c3aa80a342"
-    },
-    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art": {
-      "time": 1757584938183.924,
-      "uuid": "30575d09-78cd-4393-86cf-b6e2c5a98baf"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources": {
       "time": 1757894233727.1116,
@@ -5407,13 +5403,76 @@
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackground.ts": {
       "time": 1757937976141.742,
       "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackground.ts": {
+      "time": 1757952212979.1377,
+      "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackground.ts.meta": {
+      "time": 1757947853403.848
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\SimpleBackgroundTest.ts.meta": {
+      "time": 1757948635907.1519
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts.meta": {
+      "time": 1757948635907.1519
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\SimpleBackgroundTest.ts": {
+      "time": 1757948556958.6006,
+      "uuid": "4ecfef89-991d-4ea5-9613-a6e86461f17a"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts": {
+      "time": 1757948893747.7793,
+      "uuid": "d05b6b38-db35-4925-bfa1-d103bb143040"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts.meta": {
+      "time": 1757949061654.3884
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts": {
+      "time": 1757949028052.368,
+      "uuid": "3c0052d3-5ef3-4a3f-b4d8-0d5d2669c07c"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts.meta": {
+      "time": 1757949676013.431
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts": {
+      "time": 1757950315705.7747,
+      "uuid": "7c70f2b9-c487-4ed3-a9e3-c4b3e86b4c5b"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts.meta": {
+      "time": 1757950978911.0784
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts.meta": {
+      "time": 1757950978911.0784
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts": {
+      "time": 1757950334818.3044,
+      "uuid": "3c94306c-c195-4858-bc40-0b204ba772f9"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts": {
+      "time": 1757950635576.1665,
+      "uuid": "d45c3693-63f5-4d7f-a9ac-5a309db24468"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CameraVisibilityAnalyzer.ts.meta": {
+      "time": 1757951016915.759
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CameraVisibilityAnalyzer.ts": {
+      "time": 1757951003135.9243,
+      "uuid": "3048b321-b844-45ca-8fe4-f5ccf124ded0"
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts.meta": {
+      "time": 1757951564351.797
+    },
+    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts": {
+      "time": 1757951673092.2056,
+      "uuid": "522ea151-a18c-4cf4-8c74-4d6b01939b6a"
     }
   },
   "missing": {
     "30575d09-78cd-4393-86cf-b6e2c5a98baf": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art",
       "time": 1757584938183.924,
-      "removeTime": 1757681734687
+      "removeTime": 1757948007909
     },
     "c052bc1d-fdc9-427a-a248-c40082669411": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources",

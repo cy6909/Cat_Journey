@@ -16,7 +16,10 @@
       "Bash(do if [ ! -f \"$script.des\" ])",
       "Bash(fi)",
       "Bash(find:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(git pull:*)",
+      "Bash(git push:*)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []

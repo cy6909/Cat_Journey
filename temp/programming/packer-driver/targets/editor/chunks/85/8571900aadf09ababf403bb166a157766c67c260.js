@@ -18,6 +18,7 @@ System.register(["cc"], function (_export, _context) {
       _cclegacy._RF.push({}, "8efbbbc0mdNjo/kTkX62oBP", "MonetizationManager", undefined);
 
       // WeChat Mini Game API types
+      /// <reference types="minigame-api-typings" />
       __checkObsolete__(['_decorator', 'Component', 'Node', 'sys']);
 
       ({
@@ -228,6 +229,8 @@ System.register(["cc"], function (_export, _context) {
             id: PurchaseType.ENERGY_REFILL,
             name: "体力恢复",
             description: "立即恢复满体力",
+            price: 0,
+            // 使用游戏货币购买
             currency: CurrencyType.GEMS,
             currencyAmount: 50,
             value: {
@@ -240,6 +243,8 @@ System.register(["cc"], function (_export, _context) {
             id: PurchaseType.LEGENDARY_PADDLE,
             name: "传说挡板",
             description: "『神话破坏者』- 攻击力+50%，耐久度+100%，自动修复",
+            price: 0,
+            // 使用游戏货币购买
             currency: CurrencyType.GEMS,
             currencyAmount: 800,
             value: {
@@ -257,6 +262,8 @@ System.register(["cc"], function (_export, _context) {
             id: PurchaseType.LEGENDARY_BALL,
             name: "传说弹球",
             description: "『混沌之球』- 随机获得3种球效果，穿透+无限反弹",
+            price: 0,
+            // 使用游戏货币购买
             currency: CurrencyType.GEMS,
             currencyAmount: 1000,
             value: {
@@ -269,6 +276,8 @@ System.register(["cc"], function (_export, _context) {
             id: PurchaseType.LEGENDARY_CORE,
             name: "传说核心",
             description: "『永恒之心』- 生命值+200%，被击中时25%几率免伤",
+            price: 0,
+            // 使用游戏货币购买
             currency: CurrencyType.GEMS,
             currencyAmount: 1200,
             value: {
@@ -284,6 +293,8 @@ System.register(["cc"], function (_export, _context) {
             id: PurchaseType.LEGENDARY_RELIC,
             name: "传说遗物",
             description: "随机获得一个传说级遗物，效果强大",
+            price: 0,
+            // 使用游戏货币购买
             currency: CurrencyType.GEMS,
             currencyAmount: 600,
             value: {

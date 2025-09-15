@@ -99,6 +99,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._currentFloor = 0;
           this._currentNodeId = '';
           this._mapNodes = new Map();
+          this._completedNodes = [];
           this._chapterTheme = ChapterTheme.FOREST;
           // Map generation parameters
           this._nodeTypeDistribution = new Map();
@@ -963,6 +964,38 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         getNextChapterAvailable() {
           return this.isChapterComplete() && this._currentChapter < 3;
+        }
+
+        calculateAvailableNodes() {
+          // Calculate which nodes are available based on current progress
+          // Initially only starting nodes are available
+          for (var [nodeId, node] of this._mapNodes) {
+            if (node.type === NodeType.START) {
+              node.isAvailable = true;
+            } else {
+              node.isAvailable = false;
+            }
+          } // Update available nodes based on completed nodes
+
+
+          this.updateAvailableNodes();
+        }
+
+        updateAvailableNodes() {
+          // Unlock nodes that are connected to completed nodes
+          for (var completedNode of this._completedNodes) {
+            for (var connectionId of completedNode.connections) {
+              var connectedNode = this.getNodeById(connectionId);
+
+              if (connectedNode) {
+                connectedNode.isAvailable = true;
+              }
+            }
+          }
+        }
+
+        getNodeById(nodeId) {
+          return this._mapNodes.get(nodeId);
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "mapNodePrefab", [_dec2], {

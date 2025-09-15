@@ -1,11 +1,11 @@
 {
     "systemInfo": {
         "arch": "x64",
-        "cpu": "AMD Ryzen 7 7840HS w/ Radeon 780M Graphics     ",
-        "version": "Windows 11 Home China"
+        "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+        "version": "Windows 10 Education"
     },
     "sceneListMap": {
         "71e1758f-1876-43b5-935d-bc2e35d0d6e1": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene"
     },
-    "deviceMd5": "2e0468f3a623637f5e75576bbe64ff05"
+    "deviceMd5": "5dcbc6208e1bb48b0fc6897743f33d23"
 }

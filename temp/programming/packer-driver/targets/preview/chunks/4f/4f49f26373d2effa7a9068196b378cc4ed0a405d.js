@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec3, Collider2D, Contact2DType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, ExperienceOrb;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, ExperienceOrb;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -18,6 +18,7 @@ System.register(["cc"], function (_export, _context) {
       Component = _cc.Component;
       RigidBody2D = _cc.RigidBody2D;
       Vec3 = _cc.Vec3;
+      Vec2 = _cc.Vec2;
       Collider2D = _cc.Collider2D;
       Contact2DType = _cc.Contact2DType;
     }],
@@ -26,7 +27,7 @@ System.register(["cc"], function (_export, _context) {
 
       _cclegacy._RF.push({}, "f1f1dhJWA9GYZ4McpDTfBhR", "ExperienceOrb", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec3', 'Collider2D', 'Contact2DType', 'IPhysics2DContact']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec3', 'Vec2', 'Collider2D', 'Contact2DType', 'IPhysics2DContact']);
 
       ({
         ccclass,
@@ -92,7 +93,7 @@ System.register(["cc"], function (_export, _context) {
           if (this._rigidBody) {
             // Start falling down with slight random horizontal movement
             var randomX = (Math.random() - 0.5) * 50;
-            this._rigidBody.linearVelocity = new Vec3(randomX, -this.fallSpeed, 0);
+            this._rigidBody.linearVelocity = new Vec2(randomX, -this.fallSpeed);
           }
         }
 
@@ -139,8 +140,8 @@ System.register(["cc"], function (_export, _context) {
 
           var attractionForce = 500; // Strong attraction
 
-          var attractionVelocity = direction.multiplyScalar(attractionForce);
-          this._rigidBody.linearVelocity = attractionVelocity;
+          var attractionVelocity = Vec3.multiplyScalar(new Vec3(), direction, attractionForce);
+          this._rigidBody.linearVelocity = new Vec2(attractionVelocity.x, attractionVelocity.y);
         }
 
         onBeginContact(selfCollider, otherCollider, contact) {

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, Color, Sprite, tween, Vec3, Prefab, instantiate, RigidBody2D, Vec2, GameManager, RelicManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, BrickType, EnhancedBrick;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, Color, Sprite, tween, Vec3, Prefab, instantiate, RigidBody2D, Vec2, Enum, GameManager, RelicManager, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _crd, ccclass, property, BrickType, EnhancedBrick;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -36,6 +36,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       instantiate = _cc.instantiate;
       RigidBody2D = _cc.RigidBody2D;
       Vec2 = _cc.Vec2;
+      Enum = _cc.Enum;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
@@ -46,7 +47,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       _cclegacy._RF.push({}, "acecfigFjRLxI/GlpYxn2YH", "EnhancedBrick", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Color', 'Sprite', 'tween', 'Vec3', 'Prefab', 'instantiate', 'RigidBody2D', 'Vec2']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Color', 'Sprite', 'tween', 'Vec3', 'Prefab', 'instantiate', 'RigidBody2D', 'Vec2', 'Enum']);
 
       ({
         ccclass,
@@ -83,7 +84,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       }({}));
 
       _export("EnhancedBrick", EnhancedBrick = (_dec = ccclass('EnhancedBrick'), _dec2 = property({
-        type: BrickType
+        type: Enum(BrickType)
       }), _dec3 = property({
         type: Prefab
       }), _dec(_class = (_class2 = class EnhancedBrick extends Component {
@@ -384,7 +385,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           const ballRigidBody = ballCollider.getComponent(RigidBody2D);
           if (!ballRigidBody) return;
           const direction = Vec3.subtract(new Vec3(), this.node.getWorldPosition(), ballCollider.node.getWorldPosition()).normalize();
-          const force = Vec2.multiplyScalar(new Vec2(), direction.x, direction.y, this.magneticForce);
+          const force = Vec2.multiplyScalar(new Vec2(), new Vec2(direction.x, direction.y), this.magneticForce);
           ballRigidBody.applyForceToCenter(force, true);
           console.log('Magnetic force applied to ball');
         }
