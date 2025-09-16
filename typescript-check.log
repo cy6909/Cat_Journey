@@ -1,0 +1,6 @@
+[2025-09-16T09:31:22.850Z] [INFO] 🚀 Starting comprehensive TypeScript analysis...
+[2025-09-16T09:31:22.854Z] [INFO] ════════════════════════════════════════════════════════════
+[2025-09-16T09:31:22.865Z] [INFO] 📊 TypeScript files analyzed: 34 files, 11411 lines
+[2025-09-16T09:31:22.866Z] [INFO] 🔍 Starting TypeScript static analysis...
+[2025-09-16T09:31:22.872Z] [ERROR] Failed to run TypeScript check: spawn npx ENOENT
+[2025-09-16T09:31:22.878Z] [ERROR] ❌ TypeScript static check failed - Type errors detected!

@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, PhysicsMaterial, Collider2D, Contact2DType, Vec3, Color, Sprite, Vec2, GameManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _crd, ccclass, property, BallType, EnhancedBall;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, PhysicsMaterial, Collider2D, Contact2DType, Vec3, Color, Sprite, Vec2, Enum, GameManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _crd, ccclass, property, BallType, EnhancedBall;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -30,6 +30,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Color = _cc.Color;
       Sprite = _cc.Sprite;
       Vec2 = _cc.Vec2;
+      Enum = _cc.Enum;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }],
@@ -38,7 +39,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "5e6d2nrg9hJyKLzZFD65mxC", "EnhancedBall", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'PhysicsMaterial', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Vec3', 'Color', 'Sprite', 'tween', 'Vec2']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'PhysicsMaterial', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Vec3', 'Color', 'Sprite', 'tween', 'Vec2', 'Enum']);
 
       ({
         ccclass,
@@ -75,7 +76,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       }({}));
 
       _export("EnhancedBall", EnhancedBall = (_dec = ccclass('EnhancedBall'), _dec2 = property({
-        type: BallType
+        type: Enum(BallType)
       }), _dec(_class = (_class2 = class EnhancedBall extends Component {
         constructor() {
           super(...arguments);

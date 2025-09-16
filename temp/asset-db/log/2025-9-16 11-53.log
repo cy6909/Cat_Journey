@@ -1,0 +1,304 @@
+2025-9-16 11:53:16-debug: start **** info
+2025-9-16 11:53:16-log: Cannot access game frame or container.
+2025-9-16 11:53:17-debug: asset-db:require-engine-code (1286ms)
+2025-9-16 11:53:18-log: [bullet]:bullet wasm lib loaded.
+2025-9-16 11:53:18-log: meshopt wasm decoder initialized
+2025-9-16 11:53:18-log: [box2d]:box2d wasm lib loaded.
+2025-9-16 11:53:18-log: Cocos Creator v3.8.6
+2025-9-16 11:53:18-log: Using legacy pipeline
+2025-9-16 11:53:18-log: Forward render pipeline initialized.
+2025-9-16 11:53:18-debug: [Assets Memory track]: asset-db-plugin-register: programming start:81.10MB, end 84.10MB, increase: 3.01MB
+2025-9-16 11:53:18-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:30.91MB, end 80.24MB, increase: 49.32MB
+2025-9-16 11:53:19-debug: [Assets Memory track]: asset-db-plugin-register: builder start:84.13MB, end 225.03MB, increase: 140.90MB
+2025-9-16 11:53:19-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:225.28MB, end 228.41MB, increase: 3.13MB
+2025-9-16 11:53:19-debug: [Assets Memory track]: asset-db-plugin-register: project start:80.95MB, end 228.61MB, increase: 147.66MB
+2025-9-16 11:53:19-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:80.26MB, end 228.64MB, increase: 148.38MB
+2025-9-16 11:53:19-debug: asset-db:worker-init: initPlugin (1343ms)
+2025-9-16 11:53:19-debug: [Assets Memory track]: asset-db:worker-init start:30.90MB, end 228.74MB, increase: 197.84MB
+2025-9-16 11:53:19-debug: Run asset db hook programming:beforePreStart ...
+2025-9-16 11:53:19-debug: Run asset db hook engine-extends:beforePreStart ...
+2025-9-16 11:53:19-debug: Run asset db hook programming:beforePreStart success!
+2025-9-16 11:53:19-debug: Run asset db hook engine-extends:beforePreStart success!
+2025-9-16 11:53:19-debug: asset-db-hook-programming-beforePreStart (177ms)
+2025-9-16 11:53:19-debug: asset-db-hook-engine-extends-beforePreStart (177ms)
+2025-9-16 11:53:19-debug: asset-db:worker-init (3189ms)
+2025-9-16 11:53:19-debug: Preimport db internal success
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\artbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenesbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scriptsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\BackgroundDiagnostic.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CameraVisibilityAnalyzer.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CanvasBackgroundTest.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CanvasLayerFixer.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBall.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBossController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\FinalBackgroundFix.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBrick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\QuickBackgroundFix.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\SimpleBackgroundTest.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\StarFieldBackground.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\StarFieldBackgroundFixed.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:19-debug: Preimport db assets success
+2025-9-16 11:53:19-debug: Run asset db hook programming:afterPreStart ...
+2025-9-16 11:53:19-debug: starting packer-driver...
+2025-9-16 11:53:22-debug: initialize scripting environment...
+2025-9-16 11:53:22-debug: [[Executor]] prepare before lock
+2025-9-16 11:53:22-debug: Set detail map pack:///resolution-detail-map.json: {}
+2025-9-16 11:53:22-debug: [[Executor]] prepare after unlock
+2025-9-16 11:53:22-debug: Run asset db hook programming:afterPreStart success!
+2025-9-16 11:53:22-debug: Run asset db hook engine-extends:afterPreStart success!
+2025-9-16 11:53:22-debug: Run asset db hook engine-extends:afterPreStart ...
+2025-9-16 11:53:22-debug: Start up the 'internal' database...
+2025-9-16 11:53:22-debug: asset-db-hook-programming-afterPreStart (2772ms)
+2025-9-16 11:53:22-debug: asset-db:worker-effect-data-processing (398ms)
+2025-9-16 11:53:22-debug: asset-db-hook-engine-extends-afterPreStart (398ms)
+2025-9-16 11:53:22-debug: Start up the 'assets' database...
+2025-9-16 11:53:22-debug: asset-db:worker-startup-database[internal] (3248ms)
+2025-9-16 11:53:22-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenes\testscene.scenebackground: #aaff85; color: #000;color: #000;
+2025-9-16 11:53:22-debug: lazy register asset handler *
+2025-9-16 11:53:22-debug: [Assets Memory track]: asset-db:worker-init: startup start:176.36MB, end 188.41MB, increase: 12.05MB
+2025-9-16 11:53:22-debug: lazy register asset handler json
+2025-9-16 11:53:22-debug: lazy register asset handler directory
+2025-9-16 11:53:22-debug: lazy register asset handler spine-data
+2025-9-16 11:53:22-debug: lazy register asset handler dragonbones
+2025-9-16 11:53:22-debug: lazy register asset handler dragonbones-atlas
+2025-9-16 11:53:22-debug: lazy register asset handler terrain
+2025-9-16 11:53:22-debug: lazy register asset handler text
+2025-9-16 11:53:22-debug: lazy register asset handler typescript
+2025-9-16 11:53:22-debug: lazy register asset handler javascript
+2025-9-16 11:53:22-debug: lazy register asset handler scene
+2025-9-16 11:53:22-debug: lazy register asset handler prefab
+2025-9-16 11:53:22-debug: lazy register asset handler tiled-map
+2025-9-16 11:53:22-debug: lazy register asset handler sprite-frame
+2025-9-16 11:53:22-debug: lazy register asset handler buffer
+2025-9-16 11:53:22-debug: lazy register asset handler sign-image
+2025-9-16 11:53:22-debug: lazy register asset handler alpha-image
+2025-9-16 11:53:22-debug: lazy register asset handler image
+2025-9-16 11:53:22-debug: lazy register asset handler texture
+2025-9-16 11:53:22-debug: lazy register asset handler texture-cube
+2025-9-16 11:53:22-debug: lazy register asset handler erp-texture-cube
+2025-9-16 11:53:22-debug: lazy register asset handler render-texture
+2025-9-16 11:53:22-debug: lazy register asset handler rt-sprite-frame
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-animation
+2025-9-16 11:53:22-debug: lazy register asset handler texture-cube-face
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-mesh
+2025-9-16 11:53:22-debug: lazy register asset handler gltf
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-skeleton
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-material
+2025-9-16 11:53:22-debug: lazy register asset handler fbx
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-scene
+2025-9-16 11:53:22-debug: lazy register asset handler gltf-embeded-image
+2025-9-16 11:53:22-debug: lazy register asset handler effect
+2025-9-16 11:53:22-debug: lazy register asset handler material
+2025-9-16 11:53:22-debug: lazy register asset handler physics-material
+2025-9-16 11:53:22-debug: lazy register asset handler effect-header
+2025-9-16 11:53:22-debug: lazy register asset handler audio-clip
+2025-9-16 11:53:22-debug: lazy register asset handler animation-clip
+2025-9-16 11:53:22-debug: lazy register asset handler animation-graph
+2025-9-16 11:53:22-debug: lazy register asset handler animation-graph-variant
+2025-9-16 11:53:22-debug: lazy register asset handler ttf-font
+2025-9-16 11:53:22-debug: lazy register asset handler animation-mask
+2025-9-16 11:53:22-debug: lazy register asset handler bitmap-font
+2025-9-16 11:53:22-debug: lazy register asset handler particle
+2025-9-16 11:53:22-debug: lazy register asset handler sprite-atlas
+2025-9-16 11:53:22-debug: lazy register asset handler label-atlas
+2025-9-16 11:53:22-debug: lazy register asset handler auto-atlas
+2025-9-16 11:53:22-debug: lazy register asset handler render-flow
+2025-9-16 11:53:22-debug: lazy register asset handler render-stage
+2025-9-16 11:53:22-debug: lazy register asset handler render-pipeline
+2025-9-16 11:53:22-debug: lazy register asset handler instantiation-skeleton
+2025-9-16 11:53:22-debug: lazy register asset handler instantiation-material
+2025-9-16 11:53:22-debug: lazy register asset handler instantiation-mesh
+2025-9-16 11:53:22-debug: lazy register asset handler video-clip
+2025-9-16 11:53:22-debug: lazy register asset handler instantiation-animation
+2025-9-16 11:53:22-debug: asset-db:worker-startup-database[assets] (3127ms)
+2025-9-16 11:53:22-debug: asset-db:start-database (3363ms)
+2025-9-16 11:53:22-debug: asset-db:ready (8776ms)
+2025-9-16 11:53:22-debug: fix the bug of updateDefaultUserData
+2025-9-16 11:53:22-debug: init worker message success
+2025-9-16 11:53:22-debug: programming:execute-script (6ms)
+2025-9-16 11:53:23-debug: [Build Memory track]: builder:worker-init start:192.73MB, end 200.92MB, increase: 8.19MB
+2025-9-16 11:53:23-debug: builder:worker-init (631ms)
+2025-9-16 11:53:41-debug: refresh db internal success
+2025-9-16 11:53:41-debug: refresh db assets success
+2025-9-16 11:53:41-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-16 11:53:41-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-16 11:53:41-debug: asset-db:refresh-all-database (181ms)
+2025-9-16 11:53:41-debug: asset-db:worker-effect-data-processing (1ms)
+2025-9-16 11:53:41-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-9-16 17:27:47-debug: refresh db internal success
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\Ball.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\AdManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\BossController.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\BackgroundDiagnostic.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\Brick.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:47-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CameraVisibilityAnalyzer.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CanvasBackgroundTest.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CoreController.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CanvasLayerFixer.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\DeathZone.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBall.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EliteAndHiddenBossManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBossController.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedPaddleController.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBrick.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\FinalBackgroundFix.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ExperienceOrb.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\GameManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\Laser.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\LaserPaddlePowerUp.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\LevelManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\MapManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\MultiBallPowerUp.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\MonetizationManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\PaddleController.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\PowerUp.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\RelicManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\QuickBackgroundFix.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ProceduralLevelGenerator.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\RelicUI.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\SimpleBackgroundTest.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ShopManager.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\StarFieldBackground.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\StarFieldBackgroundFixed.tsbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\AdManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\Ball.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\BossController.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\Brick.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\CoreController.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EliteAndHiddenBossManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBall.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBossController.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedBrick.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\EnhancedPaddleController.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ExperienceOrb.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\GameManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\LevelManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\MapManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\MonetizationManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\PaddleController.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\PowerUp.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ProceduralLevelGenerator.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\RelicManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cDestroy%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ShopManager.desbackground: #ffb8b8; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\backgroundbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplaybackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managersbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\corebackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerupsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\AbyssBackground.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\ForestThemeBackground.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\uibackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\SnowMountainBackground.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\StarFieldBackground.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Ball.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Brick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\CameraVisibilityAnalyzer.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\PaddleController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBall.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\DeathZone.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBossController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedPaddleController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\LevelManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBrick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\AdManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\BossController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\AudioManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\ProceduralLevelGenerator.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\CoreController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\EliteAndHiddenBossManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\ExperienceOrb.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\MonetizationManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\MapManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\RelicManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\ShopManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\MultiBallPowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\PowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\LaserPaddlePowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\Laser.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\EnhancedParticleEffect.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuButton.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\RelicUI.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Ball.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Brick.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\PaddleController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBall.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBossController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBrick.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedPaddleController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\GameManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\LevelManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\ProceduralLevelGenerator.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\AdManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\BossController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\CoreController.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\EliteAndHiddenBossManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\ExperienceOrb.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\MapManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\MonetizationManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\RelicManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\ShopManager.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\PowerUp.desbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scriptsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:27:48-debug: refresh db assets success
+2025-9-16 17:27:48-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-16 17:27:48-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-16 17:27:48-debug: asset-db:worker-effect-data-processing (7ms)
+2025-9-16 17:27:48-debug: asset-db:refresh-all-database (1017ms)
+2025-9-16 17:27:48-debug: asset-db-hook-engine-extends-afterRefresh (16ms)
+2025-9-16 17:28:00-debug: Query all assets info in project
+2025-9-16 17:28:00-debug: init custom config: keepNodeUuid: false, useCache: true
+2025-9-16 17:28:00-debug: Skip compress image, progress: 0%
+2025-9-16 17:28:00-debug: Init all bundles start..., progress: 0%
+2025-9-16 17:28:00-debug: Num of bundles: 3..., progress: 0%
+2025-9-16 17:28:00-debug: // ---- build task 查询 Asset Bundle ----
+2025-9-16 17:28:00-debug: 查询 Asset Bundle start, progress: 0%
+2025-9-16 17:28:00-debug: Init bundle root assets start..., progress: 0%
+2025-9-16 17:28:00-debug:   Number of all scenes: 1
+2025-9-16 17:28:00-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,9361fd90-ba52-4f84-aa93-6e878fd576ca,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,ba21476f-2866-4f81-9c4d-6e359316e448,871c3b6c-7379-419d-bda3-794b239ab90d,1d08ef62-a503-4ce2-8b9a-46c90873f7d3,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+2025-9-16 17:28:00-debug:   Number of all scripts: 40
+2025-9-16 17:28:00-debug: Init bundle root assets success..., progress: 0%
+2025-9-16 17:28:00-debug:   Number of other assets: 1195
+2025-9-16 17:28:00-log: run build task 查询 Asset Bundle success in 283 ms√, progress: 5%
+2025-9-16 17:28:00-debug: // ---- build task 查询 Asset Bundle ---- (283ms)
+2025-9-16 17:28:00-debug: 查询 Asset Bundle start, progress: 5%
+2025-9-16 17:28:00-debug: [Build Memory track]: 查询 Asset Bundle start:201.75MB, end 202.87MB, increase: 1.12MB
+2025-9-16 17:28:00-debug: // ---- build task 查询 Asset Bundle ----
+2025-9-16 17:28:00-debug: // ---- build task 查询 Asset Bundle ---- (5ms)
+2025-9-16 17:28:00-log: run build task 查询 Asset Bundle success in 5 ms√, progress: 10%
+2025-9-16 17:28:00-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-9-16 17:28:00-debug: [Build Memory track]: 查询 Asset Bundle start:202.91MB, end 203.23MB, increase: 330.80KB
+2025-9-16 17:28:00-debug: 整理部分构建选项内数据到 settings.json start, progress: 10%
+2025-9-16 17:28:00-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (1ms)
+2025-9-16 17:28:00-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:203.27MB, end 202.59MB, increase: -698.34KB
+2025-9-16 17:28:00-log: run build task 整理部分构建选项内数据到 settings.json success in 1 ms√, progress: 12%
+2025-9-16 17:28:00-debug: // ---- build task 填充脚本数据到 settings.json ----
+2025-9-16 17:28:00-debug: 填充脚本数据到 settings.json start, progress: 12%
+2025-9-16 17:28:00-debug: [Build Memory track]: 填充脚本数据到 settings.json start:202.62MB, end 202.76MB, increase: 138.43KB
+2025-9-16 17:28:00-log: run build task 填充脚本数据到 settings.json success in 2 ms√, progress: 13%
+2025-9-16 17:28:00-debug: 整理部分构建选项内数据到 settings.json start, progress: 13%
+2025-9-16 17:28:00-debug: // ---- build task 填充脚本数据到 settings.json ---- (2ms)
+2025-9-16 17:28:00-debug: // ---- build task 整理部分构建选项内数据到 settings.json ----
+2025-9-16 17:28:00-debug: // ---- build task 整理部分构建选项内数据到 settings.json ---- (17ms)
+2025-9-16 17:28:00-log: run build task 整理部分构建选项内数据到 settings.json success in 17 ms√, progress: 15%
+2025-9-16 17:28:00-debug: [Build Memory track]: 整理部分构建选项内数据到 settings.json start:202.80MB, end 203.40MB, increase: 615.59KB
+2025-9-16 17:28:00-debug: refresh db internal success
+2025-9-16 17:28:00-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\uibackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:28:00-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 17:28:00-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-16 17:28:00-debug: refresh db assets success
+2025-9-16 17:28:00-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-16 17:28:00-debug: asset-db:refresh-all-database (371ms)
+2025-9-16 17:28:00-debug: asset-db:worker-effect-data-processing (1ms)
+2025-9-16 17:28:00-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-9-16 18:20:48-debug: refresh db internal success
+2025-9-16 18:20:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\uibackground: #aaff85; color: #000;color: #000;
+2025-9-16 18:20:48-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuButton.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-16 18:20:48-debug: refresh db assets success
+2025-9-16 18:20:48-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-16 18:20:48-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-16 18:20:48-debug: asset-db:refresh-all-database (211ms)
+2025-9-16 18:20:48-debug: asset-db:worker-effect-data-processing (3ms)
+2025-9-16 18:20:48-debug: asset-db-hook-engine-extends-afterRefresh (6ms)

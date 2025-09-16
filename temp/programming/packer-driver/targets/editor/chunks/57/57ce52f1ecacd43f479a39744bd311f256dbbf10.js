@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Vec3, RigidBody2D, Collider2D, Contact2DType, Sprite, Color, tween, Prefab, instantiate, math, Vec2, GameManager, EnhancedBrick, BrickType, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, BossType, BossPhase, EnhancedBossController;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Vec3, RigidBody2D, Collider2D, Contact2DType, Sprite, Color, tween, Prefab, instantiate, math, Vec2, Enum, GameManager, EnhancedBrick, BrickType, _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, BossType, BossPhase, EnhancedBossController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -42,6 +42,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       instantiate = _cc.instantiate;
       math = _cc.math;
       Vec2 = _cc.Vec2;
+      Enum = _cc.Enum;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
@@ -53,7 +54,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       _cclegacy._RF.push({}, "27557ZJ70FBvYGCwfhm4G8c", "EnhancedBossController", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Vec3', 'RigidBody2D', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Sprite', 'Color', 'tween', 'Prefab', 'instantiate', 'math', 'Vec2']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Vec3', 'RigidBody2D', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Sprite', 'Color', 'tween', 'Prefab', 'instantiate', 'math', 'Vec2', 'Enum']);
 
       ({
         ccclass,
@@ -83,7 +84,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       }({}));
 
       _export("EnhancedBossController", EnhancedBossController = (_dec = ccclass('EnhancedBossController'), _dec2 = property({
-        type: BossType
+        type: Enum(BossType)
       }), _dec3 = property({
         type: Prefab
       }), _dec4 = property({

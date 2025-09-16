@@ -25,57 +25,57 @@
     "versionCode": 1
   },
   "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa": {
-    "url": "db://assets/scripts/Ball.ts",
+    "url": "db://assets/scripts/core/Ball.ts",
     "value": {},
     "versionCode": 1
   },
   "74d2391c-448c-4e12-8af9-f4c2982fd9c1": {
-    "url": "db://assets/scripts/Brick.ts",
+    "url": "db://assets/scripts/core/Brick.ts",
     "value": {},
     "versionCode": 1
   },
   "73047f13-6a72-44ef-84d6-162a11e62ad6": {
-    "url": "db://assets/scripts/DeathZone.ts",
+    "url": "db://assets/scripts/core/DeathZone.ts",
     "value": {},
     "versionCode": 1
   },
   "1112ea98-2509-431e-b6fa-b2811d6671eb": {
-    "url": "db://assets/scripts/GameManager.ts",
+    "url": "db://assets/scripts/gameplay/GameManager.ts",
     "value": {},
     "versionCode": 1
   },
   "9cbce2d2-3365-4d36-a9fe-e286d0ab4df1": {
-    "url": "db://assets/scripts/Laser.ts",
+    "url": "db://assets/scripts/powerups/Laser.ts",
     "value": {},
     "versionCode": 1
   },
   "4ec1537e-9cf8-4bd6-9e33-63b95c117749": {
-    "url": "db://assets/scripts/LaserPaddlePowerUp.ts",
+    "url": "db://assets/scripts/powerups/LaserPaddlePowerUp.ts",
     "value": {},
     "versionCode": 1
   },
   "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0": {
-    "url": "db://assets/scripts/MultiBallPowerUp.ts",
+    "url": "db://assets/scripts/powerups/MultiBallPowerUp.ts",
     "value": {},
     "versionCode": 1
   },
   "a1b2c3d4-e5f6-7890-abcd-ef1234567890": {
-    "url": "db://assets/scripts/PaddleController.ts",
+    "url": "db://assets/scripts/core/PaddleController.ts",
     "value": {},
     "versionCode": 1
   },
   "3cb63be2-0d80-430c-8d7b-44aa16452edd": {
-    "url": "db://assets/scripts/PowerUp.ts",
+    "url": "db://assets/scripts/powerups/PowerUp.ts",
     "value": {},
     "versionCode": 1
   },
   "ebc0c1e7-8814-4bc5-854a-16588373ba8b": {
-    "url": "db://assets/scripts/RelicManager.ts",
+    "url": "db://assets/scripts/managers/RelicManager.ts",
     "value": {},
     "versionCode": 1
   },
   "13f22b93-0ab5-4198-9bd6-6a74129d2ba1": {
-    "url": "db://assets/scripts/RelicUI.ts",
+    "url": "db://assets/scripts/ui/RelicUI.ts",
     "value": {},
     "versionCode": 1
   },
@@ -8850,217 +8850,217 @@
     "versionCode": 1
   },
   "5ab194a2-f89a-4525-9550-f372a0166a0f": {
-    "url": "db://assets/scripts/AdManager.ts",
+    "url": "db://assets/scripts/managers/AdManager.ts",
     "value": {},
     "versionCode": 1
   },
   "cb177592-4af2-4364-aa4f-151cf2468684": {
-    "url": "db://assets/scripts/BossController.ts",
+    "url": "db://assets/scripts/managers/BossController.ts",
     "value": {},
     "versionCode": 1
   },
   "b64384bb-73e5-44e7-97ab-dde11b2c0873": {
-    "url": "db://assets/scripts/CoreController.ts",
+    "url": "db://assets/scripts/managers/CoreController.ts",
     "value": {},
     "versionCode": 1
   },
   "b292370e-104f-4642-9f1b-2018c49d54ae": {
-    "url": "db://assets/scripts/EliteAndHiddenBossManager.ts",
+    "url": "db://assets/scripts/managers/EliteAndHiddenBossManager.ts",
     "value": {},
     "versionCode": 1
   },
   "5e6d29eb-83d8-49c8-a2f3-6450fae66c42": {
-    "url": "db://assets/scripts/EnhancedBall.ts",
+    "url": "db://assets/scripts/gameplay/EnhancedBall.ts",
     "value": {},
     "versionCode": 1
   },
   "27557649-ef41-41bd-8182-c1f866e06f1c": {
-    "url": "db://assets/scripts/EnhancedBossController.ts",
+    "url": "db://assets/scripts/gameplay/EnhancedBossController.ts",
     "value": {},
     "versionCode": 1
   },
   "acecf8a0-1634-4bc4-8fc6-9696319f6607": {
-    "url": "db://assets/scripts/EnhancedBrick.ts",
+    "url": "db://assets/scripts/gameplay/EnhancedBrick.ts",
     "value": {},
     "versionCode": 1
   },
   "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84": {
-    "url": "db://assets/scripts/EnhancedPaddleController.ts",
+    "url": "db://assets/scripts/gameplay/EnhancedPaddleController.ts",
     "value": {},
     "versionCode": 1
   },
   "f1f1d849-580f-4661-9e0c-7290d37c1851": {
-    "url": "db://assets/scripts/ExperienceOrb.ts",
+    "url": "db://assets/scripts/managers/ExperienceOrb.ts",
     "value": {},
     "versionCode": 1
   },
   "8d0483df-9ce6-4739-ba61-8c812f09a6eb": {
-    "url": "db://assets/scripts/LevelManager.ts",
+    "url": "db://assets/scripts/gameplay/LevelManager.ts",
     "value": {},
     "versionCode": 1
   },
   "04ad1764-0c43-4052-83ae-2a379e962c0f": {
-    "url": "db://assets/scripts/MapManager.ts",
+    "url": "db://assets/scripts/managers/MapManager.ts",
     "value": {},
     "versionCode": 1
   },
   "8efbb6dc-d267-4d8e-8fe4-4e45fada804f": {
-    "url": "db://assets/scripts/MonetizationManager.ts",
+    "url": "db://assets/scripts/managers/MonetizationManager.ts",
     "value": {},
     "versionCode": 1
   },
   "21fce139-201d-4e35-b134-cd69356c8991": {
-    "url": "db://assets/scripts/ProceduralLevelGenerator.ts",
+    "url": "db://assets/scripts/gameplay/ProceduralLevelGenerator.ts",
     "value": {},
     "versionCode": 1
   },
   "ee9197dd-fbcc-48de-8b72-9ed5f1aa2caa": {
-    "url": "db://assets/scripts/ShopManager.ts",
+    "url": "db://assets/scripts/managers/ShopManager.ts",
     "value": {},
     "versionCode": 1
   },
   "9de2dcc6-41dd-4d0a-9d89-80eb5d3a7a2f": {
-    "url": "db://assets/scripts/AdManager.des",
+    "url": "db://assets/scripts/managers/AdManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "e01b4cd3-fec4-47b4-b078-2d36c18f7a59": {
-    "url": "db://assets/scripts/Ball.des",
+    "url": "db://assets/scripts/core/Ball.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "425842cc-7cbb-449c-a501-8f2ca1738860": {
-    "url": "db://assets/scripts/BossController.des",
+    "url": "db://assets/scripts/managers/BossController.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "7b9a6d27-dcfb-427a-98eb-094f06616a6a": {
-    "url": "db://assets/scripts/Brick.des",
+    "url": "db://assets/scripts/core/Brick.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "0bbd4585-b172-44ba-aafd-fdc87df994ef": {
-    "url": "db://assets/scripts/CoreController.des",
+    "url": "db://assets/scripts/managers/CoreController.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "ea8faa6a-d962-4f4e-a12a-8e4ed06811c1": {
-    "url": "db://assets/scripts/EliteAndHiddenBossManager.des",
+    "url": "db://assets/scripts/managers/EliteAndHiddenBossManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "d036b0d8-b45a-4bd6-8c5d-2a155f5b4f87": {
-    "url": "db://assets/scripts/EnhancedBall.des",
+    "url": "db://assets/scripts/gameplay/EnhancedBall.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "33f2b7b1-8b93-43fd-836f-76d9ef3242e5": {
-    "url": "db://assets/scripts/EnhancedBossController.des",
+    "url": "db://assets/scripts/gameplay/EnhancedBossController.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "1b61936f-ec53-4d91-8841-05af44692a9e": {
-    "url": "db://assets/scripts/EnhancedBrick.des",
+    "url": "db://assets/scripts/gameplay/EnhancedBrick.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "9e10476f-4699-49b1-9e93-c257efc89ff6": {
-    "url": "db://assets/scripts/EnhancedPaddleController.des",
+    "url": "db://assets/scripts/gameplay/EnhancedPaddleController.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "e197edb6-f29d-4059-a9d0-0e95b96f501a": {
-    "url": "db://assets/scripts/ExperienceOrb.des",
+    "url": "db://assets/scripts/managers/ExperienceOrb.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "dc05afb6-181b-46d1-916b-7db9d99748dc": {
-    "url": "db://assets/scripts/GameManager.des",
+    "url": "db://assets/scripts/gameplay/GameManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "96a0724d-a22c-4296-8994-d94edc619267": {
-    "url": "db://assets/scripts/LevelManager.des",
+    "url": "db://assets/scripts/gameplay/LevelManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "b5e45616-16d5-421c-8bfd-c9d8fb19a716": {
-    "url": "db://assets/scripts/MapManager.des",
+    "url": "db://assets/scripts/managers/MapManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "d8144d91-88d1-4446-bea9-01d73b7d6533": {
-    "url": "db://assets/scripts/MonetizationManager.des",
+    "url": "db://assets/scripts/managers/MonetizationManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "25799f56-843b-4bfa-9104-cd6cc632836f": {
-    "url": "db://assets/scripts/PaddleController.des",
+    "url": "db://assets/scripts/core/PaddleController.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "f9106822-a496-48db-bc30-f08eefe33661": {
-    "url": "db://assets/scripts/PowerUp.des",
+    "url": "db://assets/scripts/powerups/PowerUp.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "8f2f2c8d-9427-46e8-acf5-076baad25420": {
-    "url": "db://assets/scripts/ProceduralLevelGenerator.des",
+    "url": "db://assets/scripts/gameplay/ProceduralLevelGenerator.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "fd50a31c-7380-4ee9-bdee-43103a44bcb1": {
-    "url": "db://assets/scripts/RelicManager.des",
+    "url": "db://assets/scripts/managers/RelicManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "862927b3-d8d8-4556-9a93-f3c3aa80a342": {
-    "url": "db://assets/scripts/ShopManager.des",
+    "url": "db://assets/scripts/managers/ShopManager.des",
     "value": {
       "depends": []
     },
     "versionCode": 1
   },
   "d38601e9-2bee-4fb4-af7e-00d3fccec3b9": {
-    "url": "db://assets/scripts/StarFieldBackground.ts",
+    "url": "db://assets/scripts/background/StarFieldBackground.ts",
     "value": {},
     "versionCode": 1
   },
@@ -9095,12 +9095,77 @@
     "versionCode": 1
   },
   "3048b321-b844-45ca-8fe4-f5ccf124ded0": {
-    "url": "db://assets/scripts/CameraVisibilityAnalyzer.ts",
+    "url": "db://assets/scripts/core/CameraVisibilityAnalyzer.ts",
     "value": {},
     "versionCode": 1
   },
   "522ea151-a18c-4cf4-8c74-4d6b01939b6a": {
     "url": "db://assets/scripts/FinalBackgroundFix.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "28283523-483e-4296-828a-f595e2de5bd4": {
+    "url": "db://assets/scripts/background",
+    "value": {},
+    "versionCode": 1
+  },
+  "5ef012af-ca27-4b85-b817-8c3f7d3d5891": {
+    "url": "db://assets/scripts/core",
+    "value": {},
+    "versionCode": 1
+  },
+  "15a172f0-61d5-4189-be33-2546a13584c8": {
+    "url": "db://assets/scripts/gameplay",
+    "value": {},
+    "versionCode": 1
+  },
+  "3f789d68-aab5-4f46-9fca-9ffe35a8b292": {
+    "url": "db://assets/scripts/managers",
+    "value": {},
+    "versionCode": 1
+  },
+  "8ae27d6b-8125-4668-89ec-1f48168e93e4": {
+    "url": "db://assets/scripts/powerups",
+    "value": {},
+    "versionCode": 1
+  },
+  "833570eb-f6b5-4a66-8a1c-487e5fc88fcb": {
+    "url": "db://assets/scripts/ui",
+    "value": {},
+    "versionCode": 1
+  },
+  "dde91249-ad2c-4ed8-9e49-94eb71ca24e1": {
+    "url": "db://assets/scripts/background/AbyssBackground.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5eca5e3c-d9ba-41da-a57c-d68a109b8c28": {
+    "url": "db://assets/scripts/background/ForestThemeBackground.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "cac6a79d-054e-48ad-b800-c99a64cf882a": {
+    "url": "db://assets/scripts/background/SnowMountainBackground.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "d29ae898-3588-476f-a3d6-47ed31e18bb7": {
+    "url": "db://assets/scripts/managers/AudioManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b8abaaca-bdb0-4e9f-a0ad-cf1127954087": {
+    "url": "db://assets/scripts/ui/EnhancedParticleEffect.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "074171c4-65d6-4488-a937-bbf7041cb34d": {
+    "url": "db://assets/scripts/ui/MainMenuButton.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "027386ca-00c8-46c0-91f5-45db4b620ff2": {
+    "url": "db://assets/scripts/ui/MainMenuController.ts",
     "value": {},
     "versionCode": 1
   }

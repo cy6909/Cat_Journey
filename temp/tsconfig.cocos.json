@@ -6,16 +6,16 @@
     "strict": true,
     "types": [
       "./temp/declarations/cc.custom-macro",
-      "./temp/declarations/jsb",
       "./temp/declarations/cc",
+      "./temp/declarations/jsb",
       "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "D:\\cocos\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets\\*"
+        "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "E:\\work_space\\wx\\Cat_Journey\\assets\\*"
+        "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\*"
       ]
     },
     "experimentalDecorators": true,

@@ -19,7 +19,8 @@
       "Bash(gh auth:*)",
       "Bash(git pull:*)",
       "Bash(git push:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(where:*)"
     ],
     "deny": [],
     "ask": []
