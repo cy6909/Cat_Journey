@@ -1,0 +1,525 @@
+# AdvancedEffectSystem.ts 详细说明文档
+
+## 可编辑式特效系统设计
+
+### 核心概念
+
+AdvancedEffectSystem实现了一个高度可编辑和可扩展的特效系统，支持特效的动态叠加、组合和编辑。每个游戏对象都可以同时拥有多种特效，这些特效可以相互叠加产生复杂的视觉效果。
+
+### 特效叠加机制
+
+#### 1. 多层特效堆栈
+```typescript
+interface EffectStackLayer {
+    effectType: VisualEffectType;    // 特效类型
+    node: Node;                      // 特效节点
+    duration: number;                // 持续时间(-1为永久)
+    stackLevel: number;              // 叠加层级(1-5)
+    blendMode: string;               // 混合模式
+    priority: number;                // 优先级(0-10)
+    isActive: boolean;               // 是否激活
+}
+```
+
+#### 2. 智能叠加算法
+- **同类型特效**: 自动增加stackLevel，最多5层
+- **不同类型特效**: 可以并存，创造复杂效果
+- **冲突处理**: 冰火效果并存时产生蒸汽特效
+- **优先级管理**: 高优先级特效覆盖低优先级
+
+#### 3. 动态强度调节
+```typescript
+// 特效强度随叠加层级变化
+particleCount = baseCount * stackLevel
+emissionRate = baseRate * stackLevel
+effectRadius = baseRadius * Math.sqrt(stackLevel)
+```
+
+### 可编辑特效示例
+
+#### 弹球多重附魔系统
+```typescript
+// 场景：弹球击中火砖块后获得火焰效果
+ballNode.addComponent('FireEffect');
+
+// 继续击中冰砖块，获得冰霜效果
+ballNode.addComponent('IceEffect');
+
+// 结果：弹球同时拥有火焰尾迹和冰霜光环
+// 自动产生：蒸汽粒子效果(冰火交融)
+```
+
+#### 实现代码示例
+```typescript
+public addFireEffectToBall(ballNode: Node): void {
+    const effectSystem = AdvancedEffectSystem.getInstance();
+    if (!effectSystem) return;
+    
+    // 添加火焰尾迹
+    const fireId = effectSystem.addEffectToObject(
+        ballNode, 
+        VisualEffectType.BALL_FIRE_TRAIL, 
+        -1,  // 永久持续
+        1    // 初始层级
+    );
+    
+    // 检查是否已有冰霜效果
+    if (this.hasIceEffect(ballNode)) {
+        // 创建冰火交融特效
+        this.createSteamEffect(ballNode);
+    }
+}
+
+private createSteamEffect(ballNode: Node): void {
+    const effectSystem = AdvancedEffectSystem.getInstance();
+    if (!effectSystem) return;
+    
+    // 创建蒸汽粒子效果
+    const steamConfig = {
+        type: 'particle',
+        particleCount: 60,
+        lifetime: 1.0,
+        startColor: new Color(200, 200, 255, 150),
+        endColor: new Color(255, 255, 255, 0),
+        startSize: 6,
+        endSize: 15,
+        speed: 30,
+        gravity: { x: 0, y: 50 },
+        emission: 40,
+        shape: 'sphere',
+        blend: 'normal'
+    };
+    
+    effectSystem.addCustomEffect(ballNode, steamConfig, 5.0);
+}
+```
+
+### 砖块连锁反应系统
+
+#### 电击连锁特效
+```typescript
+public triggerElectricChain(startBrick: Node, chainLength: number = 3): void {
+    const effectSystem = AdvancedEffectSystem.getInstance();
+    if (!effectSystem) return;
+    
+    const processedBricks = new Set<Node>();
+    const queue: { brick: Node, depth: number }[] = [{ brick: startBrick, depth: 0 }];
+    
+    while (queue.length > 0) {
+        const { brick, depth } = queue.shift()!;
+        
+        if (depth >= chainLength || processedBricks.has(brick)) continue;
+        processedBricks.add(brick);
+        
+        // 在当前砖块添加电击特效
+        effectSystem.addEffectToObject(
+            brick,
+            VisualEffectType.BRICK_ELECTRIC_CHAIN,
+            1.0,
+            Math.max(1, chainLength - depth)
+        );
+        
+        // 查找相邻砖块
+        const neighbors = this.findNeighborBricks(brick, 80);
+        neighbors.forEach(neighbor => {
+            queue.push({ brick: neighbor, depth: depth + 1 });
+            
+            // 创建连接电弧
+            this.createLightningArc(brick, neighbor, depth);
+        });
+    }
+}
+
+private createLightningArc(fromBrick: Node, toBrick: Node, intensity: number): void {
+    const effectSystem = AdvancedEffectSystem.getInstance();
+    if (!effectSystem) return;
+    
+    const arcNode = new Node('LightningArc');
+    fromBrick.parent?.addChild(arcNode);
+    
+    // 计算电弧路径
+    const startPos = fromBrick.position;
+    const endPos = toBrick.position;
+    const midPoint = startPos.lerp(endPos, 0.5);
+    midPoint.y += Math.random() * 20 - 10; // 随机弯曲
+    
+    arcNode.setPosition(midPoint);
+    
+    // 创建电弧粒子效果
+    const arcConfig = {
+        type: 'particle',
+        particleCount: 20 * intensity,
+        lifetime: 0.3,
+        startColor: new Color(255, 255, 100, 255),
+        endColor: new Color(100, 100, 255, 0),
+        startSize: 2,
+        endSize: 1,
+        speed: 0,
+        emission: 100,
+        shape: 'line',
+        lineStart: startPos.subtract(midPoint),
+        lineEnd: endPos.subtract(midPoint)
+    };
+    
+    effectSystem.createCustomParticleEffect(arcNode, arcConfig);
+    
+    // 电弧存在0.3秒后消失
+    this.scheduleOnce(() => {
+        arcNode.destroy();
+    }, 0.3);
+}
+```
+
+### 挡板护甲系统
+
+#### 多层护甲特效
+```typescript
+export class PaddleArmorSystem {
+    private armorLayers: Map<string, EffectStackLayer> = new Map();
+    
+    public addArmorLayer(paddleNode: Node, armorType: string, duration: number): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        let effectType: VisualEffectType;
+        
+        switch (armorType) {
+            case 'fire':
+                effectType = VisualEffectType.PADDLE_FIRE_ARMOR;
+                break;
+            case 'ice':
+                effectType = VisualEffectType.PADDLE_ICE_SHIELD;
+                break;
+            case 'electric':
+                effectType = VisualEffectType.PADDLE_ELECTRIC_CHARGE;
+                break;
+            default:
+                return;
+        }
+        
+        // 检查是否已有相同类型护甲
+        if (this.armorLayers.has(armorType)) {
+            const existing = this.armorLayers.get(armorType)!;
+            existing.stackLevel = Math.min(existing.stackLevel + 1, 5);
+            effectSystem.updateEffectIntensity(existing);
+        } else {
+            const effectId = effectSystem.addEffectToObject(
+                paddleNode,
+                effectType,
+                duration,
+                1
+            );
+            
+            // 记录护甲层
+            this.armorLayers.set(armorType, {
+                effectType,
+                node: paddleNode,
+                duration,
+                stackLevel: 1,
+                blendMode: 'additive',
+                priority: 7,
+                isActive: true
+            });
+        }
+        
+        // 检查护甲组合效果
+        this.checkArmorCombination(paddleNode);
+    }
+    
+    private checkArmorCombination(paddleNode: Node): void {
+        const hasFire = this.armorLayers.has('fire');
+        const hasIce = this.armorLayers.has('ice');
+        const hasElectric = this.armorLayers.has('electric');
+        
+        if (hasFire && hasIce) {
+            // 冰火护甲：产生蒸汽屏障
+            this.createSteamBarrier(paddleNode);
+        }
+        
+        if (hasElectric && hasFire) {
+            // 电火护甲：产生等离子场
+            this.createPlasmaField(paddleNode);
+        }
+        
+        if (hasIce && hasElectric) {
+            // 冰电护甲：产生超导场
+            this.createSuperconductorField(paddleNode);
+        }
+        
+        if (hasFire && hasIce && hasElectric) {
+            // 三元素护甲：产生元素风暴
+            this.createElementalStorm(paddleNode);
+        }
+    }
+}
+```
+
+### 核心渐进损坏系统
+
+#### 视觉损坏程度表现
+```typescript
+export class CoreDamageVisualizer {
+    private damageEffects: EffectStackLayer[] = [];
+    
+    public updateDamageVisualization(coreNode: Node, healthPercentage: number): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        // 清除现有损坏特效
+        this.clearDamageEffects(coreNode);
+        
+        if (healthPercentage > 0.75) {
+            // 健康状态：轻微脉冲发光
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_HEALTHY_PULSE,
+                -1,
+                1
+            );
+        } else if (healthPercentage > 0.5) {
+            // 轻微损坏：裂纹出现
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_LIGHT_CRACKS,
+                -1,
+                1
+            );
+        } else if (healthPercentage > 0.25) {
+            // 中度损坏：电火花+更多裂纹
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_DAMAGE_CRACK,
+                -1,
+                2
+            );
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_DAMAGE_SPARKS,
+                -1,
+                1
+            );
+        } else {
+            // 严重损坏：剧烈脉冲+大量电弧
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_CRITICAL_PULSE,
+                -1,
+                3
+            );
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_HEAVY_SPARKS,
+                -1,
+                2
+            );
+            
+            // 红色报警发光
+            effectSystem.addEffectToObject(
+                coreNode,
+                VisualEffectType.CORE_DANGER_GLOW,
+                -1,
+                1
+            );
+        }
+    }
+}
+```
+
+### 特效编辑器接口
+
+#### 运行时特效编辑
+```typescript
+export class EffectEditor {
+    public createCustomEffect(config: CustomEffectConfig): string {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return '';
+        
+        // 验证配置
+        const validatedConfig = this.validateEffectConfig(config);
+        
+        // 注册自定义特效类型
+        const customType = `CUSTOM_${Date.now()}` as VisualEffectType;
+        effectSystem.registerCustomEffect(customType, validatedConfig);
+        
+        return customType;
+    }
+    
+    public combineEffects(effects: VisualEffectType[], blendMode: string = 'normal'): VisualEffectType {
+        const combinedConfig = {
+            type: 'composite',
+            layers: effects.map(effect => ({
+                effectType: effect,
+                blendMode: blendMode,
+                offset: { x: 0, y: 0 },
+                scale: 1.0
+            }))
+        };
+        
+        return this.createCustomEffect(combinedConfig);
+    }
+    
+    public modifyEffect(targetNode: Node, effectType: VisualEffectType, modifications: any): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        const effectStack = effectSystem.getEffectStack(targetNode);
+        const targetEffect = effectStack.find(layer => layer.effectType === effectType);
+        
+        if (targetEffect) {
+            // 应用修改
+            Object.assign(targetEffect, modifications);
+            effectSystem.updateEffectIntensity(targetEffect);
+        }
+    }
+}
+```
+
+### AI工具工作流集成
+
+#### ComfyUI特效资源生成工作流
+
+1. **粒子贴图生成**
+   ```
+   ComfyUI工作流: particle_texture_generator.json
+   输入: 特效类型(火焰/冰霜/电击/毒雾)
+   输出: 32x32 PNG序列帧, 透明背景
+   后处理: 使用FreeTexturePacker打包成精灵图
+   ```
+
+2. **发光效果贴图**
+   ```
+   ComfyUI工作流: glow_effect_generator.json
+   输入: 颜色主题, 强度级别, 半径大小
+   输出: 渐变发光贴图, 支持additive混合
+   ```
+
+3. **环境特效背景**
+   ```
+   ComfyUI工作流: environment_effects.json
+   输入: 章节主题(森林/雪山/深渊)
+   输出: 1920x1080环境特效背景
+   ```
+
+#### Runway ML动态特效生成
+
+1. **爆炸动画序列**
+   ```
+   Runway ML: Image-to-Video
+   输入: 静态爆炸起始帧
+   输出: 30帧爆炸动画序列
+   转换: FFmpeg转换为精灵序列
+   ```
+
+2. **魔法特效动画**
+   ```
+   Runway ML: Text-to-Video
+   提示词: "magical energy swirl, particle effects, transparent background"
+   输出: 循环魔法特效视频
+   ```
+
+### 性能优化与设备适配
+
+#### 自适应画质系统
+```typescript
+export class EffectQualityManager {
+    private deviceTier: number = 2; // 0-低端, 1-中端, 2-高端
+    
+    public autoDetectDeviceTier(): void {
+        const gl = cc.game.canvas.getContext('webgl');
+        const renderer = gl.getParameter(gl.RENDERER);
+        const vendor = gl.getParameter(gl.VENDOR);
+        
+        // 根据GPU信息判断设备等级
+        if (renderer.includes('Adreno 6') || renderer.includes('Mali-G7')) {
+            this.deviceTier = 2; // 高端设备
+        } else if (renderer.includes('Adreno 5') || renderer.includes('Mali-G5')) {
+            this.deviceTier = 1; // 中端设备
+        } else {
+            this.deviceTier = 0; // 低端设备
+        }
+        
+        this.applyQualitySettings();
+    }
+    
+    private applyQualitySettings(): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        effectSystem.setEffectQuality(this.deviceTier);
+        
+        // 根据设备等级调整特效配置
+        switch (this.deviceTier) {
+            case 0: // 低端设备
+                effectSystem.maxEffectNodes = 20;
+                effectSystem.enableEffectStacking = false;
+                break;
+            case 1: // 中端设备
+                effectSystem.maxEffectNodes = 35;
+                effectSystem.enableEffectStacking = true;
+                break;
+            case 2: // 高端设备
+                effectSystem.maxEffectNodes = 50;
+                effectSystem.enableEffectStacking = true;
+                break;
+        }
+    }
+}
+```
+
+### 调试与测试工具
+
+#### 特效调试面板
+```typescript
+export class EffectDebugPanel {
+    public showEffectInfo(targetNode: Node): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        const stack = effectSystem.getEffectStack(targetNode);
+        
+        console.log(`=== 特效调试信息 ===`);
+        console.log(`对象: ${targetNode.name}`);
+        console.log(`活跃特效数: ${stack.length}`);
+        
+        stack.forEach((layer, index) => {
+            console.log(`${index + 1}. ${layer.effectType}:`);
+            console.log(`   - 层级: ${layer.stackLevel}`);
+            console.log(`   - 混合模式: ${layer.blendMode}`);
+            console.log(`   - 优先级: ${layer.priority}`);
+            console.log(`   - 持续时间: ${layer.duration}s`);
+        });
+    }
+    
+    public testEffectCombination(targetNode: Node, effects: VisualEffectType[]): void {
+        const effectSystem = AdvancedEffectSystem.getInstance();
+        if (!effectSystem) return;
+        
+        console.log(`测试特效组合: ${effects.join(' + ')}`);
+        
+        effects.forEach((effect, index) => {
+            setTimeout(() => {
+                effectSystem.addEffectToObject(targetNode, effect, 5.0, 1);
+                console.log(`添加特效: ${effect}`);
+            }, index * 1000);
+        });
+    }
+}
+```
+
+### 扩展开发指南
+
+#### 创建新的特效类型
+1. **在VisualEffectType枚举中添加新类型**
+2. **在initializeEffectConfigs方法中配置**
+3. **实现对应的创建方法**
+4. **添加AI工具生成流程**
+5. **创建调试和测试用例**
+
+#### 特效系统最佳实践
+1. **模块化设计**: 每种特效独立配置和管理
+2. **性能优先**: 始终考虑设备性能限制
+3. **视觉一致性**: 保持游戏整体美术风格
+4. **用户体验**: 避免过度刺激的视觉效果
+5. **可维护性**: 清晰的代码结构和文档
+
+这个可编辑式特效系统为Cat-Conquest游戏提供了强大而灵活的视觉表现能力，支持复杂的特效组合和实时编辑，同时保持良好的性能和扩展性。
