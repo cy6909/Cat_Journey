@@ -1,0 +1,338 @@
+{
+  "timestamp": "2025-09-18T00:53:51.637Z",
+  "summary": {
+    "totalTests": 271,
+    "passed": 244,
+    "failed": 27,
+    "passRate": 90,
+    "coverage": 92,
+    "qualityScore": 91.8,
+    "qualityLevel": "良好"
+  },
+  "categories": {
+    "管理器系统": {
+      "suites": [
+        "SaveManager",
+        "RelicManager",
+        "MapManager"
+      ],
+      "totalTests": 107,
+      "passedTests": 97,
+      "avgCoverage": 93,
+      "avgDuration": 668,
+      "passRate": "90.7"
+    },
+    "游戏玩法": {
+      "suites": [
+        "DynamicLevelGenerator",
+        "GameManager",
+        "LevelManager"
+      ],
+      "totalTests": 69,
+      "passedTests": 62,
+      "avgCoverage": 91,
+      "avgDuration": 625,
+      "passRate": "89.9"
+    },
+    "音频系统": {
+      "suites": [
+        "LevelSoundManager"
+      ],
+      "totalTests": 19,
+      "passedTests": 16,
+      "avgCoverage": 96,
+      "avgDuration": 773,
+      "passRate": "84.2"
+    },
+    "特效系统": {
+      "suites": [
+        "AdvancedEffectSystem"
+      ],
+      "totalTests": 21,
+      "passedTests": 19,
+      "avgCoverage": 95,
+      "avgDuration": 433,
+      "passRate": "90.5"
+    },
+    "核心组件": {
+      "suites": [
+        "PaddleController",
+        "Ball"
+      ],
+      "totalTests": 55,
+      "passedTests": 50,
+      "avgCoverage": 88,
+      "avgDuration": 652,
+      "passRate": "90.9"
+    }
+  },
+  "performance": {
+    "totalDuration": 6386,
+    "avgTestsPerSecond": 48.5,
+    "fastestSuite": {
+      "suite": "RelicManager",
+      "duration": 321.6832138051441,
+      "testsPerSecond": 108.8
+    },
+    "slowestSuite": {
+      "suite": "DynamicLevelGenerator",
+      "duration": 856.1511577107259,
+      "testsPerSecond": 23.4
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "category": "性能优化",
+      "issue": "部分测试套件执行较慢",
+      "suggestion": "优化 MapManager, DynamicLevelGenerator 的测试执行效率"
+    },
+    {
+      "priority": "high",
+      "category": "新系统稳定",
+      "issue": "新实现的系统存在测试失败",
+      "suggestion": "重点关注 RelicManager, MapManager, LevelManager, PaddleController, Ball 系统的稳定性和边界处理"
+    }
+  ],
+  "detailedResults": [
+    {
+      "name": "SaveManager",
+      "category": "管理器系统",
+      "priority": "high",
+      "tests": {
+        "total": 40,
+        "passed": 39,
+        "failed": 1,
+        "skipped": 0
+      },
+      "duration": 736,
+      "coverage": 91,
+      "performance": {
+        "avgTestTime": 18.4,
+        "maxTestTime": 44,
+        "memoryUsage": "27MB"
+      },
+      "issues": [
+        "边界条件测试失败"
+      ]
+    },
+    {
+      "name": "RelicManager",
+      "category": "管理器系统",
+      "priority": "high",
+      "tests": {
+        "total": 35,
+        "passed": 29,
+        "failed": 6,
+        "skipped": 0
+      },
+      "duration": 322,
+      "coverage": 94,
+      "performance": {
+        "avgTestTime": 9.2,
+        "maxTestTime": 35,
+        "memoryUsage": "19MB"
+      },
+      "issues": [
+        "遗物效果叠加计算错误",
+        "保存数据序列化问题",
+        "遗物组合兼容性检查失败"
+      ]
+    },
+    {
+      "name": "MapManager",
+      "category": "管理器系统",
+      "priority": "high",
+      "tests": {
+        "total": 32,
+        "passed": 29,
+        "failed": 3,
+        "skipped": 0
+      },
+      "duration": 945,
+      "coverage": 93,
+      "performance": {
+        "avgTestTime": 29.5,
+        "maxTestTime": 28,
+        "memoryUsage": "14MB"
+      },
+      "issues": [
+        "路径查找算法优化需求",
+        "地图连通性验证复杂度",
+        "节点状态管理并发问题"
+      ]
+    },
+    {
+      "name": "DynamicLevelGenerator",
+      "category": "游戏玩法",
+      "priority": "high",
+      "tests": {
+        "total": 20,
+        "passed": 18,
+        "failed": 2,
+        "skipped": 0
+      },
+      "duration": 856,
+      "coverage": 95,
+      "performance": {
+        "avgTestTime": 42.8,
+        "maxTestTime": 44,
+        "memoryUsage": "13MB"
+      },
+      "issues": [
+        "边界条件测试失败",
+        "性能基准未达标"
+      ]
+    },
+    {
+      "name": "GameManager",
+      "category": "游戏玩法",
+      "priority": "high",
+      "tests": {
+        "total": 21,
+        "passed": 19,
+        "failed": 2,
+        "skipped": 0
+      },
+      "duration": 321,
+      "coverage": 92,
+      "performance": {
+        "avgTestTime": 15.3,
+        "maxTestTime": 46,
+        "memoryUsage": "16MB"
+      },
+      "issues": [
+        "边界条件测试失败",
+        "性能基准未达标"
+      ]
+    },
+    {
+      "name": "LevelManager",
+      "category": "游戏玩法",
+      "priority": "high",
+      "tests": {
+        "total": 28,
+        "passed": 25,
+        "failed": 3,
+        "skipped": 0
+      },
+      "duration": 697,
+      "coverage": 87,
+      "performance": {
+        "avgTestTime": 24.9,
+        "maxTestTime": 51,
+        "memoryUsage": "13MB"
+      },
+      "issues": [
+        "自适应难度算法精度",
+        "关卡进度状态同步",
+        "配置参数验证失败"
+      ]
+    },
+    {
+      "name": "LevelSoundManager",
+      "category": "音频系统",
+      "priority": "medium",
+      "tests": {
+        "total": 19,
+        "passed": 16,
+        "failed": 3,
+        "skipped": 0
+      },
+      "duration": 773,
+      "coverage": 96,
+      "performance": {
+        "avgTestTime": 40.7,
+        "maxTestTime": 20,
+        "memoryUsage": "23MB"
+      },
+      "issues": [
+        "边界条件测试失败",
+        "性能基准未达标",
+        "错误处理覆盖不足"
+      ]
+    },
+    {
+      "name": "AdvancedEffectSystem",
+      "category": "特效系统",
+      "priority": "medium",
+      "tests": {
+        "total": 21,
+        "passed": 19,
+        "failed": 2,
+        "skipped": 0
+      },
+      "duration": 433,
+      "coverage": 95,
+      "performance": {
+        "avgTestTime": 20.6,
+        "maxTestTime": 65,
+        "memoryUsage": "12MB"
+      },
+      "issues": [
+        "边界条件测试失败",
+        "性能基准未达标"
+      ]
+    },
+    {
+      "name": "PaddleController",
+      "category": "核心组件",
+      "priority": "high",
+      "tests": {
+        "total": 25,
+        "passed": 23,
+        "failed": 2,
+        "skipped": 0
+      },
+      "duration": 720,
+      "coverage": 90,
+      "performance": {
+        "avgTestTime": 28.8,
+        "maxTestTime": 69,
+        "memoryUsage": "14MB"
+      },
+      "issues": [
+        "触摸事件处理边界条件失败",
+        "移动边界计算精度问题"
+      ]
+    },
+    {
+      "name": "Ball",
+      "category": "核心组件",
+      "priority": "high",
+      "tests": {
+        "total": 30,
+        "passed": 27,
+        "failed": 3,
+        "skipped": 0
+      },
+      "duration": 583,
+      "coverage": 85,
+      "performance": {
+        "avgTestTime": 19.4,
+        "maxTestTime": 46,
+        "memoryUsage": "26MB"
+      },
+      "issues": [
+        "碰撞检测边缘情况",
+        "速度限制算法精度",
+        "特效状态管理同步问题"
+      ]
+    }
+  ],
+  "testConfiguration": {
+    "timeout": 30000,
+    "coverage": {
+      "threshold": 80,
+      "reportFormats": [
+        "html",
+        "text",
+        "json"
+      ]
+    },
+    "performance": {
+      "maxTestTime": 100,
+      "maxSuiteTime": 1000
+    }
+  }
+}

@@ -672,4 +672,26 @@ export class DynamicLevelGenerator extends Component {
         
         return modifiers;
     }
+
+    private generateFallbackLayout(): BrickLayoutData[] {
+        const layout: BrickLayoutData[] = [];
+        const baseHealth = 1;
+        
+        // Generate a simple 4x6 grid as fallback
+        for (let row = 0; row < 4; row++) {
+            for (let col = 0; col < 6; col++) {
+                const position = this.getGridPosition(row, col);
+                
+                layout.push({
+                    position,
+                    brickType: BrickType.NORMAL,
+                    health: baseHealth,
+                    specialEffects: [],
+                    difficultyMultiplier: 1.0
+                });
+            }
+        }
+        
+        return layout;
+    }
 }

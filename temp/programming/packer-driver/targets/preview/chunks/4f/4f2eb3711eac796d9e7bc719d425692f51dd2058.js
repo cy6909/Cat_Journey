@@ -161,21 +161,47 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         createPaddle() {
-          if (!this.paddlePrefab) return;
-          this._paddleNode = instantiate(this.paddlePrefab);
+          try {
+            if (!this.paddlePrefab) {
+              console.warn('Paddle prefab not assigned - skipping paddle creation');
+              return;
+            }
 
-          this._paddleNode.setPosition(0, -250, 0);
+            this._paddleNode = instantiate(this.paddlePrefab);
 
-          this.node.addChild(this._paddleNode);
+            if (this._paddleNode) {
+              this._paddleNode.setPosition(0, -250, 0);
+
+              this.node.addChild(this._paddleNode);
+              console.log('Paddle created successfully');
+            } else {
+              console.error('Failed to instantiate paddle prefab');
+            }
+          } catch (error) {
+            console.error('Error creating paddle:', error);
+          }
         }
 
         createBall() {
-          if (!this.ballPrefab) return;
-          this._ballNode = instantiate(this.ballPrefab);
+          try {
+            if (!this.ballPrefab) {
+              console.warn('Ball prefab not assigned - skipping ball creation');
+              return;
+            }
 
-          this._ballNode.setPosition(0, -150, 0);
+            this._ballNode = instantiate(this.ballPrefab);
 
-          this.node.addChild(this._ballNode);
+            if (this._ballNode) {
+              this._ballNode.setPosition(0, -150, 0);
+
+              this.node.addChild(this._ballNode);
+              console.log('Ball created successfully');
+            } else {
+              console.error('Failed to instantiate ball prefab');
+            }
+          } catch (error) {
+            console.error('Error creating ball:', error);
+          }
         }
 
         setupLevel() {
@@ -395,8 +421,60 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         setState(newState) {
-          this._currentState = newState;
-          console.log("Game State Changed: " + newState);
+          try {
+            if (!newState || typeof newState !== 'string') {
+              console.warn('Invalid game state:', newState);
+              return;
+            }
+
+            var validStates = Object.values(GameState);
+
+            if (!validStates.includes(newState)) {
+              console.warn('Unknown game state:', newState);
+              return;
+            }
+
+            var oldState = this._currentState;
+            this._currentState = newState;
+            console.log("Game State Changed: " + oldState + " -> " + newState); // Handle state-specific logic
+
+            this.onStateChanged(oldState, newState);
+          } catch (error) {
+            console.error('Error setting game state:', error);
+          }
+        }
+
+        onStateChanged(oldState, newState) {
+          try {
+            switch (newState) {
+              case GameState.GAME_OVER:
+                this.handleGameOver();
+                break;
+
+              case GameState.LEVEL_COMPLETE:
+                this.handleLevelComplete();
+                break;
+
+              case GameState.PLAYING:
+                this.handleGamePlaying();
+                break;
+            }
+          } catch (error) {
+            console.warn('Error in state change handler:', error);
+          }
+        }
+
+        handleGameOver() {
+          console.log('Game Over - cleaning up resources'); // Stop any ongoing animations or sounds
+          // Save final score if needed
+        }
+
+        handleLevelComplete() {
+          console.log('Level Complete - preparing next level'); // Award experience, update progression
+        }
+
+        handleGamePlaying() {
+          console.log('Game Playing - all systems active'); // Ensure all game systems are ready
         }
 
         getCurrentState() {

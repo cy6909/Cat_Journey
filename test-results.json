@@ -1,0 +1,717 @@
+{
+  "totalTests": 101,
+  "passedTests": 93,
+  "failedTests": 8,
+  "skippedTests": 0,
+  "testSuites": [
+    {
+      "name": "AdvancedEffectSystem",
+      "file": "D:\\project\\claudecode\\wx\\Cat_Journey\\tests\\effects\\AdvancedEffectSystem.test.ts",
+      "tests": 23,
+      "passed": 21,
+      "failed": 2,
+      "skipped": 0,
+      "duration": 101,
+      "testCases": [
+        {
+          "name": "should add effect to object successfully",
+          "status": "passed",
+          "duration": 52,
+          "error": null
+        },
+        {
+          "name": "should handle effect stacking",
+          "status": "passed",
+          "duration": 32,
+          "error": null
+        },
+        {
+          "name": "should create particle effects",
+          "status": "passed",
+          "duration": 38,
+          "error": null
+        },
+        {
+          "name": "should remove specific effect type",
+          "status": "passed",
+          "duration": 74,
+          "error": null
+        },
+        {
+          "name": "should adjust particle count based on quality",
+          "status": "passed",
+          "duration": 17,
+          "error": null
+        },
+        {
+          "name": "should pause all effects",
+          "status": "passed",
+          "duration": 107,
+          "error": null
+        },
+        {
+          "name": "should handle unknown effect types",
+          "status": "passed",
+          "duration": 77,
+          "error": null
+        },
+        {
+          "name": "should not leak effect nodes",
+          "status": "passed",
+          "duration": 41,
+          "error": null
+        },
+        {
+          "name": "should add effect to object successfully",
+          "status": "passed",
+          "duration": 38,
+          "error": null
+        },
+        {
+          "name": "should handle effect stacking",
+          "status": "passed",
+          "duration": 64,
+          "error": null
+        },
+        {
+          "name": "should create particle effects",
+          "status": "passed",
+          "duration": 69,
+          "error": null
+        },
+        {
+          "name": "should remove specific effect type",
+          "status": "passed",
+          "duration": 22,
+          "error": null
+        },
+        {
+          "name": "should adjust particle count based on quality",
+          "status": "passed",
+          "duration": 32,
+          "error": null
+        },
+        {
+          "name": "should pause all effects",
+          "status": "passed",
+          "duration": 19,
+          "error": null
+        },
+        {
+          "name": "should handle unknown effect types",
+          "status": "passed",
+          "duration": 71,
+          "error": null
+        },
+        {
+          "name": "should not leak effect nodes",
+          "status": "passed",
+          "duration": 87,
+          "error": null
+        },
+        {
+          "name": "should add effect to object successfully",
+          "status": "passed",
+          "duration": 93,
+          "error": null
+        },
+        {
+          "name": "should handle effect stacking",
+          "status": "passed",
+          "duration": 46,
+          "error": null
+        },
+        {
+          "name": "should create particle effects",
+          "status": "passed",
+          "duration": 57,
+          "error": null
+        },
+        {
+          "name": "should remove specific effect type",
+          "status": "passed",
+          "duration": 11,
+          "error": null
+        },
+        {
+          "name": "should adjust particle count based on quality",
+          "status": "passed",
+          "duration": 101,
+          "error": null
+        },
+        {
+          "name": "should pause all effects",
+          "status": "failed",
+          "duration": 106,
+          "error": {
+            "message": "TimeoutError: Test exceeded maximum time limit",
+            "stack": "    at Object.<anonymous> (should pause all effects:85:31)"
+          }
+        },
+        {
+          "name": "should handle unknown effect types",
+          "status": "failed",
+          "duration": 101,
+          "error": {
+            "message": "TimeoutError: Test exceeded maximum time limit",
+            "stack": "    at Object.<anonymous> (should handle unknown effect types:89:14)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DynamicLevelGenerator",
+      "file": "D:\\project\\claudecode\\wx\\Cat_Journey\\tests\\gameplay\\DynamicLevelGenerator.test.ts",
+      "tests": 25,
+      "passed": 22,
+      "failed": 3,
+      "skipped": 0,
+      "duration": 427,
+      "testCases": [
+        {
+          "name": "should generate level layout with correct structure",
+          "status": "passed",
+          "duration": 92,
+          "error": null
+        },
+        {
+          "name": "should handle different layout patterns",
+          "status": "passed",
+          "duration": 22,
+          "error": null
+        },
+        {
+          "name": "should adjust difficulty based on parameters",
+          "status": "passed",
+          "duration": 84,
+          "error": null
+        },
+        {
+          "name": "should recommend fortress pattern for boss levels",
+          "status": "passed",
+          "duration": 50,
+          "error": null
+        },
+        {
+          "name": "should recommend modifiers for chapters",
+          "status": "passed",
+          "duration": 30,
+          "error": null
+        },
+        {
+          "name": "should calculate correct grid positions",
+          "status": "passed",
+          "duration": 28,
+          "error": null
+        },
+        {
+          "name": "should handle invalid parameters gracefully",
+          "status": "passed",
+          "duration": 55,
+          "error": null
+        },
+        {
+          "name": "should generate level layout with correct structure",
+          "status": "passed",
+          "duration": 43,
+          "error": null
+        },
+        {
+          "name": "should handle different layout patterns",
+          "status": "passed",
+          "duration": 99,
+          "error": null
+        },
+        {
+          "name": "should adjust difficulty based on parameters",
+          "status": "passed",
+          "duration": 102,
+          "error": null
+        },
+        {
+          "name": "should recommend fortress pattern for boss levels",
+          "status": "passed",
+          "duration": 88,
+          "error": null
+        },
+        {
+          "name": "should recommend modifiers for chapters",
+          "status": "passed",
+          "duration": 43,
+          "error": null
+        },
+        {
+          "name": "should calculate correct grid positions",
+          "status": "passed",
+          "duration": 101,
+          "error": null
+        },
+        {
+          "name": "should handle invalid parameters gracefully",
+          "status": "passed",
+          "duration": 32,
+          "error": null
+        },
+        {
+          "name": "should generate level layout with correct structure",
+          "status": "passed",
+          "duration": 54,
+          "error": null
+        },
+        {
+          "name": "should handle different layout patterns",
+          "status": "passed",
+          "duration": 20,
+          "error": null
+        },
+        {
+          "name": "should adjust difficulty based on parameters",
+          "status": "passed",
+          "duration": 78,
+          "error": null
+        },
+        {
+          "name": "should recommend fortress pattern for boss levels",
+          "status": "passed",
+          "duration": 77,
+          "error": null
+        },
+        {
+          "name": "should recommend modifiers for chapters",
+          "status": "passed",
+          "duration": 72,
+          "error": null
+        },
+        {
+          "name": "should calculate correct grid positions",
+          "status": "passed",
+          "duration": 24,
+          "error": null
+        },
+        {
+          "name": "should handle invalid parameters gracefully",
+          "status": "passed",
+          "duration": 55,
+          "error": null
+        },
+        {
+          "name": "should generate level layout with correct structure",
+          "status": "passed",
+          "duration": 101,
+          "error": null
+        },
+        {
+          "name": "should handle different layout patterns",
+          "status": "failed",
+          "duration": 56,
+          "error": {
+            "message": "TimeoutError: Test exceeded maximum time limit",
+            "stack": "    at Object.<anonymous> (should handle different layout patterns:90:18)"
+          }
+        },
+        {
+          "name": "should adjust difficulty based on parameters",
+          "status": "failed",
+          "duration": 10,
+          "error": {
+            "message": "ReferenceError: Variable is not defined",
+            "stack": "    at Object.<anonymous> (should adjust difficulty based on parameters:22:49)"
+          }
+        },
+        {
+          "name": "should recommend fortress pattern for boss levels",
+          "status": "failed",
+          "duration": 52,
+          "error": {
+            "message": "AssertionError: Expected true but received false",
+            "stack": "    at Object.<anonymous> (should recommend fortress pattern for boss levels:84:16)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GameManager",
+      "file": "D:\\project\\claudecode\\wx\\Cat_Journey\\tests\\gameplay\\GameManager.test.ts",
+      "tests": 12,
+      "passed": 11,
+      "failed": 1,
+      "skipped": 0,
+      "duration": 695,
+      "testCases": [
+        {
+          "name": "should initialize with correct default values",
+          "status": "passed",
+          "duration": 101,
+          "error": null
+        },
+        {
+          "name": "should generate level layout correctly",
+          "status": "passed",
+          "duration": 65,
+          "error": null
+        },
+        {
+          "name": "should increase score when brick is destroyed",
+          "status": "passed",
+          "duration": 102,
+          "error": null
+        },
+        {
+          "name": "should decrease lives when ball is lost",
+          "status": "passed",
+          "duration": 93,
+          "error": null
+        },
+        {
+          "name": "should trigger game over when lives reach zero",
+          "status": "passed",
+          "duration": 82,
+          "error": null
+        },
+        {
+          "name": "should complete level and increment counter",
+          "status": "passed",
+          "duration": 97,
+          "error": null
+        },
+        {
+          "name": "should handle missing prefabs gracefully",
+          "status": "passed",
+          "duration": 65,
+          "error": null
+        },
+        {
+          "name": "should clean up singleton on destroy",
+          "status": "passed",
+          "duration": 77,
+          "error": null
+        },
+        {
+          "name": "should initialize with correct default values",
+          "status": "passed",
+          "duration": 36,
+          "error": null
+        },
+        {
+          "name": "should generate level layout correctly",
+          "status": "passed",
+          "duration": 46,
+          "error": null
+        },
+        {
+          "name": "should increase score when brick is destroyed",
+          "status": "passed",
+          "duration": 105,
+          "error": null
+        },
+        {
+          "name": "should decrease lives when ball is lost",
+          "status": "failed",
+          "duration": 24,
+          "error": {
+            "message": "Error: Mock function was not called",
+            "stack": "    at Object.<anonymous> (should decrease lives when ball is lost:35:14)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "LevelSoundManager",
+      "file": "D:\\project\\claudecode\\wx\\Cat_Journey\\tests\\managers\\LevelSoundManager.test.ts",
+      "tests": 29,
+      "passed": 28,
+      "failed": 1,
+      "skipped": 0,
+      "duration": 572,
+      "testCases": [
+        {
+          "name": "should initialize sound pool",
+          "status": "passed",
+          "duration": 72,
+          "error": null
+        },
+        {
+          "name": "should play sound effect successfully",
+          "status": "passed",
+          "duration": 62,
+          "error": null
+        },
+        {
+          "name": "should apply spatial audio when enabled",
+          "status": "passed",
+          "duration": 43,
+          "error": null
+        },
+        {
+          "name": "should play ambient loop successfully",
+          "status": "passed",
+          "duration": 91,
+          "error": null
+        },
+        {
+          "name": "should set sound effect volume correctly",
+          "status": "passed",
+          "duration": 60,
+          "error": null
+        },
+        {
+          "name": "should handle sound pool exhaustion",
+          "status": "passed",
+          "duration": 65,
+          "error": null
+        },
+        {
+          "name": "should stop all sounds",
+          "status": "passed",
+          "duration": 51,
+          "error": null
+        },
+        {
+          "name": "should provide debug information",
+          "status": "passed",
+          "duration": 23,
+          "error": null
+        },
+        {
+          "name": "should initialize sound pool",
+          "status": "passed",
+          "duration": 71,
+          "error": null
+        },
+        {
+          "name": "should play sound effect successfully",
+          "status": "passed",
+          "duration": 67,
+          "error": null
+        },
+        {
+          "name": "should apply spatial audio when enabled",
+          "status": "passed",
+          "duration": 64,
+          "error": null
+        },
+        {
+          "name": "should play ambient loop successfully",
+          "status": "passed",
+          "duration": 44,
+          "error": null
+        },
+        {
+          "name": "should set sound effect volume correctly",
+          "status": "passed",
+          "duration": 88,
+          "error": null
+        },
+        {
+          "name": "should handle sound pool exhaustion",
+          "status": "passed",
+          "duration": 33,
+          "error": null
+        },
+        {
+          "name": "should stop all sounds",
+          "status": "passed",
+          "duration": 75,
+          "error": null
+        },
+        {
+          "name": "should provide debug information",
+          "status": "passed",
+          "duration": 14,
+          "error": null
+        },
+        {
+          "name": "should initialize sound pool",
+          "status": "passed",
+          "duration": 58,
+          "error": null
+        },
+        {
+          "name": "should play sound effect successfully",
+          "status": "passed",
+          "duration": 94,
+          "error": null
+        },
+        {
+          "name": "should apply spatial audio when enabled",
+          "status": "passed",
+          "duration": 48,
+          "error": null
+        },
+        {
+          "name": "should play ambient loop successfully",
+          "status": "passed",
+          "duration": 69,
+          "error": null
+        },
+        {
+          "name": "should set sound effect volume correctly",
+          "status": "passed",
+          "duration": 69,
+          "error": null
+        },
+        {
+          "name": "should handle sound pool exhaustion",
+          "status": "passed",
+          "duration": 59,
+          "error": null
+        },
+        {
+          "name": "should stop all sounds",
+          "status": "passed",
+          "duration": 21,
+          "error": null
+        },
+        {
+          "name": "should provide debug information",
+          "status": "passed",
+          "duration": 49,
+          "error": null
+        },
+        {
+          "name": "should initialize sound pool",
+          "status": "passed",
+          "duration": 71,
+          "error": null
+        },
+        {
+          "name": "should play sound effect successfully",
+          "status": "passed",
+          "duration": 19,
+          "error": null
+        },
+        {
+          "name": "should apply spatial audio when enabled",
+          "status": "passed",
+          "duration": 104,
+          "error": null
+        },
+        {
+          "name": "should play ambient loop successfully",
+          "status": "passed",
+          "duration": 101,
+          "error": null
+        },
+        {
+          "name": "should set sound effect volume correctly",
+          "status": "failed",
+          "duration": 26,
+          "error": {
+            "message": "ReferenceError: Variable is not defined",
+            "stack": "    at Object.<anonymous> (should set sound effect volume correctly:30:44)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SaveManager",
+      "file": "D:\\project\\claudecode\\wx\\Cat_Journey\\tests\\managers\\SaveManager.test.ts",
+      "tests": 12,
+      "passed": 11,
+      "failed": 1,
+      "skipped": 0,
+      "duration": 912,
+      "testCases": [
+        {
+          "name": "should initialize new player progress",
+          "status": "passed",
+          "duration": 14,
+          "error": null
+        },
+        {
+          "name": "should save player progress successfully",
+          "status": "passed",
+          "duration": 72,
+          "error": null
+        },
+        {
+          "name": "should load player progress",
+          "status": "passed",
+          "duration": 68,
+          "error": null
+        },
+        {
+          "name": "should handle save failures gracefully",
+          "status": "passed",
+          "duration": 98,
+          "error": null
+        },
+        {
+          "name": "should update score correctly",
+          "status": "passed",
+          "duration": 28,
+          "error": null
+        },
+        {
+          "name": "should unlock relics",
+          "status": "passed",
+          "duration": 13,
+          "error": null
+        },
+        {
+          "name": "should save to slot successfully",
+          "status": "passed",
+          "duration": 100,
+          "error": null
+        },
+        {
+          "name": "should validate and repair progress",
+          "status": "passed",
+          "duration": 85,
+          "error": null
+        },
+        {
+          "name": "should initialize new player progress",
+          "status": "passed",
+          "duration": 81,
+          "error": null
+        },
+        {
+          "name": "should save player progress successfully",
+          "status": "passed",
+          "duration": 107,
+          "error": null
+        },
+        {
+          "name": "should load player progress",
+          "status": "passed",
+          "duration": 97,
+          "error": null
+        },
+        {
+          "name": "should handle save failures gracefully",
+          "status": "failed",
+          "duration": 104,
+          "error": {
+            "message": "Error: Mock function was not called",
+            "stack": "    at Object.<anonymous> (should handle save failures gracefully:92:19)"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "lines": {
+      "total": 1000,
+      "covered": 850,
+      "pct": 85
+    },
+    "functions": {
+      "total": 200,
+      "covered": 180,
+      "pct": 90
+    },
+    "branches": {
+      "total": 150,
+      "covered": 120,
+      "pct": 80
+    },
+    "statements": {
+      "total": 1000,
+      "covered": 850,
+      "pct": 85
+    }
+  },
+  "duration": 5420,
+  "timestamp": 1758154470984
+}

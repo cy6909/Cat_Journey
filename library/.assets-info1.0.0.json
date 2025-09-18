@@ -10,7 +10,7 @@
       "uuid": "0590ba0b-482f-48da-b425-fb739f16585d"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts": {
-      "time": 1758014867923.2825,
+      "time": 1758157471566.437,
       "uuid": "886d6f13-f395-4a7e-a603-8861f50cfffe"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art.meta": {
@@ -3690,7 +3690,7 @@
       "time": 1757894233917.2788
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene": {
-      "time": 1757987255238.046,
+      "time": 1758157681216.5732,
       "uuid": "71e1758f-1876-43b5-935d-bc2e35d0d6e1"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist": {
@@ -5095,41 +5095,17 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts.meta": {
       "time": 1757948635907.1519
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\SimpleBackgroundTest.ts": {
-      "time": 1757948556958.6006,
-      "uuid": "4ecfef89-991d-4ea5-9613-a6e86461f17a"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts": {
-      "time": 1757948893747.7793,
-      "uuid": "d05b6b38-db35-4925-bfa1-d103bb143040"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts.meta": {
       "time": 1757949061654.3884
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts": {
-      "time": 1757949028052.368,
-      "uuid": "3c0052d3-5ef3-4a3f-b4d8-0d5d2669c07c"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts.meta": {
       "time": 1757949676013.431
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts": {
-      "time": 1757950315705.7747,
-      "uuid": "7c70f2b9-c487-4ed3-a9e3-c4b3e86b4c5b"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts.meta": {
       "time": 1757950978911.0784
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts.meta": {
       "time": 1757950978911.0784
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts": {
-      "time": 1757950334818.3044,
-      "uuid": "3c94306c-c195-4858-bc40-0b204ba772f9"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts": {
-      "time": 1757950635576.1665,
-      "uuid": "d45c3693-63f5-4d7f-a9ac-5a309db24468"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CameraVisibilityAnalyzer.ts.meta": {
       "time": 1757951016915.759
@@ -5140,10 +5116,6 @@
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts.meta": {
       "time": 1757951564351.797
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts": {
-      "time": 1757951673092.2056,
-      "uuid": "522ea151-a18c-4cf4-8c74-4d6b01939b6a"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\art": {
       "time": 1757584938183.924,
@@ -5278,11 +5250,11 @@
       "uuid": "5ef012af-ca27-4b85-b817-8c3f7d3d5891"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay": {
-      "time": 1758014380164.5088,
+      "time": 1758157475071.84,
       "uuid": "15a172f0-61d5-4189-be33-2546a13584c8"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers": {
-      "time": 1758014440418.791,
+      "time": 1758157475075.8389,
       "uuid": "3f789d68-aab5-4f46-9fca-9ffe35a8b292"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\powerups": {
@@ -5290,7 +5262,7 @@
       "uuid": "8ae27d6b-8125-4668-89ec-1f48168e93e4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui": {
-      "time": 1758014938308.3098,
+      "time": 1758157471607.2222,
       "uuid": "833570eb-f6b5-4a66-8a1c-487e5fc88fcb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\background\\AbyssBackground.ts": {
@@ -5346,7 +5318,7 @@
       "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\GameManager.ts": {
-      "time": 1758014342361.0276,
+      "time": 1758154462667.6736,
       "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LevelManager.ts": {
@@ -5568,6 +5540,83 @@
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\powerups\\PowerUp.des": {
       "time": 1757894233951.386,
       "uuid": "f9106822-a496-48db-bc30-f08eefe33661"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects": {
+      "time": 1758157475070.8384,
+      "uuid": "caaf0cca-4b19-4c47-9a91-bf294cd8e0cf"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts": {
+      "time": 1758154462667.6736,
+      "uuid": "cf3d5245-f095-4488-9dd3-c7309121c0e7"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DynamicLevelGenerator.ts": {
+      "time": 1758154462665.324,
+      "uuid": "f0707c07-70da-4158-993b-707d0bf1c621"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\LevelSoundManager.ts": {
+      "time": 1758154462665.324,
+      "uuid": "7c2fd333-8762-4c63-8626-846ad3af8789"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SaveManager.ts": {
+      "time": 1758154462664.318,
+      "uuid": "94e4303d-e710-4417-810e-702bb8536063"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\LevelTransitionManager.ts": {
+      "time": 1758072699918.163,
+      "uuid": "40c3e911-510b-4bdd-856b-3886f31080cb"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\SlayTheSpireMapVisualizer.ts": {
+      "time": 1758072699918.163,
+      "uuid": "c59b264e-937f-4c35-aab6-fd7fbd021137"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects.meta": {
+      "time": 1758157471610.2288
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts.meta": {
+      "time": 1758157471617.227
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DynamicLevelGenerator.ts.meta": {
+      "time": 1758157471617.227
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\LevelSoundManager.ts.meta": {
+      "time": 1758157471618.2444
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SaveManager.ts.meta": {
+      "time": 1758157471619.244
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\LevelTransitionManager.ts.meta": {
+      "time": 1758157471620.2427
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\SlayTheSpireMapVisualizer.ts.meta": {
+      "time": 1758157471621.243
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts.des": {
+      "time": 1758073627440.7014,
+      "uuid": "375161eb-a03c-4d83-a1ea-5014539f0fbd"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DynamicLevelGenerator.ts.des": {
+      "time": 1758073040178.302,
+      "uuid": "e5ff4ce8-7d4e-408b-ba79-f58da13aa361"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\LevelSoundManager.ts.des": {
+      "time": 1758073524793.2217,
+      "uuid": "dffd06c2-a290-4b10-9017-5014bcb0178d"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SaveManager.ts.des": {
+      "time": 1758073214378.1987,
+      "uuid": "9f88b436-0f01-4c17-ade8-f1adefc52f54"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DynamicLevelGenerator.ts.des.meta": {
+      "time": 1758157475213.538
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts.des.meta": {
+      "time": 1758157475214.5386
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SaveManager.ts.des.meta": {
+      "time": 1758157475222.2495
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\LevelSoundManager.ts.des.meta": {
+      "time": 1758157475223.2507
     }
   },
   "missing": {
@@ -5612,9 +5661,9 @@
       "removeTime": 1758014867905
     },
     "7c70f2b9-c487-4ed3-a9e3-c4b3e86b4c5b": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts",
-      "time": 1757987255238.046,
-      "removeTime": 1758014867908
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BackgroundDiagnostic.ts",
+      "time": 1757950315705.7747,
+      "removeTime": 1758157475301
     },
     "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts",
@@ -5637,14 +5686,14 @@
       "removeTime": 1758014867909
     },
     "3c94306c-c195-4858-bc40-0b204ba772f9": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts",
-      "time": 1757987255239.052,
-      "removeTime": 1758014867909
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasBackgroundTest.ts",
+      "time": 1757950334818.3044,
+      "removeTime": 1758157475301
     },
     "d45c3693-63f5-4d7f-a9ac-5a309db24468": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts",
-      "time": 1757987255240.0515,
-      "removeTime": 1758014867909
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\CanvasLayerFixer.ts",
+      "time": 1757950635576.1665,
+      "removeTime": 1758157475301
     },
     "b64384bb-73e5-44e7-97ab-dde11b2c0873": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\CoreController.ts",
@@ -5687,9 +5736,9 @@
       "removeTime": 1758014867910
     },
     "522ea151-a18c-4cf4-8c74-4d6b01939b6a": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts",
-      "time": 1757987255242.0513,
-      "removeTime": 1758014867910
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\FinalBackgroundFix.ts",
+      "time": 1757951673092.2056,
+      "removeTime": 1758157475302
     },
     "1112ea98-2509-431e-b6fa-b2811d6671eb": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\GameManager.ts",
@@ -5742,9 +5791,9 @@
       "removeTime": 1758014867912
     },
     "3c0052d3-5ef3-4a3f-b4d8-0d5d2669c07c": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts",
-      "time": 1757987255242.0513,
-      "removeTime": 1758014867912
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\QuickBackgroundFix.ts",
+      "time": 1757949028052.368,
+      "removeTime": 1758157475301
     },
     "ebc0c1e7-8814-4bc5-854a-16588373ba8b": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\RelicManager.ts",
@@ -5762,9 +5811,9 @@
       "removeTime": 1758014867912
     },
     "4ecfef89-991d-4ea5-9613-a6e86461f17a": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\SimpleBackgroundTest.ts",
-      "time": 1757987255243.052,
-      "removeTime": 1758014867912
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\SimpleBackgroundTest.ts",
+      "time": 1757948556958.6006,
+      "removeTime": 1758157475300
     },
     "d38601e9-2bee-4fb4-af7e-00d3fccec3b9": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackground.ts",
@@ -5772,9 +5821,9 @@
       "removeTime": 1758014867913
     },
     "d05b6b38-db35-4925-bfa1-d103bb143040": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts",
-      "time": 1757987255244.5012,
-      "removeTime": 1758014867913
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\StarFieldBackgroundFixed.ts",
+      "time": 1757948893747.7793,
+      "removeTime": 1758157475300
     },
     "9de2dcc6-41dd-4d0a-9d89-80eb5d3a7a2f": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\AdManager.des",

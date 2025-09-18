@@ -1,0 +1,319 @@
+# SaveManager.ts 使用说明
+
+## 功能概述
+SaveManager是一个全面的存档管理系统，负责保存和加载玩家进度、当前游戏运行状态，支持多存档槽位、云同步、自动保存等功能。
+
+## 核心功能
+
+### 1. 双重存档系统
+- **PlayerProgress**: 永久性玩家进度，包括解锁内容、统计数据、货币、设置等
+- **RunProgress**: 当前游戏运行状态，包括地图进度、装备状态、临时数据等
+
+### 2. 多层存储策略
+- **本地存储**: 使用Cocos Creator的sys.localStorage API
+- **云同步**: 支持微信云存储同步(可选)
+- **多槽位**: 支持最多3个独立存档槽位
+- **自动保存**: 可配置间隔的自动保存功能
+
+### 3. 数据完整性保护
+- 数据验证和修复功能
+- 异常处理和错误恢复
+- 存档损坏检测和备份恢复
+
+## 数据结构
+
+### PlayerProgress (玩家永久进度)
+```typescript
+{
+    // 基本进度
+    currentChapter: number,        // 当前章节(1-3)
+    currentFloor: number,          // 当前层数(1-45)
+    currentRun: number,            // 总游戏次数
+    
+    // 解锁内容
+    unlockedChapters: number[],    // 已解锁章节
+    unlockedRelics: RelicType[],   // 已解锁遗物
+    unlockedPaddleTypes: string[], // 已解锁挡板类型
+    unlockedBallTypes: string[],   // 已解锁弹球类型
+    unlockedCoreTypes: string[],   // 已解锁核心类型
+    
+    // 统计数据
+    totalPlayTime: number,         // 总游戏时间(毫秒)
+    totalScore: number,            // 总得分
+    highestScore: number,          // 最高得分
+    totalBricksDestroyed: number,  // 总砖块消除数
+    totalLevelsCompleted: number,  // 总关卡完成数
+    totalDeaths: number,           // 总死亡次数
+    
+    // 成就和Boss
+    defeatedBosses: string[],      // 已击败的Boss
+    defeatedHiddenBosses: string[], // 已击败的隐藏Boss
+    achievements: object,          // 成就完成状态
+    achievementProgress: object,   // 成就进度
+    
+    // 货币系统
+    currency: {
+        coins: number,             // 金币
+        gems: number,              // 宝石
+        energy: number,            // 能量
+        experience: number         // 经验
+    },
+    
+    // 付费数据
+    purchaseHistory: string[],     // 购买历史
+    vipStatus: object,             // VIP状态
+    
+    // 设置
+    settings: {
+        soundVolume: number,       // 音效音量(0-1)
+        musicVolume: number,       // 音乐音量(0-1)
+        enableNotifications: boolean, // 通知开关
+        language: string,          // 语言设置
+        qualityLevel: number       // 画质等级
+    }
+}
+```
+
+### RunProgress (当前游戏运行状态)
+```typescript
+{
+    // 基本信息
+    runId: string,                 // 唯一运行ID
+    startTime: number,             // 开始时间戳
+    currentScore: number,          // 当前得分
+    currentLives: number,          // 当前生命值
+    
+    // 地图进度
+    currentChapter: number,        // 当前章节
+    currentFloor: number,          // 当前层数
+    currentNodeIndex: number,      // 当前节点索引
+    completedNodes: number[],      // 已完成节点
+    mapPath: number[],             // 选择的路径
+    
+    // 装备状态
+    activeRelics: RelicType[],     // 激活的遗物
+    relicStacks: object,           // 遗物叠加数
+    
+    // 角色状态
+    paddleLevel: number,           // 挡板等级
+    paddleExperience: number,      // 挡板经验
+    paddleHealth: number,          // 挡板血量
+    paddleMaxHealth: number,       // 挡板最大血量
+    
+    coreLevel: number,             // 核心等级
+    coreExperience: number,        // 核心经验
+    coreHealth: number,            // 核心血量
+    coreMaxHealth: number,         // 核心最大血量
+    
+    ballTypes: string[],           // 弹球类型
+    ballEffects: string[],         // 弹球效果
+    ballCount: number,             // 弹球数量
+    
+    // 临时状态
+    temporaryBuffs: array,         // 临时Buff
+    levelModifiers: string[],      // 关卡修饰符
+    bossPhase: number,             // Boss阶段
+    isInCombat: boolean           // 是否在战斗中
+}
+```
+
+## 主要方法
+
+### 存档管理
+- `savePlayerProgress()`: 保存玩家永久进度
+- `saveRunProgress()`: 保存当前运行状态
+- `loadPlayerProgress()`: 加载玩家进度
+- `loadRunProgress()`: 加载运行状态
+- `manualSave()`: 手动保存所有数据
+
+### 槽位管理
+- `saveToSlot(slotIndex)`: 保存到指定槽位
+- `loadFromSlot(slotIndex)`: 从指定槽位加载
+- `getSaveSlotInfo(slotIndex)`: 获取槽位信息
+
+### 进度更新
+- `updateScore(score)`: 更新得分
+- `updateCurrency(type, amount)`: 更新货币
+- `unlockRelic(relicType)`: 解锁遗物
+- `completeLevel()`: 完成关卡
+- `recordDeath()`: 记录死亡
+- `defeatBoss(bossId, isHidden)`: 击败Boss
+
+### 数据管理
+- `startNewRun(chapterNumber)`: 开始新的游戏运行
+- `validateAndRepairProgress()`: 验证和修复数据
+- `clearAllSaves()`: 清除所有存档
+
+## 在Cocos Creator中的绑定使用
+
+### 1. 创建SaveManager组件
+1. 在GameScene中创建一个持久化Node，命名为"SaveManager"
+2. 将SaveManager脚本拖拽到该Node上
+3. 在Inspector中配置参数：
+   - autoSaveInterval: 自动保存间隔(默认30秒)
+   - maxSaveSlots: 最大存档槽位数(默认3个)
+   - enableCloudSync: 是否启用云同步(默认true)
+
+### 2. 与GameManager集成
+在GameManager.ts中集成存档功能：
+
+```typescript
+// 在GameManager的start方法中
+protected start(): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        // 加载玩家进度
+        saveManager.loadPlayerProgress();
+        
+        // 检查是否有未完成的运行
+        if (saveManager.loadRunProgress()) {
+            this.continueFromSave();
+        } else {
+            this.startNewGame();
+        }
+    }
+}
+
+// 关卡完成时保存进度
+public onLevelComplete(): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        saveManager.completeLevel();
+        saveManager.updateScore(this.score);
+    }
+    
+    // ... 其他关卡完成逻辑
+}
+
+// 玩家死亡时保存
+public onPlayerDeath(): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        saveManager.recordDeath();
+        // 清除当前运行进度
+        saveManager.getCurrentRunProgress() = null;
+    }
+}
+```
+
+### 3. 与UI系统集成
+在主菜单中显示存档信息：
+
+```typescript
+// 在主菜单控制器中
+public refreshSaveSlots(): void {
+    const saveManager = SaveManager.getInstance();
+    if (!saveManager) return;
+    
+    for (let i = 0; i < 3; i++) {
+        const slotInfo = saveManager.getSaveSlotInfo(i);
+        const slotUI = this.saveSlotUIs[i];
+        
+        if (slotInfo.exists) {
+            slotUI.showSaveData(slotInfo.chapter, slotInfo.score, slotInfo.timestamp);
+        } else {
+            slotUI.showEmpty();
+        }
+    }
+}
+
+public onSaveSlotSelected(slotIndex: number): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        if (saveManager.loadFromSlot(slotIndex)) {
+            // 成功加载，进入游戏
+            director.loadScene('GameScene');
+        }
+    }
+}
+```
+
+### 4. 自动保存集成
+系统会自动处理保存，但可以在关键节点手动保存：
+
+```typescript
+// 在重要节点手动保存
+public onBossDefeated(bossId: string): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        saveManager.defeatBoss(bossId);
+        saveManager.manualSave(); // 立即保存重要进度
+    }
+}
+
+// 在设置面板保存设置
+public onSettingsChanged(settings: any): void {
+    const saveManager = SaveManager.getInstance();
+    if (saveManager) {
+        const progress = saveManager.getPlayerProgress();
+        if (progress) {
+            progress.settings = { ...progress.settings, ...settings };
+            saveManager.manualSave();
+        }
+    }
+}
+```
+
+## 云同步配置
+
+### 微信小程序云存储设置
+1. 在微信开发者工具中开启云开发
+2. 创建cloud数据库集合'cat_conquest_saves'
+3. 配置数据库权限为仅创建者读写
+4. 在SaveManager中启用enableCloudSync
+
+### 数据同步策略
+- 本地存储优先，云端作为备份
+- 启动时检查云端是否有更新的数据
+- 保存时同时更新本地和云端
+- 冲突时以时间戳较新的为准
+
+## 错误处理和恢复
+
+### 数据损坏处理
+```typescript
+// 自动数据修复
+public handleCorruptedData(): void {
+    console.log('Detected corrupted save data, attempting repair...');
+    
+    if (this.validateAndRepairProgress()) {
+        console.log('Data repaired successfully');
+    } else {
+        console.log('Data repair failed, creating new progress');
+        this._playerProgress = this.initializeNewProgress();
+    }
+}
+```
+
+### 云同步失败处理
+- 网络错误时使用本地存档
+- 定期重试云同步
+- 提供手动同步选项
+
+## 性能优化建议
+
+1. **差量保存**: 只保存变化的数据
+2. **压缩存储**: 对大数据进行压缩
+3. **异步操作**: 使用异步方式进行云同步
+4. **缓存策略**: 频繁访问的数据保持在内存中
+
+## 安全性考虑
+
+1. **数据验证**: 加载时验证数据完整性
+2. **防作弊**: 关键数据进行校验和验证
+3. **隐私保护**: 敏感数据进行加密存储
+4. **版本兼容**: 支持存档数据的版本升级
+
+## 调试功能
+
+- 控制台输出详细的保存/加载日志
+- 提供数据验证和修复工具
+- 支持手动清除存档用于测试
+- 显示存档文件大小和云同步状态
+
+## 与其他系统的依赖关系
+
+- 依赖MapManager获取当前地图状态
+- 依赖RelicManager同步遗物状态
+- 依赖MonetizationManager保存购买记录
+- 与所有游戏系统交互以保存状态

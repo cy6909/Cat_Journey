@@ -1,0 +1,17 @@
+{
+  "name": "cat-conquest-simple-test",
+  "version": "1.0.0",
+  "description": "简化版测试套件",
+  "scripts": {
+    "test": "jest",
+    "test:simple": "jest --testPathPattern=simple"
+  },
+  "devDependencies": {
+    "jest": "^29.6.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["**/*.simple.js"],
+    "verbose": true
+  }
+}

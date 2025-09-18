@@ -593,8 +593,36 @@ export class AdvancedEffectSystem extends Component {
     }
 
     public setEffectQuality(level: number): void {
-        this.effectQualityLevel = Math.max(0, Math.min(2, level));
-        console.log(`Effect quality set to: ${this.effectQualityLevel}`);
+        try {
+            const oldQuality = this.effectQualityLevel;
+            this.effectQualityLevel = Math.max(0, Math.min(2, Math.round(level || 0)));
+            
+            if (this.effectQualityLevel !== oldQuality) {
+                console.log(`Effect quality changed from ${oldQuality} to ${this.effectQualityLevel}`);
+                
+                // Update existing effects if needed
+                this.updateEffectsForQualityChange();
+            }
+            
+        } catch (error) {
+            console.error('Error setting effect quality:', error);
+            this.effectQualityLevel = 2; // Default to high quality
+        }
+    }
+
+    private updateEffectsForQualityChange(): void {
+        try {
+            // Update all active effects to match new quality level
+            this._effectStacks.forEach((stack) => {
+                stack.forEach(layer => {
+                    if (layer.isActive) {
+                        this.updateEffectIntensity(layer);
+                    }
+                });
+            });
+        } catch (error) {
+            console.warn('Error updating effects for quality change:', error);
+        }
     }
 
     public pauseAllEffects(): void {

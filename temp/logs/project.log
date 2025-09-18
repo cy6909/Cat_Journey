@@ -1,182 +1,12 @@
-2025-9-16 11:53:13 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
-2025-9-16 11:53:13 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
-2025-9-16 11:53:14 - log: Request namespace: device-list
-2025-9-16 11:53:18 - warn: [Window] Message does not exist: scene.editor-preview-call-methodError: [Window] Message does not exist: scene.editor-preview-call-method
-    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:4978)
-    at EventEmitter.emit (node:events:519:28)
-    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-base-ipc\dist\renderer.ccc:1:3858)
-    at IpcRenderer.emit (node:events:519:28)
-    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
-2025-9-16 11:53:23 - log: [Scene] meshopt wasm decoder initialized
-2025-9-16 11:53:23 - log: [Scene] [bullet]:bullet wasm lib loaded.
-2025-9-16 11:53:23 - log: [Scene] [box2d]:box2d wasm lib loaded.
-2025-9-16 11:53:23 - log: [Scene] [PHYSICS]: using builtin.
-2025-9-16 11:53:23 - log: [Scene] Cocos Creator v3.8.6
-2025-9-16 11:53:23 - log: [Scene] Using custom pipeline: Builtin
-2025-9-16 11:53:23 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
-2025-9-16 11:53:23 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\AbyssBackground.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\AbyssBackground.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 95 (line 5 column 23)SyntaxError: Expected ',' or '}' after property value in JSON at position 95 (line 5 column 23)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\ForestThemeBackground.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\ForestThemeBackground.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 102 (line 5 column 30)SyntaxError: Expected ',' or '}' after property value in JSON at position 102 (line 5 column 30)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\SnowMountainBackground.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\background\SnowMountainBackground.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 103 (line 5 column 31)SyntaxError: Expected ',' or '}' after property value in JSON at position 103 (line 5 column 31)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\AudioManager.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\AudioManager.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 100 (line 5 column 28)SyntaxError: Expected ',' or '}' after property value in JSON at position 100 (line 5 column 28)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\EnhancedParticleEffect.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\EnhancedParticleEffect.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 111 (line 5 column 39)SyntaxError: Expected ',' or '}' after property value in JSON at position 111 (line 5 column 39)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuButton.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuButton.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 103 (line 5 column 31)SyntaxError: Expected ',' or '}' after property value in JSON at position 103 (line 5 column 31)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuController.ts.meta failed!Warn: [Assets] Read meta in D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\MainMenuController.ts.meta failed!
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at CustomConsole.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1510)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1928)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:47 - warn: [Assets] Expected ',' or '}' after property value in JSON at position 107 (line 5 column 35)SyntaxError: Expected ',' or '}' after property value in JSON at position 107 (line 5 column 35)
-    at JSON.parse (<anonymous>)
-    at MetaManager.read (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:1805)
-    at MetaManager.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\meta.ccc:1:2521)
-    at AssetDB._checkAssetsStatSync (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:9852)
-    at AssetDB.refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:1:8226)
-    at AssetDBManager._refresh (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:10072)
-    at runNextTicks (node:internal/process/task_queues:60:5)
-    at processImmediate (node:internal/timers:449:9)
-    at Object.refresh-all-database (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\messages\database.ccc:1:3760)
-    at Ipc.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\ipc.ccc:1:530)
-2025-9-16 17:27:52 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-9-18 09:04:25 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
+2025-9-18 09:04:25 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
+2025-9-18 09:04:26 - log: Request namespace: device-list
+2025-9-18 09:04:36 - log: [Scene] meshopt wasm decoder initialized
+2025-9-18 09:04:36 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2025-9-18 09:04:36 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2025-9-18 09:04:36 - log: [Scene] [PHYSICS]: using builtin.
+2025-9-18 09:04:36 - log: [Scene] Cocos Creator v3.8.6
+2025-9-18 09:04:36 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -197,7 +27,8 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-9-16 17:27:52 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
+2025-9-18 09:04:36 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -218,20 +49,16 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-9-16 17:28:00 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
+2025-9-18 09:04:36 - warn: [Scene] 你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。Error: [Scene] 你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at logger (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:755:13)
+    at ExecutorSystem.resolve [as _detailResolve] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:772:17)
+    at ExecutorSystem._resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:137:14)
+    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
+    at Array.map (<anonymous>)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
     at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
     at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
     at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
@@ -239,20 +66,15 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-9-16 17:28:00 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
+2025-9-18 09:04:36 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts 为起点找不到模块 "./MapManager"
+    at rejector (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:759:15)
+    at ExecutorSystem.resolve [as _detailResolve] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:777:13)
+    at ExecutorSystem._resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:137:14)
+    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
+    at Array.map (<anonymous>)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
     at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
     at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
     at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
@@ -260,20 +82,11 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-9-16 18:20:49 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts 为起点找不到模块 "./MapManager"
+    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
+    at Array.map (<anonymous>)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
     at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
     at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
     at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
@@ -281,20 +94,17 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-9-16 18:20:49 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
+    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
+    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5408)
+    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3604)
+    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
+    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
+    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
+    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:431:7
     at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
     at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
     at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
@@ -302,3 +112,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
+    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
+2025-9-18 09:04:36 - log: [Scene] Using custom pipeline: Builtin
+2025-9-18 09:04:36 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
+2025-9-18 09:04:36 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.

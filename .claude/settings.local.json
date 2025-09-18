@@ -20,9 +20,14 @@
       "Bash(git pull:*)",
       "Bash(git push:*)",
       "Bash(node:*)",
-      "Bash(where:*)"
+      "Bash(where:*)",
+      "Bash(npx jest:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "D:\\onBeginContact"
+    ]
   }
 }

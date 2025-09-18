@@ -9168,5 +9168,68 @@
     "url": "db://assets/scripts/ui/MainMenuController.ts",
     "value": {},
     "versionCode": 1
+  },
+  "caaf0cca-4b19-4c47-9a91-bf294cd8e0cf": {
+    "url": "db://assets/scripts/effects",
+    "value": {},
+    "versionCode": 1
+  },
+  "cf3d5245-f095-4488-9dd3-c7309121c0e7": {
+    "url": "db://assets/scripts/effects/AdvancedEffectSystem.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "f0707c07-70da-4158-993b-707d0bf1c621": {
+    "url": "db://assets/scripts/gameplay/DynamicLevelGenerator.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "7c2fd333-8762-4c63-8626-846ad3af8789": {
+    "url": "db://assets/scripts/managers/LevelSoundManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "94e4303d-e710-4417-810e-702bb8536063": {
+    "url": "db://assets/scripts/managers/SaveManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "40c3e911-510b-4bdd-856b-3886f31080cb": {
+    "url": "db://assets/scripts/ui/LevelTransitionManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c59b264e-937f-4c35-aab6-fd7fbd021137": {
+    "url": "db://assets/scripts/ui/SlayTheSpireMapVisualizer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "375161eb-a03c-4d83-a1ea-5014539f0fbd": {
+    "url": "db://assets/scripts/effects/AdvancedEffectSystem.ts.des",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e5ff4ce8-7d4e-408b-ba79-f58da13aa361": {
+    "url": "db://assets/scripts/gameplay/DynamicLevelGenerator.ts.des",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "dffd06c2-a290-4b10-9017-5014bcb0178d": {
+    "url": "db://assets/scripts/managers/LevelSoundManager.ts.des",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "9f88b436-0f01-4c17-ade8-f1adefc52f54": {
+    "url": "db://assets/scripts/managers/SaveManager.ts.des",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
   }
 }
