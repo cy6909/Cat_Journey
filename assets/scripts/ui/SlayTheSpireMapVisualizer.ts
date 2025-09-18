@@ -1,5 +1,5 @@
 import { _decorator, Component, Node, Vec3, Prefab, instantiate, Color, Sprite, Label, Button, UITransform, Vec2, Graphics, tween, Camera, view, Widget } from 'cc';
-import { MapManager, NodeType, ChapterTheme } from './MapManager';
+import { MapManager, NodeType, ChapterTheme } from '../managers/MapManager';
 
 const { ccclass, property } = _decorator;
 

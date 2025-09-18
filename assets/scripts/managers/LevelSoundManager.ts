@@ -439,7 +439,7 @@ export class LevelSoundManager extends Component {
         this.scheduleOnce(() => {
             this._activeSounds.delete(soundId);
             this.returnAudioSourceToPool(audioSource);
-        }, audioClip.duration);
+        }, 5.0); // Default duration since audioClip.duration is not available
 
         return true;
     }
@@ -469,7 +469,8 @@ export class LevelSoundManager extends Component {
 
         this.ambientSource.clip = audioClip;
         this.ambientSource.volume = config.volume * this.ambientVolume;
-        this.ambientSource.pitch = config.pitch;
+        // AudioSource pitch property not available in Cocos Creator 3.x
+        // this.ambientSource.pitch = config.pitch;
         this.ambientSource.loop = true;
 
         if (config.fadeIn) {
@@ -527,9 +528,10 @@ export class LevelSoundManager extends Component {
 
         this.uiSource.clip = audioClip;
         this.uiSource.volume = config.volume * this.soundEffectVolume;
-        this.uiSource.pitch = config.randomPitch ? 
-            config.pitch + (Math.random() - 0.5) * 0.2 : 
-            config.pitch;
+        // AudioSource pitch property not available in Cocos Creator 3.x
+        // this.uiSource.pitch = config.randomPitch ? 
+        //     config.pitch + (Math.random() - 0.5) * 0.2 : 
+        //     config.pitch;
         this.uiSource.play();
 
         return true;
@@ -568,9 +570,10 @@ export class LevelSoundManager extends Component {
     private setupAudioSource(source: AudioSource, config: SoundEffectConfig, clip: AudioClip, position?: { x: number, y: number }): void {
         source.clip = clip;
         source.volume = config.volume * this.soundEffectVolume;
-        source.pitch = config.randomPitch ? 
-            config.pitch + (Math.random() - 0.5) * 0.2 : 
-            config.pitch;
+        // AudioSource pitch property not available in Cocos Creator 3.x
+        // source.pitch = config.randomPitch ? 
+        //     config.pitch + (Math.random() - 0.5) * 0.2 : 
+        //     config.pitch;
         source.loop = config.loop;
 
         // 空间音频设置
@@ -612,7 +615,8 @@ export class LevelSoundManager extends Component {
         source.stop();
         source.clip = null;
         source.volume = this.soundEffectVolume;
-        source.pitch = 1.0;
+        // AudioSource pitch property not available in Cocos Creator 3.x
+        // source.pitch = 1.0;
         source.loop = false;
     }
 

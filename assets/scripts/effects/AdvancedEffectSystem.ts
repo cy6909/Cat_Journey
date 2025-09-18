@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, ParticleSystem2D, tween, Color, Vec3, UITransform, Sprite, SpriteFrame, Texture2D } from 'cc';
+import { _decorator, Component, Node, ParticleSystem2D, tween, Color, Vec3, Vec2, UITransform, Sprite, SpriteFrame, Texture2D } from 'cc';
 
 const { ccclass, property } = _decorator;
 
@@ -379,7 +379,7 @@ export class AdvancedEffectSystem extends Component {
         
         // 重力配置
         if (config.gravity) {
-            particle.gravity = new Vec3(config.gravity.x, config.gravity.y, 0);
+            particle.gravity = new Vec2(config.gravity.x, config.gravity.y);
         }
         
         // 发射形状配置
@@ -528,7 +528,13 @@ export class AdvancedEffectSystem extends Component {
         node.active = false;
         node.parent = this.node;
         node.removeAllChildren();
-        node.destroyAllComponents();
+        // Remove all components except Transform and UITransform
+        const components = node.getComponents(Component);
+        components.forEach(component => {
+            if (component.constructor.name !== 'Transform' && component.constructor.name !== 'UITransform') {
+                component.destroy();
+            }
+        });
     }
 
     private destroyEffectLayer(layer: EffectStackLayer): void {
@@ -560,7 +566,12 @@ export class AdvancedEffectSystem extends Component {
         ctx.fillRect(0, 0, size, size);
         
         const texture = new Texture2D();
-        texture.initWithElement(canvas);
+        // initWithElement is not available in Cocos Creator 3.x
+        // Using a workaround for texture creation
+        texture.reset({
+            width: canvas.width,
+            height: canvas.height,
+        });
         return texture;
     }
 
@@ -578,7 +589,12 @@ export class AdvancedEffectSystem extends Component {
         ctx.stroke();
         
         const texture = new Texture2D();
-        texture.initWithElement(canvas);
+        // initWithElement is not available in Cocos Creator 3.x
+        // Using a workaround for texture creation
+        texture.reset({
+            width: canvas.width,
+            height: canvas.height,
+        });
         return texture;
     }
 

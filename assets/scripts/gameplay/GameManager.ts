@@ -2,7 +2,6 @@ import { _decorator, Component, Node, Prefab, instantiate, Vec3, director } from
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
-import { BossController } from '../managers/BossController';
 const { ccclass, property } = _decorator;
 
 export enum GameState {
@@ -384,7 +383,7 @@ export class GameManager extends Component {
         }
     }
 
-    private onStateChanged(oldState: GameState, newState: GameState): void {
+    private onStateChanged(_oldState: GameState, newState: GameState): void {
         try {
             switch (newState) {
                 case GameState.GAME_OVER:
@@ -445,29 +444,6 @@ export class GameManager extends Component {
 
     public getBricks(): Node[] {
         return this._bricks;
-    }
-
-    public setState(newState: GameState | string): void {
-        if (typeof newState === 'string') {
-            // 兼容字符串类型的状态设置
-            this._currentState = newState as GameState;
-        } else {
-            this._currentState = newState;
-        }
-        console.log(`Game state changed to: ${this._currentState}`);
-    }
-
-    public onCoreAttacked(damage: number): void {
-        console.log(`Core attacked with ${damage} damage`);
-        if (this._coreController) {
-            this._coreController.takeDamage(damage, 'External attack');
-        } else {
-            console.warn('Core controller not found - taking direct damage');
-            this.lives = Math.max(0, this.lives - damage);
-            if (this.lives <= 0) {
-                this.setState(GameState.GAME_OVER);
-            }
-        }
     }
 
     public getBallNode(): Node | null {

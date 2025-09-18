@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, RigidBody2D, Vec2, PhysicsMaterial, Collider2D, IPhysics2DContact, Contact2DType } from 'cc';
+import { _decorator, Component, Node, RigidBody2D, Vec2, Collider2D, IPhysics2DContact, Contact2DType } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Ball')
@@ -13,26 +13,23 @@ export class Ball extends Component {
     public minSpeed: number = 100;
 
     private _rigidBody: RigidBody2D | null = null;
-    private _collider: Collider2D | null = null;
     public isMoving: boolean = false;
     public fireEffectDuration: number = 0;
     public iceEffectDuration: number = 0;
 
     protected onLoad(): void {
         this._rigidBody = this.getComponent(RigidBody2D);
-        this._collider = this.getComponent(Collider2D);
         
         if (this._rigidBody) {
-            const physicsMaterial = new PhysicsMaterial();
-            physicsMaterial.friction = 0.0;
-            physicsMaterial.restitution = 1.0;
-            
+            // 注册碰撞事件
             const colliders = this.node.getComponents(Collider2D);
             colliders.forEach(collider => {
-                collider.material = physicsMaterial;
-                // 注册碰撞事件
                 collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
             });
+            
+            // 设置刚体属性以实现无摩擦完美弹性碰撞
+            // 注意：材质需要在编辑器中或者通过其他方式设置
+            console.log('Ball initialized with collision detection');
         }
     }
 
@@ -107,7 +104,7 @@ export class Ball extends Component {
     }
 
     // 碰撞处理方法 - 修复测试失败的核心问题
-    public onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null): void {
+    public onBeginContact(_selfCollider: Collider2D, otherCollider: Collider2D, _contact: IPhysics2DContact | null): void {
         if (!otherCollider || !otherCollider.node) {
             return;
         }

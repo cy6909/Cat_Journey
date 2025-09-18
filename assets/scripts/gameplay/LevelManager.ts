@@ -11,6 +11,14 @@ export enum LevelType {
     TIME_ATTACK = 'TIME_ATTACK'
 }
 
+export enum DifficultyTier {
+    EASY = 'EASY',
+    NORMAL = 'NORMAL', 
+    HARD = 'HARD',
+    EXPERT = 'EXPERT',
+    NIGHTMARE = 'NIGHTMARE'
+}
+
 @ccclass('LevelManager')
 export class LevelManager extends Component {
     @property

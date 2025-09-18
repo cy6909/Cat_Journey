@@ -1,6 +1,6 @@
 import { _decorator, Component, Prefab, Vec3, Node, instantiate, math } from 'cc';
 import { LevelManager, LevelType, DifficultyTier } from './LevelManager';
-import { MapManager, MapNodeType } from '../managers/MapManager';
+import { MapManager, NodeType } from '../managers/MapManager';
 import { EnhancedBrick, BrickType } from './EnhancedBrick';
 
 const { ccclass, property } = _decorator;
@@ -21,7 +21,7 @@ export interface LevelGenerationParams {
     floorNumber: number;
     levelType: LevelType;
     difficultyTier: DifficultyTier;
-    nodeType: MapNodeType;
+    nodeType: NodeType;
     layoutPattern: LevelLayoutPattern;
     specialModifiers: string[];
 }
@@ -551,20 +551,26 @@ export class DynamicLevelGenerator extends Component {
         }
     }
 
-    private getBrickSpawnChance(nodeType: MapNodeType, row: number, col: number): number {
+    private getBrickSpawnChance(nodeType: NodeType, row: number, col: number): number {
         const baseChance = {
-            [MapNodeType.COMBAT]: 0.85,
-            [MapNodeType.ELITE]: 0.9,
-            [MapNodeType.BOSS]: 1.0,
-            [MapNodeType.TREASURE]: 0.6,
-            [MapNodeType.SHOP]: 0.4,
-            [MapNodeType.REST]: 0.3,
-            [MapNodeType.EVENT]: 0.7,
-            [MapNodeType.SECRET]: 0.95,
-            [MapNodeType.MINI_BOSS]: 0.88,
-            [MapNodeType.PUZZLE]: 0.75,
-            [MapNodeType.GAUNTLET]: 0.95,
-            [MapNodeType.FINAL_BOSS]: 1.0
+            [NodeType.COMBAT]: 0.85,
+            [NodeType.ELITE]: 0.9,
+            [NodeType.BOSS]: 1.0,
+            [NodeType.HIDDEN_BOSS]: 1.0,
+            [NodeType.EVENT]: 0.7,
+            [NodeType.SHOP]: 0.4,
+            [NodeType.TREASURE]: 0.6,
+            [NodeType.CAMPFIRE]: 0.3,
+            [NodeType.UPGRADE]: 0.5,
+            [NodeType.MYSTERY]: 0.8,
+            [NodeType.START]: 0.0,
+            [NodeType.END]: 0.0,
+            [NodeType.REST]: 0.3,
+            [NodeType.SECRET]: 0.95,
+            [NodeType.MINI_BOSS]: 0.88,
+            [NodeType.PUZZLE]: 0.75,
+            [NodeType.GAUNTLET]: 0.95,
+            [NodeType.FINAL_BOSS]: 1.0
         };
         
         return baseChance[nodeType] || 0.8;
@@ -575,7 +581,7 @@ export class DynamicLevelGenerator extends Component {
         const random = Math.random();
         
         // 根据难度和位置选择砖块类型
-        if (params.levelType === LevelType.BOSS || params.nodeType === MapNodeType.BOSS) {
+        if (params.levelType === LevelType.BOSS || params.nodeType === NodeType.BOSS) {
             if (random < 0.3) return BrickType.REINFORCED;
             if (random < 0.5) return BrickType.ELECTRIC;
             if (random < 0.7) return BrickType.EXPLOSIVE;
@@ -613,11 +619,11 @@ export class DynamicLevelGenerator extends Component {
         
         // 节点类型
         switch (params.nodeType) {
-            case MapNodeType.ELITE: multiplier *= 1.4; break;
-            case MapNodeType.BOSS: multiplier *= 2.0; break;
-            case MapNodeType.MINI_BOSS: multiplier *= 1.6; break;
-            case MapNodeType.GAUNTLET: multiplier *= 1.5; break;
-            case MapNodeType.FINAL_BOSS: multiplier *= 3.0; break;
+            case NodeType.ELITE: multiplier *= 1.4; break;
+            case NodeType.BOSS: multiplier *= 2.0; break;
+            case NodeType.MINI_BOSS: multiplier *= 1.6; break;
+            case NodeType.GAUNTLET: multiplier *= 1.5; break;
+            case NodeType.FINAL_BOSS: multiplier *= 3.0; break;
         }
         
         return multiplier;
@@ -632,7 +638,7 @@ export class DynamicLevelGenerator extends Component {
             return LevelLayoutPattern.FORTRESS;
         }
         
-        if (params.nodeType === MapNodeType.ELITE) {
+        if (params.nodeType === NodeType.ELITE) {
             const patterns = [LevelLayoutPattern.SPIRAL, LevelLayoutPattern.DIAMOND, LevelLayoutPattern.FORTRESS];
             return patterns[Math.floor(Math.random() * patterns.length)];
         }
@@ -666,7 +672,7 @@ export class DynamicLevelGenerator extends Component {
         }
         
         // 特殊节点修饰符
-        if (params.nodeType === MapNodeType.GAUNTLET) {
+        if (params.nodeType === NodeType.GAUNTLET) {
             modifiers.push('electric_storm', 'fire_zone');
         }
         

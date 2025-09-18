@@ -22,7 +22,8 @@
       "Bash(node:*)",
       "Bash(where:*)",
       "Bash(npx jest:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": [],
     "ask": [],

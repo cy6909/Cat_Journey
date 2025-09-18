@@ -1,5 +1,5 @@
 import { _decorator, Component, Node, Vec3, Prefab, instantiate, Color, Sprite, Label, Button, UITransform } from 'cc';
-import { EliteType, HiddenBossType } from './EliteAndHiddenBossManager';
+import { EliteType } from './EliteAndHiddenBossManager';
 import { BossType } from '../gameplay/EnhancedBossController';
 
 const { ccclass, property } = _decorator;
@@ -16,7 +16,13 @@ export enum NodeType {
     UPGRADE = 'upgrade',        // 升级台
     MYSTERY = 'mystery',        // 神秘节点
     START = 'start',            // 起始节点
-    END = 'end'                 // 结束节点
+    END = 'end',                // 结束节点
+    REST = 'rest',              // 休息节点 (alias for CAMPFIRE)
+    SECRET = 'secret',          // 秘密节点
+    MINI_BOSS = 'mini_boss',    // 小Boss
+    PUZZLE = 'puzzle',          // 谜题节点
+    GAUNTLET = 'gauntlet',      // 挑战节点
+    FINAL_BOSS = 'final_boss'   // 最终Boss
 }
 
 // 测试兼容性别名
@@ -416,7 +422,7 @@ export class MapManager extends Component {
         }
     }
     
-    private connectFloors(currentFloor: MapNode[], nextFloor: MapNode[], floorIndex: number): void {
+    private connectFloors(currentFloor: MapNode[], nextFloor: MapNode[], _floorIndex: number): void {
         if (currentFloor.length === 0 || nextFloor.length === 0) return;
         
         // Each node in current floor connects to 1-3 nodes in next floor
@@ -495,7 +501,7 @@ export class MapManager extends Component {
         this.clearMapVisuals();
         
         // Create node visuals
-        for (const [nodeId, node] of this._mapNodes) {
+        for (const [_nodeId, node] of this._mapNodes) {
             this.createNodeVisual(node);
         }
         
@@ -535,7 +541,7 @@ export class MapManager extends Component {
     private createConnectionVisuals(): void {
         if (!this.connectionLinePrefab) return;
         
-        for (const [nodeId, node] of this._mapNodes) {
+        for (const [_nodeId, node] of this._mapNodes) {
             for (const connectionId of node.connections) {
                 const targetNode = this._mapNodes.get(connectionId);
                 if (!targetNode) continue;
@@ -684,17 +690,17 @@ export class MapManager extends Component {
         // Award treasure and show UI
     }
     
-    private restAtCampfire(node: MapNode): void {
+    private restAtCampfire(_node: MapNode): void {
         console.log('Resting at campfire');
         // Restore health, show rest options
     }
     
-    private enterUpgradeStation(node: MapNode): void {
+    private enterUpgradeStation(_node: MapNode): void {
         console.log('Entered upgrade station');
         // Show upgrade options
     }
     
-    private encounterMystery(node: MapNode): void {
+    private encounterMystery(_node: MapNode): void {
         console.log('Encountered mystery node');
         // Random effect
     }
@@ -815,7 +821,7 @@ export class MapManager extends Component {
     }
     
     // Event and shop data generation
-    private getAvailableEvents(theme: ChapterTheme, floor: number): any[] {
+    private getAvailableEvents(_theme: ChapterTheme, _floor: number): any[] {
         // This would be expanded with actual event data
         return [
             {
@@ -836,7 +842,7 @@ export class MapManager extends Component {
         ];
     }
     
-    private generateShopItems(floor: number): ShopItem[] {
+    private generateShopItems(_floor: number): ShopItem[] {
         // Generate shop items based on floor and chapter
         return [
             {
@@ -871,7 +877,7 @@ export class MapManager extends Component {
         }
     }
     
-    private saveMapProgress(): void {
+    private _saveMapProgress(): void {
         // Save current map state
         console.log('Map progress saved');
     }
@@ -907,7 +913,7 @@ export class MapManager extends Component {
     private calculateAvailableNodes(): void {
         // Calculate which nodes are available based on current progress
         // Initially only starting nodes are available
-        for (const [nodeId, node] of this._mapNodes) {
+        for (const [_nodeId, node] of this._mapNodes) {
             if (node.type === NodeType.START) {
                 node.isAvailable = true;
             } else {
@@ -935,15 +941,7 @@ export class MapManager extends Component {
         return this._mapNodes.get(nodeId);
     }
 
-    // 添加测试需要的方法
-    public getCurrentChapter(): number {
-        return this._currentChapter;
-    }
-
-    public getCurrentFloor(): number {
-        return this._currentFloor;
-    }
-
+    // 添加测试需要的方法  
     public getCurrentNodeType(): NodeType {
         const currentNode = this.getNodeById(this._currentNodeId);
         return currentNode ? currentNode.type : NodeType.START;
@@ -1018,11 +1016,5 @@ export class MapManager extends Component {
         this._currentFloor = 0;
         this._currentNodeId = '';
         this.clearMapVisuals();
-    }
-
-    private clearMapVisuals(): void {
-        this._nodeVisuals.clear();
-        this._connectionLines.forEach(line => line.destroy());
-        this._connectionLines = [];
     }
 }
