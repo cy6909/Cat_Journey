@@ -19,6 +19,9 @@ export enum NodeType {
     END = 'end'                 // 结束节点
 }
 
+// 测试兼容性别名
+export const MapNodeType = NodeType;
+
 export enum ChapterTheme {
     FOREST = 'forest',          // 第一章：森林
     MOUNTAIN = 'mountain',      // 第二章：山脉  
@@ -93,6 +96,13 @@ interface ShopItem {
 
 @ccclass('MapManager')  
 export class MapManager extends Component {
+    // 单例模式
+    private static _instance: MapManager | null = null;
+    
+    public static getInstance(): MapManager | null {
+        return MapManager._instance;
+    }
+    
     @property({type: Prefab})
     public mapNodePrefab: Prefab | null = null;
     
@@ -129,9 +139,18 @@ export class MapManager extends Component {
     private _connectionLines: Node[] = [];
     
     protected onLoad(): void {
+        if (MapManager._instance === null) {
+            MapManager._instance = this;
+        }
         this.initializeNodeDistribution();
         this.initializeChapterBosses();
         this.loadMapProgress();
+    }
+
+    protected onDestroy(): void {
+        if (MapManager._instance === this) {
+            MapManager._instance = null;
+        }
     }
     
     protected start(): void {
@@ -914,5 +933,96 @@ export class MapManager extends Component {
     
     private getNodeById(nodeId: string): MapNode | undefined {
         return this._mapNodes.get(nodeId);
+    }
+
+    // 添加测试需要的方法
+    public getCurrentChapter(): number {
+        return this._currentChapter;
+    }
+
+    public getCurrentFloor(): number {
+        return this._currentFloor;
+    }
+
+    public getCurrentNodeType(): NodeType {
+        const currentNode = this.getNodeById(this._currentNodeId);
+        return currentNode ? currentNode.type : NodeType.START;
+    }
+
+    public getMapSize(): number {
+        return this._mapNodes.size;
+    }
+
+    public getAvailableNodes(): MapNode[] {
+        return Array.from(this._mapNodes.values()).filter(node => node.isAvailable);
+    }
+
+    public getCompletedNodesCount(): number {
+        return this._completedNodes.length;
+    }
+
+    public canNavigateToNode(nodeId: string): boolean {
+        const targetNode = this.getNodeById(nodeId);
+        if (!targetNode) return false;
+        return targetNode.isAvailable && !targetNode.isVisited;
+    }
+
+    public getNodeConnections(nodeId: string): string[] {
+        const node = this.getNodeById(nodeId);
+        return node ? node.connections : [];
+    }
+
+    public getShortestPath(fromNodeId: string, toNodeId: string): string[] {
+        // 简单的BFS路径查找实现
+        const visited = new Set<string>();
+        const queue: { nodeId: string, path: string[] }[] = [];
+        
+        queue.push({ nodeId: fromNodeId, path: [fromNodeId] });
+        visited.add(fromNodeId);
+        
+        while (queue.length > 0) {
+            const { nodeId, path } = queue.shift()!;
+            
+            if (nodeId === toNodeId) {
+                return path;
+            }
+            
+            const node = this.getNodeById(nodeId);
+            if (node) {
+                for (const connectionId of node.connections) {
+                    if (!visited.has(connectionId)) {
+                        visited.add(connectionId);
+                        queue.push({ 
+                            nodeId: connectionId, 
+                            path: [...path, connectionId] 
+                        });
+                    }
+                }
+            }
+        }
+        
+        return []; // 无路径
+    }
+
+    public getNodeData(nodeId: string): MapNode | null {
+        return this.getNodeById(nodeId) || null;
+    }
+
+    public getAllNodes(): MapNode[] {
+        return Array.from(this._mapNodes.values());
+    }
+
+    public resetMap(): void {
+        this._mapNodes.clear();
+        this._completedNodes = [];
+        this._currentFloor = 0;
+        this._currentNodeId = '';
+        this.clearMapVisuals();
+    }
+
+    private clearMapVisuals(): void {
+        this._nodeVisuals.clear();
+        this._connectionLines.forEach(line => line.destroy());
+        this._connectionLines = [];
     }
 }

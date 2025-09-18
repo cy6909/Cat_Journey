@@ -136,13 +136,66 @@ export class RelicManager extends Component {
     private onRelicRemoved(relicType: RelicType): void {
     }
 
-    public grantRandomRelic(): void {
+    public grantRandomRelic(): RelicType | null {
         const allRelicTypes = Object.values(RelicType);
         const availableRelics = allRelicTypes.filter((type: RelicType) => !this.hasRelic(type));
         
         if (availableRelics.length > 0) {
             const randomRelic = availableRelics[Math.floor(Math.random() * availableRelics.length)];
             this.addRelic(randomRelic);
+            return randomRelic;
         }
+        return null;
+    }
+
+    // 添加测试需要的方法
+    public getRelicCount(): number {
+        return this._activeRelics.size;
+    }
+
+    public canAcquireRelic(relicType: RelicType): boolean {
+        return !this.hasRelic(relicType);
+    }
+
+    public getRelicEffect(relicType: RelicType): string {
+        const relic = this.getRelic(relicType);
+        return relic ? relic.description : '';
+    }
+
+    public saveRelics(): any {
+        const relicData: any = {};
+        this._activeRelics.forEach((relic, type) => {
+            relicData[type] = relic;
+        });
+        return relicData;
+    }
+
+    public loadRelics(data: any): boolean {
+        try {
+            this.clearAllRelics();
+            for (const [type, relicData] of Object.entries(data)) {
+                if (Object.values(RelicType).includes(type as RelicType)) {
+                    this._activeRelics.set(type as RelicType, relicData as Relic);
+                }
+            }
+            return true;
+        } catch (error) {
+            console.error('Failed to load relics:', error);
+            return false;
+        }
+    }
+
+    public getRelicCombinations(): RelicType[][] {
+        const activeTypes = Array.from(this._activeRelics.keys());
+        const combinations: RelicType[][] = [];
+        
+        // 生成所有可能的组合
+        for (let i = 0; i < activeTypes.length; i++) {
+            for (let j = i + 1; j < activeTypes.length; j++) {
+                combinations.push([activeTypes[i], activeTypes[j]]);
+            }
+        }
+        
+        return combinations;
     }
 }

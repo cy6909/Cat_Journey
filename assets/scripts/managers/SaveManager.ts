@@ -451,11 +451,19 @@ export class SaveManager extends Component {
      * 进度更新方法
      */
     public updateScore(score: number): void {
-        if (this._playerProgress) {
-            this._playerProgress.totalScore += score;
-            if (score > this._playerProgress.highestScore) {
-                this._playerProgress.highestScore = score;
-            }
+        if (!this._playerProgress) {
+            console.warn('Cannot update score: no player progress loaded');
+            return;
+        }
+        
+        if (typeof score !== 'number' || isNaN(score) || score < 0) {
+            console.warn('Invalid score value:', score);
+            return;
+        }
+        
+        this._playerProgress.totalScore += score;
+        if (score > this._playerProgress.highestScore) {
+            this._playerProgress.highestScore = score;
         }
         
         if (this._currentRunProgress) {
@@ -665,6 +673,172 @@ export class SaveManager extends Component {
             
         } catch (error) {
             console.error('Failed to clear saves:', error);
+        }
+    }
+
+    private saveToLocalStorage(key: string, data: string): boolean {
+        try {
+            if (!key || !data) {
+                console.warn('Invalid localStorage save parameters');
+                return false;
+            }
+            
+            // Check localStorage availability
+            if (typeof sys === 'undefined' || !sys.localStorage) {
+                console.warn('localStorage not available');
+                return false;
+            }
+            
+            sys.localStorage.setItem(key, data);
+            return true;
+            
+        } catch (error) {
+            console.error('localStorage save failed:', error);
+            return false;
+        }
+    }
+
+    private loadFromLocalStorage(key: string): string | null {
+        try {
+            if (!key) {
+                console.warn('Invalid localStorage load key');
+                return null;
+            }
+            
+            // Check localStorage availability
+            if (typeof sys === 'undefined' || !sys.localStorage) {
+                console.warn('localStorage not available');
+                return null;
+            }
+            
+            return sys.localStorage.getItem(key);
+            
+        } catch (error) {
+            console.error('localStorage load failed:', error);
+            return null;
+        }
+    }
+
+    // 添加测试期望的方法
+    public saveToSlot(slotIndex: number, data: any): boolean {
+        try {
+            if (slotIndex < 0 || slotIndex >= this.maxSaveSlots) {
+                console.warn('Invalid save slot index');
+                return false;
+            }
+            
+            const saveKey = `cat_conquest_slot_${slotIndex}`;
+            const saveData = JSON.stringify(data);
+            return this.saveToLocalStorage(saveKey, saveData);
+            
+        } catch (error) {
+            console.error('Failed to save to slot:', error);
+            return false;
+        }
+    }
+
+    public loadFromSlot(slotIndex: number): any {
+        try {
+            if (slotIndex < 0 || slotIndex >= this.maxSaveSlots) {
+                console.warn('Invalid save slot index');
+                return null;
+            }
+            
+            const saveKey = `cat_conquest_slot_${slotIndex}`;
+            const saveData = this.loadFromLocalStorage(saveKey);
+            
+            if (saveData) {
+                return JSON.parse(saveData);
+            }
+            
+            return null;
+            
+        } catch (error) {
+            console.error('Failed to load from slot:', error);
+            return null;
+        }
+    }
+
+    public getSaveSlotInfo(slotIndex: number): { exists: boolean, data?: any } {
+        try {
+            if (slotIndex < 0 || slotIndex >= this.maxSaveSlots) {
+                return { exists: false };
+            }
+            
+            const data = this.loadFromSlot(slotIndex);
+            return {
+                exists: data !== null,
+                data: data
+            };
+            
+        } catch (error) {
+            console.error('Failed to get save slot info:', error);
+            return { exists: false };
+        }
+    }
+
+    public validateAndRepairProgress(progress?: PlayerProgress): boolean {
+        try {
+            const targetProgress = progress || this._playerProgress;
+            if (!targetProgress) {
+                console.warn('No progress to validate');
+                return false;
+            }
+            
+            // 基本验证和修复
+            if (!targetProgress.currency) {
+                targetProgress.currency = {
+                    coins: 100,
+                    gems: 0,
+                    energy: 100,
+                    experience: 0
+                };
+            }
+            
+            if (!Array.isArray(targetProgress.unlockedChapters)) {
+                targetProgress.unlockedChapters = [1];
+            }
+            
+            if (!Array.isArray(targetProgress.unlockedRelics)) {
+                targetProgress.unlockedRelics = [];
+            }
+            
+            // 确保基本数值不为负
+            targetProgress.totalScore = Math.max(0, targetProgress.totalScore || 0);
+            targetProgress.highestScore = Math.max(0, targetProgress.highestScore || 0);
+            targetProgress.totalPlayTime = Math.max(0, targetProgress.totalPlayTime || 0);
+            
+            this.markDirty();
+            return true;
+            
+        } catch (error) {
+            console.error('Failed to validate progress:', error);
+            return false;
+        }
+    }
+
+    public getPlayerProgress(): PlayerProgress | null {
+        return this._playerProgress;
+    }
+
+    public getCurrentRunProgress(): RunProgress | null {
+        return this._currentRunProgress;
+    }
+
+    public hasUnsavedChanges(): boolean {
+        return this._hasUnsavedChanges;
+    }
+
+    public manualSave(): boolean {
+        try {
+            const progressSaved = this.savePlayerProgress();
+            const runSaved = this.saveRunProgress();
+            
+            return progressSaved && runSaved;
+            
+        } catch (error) {
+            console.error('Manual save failed:', error);
+            return false;
         }
     }
 }

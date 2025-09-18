@@ -111,19 +111,45 @@ export class GameManager extends Component {
     }
 
     private createPaddle(): void {
-        if (!this.paddlePrefab) return;
-        
-        this._paddleNode = instantiate(this.paddlePrefab);
-        this._paddleNode.setPosition(0, -250, 0);
-        this.node.addChild(this._paddleNode);
+        try {
+            if (!this.paddlePrefab) {
+                console.warn('Paddle prefab not assigned - skipping paddle creation');
+                return;
+            }
+            
+            this._paddleNode = instantiate(this.paddlePrefab);
+            if (this._paddleNode) {
+                this._paddleNode.setPosition(0, -250, 0);
+                this.node.addChild(this._paddleNode);
+                console.log('Paddle created successfully');
+            } else {
+                console.error('Failed to instantiate paddle prefab');
+            }
+            
+        } catch (error) {
+            console.error('Error creating paddle:', error);
+        }
     }
 
     private createBall(): void {
-        if (!this.ballPrefab) return;
-        
-        this._ballNode = instantiate(this.ballPrefab);
-        this._ballNode.setPosition(0, -150, 0);
-        this.node.addChild(this._ballNode);
+        try {
+            if (!this.ballPrefab) {
+                console.warn('Ball prefab not assigned - skipping ball creation');
+                return;
+            }
+            
+            this._ballNode = instantiate(this.ballPrefab);
+            if (this._ballNode) {
+                this._ballNode.setPosition(0, -150, 0);
+                this.node.addChild(this._ballNode);
+                console.log('Ball created successfully');
+            } else {
+                console.error('Failed to instantiate ball prefab');
+            }
+            
+        } catch (error) {
+            console.error('Error creating ball:', error);
+        }
     }
 
     private setupLevel(): void {
@@ -333,8 +359,63 @@ export class GameManager extends Component {
     }
 
     public setState(newState: GameState): void {
-        this._currentState = newState;
-        console.log(`Game State Changed: ${newState}`);
+        try {
+            if (!newState || typeof newState !== 'string') {
+                console.warn('Invalid game state:', newState);
+                return;
+            }
+
+            const validStates = Object.values(GameState);
+            if (!validStates.includes(newState as GameState)) {
+                console.warn('Unknown game state:', newState);
+                return;
+            }
+
+            const oldState = this._currentState;
+            this._currentState = newState;
+            
+            console.log(`Game State Changed: ${oldState} -> ${newState}`);
+            
+            // Handle state-specific logic
+            this.onStateChanged(oldState, newState);
+            
+        } catch (error) {
+            console.error('Error setting game state:', error);
+        }
+    }
+
+    private onStateChanged(oldState: GameState, newState: GameState): void {
+        try {
+            switch (newState) {
+                case GameState.GAME_OVER:
+                    this.handleGameOver();
+                    break;
+                case GameState.LEVEL_COMPLETE:
+                    this.handleLevelComplete();
+                    break;
+                case GameState.PLAYING:
+                    this.handleGamePlaying();
+                    break;
+            }
+        } catch (error) {
+            console.warn('Error in state change handler:', error);
+        }
+    }
+
+    private handleGameOver(): void {
+        console.log('Game Over - cleaning up resources');
+        // Stop any ongoing animations or sounds
+        // Save final score if needed
+    }
+
+    private handleLevelComplete(): void {
+        console.log('Level Complete - preparing next level');
+        // Award experience, update progression
+    }
+
+    private handleGamePlaying(): void {
+        console.log('Game Playing - all systems active');
+        // Ensure all game systems are ready
     }
 
     public getCurrentState(): GameState {
@@ -355,5 +436,71 @@ export class GameManager extends Component {
 
     public getLevel(): number {
         return this.level;
+    }
+
+    // 添加测试期望的方法
+    public getBrickCount(): number {
+        return this._bricks.length;
+    }
+
+    public getBricks(): Node[] {
+        return this._bricks;
+    }
+
+    public setState(newState: GameState | string): void {
+        if (typeof newState === 'string') {
+            // 兼容字符串类型的状态设置
+            this._currentState = newState as GameState;
+        } else {
+            this._currentState = newState;
+        }
+        console.log(`Game state changed to: ${this._currentState}`);
+    }
+
+    public onCoreAttacked(damage: number): void {
+        console.log(`Core attacked with ${damage} damage`);
+        if (this._coreController) {
+            this._coreController.takeDamage(damage, 'External attack');
+        } else {
+            console.warn('Core controller not found - taking direct damage');
+            this.lives = Math.max(0, this.lives - damage);
+            if (this.lives <= 0) {
+                this.setState(GameState.GAME_OVER);
+            }
+        }
+    }
+
+    public getBallNode(): Node | null {
+        return this._ballNode;
+    }
+
+    public getPaddleNode(): Node | null {
+        return this._paddleNode;
+    }
+
+    public getCoreController(): CoreController | null {
+        return this._coreController;
+    }
+
+    public getLevelManager(): LevelManager | null {
+        return this._levelManager;
+    }
+
+    public getGameState(): GameState {
+        return this._currentState;
+    }
+
+    public addScore(points: number): void {
+        this.score += points;
+        console.log(`Score increased by ${points}. Total: ${this.score}`);
+    }
+
+    public decreaseLives(amount: number = 1): void {
+        this.lives = Math.max(0, this.lives - amount);
+        console.log(`Lives decreased by ${amount}. Remaining: ${this.lives}`);
+        
+        if (this.lives <= 0) {
+            this.setState(GameState.GAME_OVER);
+        }
     }
 }

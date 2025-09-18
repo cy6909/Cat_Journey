@@ -34,6 +34,9 @@ export class LevelManager extends Component {
     private _currentLevelType: LevelType = LevelType.NORMAL;
     private _bossNode: Node | null = null;
     private _levelStartTime: number = 0;
+    private _currentLevel: number = 1;
+    private _currentChapter: number = 1;
+    private _currentDifficulty: number = 1;
     
     public static getInstance(): LevelManager | null {
         return LevelManager._instance;
@@ -253,9 +256,70 @@ export class LevelManager extends Component {
     }
     
     public adjustDifficulty(level: number): void {
+        if (level < 0) return; // 处理无效参数
+        
+        this._currentDifficulty = level;
         // Adjust pressure system based on level
         const difficultyMultiplier = 1 + (level / 10);
         this.pressureMoveSpeed = 10 * difficultyMultiplier;
         this.pressureStartDelay = Math.max(15, 30 - level);
+    }
+
+    // 添加测试需要的方法
+    public getCurrentDifficulty(): number {
+        return this._currentDifficulty;
+    }
+
+    public setLevelType(levelType: LevelType): void {
+        this._currentLevelType = levelType;
+    }
+
+    public setLevel(level: number): void {
+        if (level < 1) return; // 处理无效参数
+        this._currentLevel = level;
+    }
+
+    public getLevel(): number {
+        return this._currentLevel;
+    }
+
+    public setChapter(chapter: number): void {
+        if (chapter < 1) return; // 处理无效参数
+        this._currentChapter = chapter;
+        // 根据章节调整基础难度
+        this._currentDifficulty = chapter;
+    }
+
+    public getChapter(): number {
+        return this._currentChapter;
+    }
+
+    public setLevelConfiguration(config: any): void {
+        if (!config) return;
+        
+        if (config.level) this.setLevel(config.level);
+        if (config.chapter) this.setChapter(config.chapter);
+        if (config.difficulty !== undefined) this._currentDifficulty = config.difficulty;
+        if (config.levelType) this.setLevelType(config.levelType);
+    }
+
+    public getLevelConfiguration(): any {
+        return {
+            level: this._currentLevel,
+            chapter: this._currentChapter,
+            difficulty: this._currentDifficulty,
+            levelType: this._currentLevelType
+        };
+    }
+
+    public getCurrentLevelData(): any {
+        return {
+            level: this._currentLevel,
+            chapter: this._currentChapter,
+            difficulty: this._currentDifficulty,
+            type: this._currentLevelType,
+            pressureActive: this._pressureActive,
+            pressureTimer: this._pressureTimer
+        };
     }
 }
