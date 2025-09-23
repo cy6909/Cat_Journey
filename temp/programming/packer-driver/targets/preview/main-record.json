@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 6005.7168,
+      "mTimestamp": 6088.1241,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -682,7 +682,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 10377.4351,
+      "mTimestamp": 10597.5969,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -3078,7 +3078,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1758157465764,
+      "mTimestamp": 1758617494221,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -8105,7 +8105,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Ball.ts": {
       "mTimestamp": {
-        "mtime": 1757587042644.4758,
+        "mtime": 1758161483791.1252,
         "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
       },
       "chunkId": "8327df90437bd567230e0bf6a4a96cc297c41410",
@@ -8121,11 +8121,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 80
+              "column": 109
             },
             "end": {
               "line": 1,
-              "column": 84
+              "column": 113
             }
           }
         }
@@ -8398,7 +8398,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/PaddleController.ts": {
       "mTimestamp": {
-        "mtime": 1757586921988.2542,
+        "mtime": 1758159313797.744,
         "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
       },
       "chunkId": "684964408a5d4f8f6f211556135619f1339e7408",
@@ -8414,11 +8414,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 111
+              "column": 118
             },
             "end": {
               "line": 1,
-              "column": 115
+              "column": 122
             }
           }
         }
@@ -8849,7 +8849,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1758154462667.6736,
+        "mtime": 1758161854088.4934,
         "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
       },
       "chunkId": "4f2eb3711eac796d9e7bc719d425692f51dd2058",
@@ -8975,7 +8975,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts": {
       "mTimestamp": {
-        "mtime": 1758014359367.1177,
+        "mtime": 1758162724319.7124,
         "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
       },
       "chunkId": "8f7505e2dd8f29016c6c56fecbc227d1545b32dc",
@@ -9614,7 +9614,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts": {
       "mTimestamp": {
-        "mtime": 1758014440416.7896,
+        "mtime": 1758162642008.0276,
         "uuid": "04ad1764-0c43-4052-83ae-2a379e962c0f"
       },
       "chunkId": "21916edbf4b8302f70395956a2391201daf71d5e",
@@ -9648,11 +9648,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 42
+              "column": 26
             },
             "end": {
               "line": 2,
-              "column": 71
+              "column": 55
             }
           }
         },
@@ -9771,7 +9771,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts": {
       "mTimestamp": {
-        "mtime": 1757894233955.3887,
+        "mtime": 1758159363189.359,
         "uuid": "ebc0c1e7-8814-4bc5-854a-16588373ba8b"
       },
       "chunkId": "53b60a13ffd6e28e13270e932a06dd2203f25df9",
@@ -10515,7 +10515,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/effects/AdvancedEffectSystem.ts": {
       "mTimestamp": {
-        "mtime": 1758154462667.6736,
+        "mtime": 1758162862042.159,
         "uuid": "cf3d5245-f095-4488-9dd3-c7309121c0e7"
       },
       "chunkId": "766094ba93916d4320ed11060a1c4df769b74e7f",
@@ -10531,11 +10531,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 127
+              "column": 133
             },
             "end": {
               "line": 1,
-              "column": 131
+              "column": 137
             }
           }
         }
@@ -10567,7 +10567,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/DynamicLevelGenerator.ts": {
       "mTimestamp": {
-        "mtime": 1758154462665.324,
+        "mtime": 1758162754199.585,
         "uuid": "f0707c07-70da-4158-993b-707d0bf1c621"
       },
       "chunkId": "251c813e1550e7b10c84b7afc57c370bac9a3eb2",
@@ -10615,11 +10615,11 @@
           "loc": {
             "start": {
               "line": 3,
-              "column": 40
+              "column": 37
             },
             "end": {
               "line": 3,
-              "column": 64
+              "column": 61
             }
           }
         },
@@ -10693,7 +10693,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts": {
       "mTimestamp": {
-        "mtime": 1758154462665.324,
+        "mtime": 1758162934488.0308,
         "uuid": "7c2fd333-8762-4c63-8626-846ad3af8789"
       },
       "chunkId": "4e3327beee53266608a9e59decfcd53ae6a941ee",
@@ -10745,7 +10745,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts": {
       "mTimestamp": {
-        "mtime": 1758154462664.318,
+        "mtime": 1758162545569.3728,
         "uuid": "94e4303d-e710-4417-810e-702bb8536063"
       },
       "chunkId": "5f0b5bdbdad2e4f57b914af13fc35ddd66076f69",
@@ -10892,7 +10892,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts": {
       "mTimestamp": {
-        "mtime": 1758072699918.163,
+        "mtime": 1758162561665.5293,
         "uuid": "c59b264e-937f-4c35-aab6-fd7fbd021137"
       },
       "chunkId": "21ee88122b4555411929b206cbdd11865f856d8d",
@@ -10921,7 +10921,7 @@
           }
         },
         {
-          "value": "./MapManager",
+          "value": "../managers/MapManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
@@ -10930,7 +10930,7 @@
             },
             "end": {
               "line": 2,
-              "column": 65
+              "column": 75
             }
           }
         }
@@ -10967,15 +10967,10 @@
         },
         {
           "resolved": {
-            "type": "error",
-            "text": "Error: 以 file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts 为起点找不到模块 \"./MapManager\""
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts"
           },
-          "messages": [
-            {
-              "level": "warn",
-              "text": "你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。"
-            }
-          ]
+          "messages": []
         }
       ]
     }

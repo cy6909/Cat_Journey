@@ -10,15 +10,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
 
   function _reportPossibleCrUseOfMapManager(extras) {
-    _reporterNs.report("MapManager", "./MapManager", _context.meta, extras);
+    _reporterNs.report("MapManager", "../managers/MapManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfNodeType(extras) {
-    _reporterNs.report("NodeType", "./MapManager", _context.meta, extras);
+    _reporterNs.report("NodeType", "../managers/MapManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfChapterTheme(extras) {
-    _reporterNs.report("ChapterTheme", "./MapManager", _context.meta, extras);
+    _reporterNs.report("ChapterTheme", "../managers/MapManager", _context.meta, extras);
   }
 
   return {

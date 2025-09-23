@@ -1,12 +1,18 @@
-2025-9-18 09:04:25 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
-2025-9-18 09:04:25 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
-2025-9-18 09:04:26 - log: Request namespace: device-list
-2025-9-18 09:04:36 - log: [Scene] meshopt wasm decoder initialized
-2025-9-18 09:04:36 - log: [Scene] [bullet]:bullet wasm lib loaded.
-2025-9-18 09:04:36 - log: [Scene] [box2d]:box2d wasm lib loaded.
-2025-9-18 09:04:36 - log: [Scene] [PHYSICS]: using builtin.
-2025-9-18 09:04:36 - log: [Scene] Cocos Creator v3.8.6
-2025-9-18 09:04:36 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-9-23 16:51:33 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
+2025-9-23 16:51:34 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
+2025-9-23 16:51:34 - log: Request namespace: device-list
+2025-9-23 16:51:39 - warn: [Window] Message does not exist: scene.editor-preview-call-methodError: [Window] Message does not exist: scene.editor-preview-call-method
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:4978)
+    at EventEmitter.emit (node:events:519:28)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-base-ipc\dist\renderer.ccc:1:3858)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-9-23 16:51:44 - log: [Scene] meshopt wasm decoder initialized
+2025-9-23 16:51:44 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2025-9-23 16:51:44 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2025-9-23 16:51:44 - log: [Scene] [PHYSICS]: using builtin.
+2025-9-23 16:51:44 - log: [Scene] Cocos Creator v3.8.6
+2025-9-23 16:51:44 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -28,7 +34,7 @@
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-9-18 09:04:36 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-9-23 16:51:44 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -50,69 +56,6 @@
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-9-18 09:04:36 - warn: [Scene] 你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。Error: [Scene] 你是否遗漏了扩展名？请注意你不能在模块说明符中省略扩展名。
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at logger (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:755:13)
-    at ExecutorSystem.resolve [as _detailResolve] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:772:17)
-    at ExecutorSystem._resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:137:14)
-    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
-    at Array.map (<anonymous>)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-9-18 09:04:36 - error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts 为起点找不到模块 "./MapManager"
-    at rejector (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:759:15)
-    at ExecutorSystem.resolve [as _detailResolve] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:777:13)
-    at ExecutorSystem._resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:137:14)
-    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
-    at Array.map (<anonymous>)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)Error: [Scene] {hidden(::SceneExecutorImportExceptionHandler::)} Error: Error: 以 file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts 为起点找不到模块 "./MapManager"
-    at SystemJS.resolve (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\editor-systemjs\index.ts:36:23)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:355:37
-    at Array.map (<anonymous>)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:353:41
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
-    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1414)
-    at console.error (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at ScriptManager._handleImportException (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:5408)
-    at Executor.importExceptionHandler [as _importExceptionHandler] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3604)
-    at Executor._onModuleLoaded (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:401:22)
-    at SystemJS.onload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:99:18)
-    at triggerOnload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:270:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:431:7
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-    at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-9-18 09:04:36 - log: [Scene] Using custom pipeline: Builtin
-2025-9-18 09:04:36 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
-2025-9-18 09:04:36 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
+2025-9-23 16:51:44 - log: [Scene] Using custom pipeline: Builtin
+2025-9-23 16:51:45 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
+2025-9-23 16:51:45 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.

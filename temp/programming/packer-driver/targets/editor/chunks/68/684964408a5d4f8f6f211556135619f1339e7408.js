@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, _dec, _class, _class2, _descriptor, _crd, ccclass, property, PaddleController;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, PaddleController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -27,7 +27,7 @@ System.register(["cc"], function (_export, _context) {
 
       _cclegacy._RF.push({}, "a1b2cPU5fZ4kKvN7xI0VniQ", "PaddleController", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2', 'Touch']);
 
       ({
         ccclass,
@@ -38,11 +38,20 @@ System.register(["cc"], function (_export, _context) {
         constructor(...args) {
           super(...args);
 
-          _initializerDefineProperty(this, "moveSpeed", _descriptor, this);
+          _initializerDefineProperty(this, "speed", _descriptor, this);
+
+          _initializerDefineProperty(this, "paddleWidth", _descriptor2, this);
+
+          _initializerDefineProperty(this, "boundaryMargin", _descriptor3, this);
+
+          _initializerDefineProperty(this, "moveSpeed", _descriptor4, this);
 
           this._canvasComponent = null;
           this._uiTransform = null;
           this._camera = null;
+          this._isTouching = false;
+          this._lastTouchX = 0;
+          this._screenWidth = 960;
         }
 
         onLoad() {
@@ -54,13 +63,52 @@ System.register(["cc"], function (_export, _context) {
         }
 
         onEnable() {
+          input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
           input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+          input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
           input.on(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
         }
 
         onDisable() {
+          input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
           input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+          input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
           input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+        } // 测试需要的移动方法
+
+
+        moveLeft(deltaTime) {
+          const currentPos = this.node.getPosition();
+          const newX = currentPos.x - this.speed * deltaTime;
+          const clampedX = this.clampToScreenBounds(newX);
+          this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+        }
+
+        moveRight(deltaTime) {
+          const currentPos = this.node.getPosition();
+          const newX = currentPos.x + this.speed * deltaTime;
+          const clampedX = this.clampToScreenBounds(newX);
+          this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+        }
+
+        clampToScreenBounds(x) {
+          const leftBound = -(this._screenWidth / 2) + this.paddleWidth / 2 + this.boundaryMargin;
+          const rightBound = this._screenWidth / 2 - this.paddleWidth / 2 - this.boundaryMargin;
+          return Math.max(leftBound, Math.min(rightBound, x));
+        }
+
+        onTouchStart(event) {
+          const touches = event.getTouches();
+
+          if (touches.length > 0) {
+            const touch = touches[0];
+            this._isTouching = true;
+            this._lastTouchX = touch.getLocationX();
+          }
+        }
+
+        onTouchEnd(event) {
+          this._isTouching = false;
         }
 
         onTouchMove(event) {
@@ -72,22 +120,56 @@ System.register(["cc"], function (_export, _context) {
         }
 
         updatePaddlePosition(screenPos) {
-          var _this$node$parent2, _this$_canvasComponen2;
+          var _this$node$parent2;
 
           if (!this._camera || !this._uiTransform) return;
 
           const worldPos = this._camera.screenToWorld(new Vec3(screenPos.x, screenPos.y, 0));
 
           const localPos = ((_this$node$parent2 = this.node.parent) == null || (_this$node$parent2 = _this$node$parent2.getComponent(UITransform)) == null ? void 0 : _this$node$parent2.convertToNodeSpaceAR(worldPos)) || worldPos;
-          const paddleHalfWidth = this._uiTransform.width / 2;
-          const canvasWidth = ((_this$_canvasComponen2 = this._canvasComponent) == null || (_this$_canvasComponen2 = _this$_canvasComponen2.getComponent(UITransform)) == null ? void 0 : _this$_canvasComponen2.width) || 960;
-          const leftBound = -canvasWidth / 2 + paddleHalfWidth;
-          const rightBound = canvasWidth / 2 - paddleHalfWidth;
-          const clampedX = Math.max(leftBound, Math.min(rightBound, localPos.x));
+          const clampedX = this.clampToScreenBounds(localPos.x);
           this.node.setPosition(clampedX, this.node.position.y, this.node.position.z);
+        } // 公共访问器供测试使用
+
+
+        get isTouching() {
+          return this._isTouching;
         }
 
-      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "moveSpeed", [property], {
+        get lastTouchX() {
+          return this._lastTouchX;
+        }
+
+        get screenWidth() {
+          return this._screenWidth;
+        }
+
+        set screenWidth(value) {
+          this._screenWidth = value;
+        }
+
+      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "speed", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 300;
+        }
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "paddleWidth", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 100;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "boundaryMargin", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return 50;
+        }
+      }), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "moveSpeed", [property], {
         configurable: true,
         enumerable: true,
         writable: true,

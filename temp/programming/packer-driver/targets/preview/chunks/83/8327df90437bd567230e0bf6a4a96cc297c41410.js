@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec2, PhysicsMaterial, _dec, _class, _class2, _descriptor, _descriptor2, _crd, ccclass, property, Ball;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec2, Collider2D, Contact2DType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, Ball;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -18,14 +18,15 @@ System.register(["cc"], function (_export, _context) {
       Component = _cc.Component;
       RigidBody2D = _cc.RigidBody2D;
       Vec2 = _cc.Vec2;
-      PhysicsMaterial = _cc.PhysicsMaterial;
+      Collider2D = _cc.Collider2D;
+      Contact2DType = _cc.Contact2DType;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "ba31691v+lEpIX5npg55beq", "Ball", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec2', 'PhysicsMaterial']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec2', 'Collider2D', 'IPhysics2DContact', 'Contact2DType']);
 
       ({
         ccclass,
@@ -40,20 +41,26 @@ System.register(["cc"], function (_export, _context) {
 
           _initializerDefineProperty(this, "maxSpeed", _descriptor2, this);
 
+          _initializerDefineProperty(this, "minSpeed", _descriptor3, this);
+
           this._rigidBody = null;
+          this.isMoving = false;
+          this.fireEffectDuration = 0;
+          this.iceEffectDuration = 0;
         }
 
         onLoad() {
           this._rigidBody = this.getComponent(RigidBody2D);
 
           if (this._rigidBody) {
-            var physicsMaterial = new PhysicsMaterial();
-            physicsMaterial.friction = 0.0;
-            physicsMaterial.restitution = 1.0;
-            var colliders = this.node.getComponents('cc.Collider2D');
+            // 注册碰撞事件
+            var colliders = this.node.getComponents(Collider2D);
             colliders.forEach(collider => {
-              collider.material = physicsMaterial;
-            });
+              collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
+            }); // 设置刚体属性以实现无摩擦完美弹性碰撞
+            // 注意：材质需要在编辑器中或者通过其他方式设置
+
+            console.log('Ball initialized with collision detection');
           }
         }
 
@@ -61,22 +68,120 @@ System.register(["cc"], function (_export, _context) {
           this.launch();
         }
 
-        launch() {
+        launch(direction) {
           if (!this._rigidBody) return;
-          var angle = Math.PI / 4 + Math.random() * (Math.PI / 2);
-          var velocity = new Vec2(Math.cos(angle) * this.initialSpeed, Math.sin(angle) * this.initialSpeed);
+          var velocity;
+
+          if (direction && (direction.x !== 0 || direction.y !== 0)) {
+            // 使用指定方向
+            var normalized = direction.normalize();
+            velocity = new Vec2(normalized.x * this.initialSpeed, normalized.y * this.initialSpeed);
+          } else {
+            // 使用默认随机方向
+            var angle = Math.PI / 4 + Math.random() * (Math.PI / 2);
+            velocity = new Vec2(Math.cos(angle) * this.initialSpeed, Math.sin(angle) * this.initialSpeed);
+          }
+
           this._rigidBody.linearVelocity = velocity;
+          this.isMoving = true;
+        }
+
+        launchWithDefaultDirection() {
+          this.launch();
         }
 
         resetBall() {
           if (!this._rigidBody) return;
           this.node.setPosition(0, 0, 0);
           this._rigidBody.linearVelocity = new Vec2(0, 0);
+          this.isMoving = false;
           this.scheduleOnce(() => this.launch(), 1.0);
+        } // 特效系统方法
+
+
+        applyFireEffect(duration) {
+          if (typeof duration === 'number' && duration > 0) {
+            this.fireEffectDuration = duration;
+          }
         }
 
-        update() {
-          if (!this._rigidBody) return;
+        applyIceEffect(duration) {
+          if (typeof duration === 'number' && duration > 0) {
+            this.iceEffectDuration = duration;
+          }
+        }
+
+        hasFireEffect() {
+          return this.fireEffectDuration > 0;
+        }
+
+        hasIceEffect() {
+          return this.iceEffectDuration > 0;
+        }
+
+        getFireEffectDuration() {
+          return this.fireEffectDuration;
+        }
+
+        getIceEffectDuration() {
+          return this.iceEffectDuration;
+        } // 碰撞处理方法 - 修复测试失败的核心问题
+
+
+        onBeginContact(_selfCollider, otherCollider, _contact) {
+          if (!otherCollider || !otherCollider.node) {
+            return;
+          }
+
+          var otherNode = otherCollider.node;
+
+          if (otherNode.name === 'Paddle' || otherNode.getComponent('PaddleController')) {
+            this.onPaddleHit(otherNode);
+          }
+        }
+
+        onPaddleHit(paddleNode) {
+          if (!this._rigidBody || !paddleNode) return;
+          var velocity = this._rigidBody.linearVelocity; // 修复测试失败的问题：确保球向上反弹
+
+          if (velocity.y < 0) {
+            velocity.y = Math.abs(velocity.y);
+            this._rigidBody.linearVelocity = velocity;
+          }
+        }
+
+        get velocity() {
+          return this._rigidBody ? this._rigidBody.linearVelocity : new Vec2(0, 0);
+        }
+
+        set velocity(value) {
+          if (this._rigidBody) {
+            this._rigidBody.linearVelocity = value;
+          }
+        }
+
+        update(deltaTime) {
+          if (!this._rigidBody) return; // 更新特效持续时间
+
+          var dt = deltaTime || 1 / 60;
+
+          if (this.fireEffectDuration > 0) {
+            this.fireEffectDuration -= dt;
+
+            if (this.fireEffectDuration < 0) {
+              this.fireEffectDuration = 0;
+            }
+          }
+
+          if (this.iceEffectDuration > 0) {
+            this.iceEffectDuration -= dt;
+
+            if (this.iceEffectDuration < 0) {
+              this.iceEffectDuration = 0;
+            }
+          } // 速度控制
+
+
           var velocity = this._rigidBody.linearVelocity;
           var speed = velocity.length();
 
@@ -104,6 +209,13 @@ System.register(["cc"], function (_export, _context) {
         writable: true,
         initializer: function initializer() {
           return 600;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "minSpeed", [property], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function initializer() {
+          return 100;
         }
       })), _class2)) || _class));
 

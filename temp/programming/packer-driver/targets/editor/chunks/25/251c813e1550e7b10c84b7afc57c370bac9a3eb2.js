@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec3, LevelManager, LevelType, DifficultyTier, MapManager, MapNodeType, BrickType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _crd, ccclass, property, LevelLayoutPattern, DynamicLevelGenerator;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec3, LevelManager, LevelType, DifficultyTier, MapManager, NodeType, BrickType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _class3, _crd, ccclass, property, LevelLayoutPattern, DynamicLevelGenerator;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,8 +25,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("MapManager", "../managers/MapManager", _context.meta, extras);
   }
 
-  function _reportPossibleCrUseOfMapNodeType(extras) {
-    _reporterNs.report("MapNodeType", "../managers/MapManager", _context.meta, extras);
+  function _reportPossibleCrUseOfNodeType(extras) {
+    _reporterNs.report("NodeType", "../managers/MapManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfBrickType(extras) {
@@ -49,7 +49,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       DifficultyTier = _unresolved_2.DifficultyTier;
     }, function (_unresolved_3) {
       MapManager = _unresolved_3.MapManager;
-      MapNodeType = _unresolved_3.MapNodeType;
+      NodeType = _unresolved_3.NodeType;
     }, function (_unresolved_4) {
       BrickType = _unresolved_4.BrickType;
     }],
@@ -637,42 +637,60 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         getBrickSpawnChance(nodeType, row, col) {
           const baseChance = {
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).COMBAT]: 0.85,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).COMBAT]: 0.85,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).ELITE]: 0.9,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).ELITE]: 0.9,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).BOSS]: 1.0,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).BOSS]: 1.0,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).TREASURE]: 0.6,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).HIDDEN_BOSS]: 1.0,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).SHOP]: 0.4,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).EVENT]: 0.7,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).REST]: 0.3,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).SHOP]: 0.4,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).EVENT]: 0.7,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).TREASURE]: 0.6,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).SECRET]: 0.95,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).CAMPFIRE]: 0.3,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).MINI_BOSS]: 0.88,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).UPGRADE]: 0.5,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).PUZZLE]: 0.75,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).MYSTERY]: 0.8,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).GAUNTLET]: 0.95,
-            [(_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            }), NodeType) : NodeType).START]: 0.0,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).FINAL_BOSS]: 1.0
+            }), NodeType) : NodeType).END]: 0.0,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).REST]: 0.3,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).SECRET]: 0.95,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).MINI_BOSS]: 0.88,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).PUZZLE]: 0.75,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).GAUNTLET]: 0.95,
+            [(_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
+              error: Error()
+            }), NodeType) : NodeType).FINAL_BOSS]: 1.0
           };
           return baseChance[nodeType] || 0.8;
         }
@@ -683,9 +701,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (params.levelType === (_crd && LevelType === void 0 ? (_reportPossibleCrUseOfLevelType({
             error: Error()
-          }), LevelType) : LevelType).BOSS || params.nodeType === (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+          }), LevelType) : LevelType).BOSS || params.nodeType === (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
             error: Error()
-          }), MapNodeType) : MapNodeType).BOSS) {
+          }), NodeType) : NodeType).BOSS) {
             if (random < 0.3) return (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
               error: Error()
             }), BrickType) : BrickType).REINFORCED;
@@ -755,33 +773,33 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
 
           switch (params.nodeType) {
-            case (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            case (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).ELITE:
+            }), NodeType) : NodeType).ELITE:
               multiplier *= 1.4;
               break;
 
-            case (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            case (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).BOSS:
+            }), NodeType) : NodeType).BOSS:
               multiplier *= 2.0;
               break;
 
-            case (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            case (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).MINI_BOSS:
+            }), NodeType) : NodeType).MINI_BOSS:
               multiplier *= 1.6;
               break;
 
-            case (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            case (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).GAUNTLET:
+            }), NodeType) : NodeType).GAUNTLET:
               multiplier *= 1.5;
               break;
 
-            case (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+            case (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
               error: Error()
-            }), MapNodeType) : MapNodeType).FINAL_BOSS:
+            }), NodeType) : NodeType).FINAL_BOSS:
               multiplier *= 3.0;
               break;
           }
@@ -801,9 +819,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return LevelLayoutPattern.FORTRESS;
           }
 
-          if (params.nodeType === (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+          if (params.nodeType === (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
             error: Error()
-          }), MapNodeType) : MapNodeType).ELITE) {
+          }), NodeType) : NodeType).ELITE) {
             const patterns = [LevelLayoutPattern.SPIRAL, LevelLayoutPattern.DIAMOND, LevelLayoutPattern.FORTRESS];
             return patterns[Math.floor(Math.random() * patterns.length)];
           }
@@ -841,9 +859,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           } // 特殊节点修饰符
 
 
-          if (params.nodeType === (_crd && MapNodeType === void 0 ? (_reportPossibleCrUseOfMapNodeType({
+          if (params.nodeType === (_crd && NodeType === void 0 ? (_reportPossibleCrUseOfNodeType({
             error: Error()
-          }), MapNodeType) : MapNodeType).GAUNTLET) {
+          }), NodeType) : NodeType).GAUNTLET) {
             modifiers.push('electric_storm', 'fire_zone');
           }
 

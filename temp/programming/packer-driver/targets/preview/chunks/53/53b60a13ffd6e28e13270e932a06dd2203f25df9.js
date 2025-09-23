@@ -174,7 +174,64 @@ System.register(["cc"], function (_export, _context) {
           if (availableRelics.length > 0) {
             var randomRelic = availableRelics[Math.floor(Math.random() * availableRelics.length)];
             this.addRelic(randomRelic);
+            return randomRelic;
           }
+
+          return null;
+        } // 添加测试需要的方法
+
+
+        getRelicCount() {
+          return this._activeRelics.size;
+        }
+
+        canAcquireRelic(relicType) {
+          return !this.hasRelic(relicType);
+        }
+
+        getRelicEffect(relicType) {
+          var relic = this.getRelic(relicType);
+          return relic ? relic.description : '';
+        }
+
+        saveRelics() {
+          var relicData = {};
+
+          this._activeRelics.forEach((relic, type) => {
+            relicData[type] = relic;
+          });
+
+          return relicData;
+        }
+
+        loadRelics(data) {
+          try {
+            this.clearAllRelics();
+
+            for (var [type, relicData] of Object.entries(data)) {
+              if (Object.values(RelicType).includes(type)) {
+                this._activeRelics.set(type, relicData);
+              }
+            }
+
+            return true;
+          } catch (error) {
+            console.error('Failed to load relics:', error);
+            return false;
+          }
+        }
+
+        getRelicCombinations() {
+          var activeTypes = Array.from(this._activeRelics.keys());
+          var combinations = []; // 生成所有可能的组合
+
+          for (var i = 0; i < activeTypes.length; i++) {
+            for (var j = i + 1; j < activeTypes.length; j++) {
+              combinations.push([activeTypes[i], activeTypes[j]]);
+            }
+          }
+
+          return combinations;
         }
 
       }, _class2._instance = null, _class2)) || _class));

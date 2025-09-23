@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec3, Prefab, instantiate, Color, Sprite, Label, Button, UITransform, EliteType, BossType, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _crd, ccclass, property, NodeType, ChapterTheme, MapManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Vec3, Prefab, instantiate, Color, Sprite, Label, Button, UITransform, EliteType, BossType, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _class3, _crd, ccclass, property, NodeType, MapNodeType, ChapterTheme, MapManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -64,8 +64,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         NodeType["MYSTERY"] = "mystery";
         NodeType["START"] = "start";
         NodeType["END"] = "end";
+        NodeType["REST"] = "rest";
+        NodeType["SECRET"] = "secret";
+        NodeType["MINI_BOSS"] = "mini_boss";
+        NodeType["PUZZLE"] = "puzzle";
+        NodeType["GAUNTLET"] = "gauntlet";
+        NodeType["FINAL_BOSS"] = "final_boss";
         return NodeType;
-      }({}));
+      }({})); // 测试兼容性别名
+
+
+      _export("MapNodeType", MapNodeType = NodeType);
 
       _export("ChapterTheme", ChapterTheme = /*#__PURE__*/function (ChapterTheme) {
         ChapterTheme["FOREST"] = "forest";
@@ -78,7 +87,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         type: Prefab
       }), _dec3 = property({
         type: Prefab
-      }), _dec(_class = (_class2 = class MapManager extends Component {
+      }), _dec(_class = (_class2 = (_class3 = class MapManager extends Component {
         constructor(...args) {
           super(...args);
 
@@ -110,10 +119,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._connectionLines = [];
         }
 
+        static getInstance() {
+          return MapManager._instance;
+        }
+
         onLoad() {
+          if (MapManager._instance === null) {
+            MapManager._instance = this;
+          }
+
           this.initializeNodeDistribution();
           this.initializeChapterBosses();
           this.loadMapProgress();
+        }
+
+        onDestroy() {
+          if (MapManager._instance === this) {
+            MapManager._instance = null;
+          }
         }
 
         start() {
@@ -403,7 +426,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
         }
 
-        connectFloors(currentFloor, nextFloor, floorIndex) {
+        connectFloors(currentFloor, nextFloor, _floorIndex) {
           if (currentFloor.length === 0 || nextFloor.length === 0) return; // Each node in current floor connects to 1-3 nodes in next floor
 
           for (const currentNode of currentFloor) {
@@ -471,7 +494,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         createMapVisuals() {
           this.clearMapVisuals(); // Create node visuals
 
-          for (const [nodeId, node] of this._mapNodes) {
+          for (const [_nodeId, node] of this._mapNodes) {
             this.createNodeVisual(node);
           } // Create connection lines
 
@@ -509,7 +532,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         createConnectionVisuals() {
           if (!this.connectionLinePrefab) return;
 
-          for (const [nodeId, node] of this._mapNodes) {
+          for (const [_nodeId, node] of this._mapNodes) {
             for (const connectionId of node.connections) {
               const targetNode = this._mapNodes.get(connectionId);
 
@@ -719,15 +742,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           console.log(`Found treasure: ${(_node$treasureData = node.treasureData) == null ? void 0 : _node$treasureData.rewardType}`); // Award treasure and show UI
         }
 
-        restAtCampfire(node) {
+        restAtCampfire(_node) {
           console.log('Resting at campfire'); // Restore health, show rest options
         }
 
-        enterUpgradeStation(node) {
+        enterUpgradeStation(_node) {
           console.log('Entered upgrade station'); // Show upgrade options
         }
 
-        encounterMystery(node) {
+        encounterMystery(_node) {
           console.log('Encountered mystery node'); // Random effect
         } // Utility methods
 
@@ -862,7 +885,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         } // Event and shop data generation
 
 
-        getAvailableEvents(theme, floor) {
+        getAvailableEvents(_theme, _floor) {
           // This would be expanded with actual event data
           return [{
             type: 'mysterious_shrine',
@@ -886,7 +909,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }];
         }
 
-        generateShopItems(floor) {
+        generateShopItems(_floor) {
           // Generate shop items based on floor and chapter
           return [{
             id: 'health_potion',
@@ -933,7 +956,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }
         }
 
-        saveMapProgress() {
+        _saveMapProgress() {
           // Save current map state
           console.log('Map progress saved');
         }
@@ -969,7 +992,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         calculateAvailableNodes() {
           // Calculate which nodes are available based on current progress
           // Initially only starting nodes are available
-          for (const [nodeId, node] of this._mapNodes) {
+          for (const [_nodeId, node] of this._mapNodes) {
             if (node.type === NodeType.START) {
               node.isAvailable = true;
             } else {
@@ -996,9 +1019,93 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         getNodeById(nodeId) {
           return this._mapNodes.get(nodeId);
+        } // 添加测试需要的方法  
+
+
+        getCurrentNodeType() {
+          const currentNode = this.getNodeById(this._currentNodeId);
+          return currentNode ? currentNode.type : NodeType.START;
         }
 
-      }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "mapNodePrefab", [_dec2], {
+        getMapSize() {
+          return this._mapNodes.size;
+        }
+
+        getAvailableNodes() {
+          return Array.from(this._mapNodes.values()).filter(node => node.isAvailable);
+        }
+
+        getCompletedNodesCount() {
+          return this._completedNodes.length;
+        }
+
+        canNavigateToNode(nodeId) {
+          const targetNode = this.getNodeById(nodeId);
+          if (!targetNode) return false;
+          return targetNode.isAvailable && !targetNode.isVisited;
+        }
+
+        getNodeConnections(nodeId) {
+          const node = this.getNodeById(nodeId);
+          return node ? node.connections : [];
+        }
+
+        getShortestPath(fromNodeId, toNodeId) {
+          // 简单的BFS路径查找实现
+          const visited = new Set();
+          const queue = [];
+          queue.push({
+            nodeId: fromNodeId,
+            path: [fromNodeId]
+          });
+          visited.add(fromNodeId);
+
+          while (queue.length > 0) {
+            const {
+              nodeId,
+              path
+            } = queue.shift();
+
+            if (nodeId === toNodeId) {
+              return path;
+            }
+
+            const node = this.getNodeById(nodeId);
+
+            if (node) {
+              for (const connectionId of node.connections) {
+                if (!visited.has(connectionId)) {
+                  visited.add(connectionId);
+                  queue.push({
+                    nodeId: connectionId,
+                    path: [...path, connectionId]
+                  });
+                }
+              }
+            }
+          }
+
+          return []; // 无路径
+        }
+
+        getNodeData(nodeId) {
+          return this.getNodeById(nodeId) || null;
+        }
+
+        getAllNodes() {
+          return Array.from(this._mapNodes.values());
+        }
+
+        resetMap() {
+          this._mapNodes.clear();
+
+          this._completedNodes = [];
+          this._currentFloor = 0;
+          this._currentNodeId = '';
+          this.clearMapVisuals();
+        }
+
+      }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "mapNodePrefab", [_dec2], {
         configurable: true,
         enumerable: true,
         writable: true,

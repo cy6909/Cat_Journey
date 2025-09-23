@@ -5246,15 +5246,15 @@
       "uuid": "28283523-483e-4296-828a-f595e2de5bd4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core": {
-      "time": 1758014313814.536,
+      "time": 1758161483793.1064,
       "uuid": "5ef012af-ca27-4b85-b817-8c3f7d3d5891"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay": {
-      "time": 1758157475071.84,
+      "time": 1758162754201.59,
       "uuid": "15a172f0-61d5-4189-be33-2546a13584c8"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers": {
-      "time": 1758157475075.8389,
+      "time": 1758162934489.4946,
       "uuid": "3f789d68-aab5-4f46-9fca-9ffe35a8b292"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\powerups": {
@@ -5262,7 +5262,7 @@
       "uuid": "8ae27d6b-8125-4668-89ec-1f48168e93e4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui": {
-      "time": 1758157471607.2222,
+      "time": 1758162561666.532,
       "uuid": "833570eb-f6b5-4a66-8a1c-487e5fc88fcb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\background\\AbyssBackground.ts": {
@@ -5282,7 +5282,7 @@
       "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.ts": {
-      "time": 1757587042644.4758,
+      "time": 1758161483791.1252,
       "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.ts": {
@@ -5298,7 +5298,7 @@
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.ts": {
-      "time": 1757586921988.2542,
+      "time": 1758159313797.744,
       "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBall.ts": {
@@ -5318,11 +5318,11 @@
       "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\GameManager.ts": {
-      "time": 1758154462667.6736,
+      "time": 1758161854088.4934,
       "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LevelManager.ts": {
-      "time": 1758014359367.1177,
+      "time": 1758162724319.7124,
       "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\ProceduralLevelGenerator.ts": {
@@ -5354,7 +5354,7 @@
       "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\MapManager.ts": {
-      "time": 1758014440416.7896,
+      "time": 1758162642008.0276,
       "uuid": "04ad1764-0c43-4052-83ae-2a379e962c0f"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\MonetizationManager.ts": {
@@ -5362,7 +5362,7 @@
       "uuid": "8efbb6dc-d267-4d8e-8fe4-4e45fada804f"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\RelicManager.ts": {
-      "time": 1757894233955.3887,
+      "time": 1758159363189.359,
       "uuid": "ebc0c1e7-8814-4bc5-854a-16588373ba8b"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\ShopManager.ts": {
@@ -5542,23 +5542,23 @@
       "uuid": "f9106822-a496-48db-bc30-f08eefe33661"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects": {
-      "time": 1758157475070.8384,
+      "time": 1758162862044.167,
       "uuid": "caaf0cca-4b19-4c47-9a91-bf294cd8e0cf"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts": {
-      "time": 1758154462667.6736,
+      "time": 1758162862042.159,
       "uuid": "cf3d5245-f095-4488-9dd3-c7309121c0e7"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DynamicLevelGenerator.ts": {
-      "time": 1758154462665.324,
+      "time": 1758162754199.585,
       "uuid": "f0707c07-70da-4158-993b-707d0bf1c621"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\LevelSoundManager.ts": {
-      "time": 1758154462665.324,
+      "time": 1758162934488.0308,
       "uuid": "7c2fd333-8762-4c63-8626-846ad3af8789"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SaveManager.ts": {
-      "time": 1758154462664.318,
+      "time": 1758162545569.3728,
       "uuid": "94e4303d-e710-4417-810e-702bb8536063"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\LevelTransitionManager.ts": {
@@ -5566,7 +5566,7 @@
       "uuid": "40c3e911-510b-4bdd-856b-3886f31080cb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\SlayTheSpireMapVisualizer.ts": {
-      "time": 1758072699918.163,
+      "time": 1758162561665.5293,
       "uuid": "c59b264e-937f-4c35-aab6-fd7fbd021137"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\effects.meta": {

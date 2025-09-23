@@ -435,7 +435,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
-        onStateChanged(oldState, newState) {
+        onStateChanged(_oldState, newState) {
           try {
             switch (newState) {
               case GameState.GAME_OVER:
@@ -486,6 +486,49 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         getLevel() {
           return this.level;
+        } // 添加测试期望的方法
+
+
+        getBrickCount() {
+          return this._bricks.length;
+        }
+
+        getBricks() {
+          return this._bricks;
+        }
+
+        getBallNode() {
+          return this._ballNode;
+        }
+
+        getPaddleNode() {
+          return this._paddleNode;
+        }
+
+        getCoreController() {
+          return this._coreController;
+        }
+
+        getLevelManager() {
+          return this._levelManager;
+        }
+
+        getGameState() {
+          return this._currentState;
+        }
+
+        addScore(points) {
+          this.score += points;
+          console.log(`Score increased by ${points}. Total: ${this.score}`);
+        }
+
+        decreaseLives(amount = 1) {
+          this.lives = Math.max(0, this.lives - amount);
+          console.log(`Lives decreased by ${amount}. Remaining: ${this.lives}`);
+
+          if (this.lives <= 0) {
+            this.setState(GameState.GAME_OVER);
+          }
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "brickPrefab", [_dec2], {

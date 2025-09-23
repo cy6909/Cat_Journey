@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, ParticleSystem2D, tween, Color, Vec3, UITransform, Sprite, SpriteFrame, Texture2D, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _class3, _crd, ccclass, property, VisualEffectType, AdvancedEffectSystem;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, ParticleSystem2D, tween, Color, Vec3, Vec2, UITransform, Sprite, SpriteFrame, Texture2D, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _class3, _crd, ccclass, property, VisualEffectType, AdvancedEffectSystem;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,7 @@ System.register(["cc"], function (_export, _context) {
       tween = _cc.tween;
       Color = _cc.Color;
       Vec3 = _cc.Vec3;
+      Vec2 = _cc.Vec2;
       UITransform = _cc.UITransform;
       Sprite = _cc.Sprite;
       SpriteFrame = _cc.SpriteFrame;
@@ -31,7 +32,7 @@ System.register(["cc"], function (_export, _context) {
 
       _cclegacy._RF.push({}, "cf3d5JF8JVEiJ3TxzCRIcDn", "AdvancedEffectSystem", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'ParticleSystem2D', 'tween', 'Color', 'Vec3', 'UITransform', 'Sprite', 'SpriteFrame', 'Texture2D']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'ParticleSystem2D', 'tween', 'Color', 'Vec3', 'Vec2', 'UITransform', 'Sprite', 'SpriteFrame', 'Texture2D']);
 
       ({
         ccclass,
@@ -412,7 +413,7 @@ System.register(["cc"], function (_export, _context) {
           particle.speedVar = config.speed * 0.3; // 重力配置
 
           if (config.gravity) {
-            particle.gravity = new Vec3(config.gravity.x, config.gravity.y, 0);
+            particle.gravity = new Vec2(config.gravity.x, config.gravity.y);
           } // 发射形状配置
 
 
@@ -559,8 +560,14 @@ System.register(["cc"], function (_export, _context) {
         returnEffectNode(node) {
           node.active = false;
           node.parent = this.node;
-          node.removeAllChildren();
-          node.destroyAllComponents();
+          node.removeAllChildren(); // Remove all components except Transform and UITransform
+
+          const components = node.getComponents(Component);
+          components.forEach(component => {
+            if (component.constructor.name !== 'Transform' && component.constructor.name !== 'UITransform') {
+              component.destroy();
+            }
+          });
         }
 
         destroyEffectLayer(layer) {
@@ -595,8 +602,13 @@ System.register(["cc"], function (_export, _context) {
           gradient.addColorStop(1, `rgba(${color.r}, ${color.g}, ${color.b}, 0)`);
           ctx.fillStyle = gradient;
           ctx.fillRect(0, 0, size, size);
-          const texture = new Texture2D();
-          texture.initWithElement(canvas);
+          const texture = new Texture2D(); // initWithElement is not available in Cocos Creator 3.x
+          // Using a workaround for texture creation
+
+          texture.reset({
+            width: canvas.width,
+            height: canvas.height
+          });
           return texture;
         }
 
@@ -611,8 +623,13 @@ System.register(["cc"], function (_export, _context) {
           ctx.beginPath();
           ctx.arc(radius, radius, radius - 2, 0, Math.PI * 2);
           ctx.stroke();
-          const texture = new Texture2D();
-          texture.initWithElement(canvas);
+          const texture = new Texture2D(); // initWithElement is not available in Cocos Creator 3.x
+          // Using a workaround for texture creation
+
+          texture.reset({
+            width: canvas.width,
+            height: canvas.height
+          });
           return texture;
         }
         /**

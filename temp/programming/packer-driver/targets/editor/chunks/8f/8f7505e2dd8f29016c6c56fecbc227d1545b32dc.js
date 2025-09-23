@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, GameManager, BossController, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _crd, ccclass, property, LevelType, LevelManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, GameManager, BossController, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _crd, ccclass, property, LevelType, DifficultyTier, LevelManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -55,6 +55,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         return LevelType;
       }({}));
 
+      _export("DifficultyTier", DifficultyTier = /*#__PURE__*/function (DifficultyTier) {
+        DifficultyTier["EASY"] = "EASY";
+        DifficultyTier["NORMAL"] = "NORMAL";
+        DifficultyTier["HARD"] = "HARD";
+        DifficultyTier["EXPERT"] = "EXPERT";
+        DifficultyTier["NIGHTMARE"] = "NIGHTMARE";
+        return DifficultyTier;
+      }({}));
+
       _export("LevelManager", LevelManager = (_dec = ccclass('LevelManager'), _dec2 = property(Prefab), _dec3 = property(Node), _dec(_class = (_class2 = (_class3 = class LevelManager extends Component {
         constructor(...args) {
           super(...args);
@@ -77,6 +86,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._currentLevelType = LevelType.NORMAL;
           this._bossNode = null;
           this._levelStartTime = 0;
+          this._currentLevel = 1;
+          this._currentChapter = 1;
+          this._currentDifficulty = 1;
         }
 
         static getInstance() {
@@ -300,10 +312,72 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         adjustDifficulty(level) {
-          // Adjust pressure system based on level
+          if (level < 0) return; // 处理无效参数
+
+          this._currentDifficulty = level; // Adjust pressure system based on level
+
           const difficultyMultiplier = 1 + level / 10;
           this.pressureMoveSpeed = 10 * difficultyMultiplier;
           this.pressureStartDelay = Math.max(15, 30 - level);
+        } // 添加测试需要的方法
+
+
+        getCurrentDifficulty() {
+          return this._currentDifficulty;
+        }
+
+        setLevelType(levelType) {
+          this._currentLevelType = levelType;
+        }
+
+        setLevel(level) {
+          if (level < 1) return; // 处理无效参数
+
+          this._currentLevel = level;
+        }
+
+        getLevel() {
+          return this._currentLevel;
+        }
+
+        setChapter(chapter) {
+          if (chapter < 1) return; // 处理无效参数
+
+          this._currentChapter = chapter; // 根据章节调整基础难度
+
+          this._currentDifficulty = chapter;
+        }
+
+        getChapter() {
+          return this._currentChapter;
+        }
+
+        setLevelConfiguration(config) {
+          if (!config) return;
+          if (config.level) this.setLevel(config.level);
+          if (config.chapter) this.setChapter(config.chapter);
+          if (config.difficulty !== undefined) this._currentDifficulty = config.difficulty;
+          if (config.levelType) this.setLevelType(config.levelType);
+        }
+
+        getLevelConfiguration() {
+          return {
+            level: this._currentLevel,
+            chapter: this._currentChapter,
+            difficulty: this._currentDifficulty,
+            levelType: this._currentLevelType
+          };
+        }
+
+        getCurrentLevelData() {
+          return {
+            level: this._currentLevel,
+            chapter: this._currentChapter,
+            difficulty: this._currentDifficulty,
+            type: this._currentLevelType,
+            pressureActive: this._pressureActive,
+            pressureTimer: this._pressureTimer
+          };
         }
 
       }, _class3._instance = null, _class3), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "pressureMoveSpeed", [property], {

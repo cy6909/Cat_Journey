@@ -149,3 +149,26 @@
 2025-9-18 09:07:59-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
 2025-9-18 09:08:01-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenes\testscene.scenebackground: #aaff85; color: #000;color: #000;
 2025-9-18 09:08:01-debug: asset-db:reimport-asset71e1758f-1876-43b5-935d-bc2e35d0d6e1 (7ms)
+2025-9-18 14:00:24-debug: refresh db internal success
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\corebackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managersbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\effectsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplaybackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\uibackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Ball.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\PaddleController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\effects\AdvancedEffectSystem.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\DynamicLevelGenerator.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\LevelManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\LevelSoundManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\MapManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\RelicManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\managers\SaveManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:24-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\ui\SlayTheSpireMapVisualizer.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-18 14:00:25-debug: refresh db assets success
+2025-9-18 14:00:25-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-18 14:00:25-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-18 14:00:25-debug: asset-db:worker-effect-data-processing (12ms)
+2025-9-18 14:00:25-debug: asset-db:refresh-all-database (578ms)
+2025-9-18 14:00:25-debug: asset-db-hook-engine-extends-afterRefresh (19ms)

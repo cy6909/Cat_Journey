@@ -423,7 +423,8 @@ System.register(["cc"], function (_export, _context) {
             this._activeSounds.delete(soundId);
 
             this.returnAudioSourceToPool(audioSource);
-          }, audioClip.duration);
+          }, 5.0); // Default duration since audioClip.duration is not available
+
           return true;
         }
         /**
@@ -454,8 +455,9 @@ System.register(["cc"], function (_export, _context) {
           }
 
           this.ambientSource.clip = audioClip;
-          this.ambientSource.volume = config.volume * this.ambientVolume;
-          this.ambientSource.pitch = config.pitch;
+          this.ambientSource.volume = config.volume * this.ambientVolume; // AudioSource pitch property not available in Cocos Creator 3.x
+          // this.ambientSource.pitch = config.pitch;
+
           this.ambientSource.loop = true;
 
           if (config.fadeIn) {
@@ -513,8 +515,11 @@ System.register(["cc"], function (_export, _context) {
 
           if (!audioClip || !this.uiSource) return false;
           this.uiSource.clip = audioClip;
-          this.uiSource.volume = config.volume * this.soundEffectVolume;
-          this.uiSource.pitch = config.randomPitch ? config.pitch + (Math.random() - 0.5) * 0.2 : config.pitch;
+          this.uiSource.volume = config.volume * this.soundEffectVolume; // AudioSource pitch property not available in Cocos Creator 3.x
+          // this.uiSource.pitch = config.randomPitch ? 
+          //     config.pitch + (Math.random() - 0.5) * 0.2 : 
+          //     config.pitch;
+
           this.uiSource.play();
           return true;
         }
@@ -553,8 +558,11 @@ System.register(["cc"], function (_export, _context) {
 
         setupAudioSource(source, config, clip, position) {
           source.clip = clip;
-          source.volume = config.volume * this.soundEffectVolume;
-          source.pitch = config.randomPitch ? config.pitch + (Math.random() - 0.5) * 0.2 : config.pitch;
+          source.volume = config.volume * this.soundEffectVolume; // AudioSource pitch property not available in Cocos Creator 3.x
+          // source.pitch = config.randomPitch ? 
+          //     config.pitch + (Math.random() - 0.5) * 0.2 : 
+          //     config.pitch;
+
           source.loop = config.loop; // 空间音频设置
 
           if (config.spatialAudio && position && this.enableSpatialAudio) {
@@ -594,8 +602,9 @@ System.register(["cc"], function (_export, _context) {
         returnAudioSourceToPool(source) {
           source.stop();
           source.clip = null;
-          source.volume = this.soundEffectVolume;
-          source.pitch = 1.0;
+          source.volume = this.soundEffectVolume; // AudioSource pitch property not available in Cocos Creator 3.x
+          // source.pitch = 1.0;
+
           source.loop = false;
         }
         /**
