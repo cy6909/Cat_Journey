@@ -1,7 +1,8 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, director } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, BoxCollider2D } from 'cc';
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
+import { Ball } from '../core/Ball';
 const { ccclass, property } = _decorator;
 
 export enum GameState {
@@ -27,6 +28,12 @@ export class GameManager extends Component {
 
     @property(Prefab)
     public laserPaddlePowerUpPrefab: Prefab | null = null;
+
+    @property(Prefab)
+    public wallPrefab: Prefab | null = null;
+
+    @property(Prefab)
+    public deathZonePrefab: Prefab | null = null;
 
     @property
     public powerUpDropChance: number = 0.2;
@@ -85,10 +92,14 @@ export class GameManager extends Component {
 
     private initializeGame(): void {
         this.setState(GameState.PRE_START);
+        this.createBoundaryWalls();
         this.createPaddle();
         this.createBall();
         this.setupLevel();
+        
+        // 延迟发射球，确保所有物理对象都已初始化
         this.scheduleOnce(() => {
+            this.launchBall();
             this.setState(GameState.PLAYING);
         }, 2.0);
     }
@@ -119,8 +130,15 @@ export class GameManager extends Component {
             this._paddleNode = instantiate(this.paddlePrefab);
             if (this._paddleNode) {
                 this._paddleNode.setPosition(0, -250, 0);
-                this.node.addChild(this._paddleNode);
-                console.log('Paddle created successfully');
+                // 统一添加到Canvas下
+                const canvas = this.node.parent;
+                if (canvas) {
+                    canvas.addChild(this._paddleNode);
+                    console.log('Paddle created successfully and added to Canvas');
+                } else {
+                    this.node.addChild(this._paddleNode);
+                    console.log('Paddle created successfully and added to GameManager');
+                }
             } else {
                 console.error('Failed to instantiate paddle prefab');
             }
@@ -139,9 +157,16 @@ export class GameManager extends Component {
             
             this._ballNode = instantiate(this.ballPrefab);
             if (this._ballNode) {
-                this._ballNode.setPosition(0, -150, 0);
-                this.node.addChild(this._ballNode);
-                console.log('Ball created successfully');
+                this._ballNode.setPosition(0, -100, 0); // 相对Canvas中心的位置
+                // 将Ball添加到Canvas下，而不是GameManager下
+                const canvas = this.node.parent;
+                if (canvas) {
+                    canvas.addChild(this._ballNode);
+                    console.log('Ball created successfully and added to Canvas');
+                } else {
+                    this.node.addChild(this._ballNode);
+                    console.log('Ball created successfully and added to GameManager');
+                }
             } else {
                 console.error('Failed to instantiate ball prefab');
             }
@@ -151,7 +176,81 @@ export class GameManager extends Component {
         }
     }
 
+    private createBoundaryWalls(): void {
+        try {
+            if (!this.wallPrefab) {
+                console.warn('Wall prefab not assigned - skipping boundary creation');
+                return;
+            }
+
+            // Screen boundaries for 640x960 portrait: left=-320, right=+320, top=+480, bottom=-480
+            const canvas = this.node.parent;
+            const parentNode = canvas || this.node;
+            
+            // Left wall
+            const leftWall = instantiate(this.wallPrefab);
+            leftWall.setPosition(-325, 0, 0); // 竖屏左边界
+            leftWall.setScale(1, 10, 1); // 高一些适应竖屏
+            const leftSprite = leftWall.getComponent(Sprite);
+            if (leftSprite) {
+                leftSprite.color = new Color(255, 0, 0, 128);
+            }
+            parentNode.addChild(leftWall);
+
+            // Right wall  
+            const rightWall = instantiate(this.wallPrefab);
+            rightWall.setPosition(325, 0, 0); // 竖屏右边界
+            rightWall.setScale(1, 10, 1);
+            const rightSprite = rightWall.getComponent(Sprite);
+            if (rightSprite) {
+                rightSprite.color = new Color(255, 0, 0, 128);
+            }
+            parentNode.addChild(rightWall);
+
+            // Top wall
+            const topWall = instantiate(this.wallPrefab);
+            topWall.setPosition(0, 485, 0); // 竖屏上边界
+            topWall.setScale(7, 1, 1); // 宽一些覆盖竖屏宽度
+            const topSprite = topWall.getComponent(Sprite);
+            if (topSprite) {
+                topSprite.color = new Color(0, 255, 0, 128);
+            }
+            parentNode.addChild(topWall);
+
+            // Bottom wall
+            const bottomWall = instantiate(this.wallPrefab);
+            bottomWall.setPosition(0, -485, 0); // 竖屏下边界
+            bottomWall.setScale(7, 1, 1);
+            const bottomSprite = bottomWall.getComponent(Sprite);
+            if (bottomSprite) {
+                bottomSprite.color = new Color(0, 0, 255, 128);
+            }
+            parentNode.addChild(bottomWall);
+
+            console.log('Boundary walls created successfully');
+        } catch (error) {
+            console.error('Error creating boundary walls:', error);
+        }
+    }
+
+    private launchBall(): void {
+        if (this._ballNode) {
+            const ballScript = this._ballNode.getComponent(Ball);
+            if (ballScript && typeof ballScript.launch === 'function') {
+                ballScript.launch();
+                console.log('Ball launched after physics initialization');
+            } else {
+                console.warn('Ball script not found or launch method not available');
+            }
+        } else {
+            console.warn('Ball node not found, cannot launch');
+        }
+    }
+
     private setupLevel(): void {
+        console.log('SetupLevel called - temporarily skipping brick creation for physics testing');
+        // 暂时注释掉brick创建，专注测试Ball和Wall物理
+        /*
         this.clearBricks();
         
         if (this._levelManager) {
@@ -166,6 +265,7 @@ export class GameManager extends Component {
             const layout = this.getLevelLayout(this.level);
             this.createBricksFromLayout(layout);
         }
+        */
     }
 
     private getLevelLayout(level: number): number[][] {

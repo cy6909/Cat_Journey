@@ -1,8 +1,8 @@
 {
   "general": {
     "designResolution": {
-      "width": 960,
-      "height": 640,
+      "width": 640,
+      "height": 960,
       "fitHeight": true,
       "fitWidth": true
     }
@@ -21,6 +21,14 @@
   "collisionConfig": {
     "enableCollisionMatrix": true,
     "enableContactListener": true,
+    "collisionGroups": [
+      "Default",
+      "Wall", 
+      "Ball",
+      "Brick",
+      "DeathZone",
+      "PowerUp"
+    ],
     "collisionMatrix": [
       [false, false, false, false, false, false],
       [false, true, true, false, true, false],

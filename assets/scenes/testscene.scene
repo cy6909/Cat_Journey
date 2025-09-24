@@ -280,7 +280,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 389.68888888888887,
+    "_orthoHeight": 354.76605868358445,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -796,6 +796,14 @@
     },
     "multiBallPowerUpPrefab": null,
     "laserPaddlePowerUpPrefab": null,
+    "wallPrefab": {
+      "__uuid__": "08ab0291-515e-45dd-9d6f-032cd02586f0",
+      "__expectedType__": "cc.Prefab"
+    },
+    "deathZonePrefab": {
+      "__uuid__": "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
+      "__expectedType__": "cc.Prefab"
+    },
     "powerUpDropChance": 0.2,
     "brickContainer": null,
     "coreNode": null,

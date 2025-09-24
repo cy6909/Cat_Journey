@@ -5,17 +5,17 @@
     "module": "ES2015",
     "strict": true,
     "types": [
-      "./temp/declarations/cc.custom-macro",
       "./temp/declarations/cc",
+      "./temp/declarations/cc.custom-macro",
       "./temp/declarations/jsb",
       "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets\\*"
+        "D:\\cocos\\Creator\\3.8.6\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\*"
+        "E:\\work_space\\wx\\Cat_Journey\\assets\\*"
       ]
     },
     "experimentalDecorators": true,

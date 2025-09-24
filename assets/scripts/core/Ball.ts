@@ -34,7 +34,8 @@ export class Ball extends Component {
     }
 
     protected start(): void {
-        this.launch();
+        // 不自动发射球，等待GameManager准备完成后手动调用launch()
+        console.log('Ball ready, waiting for launch command');
     }
 
     public launch(direction?: Vec2): void {
@@ -59,6 +60,9 @@ export class Ball extends Component {
 
         this._rigidBody.linearVelocity = velocity;
         this.isMoving = true;
+        
+        console.log(`Ball launched from position: (${this.node.position.x}, ${this.node.position.y})`);
+        console.log(`Ball velocity: (${velocity.x}, ${velocity.y}), angle: ${Math.atan2(velocity.y, velocity.x) * 180 / Math.PI}°`);
     }
 
     public launchWithDefaultDirection(): void {

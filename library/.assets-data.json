@@ -155,6 +155,8 @@
         "c7ab9736-f219-419f-9172-9ecc23c3e405",
         "7ec887bc-b20e-429d-8e28-08067520a25c",
         "58f8e17d-e23d-439d-8aea-d766a9c88be0",
+        "08ab0291-515e-45dd-9d6f-032cd02586f0",
+        "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
       ],
@@ -9225,6 +9227,25 @@
     "url": "db://assets/scripts/managers/SaveManager.ts.des",
     "value": {
       "depends": []
+    },
+    "versionCode": 1
+  },
+  "654236d3-132f-43e6-a1c3-7dccb0eb9f73": {
+    "url": "db://assets/prefabs/DeathZone.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "08ab0291-515e-45dd-9d6f-032cd02586f0": {
+    "url": "db://assets/prefabs/Wall.prefab",
+    "value": {
+      "depends": [
+        "104daebd-5903-4488-8a7c-86cc0740738e@91ec0",
+        "104daebd-5903-4488-8a7c-86cc0740738e"
+      ],
+      "dependScripts": []
     },
     "versionCode": 1
   }
