@@ -82,7 +82,10 @@
   "58f8e17d-e23d-439d-8aea-d766a9c88be0": {
     "url": "db://assets/prefabs/Ball.prefab",
     "value": {
-      "depends": [],
+      "depends": [
+        "372a30b9-2c2c-400a-9907-bc667a7aaba6@eec38",
+        "372a30b9-2c2c-400a-9907-bc667a7aaba6"
+      ],
       "dependScripts": [
         "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
       ]
@@ -149,21 +152,14 @@
     "value": {
       "depends": [
         "71e1758f-1876-43b5-935d-bc2e35d0d6e1",
-        "58f8e17d-e23d-439d-8aea-d766a9c88be0",
+        "c7ab9736-f219-419f-9172-9ecc23c3e405",
         "7ec887bc-b20e-429d-8e28-08067520a25c",
-        "104daebd-5903-4488-8a7c-86cc0740738e@8a874",
-        "104daebd-5903-4488-8a7c-86cc0740738e",
-        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
-        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "58f8e17d-e23d-439d-8aea-d766a9c88be0",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
       ],
       "dependScripts": [
-        "1112ea98-2509-431e-b6fa-b2811d6671eb",
-        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
-        "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
+        "1112ea98-2509-431e-b6fa-b2811d6671eb"
       ]
     },
     "versionCode": 1
