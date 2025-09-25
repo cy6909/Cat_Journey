@@ -312,13 +312,27 @@ export class GameManager extends Component {
                 
                 brick.setPosition(x, y, 0);
                 
-                const brickScript = brick.getComponent('Brick');
+                // Use EnhancedBrick component with programmatic types
+                const brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
                 if (brickScript) {
-                    (brickScript as any).setHealth(brickType);
+                    // Convert layout value to diverse brick types
+                    const enhancedBrickType = this.getBrickTypeFromValue(brickType, row, col);
+                    
+                    if ((brickScript as any).brickType !== undefined) {
+                        // EnhancedBrick system
+                        (brickScript as any).brickType = enhancedBrickType;
+                        // Trigger initialization after type assignment
+                        if ((brickScript as any).initializeBrickType) {
+                            (brickScript as any).initializeBrickType();
+                        }
+                    } else {
+                        // Legacy Brick system fallback
+                        (brickScript as any).setHealth(brickType);
+                    }
                     
                     // Some bricks drop experience orbs
                     if (Math.random() < 0.1) { // 10% chance
-                        (brickScript as any).setDropsExperience(true);
+                        (brickScript as any).setDropsExperience && (brickScript as any).setDropsExperience(true);
                     }
                 }
 
@@ -326,6 +340,76 @@ export class GameManager extends Component {
                 this._bricks.push(brick);
             }
         }
+        
+        console.log(`Created ${this._bricks.length} bricks with diverse types`);
+    }
+    
+    /**
+     * Convert layout value to enhanced brick type with strategic diversity
+     * 为每个砖块分配有意义的类型，而不是简单的随机化
+     */
+    private getBrickTypeFromValue(layoutValue: number, row: number, col: number): number {
+        // Import BrickType enum values  
+        const BrickType = {
+            NORMAL: 0, REINFORCED: 1, EXPLOSIVE: 2, ELECTRIC: 3, EXPERIENCE: 4,
+            REGENERATING: 5, PHASE: 6, MAGNETIC: 7, REFLECTIVE: 8, POISON: 9,
+            ICE: 10, FIRE: 11, SPLITTING: 12, TELEPORT: 13, SHIELD: 14,
+            GRAVITY: 15, TIME: 16, HEALING: 17, CURSED: 18, CRYSTAL: 19,
+            RUBBER: 20, METAL: 21, VOID: 22, LIGHT: 23, DARK: 24
+        };
+        
+        // Strategic brick placement based on position and level
+        const totalPositions = (row * 8 + col); // Unique position identifier
+        const levelDifficulty = this.level;
+        
+        // Base distribution: mostly normal bricks
+        if (layoutValue === 1) {
+            // Row-based strategy
+            switch (row) {
+                case 0: // Top row - defensive types
+                    if (col % 3 === 0) return BrickType.SHIELD;
+                    if (col % 4 === 1) return BrickType.REINFORCED;
+                    return BrickType.NORMAL;
+                    
+                case 1: // Second row - special effects
+                    if (col % 5 === 0) return BrickType.EXPLOSIVE;
+                    if (col % 5 === 2) return BrickType.ELECTRIC;
+                    if (col % 7 === 3) return BrickType.EXPERIENCE;
+                    return BrickType.NORMAL;
+                    
+                case 2: // Third row - element effects
+                    if (col % 4 === 0) return BrickType.FIRE;
+                    if (col % 4 === 2) return BrickType.ICE;
+                    if (col % 6 === 1) return BrickType.POISON;
+                    return BrickType.NORMAL;
+                    
+                default: // Bottom rows - utility and rare types
+                    if (col === 0 || col === 7) return BrickType.HEALING; // Corner healing
+                    if (totalPositions % 11 === 0) return BrickType.TELEPORT;
+                    if (totalPositions % 13 === 0) return BrickType.CRYSTAL;
+                    return BrickType.NORMAL;
+            }
+        }
+        
+        // Enhanced bricks for higher layout values
+        if (layoutValue === 2) {
+            const rareTypes = [
+                BrickType.GRAVITY, BrickType.TIME, BrickType.VOID, 
+                BrickType.METAL, BrickType.PHASE, BrickType.MAGNETIC
+            ];
+            
+            // Add level scaling for rare types
+            if (levelDifficulty > 2) {
+                const typeIndex = (totalPositions + levelDifficulty) % rareTypes.length;
+                return rareTypes[typeIndex];
+            } else {
+                // Early levels: safer special types
+                const earlySpecial = [BrickType.REINFORCED, BrickType.EXPERIENCE, BrickType.HEALING];
+                return earlySpecial[totalPositions % earlySpecial.length];
+            }
+        }
+        
+        return BrickType.NORMAL;
     }
 
     private clearBricks(): void {
@@ -369,7 +453,16 @@ export class GameManager extends Component {
         if (randomPowerUp) {
             const powerUpNode = instantiate(randomPowerUp);
             powerUpNode.setPosition(position);
-            this.node.addChild(powerUpNode);
+            
+            // Add to Canvas for consistent coordinate system
+            const canvas = this.node.parent;
+            if (canvas) {
+                canvas.addChild(powerUpNode);
+                console.log('PowerUp dropped and added to Canvas');
+            } else {
+                this.node.addChild(powerUpNode);
+                console.log('PowerUp dropped and added to GameManager');
+            }
         }
     }
 

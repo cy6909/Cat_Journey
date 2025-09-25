@@ -106,7 +106,7 @@ export class EnhancedBrick extends Component {
         this.updateTimeBasedEffects(dt);
     }
     
-    private initializeBrickType(): void {
+    public initializeBrickType(): void {
         switch (this.brickType) {
             case BrickType.NORMAL:
                 this.setBrickColor(Color.RED);

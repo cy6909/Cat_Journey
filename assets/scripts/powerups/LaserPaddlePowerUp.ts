@@ -1,5 +1,5 @@
 import { _decorator, Node, Prefab, instantiate, Vec3, input, Input, EventTouch } from 'cc';
-import { PowerUp } from './PowerUp';
+import { PowerUp, PowerUpType } from './PowerUp';
 const { ccclass, property } = _decorator;
 
 @ccclass('LaserPaddlePowerUp')
@@ -16,11 +16,17 @@ export class LaserPaddlePowerUp extends PowerUp {
     private _paddleNode: Node | null = null;
     private _canFire: boolean = true;
 
+    protected onLoad(): void {
+        // Set power-up type before calling parent onLoad
+        this.powerUpType = PowerUpType.LASER_PADDLE;
+        super.onLoad();
+    }
+
     protected activateEffect(): void {
         const gameManager = this.getGameManager();
         if (!gameManager) return;
 
-        this._paddleNode = gameManager.node.getChildByName('Paddle');
+        this._paddleNode = gameManager.getPaddleNode();
         if (!this._paddleNode) return;
 
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
@@ -53,7 +59,13 @@ export class LaserPaddlePowerUp extends PowerUp {
         
         const gameManager = this.getGameManager();
         if (gameManager) {
-            gameManager.node.addChild(laser);
+            // Add to Canvas for consistent coordinate system
+            const canvas = gameManager.node.parent;
+            if (canvas) {
+                canvas.addChild(laser);
+            } else {
+                gameManager.node.addChild(laser);
+            }
         }
 
         const laserScript = laser.getComponent('Laser');

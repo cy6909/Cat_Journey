@@ -1,11 +1,17 @@
 import { _decorator, instantiate, Vec3 } from 'cc';
-import { PowerUp } from './PowerUp';
+import { PowerUp, PowerUpType } from './PowerUp';
 const { ccclass, property } = _decorator;
 
 @ccclass('MultiBallPowerUp')
 export class MultiBallPowerUp extends PowerUp {
     @property
     public extraBalls: number = 2;
+
+    protected onLoad(): void {
+        // Set power-up type before calling parent onLoad
+        this.powerUpType = PowerUpType.MULTI_BALL;
+        super.onLoad();
+    }
 
     protected activateEffect(): void {
         const gameManager = this.getGameManager();
@@ -14,7 +20,7 @@ export class MultiBallPowerUp extends PowerUp {
         const ballPrefab = gameManager.getBallPrefab();
         if (!ballPrefab) return;
 
-        const currentBall = gameManager.node.getChildByName('Ball');
+        const currentBall = gameManager.getBallNode();
         if (!currentBall) return;
 
         const currentPos = currentBall.position;
@@ -29,7 +35,14 @@ export class MultiBallPowerUp extends PowerUp {
             );
             
             newBall.setPosition(currentPos.add(offset));
-            gameManager.node.addChild(newBall);
+            
+            // Add to Canvas instead of GameManager for consistent coordinate system
+            const canvas = gameManager.node.parent;
+            if (canvas) {
+                canvas.addChild(newBall);
+            } else {
+                gameManager.node.addChild(newBall);
+            }
 
             const ballScript = newBall.getComponent('Ball');
             if (ballScript) {
