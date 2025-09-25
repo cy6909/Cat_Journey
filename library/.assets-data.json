@@ -135,7 +135,10 @@
   "7ec887bc-b20e-429d-8e28-08067520a25c": {
     "url": "db://assets/prefabs/Paddle.prefab",
     "value": {
-      "depends": [],
+      "depends": [
+        "104daebd-5903-4488-8a7c-86cc0740738e@af77c",
+        "104daebd-5903-4488-8a7c-86cc0740738e"
+      ],
       "dependScripts": [
         "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
       ]

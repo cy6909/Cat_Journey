@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, RelicManager, LevelManager, LevelType, CoreController, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, Color, Sprite, PhysicsSystem2D, RelicManager, LevelManager, LevelType, CoreController, Ball, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,6 +25,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("CoreController", "../managers/CoreController", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfBall(extras) {
+    _reporterNs.report("Ball", "../core/Ball", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -38,6 +42,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Prefab = _cc.Prefab;
       instantiate = _cc.instantiate;
       director = _cc.director;
+      Color = _cc.Color;
+      Sprite = _cc.Sprite;
+      PhysicsSystem2D = _cc.PhysicsSystem2D;
     }, function (_unresolved_2) {
       RelicManager = _unresolved_2.RelicManager;
     }, function (_unresolved_3) {
@@ -45,13 +52,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       LevelType = _unresolved_3.LevelType;
     }, function (_unresolved_4) {
       CoreController = _unresolved_4.CoreController;
+    }, function (_unresolved_5) {
+      Ball = _unresolved_5.Ball;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "1112eqYJQlDHrb6soEdZnHr", "GameManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director', 'Color', 'Sprite', 'BoxCollider2D', 'PhysicsSystem2D']);
 
       ({
         ccclass,
@@ -66,7 +75,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         return GameState;
       }({}));
 
-      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Prefab), _dec3 = property(Prefab), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Prefab), _dec7 = property(Node), _dec8 = property(Node), _dec9 = property(Prefab), _dec(_class = (_class2 = (_class3 = class GameManager extends Component {
+      _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property(Prefab), _dec3 = property(Prefab), _dec4 = property(Prefab), _dec5 = property(Prefab), _dec6 = property(Prefab), _dec7 = property(Prefab), _dec8 = property(Prefab), _dec9 = property(Node), _dec10 = property(Node), _dec11 = property(Prefab), _dec(_class = (_class2 = (_class3 = class GameManager extends Component {
         constructor(...args) {
           super(...args);
 
@@ -80,19 +89,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           _initializerDefineProperty(this, "laserPaddlePowerUpPrefab", _descriptor5, this);
 
-          _initializerDefineProperty(this, "powerUpDropChance", _descriptor6, this);
+          _initializerDefineProperty(this, "wallPrefab", _descriptor6, this);
 
-          _initializerDefineProperty(this, "brickContainer", _descriptor7, this);
+          _initializerDefineProperty(this, "deathZonePrefab", _descriptor7, this);
 
-          _initializerDefineProperty(this, "coreNode", _descriptor8, this);
+          _initializerDefineProperty(this, "powerUpDropChance", _descriptor8, this);
 
-          _initializerDefineProperty(this, "experienceOrbPrefab", _descriptor9, this);
+          _initializerDefineProperty(this, "brickContainer", _descriptor9, this);
 
-          _initializerDefineProperty(this, "lives", _descriptor10, this);
+          _initializerDefineProperty(this, "coreNode", _descriptor10, this);
 
-          _initializerDefineProperty(this, "score", _descriptor11, this);
+          _initializerDefineProperty(this, "experienceOrbPrefab", _descriptor11, this);
 
-          _initializerDefineProperty(this, "level", _descriptor12, this);
+          _initializerDefineProperty(this, "lives", _descriptor12, this);
+
+          _initializerDefineProperty(this, "score", _descriptor13, this);
+
+          _initializerDefineProperty(this, "level", _descriptor14, this);
 
           this._currentState = GameState.PRE_START;
           this._bricks = [];
@@ -129,11 +142,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         initializeGame() {
-          this.setState(GameState.PRE_START);
+          this.setState(GameState.PRE_START); // 启用物理调试显示
+
+          PhysicsSystem2D.instance.debugDrawFlags = 1; // 启用调试绘制
+
+          console.log('Physics debug draw enabled');
+          this.createBoundaryWalls();
           this.createPaddle();
           this.createBall();
-          this.setupLevel();
+          this.setupLevel(); // 延迟发射球，确保所有物理对象都已初始化
+
           this.scheduleOnce(() => {
+            this.launchBall();
             this.setState(GameState.PLAYING);
           }, 2.0);
         }
@@ -170,10 +190,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this._paddleNode = instantiate(this.paddlePrefab);
 
             if (this._paddleNode) {
-              this._paddleNode.setPosition(0, -250, 0);
+              this._paddleNode.setPosition(0, -300, 0); // 统一添加到Canvas下
 
-              this.node.addChild(this._paddleNode);
-              console.log('Paddle created successfully');
+
+              const canvas = this.node.parent;
+
+              if (canvas) {
+                canvas.addChild(this._paddleNode);
+                console.log('Paddle created successfully and added to Canvas');
+              } else {
+                this.node.addChild(this._paddleNode);
+                console.log('Paddle created successfully and added to GameManager');
+              }
             } else {
               console.error('Failed to instantiate paddle prefab');
             }
@@ -192,10 +220,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this._ballNode = instantiate(this.ballPrefab);
 
             if (this._ballNode) {
-              this._ballNode.setPosition(0, -150, 0);
+              this._ballNode.setPosition(0, -100, 0); // 相对Canvas中心的位置
+              // 将Ball添加到Canvas下，而不是GameManager下
 
-              this.node.addChild(this._ballNode);
-              console.log('Ball created successfully');
+
+              const canvas = this.node.parent;
+
+              if (canvas) {
+                canvas.addChild(this._ballNode);
+                console.log('Ball created successfully and added to Canvas');
+              } else {
+                this.node.addChild(this._ballNode);
+                console.log('Ball created successfully and added to GameManager');
+              }
             } else {
               console.error('Failed to instantiate ball prefab');
             }
@@ -204,7 +241,92 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
+        createBoundaryWalls() {
+          try {
+            if (!this.wallPrefab) {
+              console.warn('Wall prefab not assigned - skipping boundary creation');
+              return;
+            } // Screen boundaries for 640x960 portrait: left=-320, right=+320, top=+480, bottom=-480
+
+
+            const canvas = this.node.parent;
+            const parentNode = canvas || this.node; // Left wall
+
+            const leftWall = instantiate(this.wallPrefab);
+            leftWall.setPosition(-325, 0, 0); // 竖屏左边界
+
+            leftWall.setScale(1, 10, 1); // 高一些适应竖屏
+
+            const leftSprite = leftWall.getComponent(Sprite);
+
+            if (leftSprite) {
+              leftSprite.color = new Color(255, 0, 0, 128);
+            }
+
+            parentNode.addChild(leftWall); // Right wall  
+
+            const rightWall = instantiate(this.wallPrefab);
+            rightWall.setPosition(325, 0, 0); // 竖屏右边界
+
+            rightWall.setScale(1, 10, 1);
+            const rightSprite = rightWall.getComponent(Sprite);
+
+            if (rightSprite) {
+              rightSprite.color = new Color(255, 0, 0, 128);
+            }
+
+            parentNode.addChild(rightWall); // Top wall
+
+            const topWall = instantiate(this.wallPrefab);
+            topWall.setPosition(0, 485, 0); // 竖屏上边界
+
+            topWall.setScale(7, 1, 1); // 宽一些覆盖竖屏宽度
+
+            const topSprite = topWall.getComponent(Sprite);
+
+            if (topSprite) {
+              topSprite.color = new Color(0, 255, 0, 128);
+            }
+
+            parentNode.addChild(topWall); // Bottom wall
+
+            const bottomWall = instantiate(this.wallPrefab);
+            bottomWall.setPosition(0, -485, 0); // 竖屏下边界
+
+            bottomWall.setScale(7, 1, 1);
+            const bottomSprite = bottomWall.getComponent(Sprite);
+
+            if (bottomSprite) {
+              bottomSprite.color = new Color(0, 0, 255, 128);
+            }
+
+            parentNode.addChild(bottomWall);
+            console.log('Boundary walls created successfully');
+          } catch (error) {
+            console.error('Error creating boundary walls:', error);
+          }
+        }
+
+        launchBall() {
+          if (this._ballNode) {
+            const ballScript = this._ballNode.getComponent(_crd && Ball === void 0 ? (_reportPossibleCrUseOfBall({
+              error: Error()
+            }), Ball) : Ball);
+
+            if (ballScript && typeof ballScript.launch === 'function') {
+              ballScript.launch();
+              console.log('Ball launched after physics initialization');
+            } else {
+              console.warn('Ball script not found or launch method not available');
+            }
+          } else {
+            console.warn('Ball node not found, cannot launch');
+          }
+        }
+
         setupLevel() {
+          console.log('SetupLevel called - restoring brick creation for full game testing'); // 恢复brick创建，测试完整游戏交互
+
           this.clearBricks();
 
           if (this._levelManager) {
@@ -566,49 +688,63 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         initializer: function () {
           return null;
         }
-      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "powerUpDropChance", [property], {
+      }), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "wallPrefab", [_dec7], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "deathZonePrefab", [_dec8], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return null;
+        }
+      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "powerUpDropChance", [property], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return 0.2;
         }
-      }), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "brickContainer", [_dec7], {
+      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "brickContainer", [_dec9], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "coreNode", [_dec8], {
+      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "coreNode", [_dec10], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "experienceOrbPrefab", [_dec9], {
+      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "experienceOrbPrefab", [_dec11], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return null;
         }
-      }), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "lives", [property], {
+      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "lives", [property], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return 3;
         }
-      }), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "score", [property], {
+      }), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "score", [property], {
         configurable: true,
         enumerable: true,
         writable: true,
         initializer: function () {
           return 0;
         }
-      }), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "level", [property], {
+      }), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "level", [property], {
         configurable: true,
         enumerable: true,
         writable: true,

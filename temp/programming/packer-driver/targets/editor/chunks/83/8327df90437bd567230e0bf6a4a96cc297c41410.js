@@ -65,7 +65,8 @@ System.register(["cc"], function (_export, _context) {
         }
 
         start() {
-          this.launch();
+          // 不自动发射球，等待GameManager准备完成后手动调用launch()
+          console.log('Ball ready, waiting for launch command');
         }
 
         launch(direction) {
@@ -84,6 +85,8 @@ System.register(["cc"], function (_export, _context) {
 
           this._rigidBody.linearVelocity = velocity;
           this.isMoving = true;
+          console.log(`Ball launched from position: (${this.node.position.x}, ${this.node.position.y})`);
+          console.log(`Ball velocity: (${velocity.x}, ${velocity.y}), angle: ${Math.atan2(velocity.y, velocity.x) * 180 / Math.PI}°`);
         }
 
         launchWithDefaultDirection() {

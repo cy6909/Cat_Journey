@@ -1307,3 +1307,20 @@
 2025-9-24 20:24:49-debug: asset-db:refresh-all-database (136ms)
 2025-9-24 20:24:49-debug: asset-db:worker-effect-data-processing (1ms)
 2025-9-24 20:24:49-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2025-9-25 10:33:07-debug: refresh db internal success
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenesbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Wall.prefabbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Ball.prefabbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\DeathZone.prefabbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\corebackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenes\testscene.scenebackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplaybackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Ball.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 10:33:07-debug: refresh db assets success
+2025-9-25 10:33:07-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-25 10:33:07-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-25 10:33:07-debug: asset-db:refresh-all-database (588ms)
+2025-9-25 10:33:07-debug: asset-db:worker-effect-data-processing (6ms)
+2025-9-25 10:33:07-debug: asset-db-hook-engine-extends-afterRefresh (9ms)

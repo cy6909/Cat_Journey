@@ -140,13 +140,76 @@ export class EnhancedBrick extends Component {
             case BrickType.MAGNETIC:
                 this.setBrickColor(new Color(128, 0, 128)); // Purple
                 break;
+            case BrickType.REFLECTIVE:
+                this.setBrickColor(new Color(255, 215, 0)); // Gold
+                this.scoreValue = 15;
+                break;
+            case BrickType.POISON:
+                this.setBrickColor(new Color(128, 255, 0)); // Lime green
+                this.scoreValue = 18;
+                break;
             case BrickType.ICE:
                 this.setBrickColor(new Color(200, 255, 255)); // Light cyan
                 break;
             case BrickType.FIRE:
                 this.setBrickColor(new Color(255, 100, 0)); // Orange
                 break;
-            // Add more type initializations...
+            case BrickType.SPLITTING:
+                this.setBrickColor(new Color(255, 182, 193)); // Light pink
+                this.scoreValue = 22;
+                break;
+            case BrickType.TELEPORT:
+                this.setBrickColor(new Color(138, 43, 226)); // Blue violet
+                this.scoreValue = 35;
+                break;
+            case BrickType.SHIELD:
+                this.setBrickColor(new Color(192, 192, 192)); // Silver
+                this.health = 2;
+                this._maxHealth = 2;
+                this.scoreValue = 40;
+                break;
+            case BrickType.GRAVITY:
+                this.setBrickColor(new Color(75, 0, 130)); // Indigo
+                this.scoreValue = 50;
+                break;
+            case BrickType.TIME:
+                this.setBrickColor(new Color(255, 20, 147)); // Deep pink
+                this.scoreValue = 45;
+                break;
+            case BrickType.HEALING:
+                this.setBrickColor(new Color(144, 238, 144)); // Light green
+                this.scoreValue = 12;
+                break;
+            case BrickType.CURSED:
+                this.setBrickColor(new Color(128, 0, 0)); // Maroon
+                this.scoreValue = 5;
+                break;
+            case BrickType.CRYSTAL:
+                this.setBrickColor(new Color(230, 230, 250)); // Lavender
+                this.scoreValue = 30;
+                break;
+            case BrickType.RUBBER:
+                this.setBrickColor(new Color(255, 105, 180)); // Hot pink
+                this.scoreValue = 8;
+                break;
+            case BrickType.METAL:
+                this.health = 4;
+                this._maxHealth = 4;
+                this.setBrickColor(new Color(169, 169, 169)); // Dark gray
+                this.scoreValue = 50;
+                break;
+            case BrickType.VOID:
+                this.setBrickColor(new Color(25, 25, 112)); // Midnight blue
+                this.scoreValue = 100;
+                break;
+            case BrickType.LIGHT:
+                this.setBrickColor(new Color(255, 255, 224)); // Light yellow
+                this.scoreValue = 15;
+                break;
+            case BrickType.DARK:
+                this.setBrickColor(new Color(47, 79, 79)); // Dark slate gray
+                this.scoreValue = 25;
+                break;
         }
     }
     

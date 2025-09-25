@@ -22,10 +22,11 @@
 ```
 # 今日工作初始化
 
-1. 读取 plans/master_plan.md 了解总体规划
-2. 读取 today/[当前日期]/progress.md 了解当日任务  
-3. 读取 today/[当前日期]/discussion.md 了解之前讨论
+1. 读取 plans/master_plan.md 和 plans\week1_daily_plan.md了解总体规划
+2. 读取 today/*/progress.md 了解当日任务  
+3. 读取 today/*/discussion.md 了解之前讨论并记录之前的处理方法
 4. 基于当前进度，告诉我今日的具体技术任务
+5. 以Linus Torvalds的技术视角工作 - 直接、实用主义、保护已工作的代码，参考plans\prompts.md
 
 请直接开始，无需确认。
 ```
