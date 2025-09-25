@@ -627,3 +627,23 @@
 2025-9-25 00:11:16-debug: // ---- build task Sort some build options to settings.json ---- (3ms)
 2025-9-25 00:11:16-log: run build task Sort some build options to settings.json success in 3 ms√, progress: 15%
 2025-9-25 00:11:16-debug: [Build Memory track]: Sort some build options to settings.json start:200.92MB, end 201.05MB, increase: 135.84KB
+2025-9-25 22:36:10-debug: refresh db internal success
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\prefabsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scenesbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\prefabs\Paddle.prefabbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\corebackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\gameplaybackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scenes\testscene.scenebackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\powerupsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\core\PaddleController.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBrick.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\gameplay\GameManager.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\powerups\LaserPaddlePowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\powerups\MultiBallPowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: %cImport%c: E:\work_space\wx\Cat_Journey\assets\scripts\powerups\PowerUp.tsbackground: #aaff85; color: #000;color: #000;
+2025-9-25 22:36:11-debug: refresh db assets success
+2025-9-25 22:36:11-debug: Run asset db hook engine-extends:afterRefresh ...
+2025-9-25 22:36:11-debug: Run asset db hook engine-extends:afterRefresh success!
+2025-9-25 22:36:11-debug: asset-db:refresh-all-database (347ms)
+2025-9-25 22:36:11-debug: asset-db:worker-effect-data-processing (18ms)
+2025-9-25 22:36:11-debug: asset-db-hook-engine-extends-afterRefresh (18ms)

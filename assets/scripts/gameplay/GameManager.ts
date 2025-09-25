@@ -1,8 +1,9 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, BoxCollider2D, PhysicsSystem2D } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D } from 'cc';
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
 import { Ball } from '../core/Ball';
+// import { RuntimeDebugPanel } from '../debug/RuntimeDebugPanel';
 const { ccclass, property } = _decorator;
 
 export enum GameState {
@@ -87,7 +88,7 @@ export class GameManager extends Component {
     protected start(): void {
         this.initializeGame();
         this.initializeCore();
-        this.initializeLevelManager();
+        // this.initializeLevelManager(); // 暂时注释掉
     }
 
     private initializeGame(): void {
@@ -99,14 +100,17 @@ export class GameManager extends Component {
         
         this.createBoundaryWalls();
         this.createPaddle();
-        this.createBall();
-        this.setupLevel();
         
-        // 延迟发射球，确保所有物理对象都已初始化
+        // 延迟创建Ball，确保Paddle完全初始化
         this.scheduleOnce(() => {
-            this.launchBall();
-            this.setState(GameState.PLAYING);
-        }, 2.0);
+            this.createBallBasedOnPaddle();
+        }, 0.1);
+        
+        this.setupLevel();
+        // this.createDebugPanel(); // 暂时注释掉，先修复场景加载问题
+        
+        // Ball现在由鼠标点击控制发射，不需要自动延迟发射
+        this.setState(GameState.PLAYING);
     }
 
     private initializeCore(): void {
@@ -118,12 +122,14 @@ export class GameManager extends Component {
         }
     }
 
+    /*
     private initializeLevelManager(): void {
         this._levelManager = LevelManager.getInstance();
         if (!this._levelManager) {
             console.warn('LevelManager instance not found');
         }
     }
+    */
 
     private createPaddle(): void {
         try {
@@ -153,6 +159,54 @@ export class GameManager extends Component {
         }
     }
 
+    private createBallBasedOnPaddle(): void {
+        try {
+            if (!this.ballPrefab) {
+                console.warn('Ball prefab not assigned - skipping ball creation');
+                return;
+            }
+            
+            if (!this._paddleNode) {
+                console.error('Cannot create ball - paddle not found');
+                return;
+            }
+            
+            // 获取Paddle的实际位置
+            const paddlePos = this._paddleNode.position;
+            console.log(`Paddle actual position: (${paddlePos.x}, ${paddlePos.y}, ${paddlePos.z})`);
+            
+            this._ballNode = instantiate(this.ballPrefab);
+            if (this._ballNode) {
+                // Ball位置基于Paddle实际位置，上方20像素
+                const ballPos = new Vec3(paddlePos.x, paddlePos.y + 20, paddlePos.z);
+                this._ballNode.setPosition(ballPos);
+                
+                console.log(`Ball positioned at: (${ballPos.x}, ${ballPos.y}, ${ballPos.z})`);
+                
+                // 将Ball添加到Canvas下，与Paddle同级
+                const canvas = this.node.parent;
+                if (canvas) {
+                    canvas.addChild(this._ballNode);
+                    console.log('Ball created successfully and added to Canvas');
+                } else {
+                    this.node.addChild(this._ballNode);
+                    console.log('Ball created successfully and added to GameManager');
+                }
+                
+                // 通知Ball找到Paddle引用
+                const ballScript = this._ballNode.getComponent('Ball');
+                if (ballScript && typeof (ballScript as any).setPaddleReference === 'function') {
+                    (ballScript as any).setPaddleReference(this._paddleNode);
+                }
+            } else {
+                console.error('Failed to instantiate ball prefab');
+            }
+            
+        } catch (error) {
+            console.error('Error creating ball based on paddle:', error);
+        }
+    }
+
     private createBall(): void {
         try {
             if (!this.ballPrefab) {
@@ -162,7 +216,7 @@ export class GameManager extends Component {
             
             this._ballNode = instantiate(this.ballPrefab);
             if (this._ballNode) {
-                this._ballNode.setPosition(0, -100, 0); // 相对Canvas中心的位置
+                this._ballNode.setPosition(0, -250, 0); // 与跟随逻辑一致：-300 + 50 = -250
                 // 将Ball添加到Canvas下，而不是GameManager下
                 const canvas = this.node.parent;
                 if (canvas) {
@@ -238,6 +292,28 @@ export class GameManager extends Component {
         }
     }
 
+    /*
+    private createDebugPanel(): void {
+        try {
+            // 创建调试面板节点
+            const debugNode = new Node('RuntimeDebugPanel');
+            const debugPanel = debugNode.addComponent(RuntimeDebugPanel);
+            
+            // 添加到Canvas下，确保在UI层次结构中
+            const canvas = this.node.parent;
+            if (canvas) {
+                canvas.addChild(debugNode);
+                console.log('✅ Runtime debug panel created and added to Canvas');
+            } else {
+                this.node.addChild(debugNode);
+                console.log('✅ Runtime debug panel created and added to GameManager');
+            }
+        } catch (error) {
+            console.error('Error creating debug panel:', error);
+        }
+    }
+    */
+
     private launchBall(): void {
         if (this._ballNode) {
             const ballScript = this._ballNode.getComponent(Ball);
@@ -257,6 +333,11 @@ export class GameManager extends Component {
         // 恢复brick创建，测试完整游戏交互
         this.clearBricks();
         
+        // 暂时直接创建砖块，不依赖LevelManager
+        const layout = this.getLevelLayout(this.level);
+        this.createBricksFromLayout(layout);
+        
+        /*
         if (this._levelManager) {
             this._levelManager.initializeLevel();
             
@@ -269,14 +350,18 @@ export class GameManager extends Component {
             const layout = this.getLevelLayout(this.level);
             this.createBricksFromLayout(layout);
         }
+        */
     }
 
     private getLevelLayout(level: number): number[][] {
+        // 更多砖块：从8x4增加到12x6，提升内容密度
         const basicLayout = [
-            [1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1]
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         ];
 
         if (level > 1) {
@@ -295,22 +380,44 @@ export class GameManager extends Component {
     private createBricksFromLayout(layout: number[][]): void {
         if (!this.brickPrefab || !this.brickContainer) return;
 
-        const startX = -280;
-        const startY = 200;
-        const brickWidth = 80;
-        const brickHeight = 40;
-        const spacing = 10;
+        // 基于真实砖块尺寸计算布局 - 消除缩放特殊情况
+        const wallInnerBoundary = 320; // 墙壁内边界 (325-5)
+        const actualBrickWidth = 80 * 0.625;  // 50像素实际宽度
+        const actualBrickHeight = 40 * 0.625; // 25像素实际高度
+        const spacing = 4;  // 减小间距适应更多砖块
+        
+        const cols = layout[0] ? layout[0].length : 0;
+        const totalBrickArea = cols * actualBrickWidth + (cols - 1) * spacing;
+        
+        // 如果12列太宽，减少到10列
+        let finalCols = cols;
+        let finalLayout = layout;
+        
+        if (totalBrickArea > wallInnerBoundary * 2) {
+            console.log(`12列太宽(${totalBrickArea})，减少到10列`);
+            finalCols = 10;
+            finalLayout = layout.map(row => row.slice(0, 10)); // 截取前10列
+        }
+        
+        const finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing;
+        const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
+        const startY = 300;
+        
+        console.log(`Creating ${finalLayout.length}x${finalCols} brick grid, total width: ${finalTotalWidth.toFixed(1)}, wall boundary: ±${wallInnerBoundary}`);
 
-        for (let row = 0; row < layout.length; row++) {
-            for (let col = 0; col < layout[row].length; col++) {
-                const brickType = layout[row][col];
+        for (let row = 0; row < finalLayout.length; row++) {
+            for (let col = 0; col < finalCols; col++) {
+                const brickType = finalLayout[row][col];
                 if (brickType === 0) continue;
 
                 const brick = instantiate(this.brickPrefab);
-                const x = startX + col * (brickWidth + spacing);
-                const y = startY - row * (brickHeight + spacing);
+                const x = startX + col * (actualBrickWidth + spacing);
+                const y = startY - row * (actualBrickHeight + spacing);
                 
                 brick.setPosition(x, y, 0);
+                
+                // 缩放砖块到新尺寸
+                brick.setScale(0.625, 0.625, 1);
                 
                 // Use EnhancedBrick component with programmatic types
                 const brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
@@ -522,6 +629,10 @@ export class GameManager extends Component {
     }
 
     private checkLevelComplete(): void {
+        // 暂时简化：直接完成关卡，不检查Boss类型
+        this.onLevelComplete();
+        
+        /*
         const levelType = this._levelManager ? this._levelManager.getCurrentLevelType() : LevelType.NORMAL;
         
         if (levelType === LevelType.BOSS) {
@@ -530,6 +641,7 @@ export class GameManager extends Component {
         }
         
         this.onLevelComplete();
+        */
     }
 
     public onLevelComplete(): void {

@@ -281,23 +281,21 @@ export class EnhancedBrick extends Component {
         const gameManager = GameManager.getInstance();
         const relicManager = RelicManager.getInstance();
         
-        // Award score and experience
-        if (gameManager && (gameManager as any).addScore) {
-            (gameManager as any).addScore(this.scoreValue);
-        }
-        
-        // Apply post-destruction effects
+        // Apply post-destruction effects before notifying GameManager
         this.applyDestructionEffects(impactPosition);
-        
-        // Drop experience orb for experience bricks
-        if (this.brickType === BrickType.EXPERIENCE || Math.random() < 0.3) {
-            this.dropExperienceOrb();
-        }
         
         // Check for explosive bricks relic
         if (relicManager && (relicManager as any).hasRelic) {
             (relicManager as any).hasRelic('ExplosiveBricks');
             this.explodeAdjacent(impactPosition);
+        }
+        
+        // Notify GameManager (handles score, level completion, power-ups)
+        const brickPosition = this.node.getWorldPosition();
+        const dropsExperience = this.brickType === BrickType.EXPERIENCE || Math.random() < 0.3;
+        
+        if (gameManager) {
+            gameManager.onBrickDestroyed(this.scoreValue, brickPosition, dropsExperience);
         }
         
         // Destroy the brick

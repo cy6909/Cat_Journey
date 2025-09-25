@@ -158,6 +158,8 @@
         "c7ab9736-f219-419f-9172-9ecc23c3e405",
         "7ec887bc-b20e-429d-8e28-08067520a25c",
         "58f8e17d-e23d-439d-8aea-d766a9c88be0",
+        "55e1ab56-d880-4407-a9d5-795c509dcee3",
+        "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e",
         "08ab0291-515e-45dd-9d6f-032cd02586f0",
         "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
@@ -9250,6 +9252,16 @@
       ],
       "dependScripts": []
     },
+    "versionCode": 1
+  },
+  "fefbfc8e-0a71-4ab4-8ee8-ac20e590d4d3": {
+    "url": "db://assets/scripts/debug/RuntimeDebugPanel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ee27c8c9-125a-43a3-a28f-f3526d4fbb53": {
+    "url": "db://assets/scripts/debug",
+    "value": {},
     "versionCode": 1
   }
 }

@@ -794,8 +794,14 @@
       "__uuid__": "58f8e17d-e23d-439d-8aea-d766a9c88be0",
       "__expectedType__": "cc.Prefab"
     },
-    "multiBallPowerUpPrefab": null,
-    "laserPaddlePowerUpPrefab": null,
+    "multiBallPowerUpPrefab": {
+      "__uuid__": "55e1ab56-d880-4407-a9d5-795c509dcee3",
+      "__expectedType__": "cc.Prefab"
+    },
+    "laserPaddlePowerUpPrefab": {
+      "__uuid__": "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e",
+      "__expectedType__": "cc.Prefab"
+    },
     "wallPrefab": {
       "__uuid__": "08ab0291-515e-45dd-9d6f-032cd02586f0",
       "__expectedType__": "cc.Prefab"
@@ -805,13 +811,15 @@
       "__expectedType__": "cc.Prefab"
     },
     "powerUpDropChance": 0.2,
-    "brickContainer": null,
+    "brickContainer": {
+      "__id__": 11
+    },
     "coreNode": null,
     "experienceOrbPrefab": null,
     "lives": 3,
     "score": 0,
     "level": 1,
-    "_id": "5ciGPNTYRLvaFy7Fwk8oiP"
+    "_id": "5fSk4yOZlAcpd9kQdrmUGb"
   },
   {
     "__type__": "cc.UITransform",

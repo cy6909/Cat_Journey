@@ -153,8 +153,8 @@
     "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
-    "_group": 1,
-    "_type": 2,
+    "_group": 4,
+    "_type": 1,
     "_allowSleep": true,
     "_gravityScale": 1,
     "_linearDamping": 0,
@@ -221,6 +221,7 @@
     "health": 1,
     "maxHealth": 1,
     "scoreValue": 10,
+    "dropsExperience": false,
     "_id": ""
   },
   {

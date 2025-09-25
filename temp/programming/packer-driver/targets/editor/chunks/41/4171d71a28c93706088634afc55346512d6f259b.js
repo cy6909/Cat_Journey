@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, RigidBody2D, Vec2, GameManager, _dec, _class, _class2, _descriptor, _descriptor2, _crd, ccclass, property, PowerUp;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Collider2D, Contact2DType, Sprite, Color, UITransform, Enum, GameManager, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, PowerUpType, PowerUp;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -24,8 +24,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Component = _cc.Component;
       Collider2D = _cc.Collider2D;
       Contact2DType = _cc.Contact2DType;
-      RigidBody2D = _cc.RigidBody2D;
-      Vec2 = _cc.Vec2;
+      Sprite = _cc.Sprite;
+      Color = _cc.Color;
+      UITransform = _cc.UITransform;
+      Enum = _cc.Enum;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }],
@@ -34,14 +36,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _cclegacy._RF.push({}, "3cb63viDYBDDI17RKoWRS7d", "PowerUp", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Collider2D', 'Contact2DType', 'RigidBody2D', 'Vec2']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Collider2D', 'Contact2DType', 'Sprite', 'Color', 'UITransform', 'Vec3', 'Enum']);
 
       ({
         ccclass,
         property
       } = _decorator);
 
-      _export("PowerUp", PowerUp = (_dec = ccclass('PowerUp'), _dec(_class = (_class2 = class PowerUp extends Component {
+      _export("PowerUpType", PowerUpType = /*#__PURE__*/function (PowerUpType) {
+        PowerUpType[PowerUpType["MULTI_BALL"] = 0] = "MULTI_BALL";
+        PowerUpType[PowerUpType["LASER_PADDLE"] = 1] = "LASER_PADDLE";
+        PowerUpType[PowerUpType["LARGER_PADDLE"] = 2] = "LARGER_PADDLE";
+        PowerUpType[PowerUpType["SMALLER_PADDLE"] = 3] = "SMALLER_PADDLE";
+        PowerUpType[PowerUpType["FASTER_BALL"] = 4] = "FASTER_BALL";
+        PowerUpType[PowerUpType["SLOWER_BALL"] = 5] = "SLOWER_BALL";
+        return PowerUpType;
+      }({}));
+
+      _export("PowerUp", PowerUp = (_dec = ccclass('PowerUp'), _dec2 = property({
+        type: Enum(PowerUpType)
+      }), _dec(_class = (_class2 = class PowerUp extends Component {
         constructor(...args) {
           super(...args);
 
@@ -49,20 +63,150 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
           _initializerDefineProperty(this, "duration", _descriptor2, this);
 
-          this._rigidBody = null;
+          _initializerDefineProperty(this, "powerUpType", _descriptor3, this);
+
           this._isCollected = false;
+          this._sprite = null;
         }
 
         onLoad() {
-          this._rigidBody = this.getComponent(RigidBody2D);
+          this._sprite = this.getComponent(Sprite); // Initialize programmatic visual appearance
+
+          this.initializePowerUpVisual();
           const collider = this.getComponent(Collider2D);
 
           if (collider) {
             collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
           }
+        }
 
-          if (this._rigidBody) {
-            this._rigidBody.linearVelocity = new Vec2(0, -this.fallSpeed);
+        start() {
+          // 使用简单的位置移动代替物理速度，避免物理世界初始化问题
+          console.log(`PowerUp started, using position-based movement`);
+        }
+
+        update(dt) {
+          // 使用简单的位置更新实现掉落效果
+          if (this.node && this.node.isValid) {
+            const currentPos = this.node.position;
+            const newY = currentPos.y - this.fallSpeed * dt;
+            this.node.setPosition(currentPos.x, newY, currentPos.z); // 检查是否掉出屏幕底部
+
+            if (newY < -500) {
+              // 屏幕底部大约是-480
+              this.node.destroy();
+            }
+          }
+        }
+
+        initializePhysics() {
+          // 不再需要设置linearVelocity，使用位置更新
+          console.log(`PowerUp using position-based movement, no physics velocity needed`);
+        }
+        /**
+         * 程序化生成PowerUp视觉效果 - 简单几何形状方案
+         * Following the discussion.md approach: simple geometric shapes instead of complex sprites
+         */
+
+
+        initializePowerUpVisual() {
+          if (!this._sprite) return; // Set base size for all power-ups
+
+          const transform = this.node.getComponent(UITransform);
+
+          if (transform) {
+            transform.setContentSize(32, 32); // Standard 32x32 size
+          } // Generate geometric shape based on power-up type
+
+
+          switch (this.powerUpType) {
+            case PowerUpType.MULTI_BALL:
+              // Yellow circle ⭐ - represents multiple balls
+              this._sprite.color = new Color(255, 255, 0, 255); // Bright yellow
+              // Note: Sprite shape determined by SpriteFrame, color makes it distinctive
+
+              break;
+
+            case PowerUpType.LASER_PADDLE:
+              // Red rectangle 🔴 - represents laser weapon
+              this._sprite.color = new Color(255, 0, 0, 255); // Bright red
+
+              if (transform) {
+                transform.setContentSize(40, 20); // Rectangle shape
+              }
+
+              break;
+
+            case PowerUpType.LARGER_PADDLE:
+              // Green plus/expand shape - represents paddle enlargement
+              this._sprite.color = new Color(0, 255, 0, 255); // Bright green
+
+              if (transform) {
+                transform.setContentSize(36, 36); // Slightly larger
+              }
+
+              break;
+
+            case PowerUpType.SMALLER_PADDLE:
+              // Orange minus/contract shape - represents paddle shrinking (negative effect)
+              this._sprite.color = new Color(255, 165, 0, 255); // Orange warning
+
+              if (transform) {
+                transform.setContentSize(24, 24); // Slightly smaller
+              }
+
+              break;
+
+            case PowerUpType.FASTER_BALL:
+              // Cyan arrow/speed lines - represents acceleration
+              this._sprite.color = new Color(0, 255, 255, 255); // Cyan
+
+              break;
+
+            case PowerUpType.SLOWER_BALL:
+              // Blue snail/slow effect - represents deceleration
+              this._sprite.color = new Color(0, 100, 255, 255); // Blue
+
+              break;
+          }
+
+          console.log(`PowerUp visual initialized: Type ${PowerUpType[this.powerUpType]}, Color: ${this._sprite.color.toString()}`);
+        }
+        /**
+         * Get power-up type name for debugging and UI display
+         */
+
+
+        getPowerUpTypeName() {
+          return PowerUpType[this.powerUpType] || 'UNKNOWN';
+        }
+        /**
+         * Get power-up description for player feedback
+         */
+
+
+        getPowerUpDescription() {
+          switch (this.powerUpType) {
+            case PowerUpType.MULTI_BALL:
+              return "Spawns 2 additional balls";
+
+            case PowerUpType.LASER_PADDLE:
+              return "Paddle can shoot lasers for 10 seconds";
+
+            case PowerUpType.LARGER_PADDLE:
+              return "Paddle becomes larger";
+
+            case PowerUpType.SMALLER_PADDLE:
+              return "Paddle becomes smaller (negative effect)";
+
+            case PowerUpType.FASTER_BALL:
+              return "Ball moves faster";
+
+            case PowerUpType.SLOWER_BALL:
+              return "Ball moves slower";
+
+            default:
+              return "Unknown power-up effect";
           }
         }
 
@@ -87,18 +231,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         collectPowerUp() {
           if (this._isCollected) return;
           this._isCollected = true;
+          console.log(`Collected power-up: ${this.getPowerUpTypeName()} - ${this.getPowerUpDescription()}`);
           this.activateEffect();
 
           if (this.duration > 0) {
             this.scheduleOnce(() => {
               this.deactivateEffect();
+              console.log(`Power-up expired: ${this.getPowerUpTypeName()}`);
             }, this.duration);
           }
 
           this.node.destroy();
         }
 
-        deactivateEffect() {}
+        deactivateEffect() {// Default implementation - override in derived classes if needed
+        }
 
         getGameManager() {
           return (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
@@ -119,6 +266,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         writable: true,
         initializer: function () {
           return 10.0;
+        }
+      }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "powerUpType", [_dec2], {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        initializer: function () {
+          return PowerUpType.MULTI_BALL;
         }
       })), _class2)) || _class));
 

@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 6205.572,
+      "mTimestamp": 4068.2724,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -682,11 +682,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 34969030.4839,
+      "mTimestamp": 2220741.15,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -695,12 +695,12 @@
             },
             "end": {
               "line": 4,
-              "column": 146
+              "column": 126
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
@@ -709,12 +709,12 @@
             },
             "end": {
               "line": 5,
-              "column": 151
+              "column": 131
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
@@ -723,12 +723,12 @@
             },
             "end": {
               "line": 6,
-              "column": 155
+              "column": 135
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
@@ -737,12 +737,12 @@
             },
             "end": {
               "line": 7,
-              "column": 152
+              "column": 132
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
@@ -751,12 +751,12 @@
             },
             "end": {
               "line": 8,
-              "column": 146
+              "column": 126
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
@@ -765,12 +765,12 @@
             },
             "end": {
               "line": 9,
-              "column": 139
+              "column": 119
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/AbyssBackground.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/AbyssBackground.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -779,12 +779,12 @@
             },
             "end": {
               "line": 10,
-              "column": 98
+              "column": 90
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/ForestThemeBackground.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/ForestThemeBackground.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -793,12 +793,12 @@
             },
             "end": {
               "line": 11,
-              "column": 104
+              "column": 96
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/SnowMountainBackground.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/SnowMountainBackground.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
@@ -807,12 +807,12 @@
             },
             "end": {
               "line": 12,
-              "column": 105
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/StarFieldBackground.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/StarFieldBackground.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
@@ -821,12 +821,12 @@
             },
             "end": {
               "line": 13,
-              "column": 102
+              "column": 94
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Ball.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/Ball.ts",
           "resolved": "__unresolved_10",
           "loc": {
             "start": {
@@ -835,12 +835,12 @@
             },
             "end": {
               "line": 14,
-              "column": 81
+              "column": 73
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Brick.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/Brick.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
@@ -849,12 +849,12 @@
             },
             "end": {
               "line": 15,
-              "column": 82
+              "column": 74
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/CameraVisibilityAnalyzer.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/CameraVisibilityAnalyzer.ts",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
@@ -863,12 +863,12 @@
             },
             "end": {
               "line": 16,
-              "column": 101
+              "column": 93
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/DeathZone.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/DeathZone.ts",
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
@@ -877,12 +877,12 @@
             },
             "end": {
               "line": 17,
-              "column": 86
+              "column": 78
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/PaddleController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/PaddleController.ts",
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
@@ -891,12 +891,12 @@
             },
             "end": {
               "line": 18,
-              "column": 93
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/effects/AdvancedEffectSystem.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/debug/RuntimeDebugPanel.ts",
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
@@ -905,12 +905,12 @@
             },
             "end": {
               "line": 19,
-              "column": 100
+              "column": 87
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/DynamicLevelGenerator.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/effects/AdvancedEffectSystem.ts",
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
@@ -919,12 +919,12 @@
             },
             "end": {
               "line": 20,
-              "column": 102
+              "column": 92
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBall.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/DynamicLevelGenerator.ts",
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
@@ -933,12 +933,12 @@
             },
             "end": {
               "line": 21,
-              "column": 93
+              "column": 94
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBossController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBall.ts",
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
@@ -947,12 +947,12 @@
             },
             "end": {
               "line": 22,
-              "column": 103
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBossController.ts",
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
@@ -961,12 +961,12 @@
             },
             "end": {
               "line": 23,
-              "column": 94
+              "column": 95
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedPaddleController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts",
           "resolved": "__unresolved_20",
           "loc": {
             "start": {
@@ -975,12 +975,12 @@
             },
             "end": {
               "line": 24,
-              "column": 105
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedPaddleController.ts",
           "resolved": "__unresolved_21",
           "loc": {
             "start": {
@@ -989,12 +989,12 @@
             },
             "end": {
               "line": 25,
-              "column": 92
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts",
           "resolved": "__unresolved_22",
           "loc": {
             "start": {
@@ -1003,12 +1003,12 @@
             },
             "end": {
               "line": 26,
-              "column": 93
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/ProceduralLevelGenerator.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts",
           "resolved": "__unresolved_23",
           "loc": {
             "start": {
@@ -1017,12 +1017,12 @@
             },
             "end": {
               "line": 27,
-              "column": 105
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/AdManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/ProceduralLevelGenerator.ts",
           "resolved": "__unresolved_24",
           "loc": {
             "start": {
@@ -1031,12 +1031,12 @@
             },
             "end": {
               "line": 28,
-              "column": 90
+              "column": 97
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/AudioManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/AdManager.ts",
           "resolved": "__unresolved_25",
           "loc": {
             "start": {
@@ -1045,12 +1045,12 @@
             },
             "end": {
               "line": 29,
-              "column": 93
+              "column": 82
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/BossController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/AudioManager.ts",
           "resolved": "__unresolved_26",
           "loc": {
             "start": {
@@ -1059,12 +1059,12 @@
             },
             "end": {
               "line": 30,
-              "column": 95
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/CoreController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/BossController.ts",
           "resolved": "__unresolved_27",
           "loc": {
             "start": {
@@ -1073,12 +1073,12 @@
             },
             "end": {
               "line": 31,
-              "column": 95
+              "column": 87
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/EliteAndHiddenBossManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/CoreController.ts",
           "resolved": "__unresolved_28",
           "loc": {
             "start": {
@@ -1087,12 +1087,12 @@
             },
             "end": {
               "line": 32,
-              "column": 106
+              "column": 87
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/EliteAndHiddenBossManager.ts",
           "resolved": "__unresolved_29",
           "loc": {
             "start": {
@@ -1101,12 +1101,12 @@
             },
             "end": {
               "line": 33,
-              "column": 94
+              "column": 98
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts",
           "resolved": "__unresolved_30",
           "loc": {
             "start": {
@@ -1115,12 +1115,12 @@
             },
             "end": {
               "line": 34,
-              "column": 98
+              "column": 86
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts",
           "resolved": "__unresolved_31",
           "loc": {
             "start": {
@@ -1129,12 +1129,12 @@
             },
             "end": {
               "line": 35,
-              "column": 91
+              "column": 90
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MonetizationManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/MapManager.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
@@ -1143,12 +1143,12 @@
             },
             "end": {
               "line": 36,
-              "column": 100
+              "column": 83
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/MonetizationManager.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -1157,12 +1157,12 @@
             },
             "end": {
               "line": 37,
-              "column": 93
+              "column": 92
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts",
           "resolved": "__unresolved_34",
           "loc": {
             "start": {
@@ -1171,12 +1171,12 @@
             },
             "end": {
               "line": 38,
-              "column": 92
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ShopManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts",
           "resolved": "__unresolved_35",
           "loc": {
             "start": {
@@ -1185,12 +1185,12 @@
             },
             "end": {
               "line": 39,
-              "column": 92
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/Laser.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/ShopManager.ts",
           "resolved": "__unresolved_36",
           "loc": {
             "start": {
@@ -1199,12 +1199,12 @@
             },
             "end": {
               "line": 40,
-              "column": 86
+              "column": 84
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/Laser.ts",
           "resolved": "__unresolved_37",
           "loc": {
             "start": {
@@ -1213,12 +1213,12 @@
             },
             "end": {
               "line": 41,
-              "column": 99
+              "column": 78
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts",
           "resolved": "__unresolved_38",
           "loc": {
             "start": {
@@ -1227,12 +1227,12 @@
             },
             "end": {
               "line": 42,
-              "column": 97
+              "column": 91
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts",
           "resolved": "__unresolved_39",
           "loc": {
             "start": {
@@ -1241,12 +1241,12 @@
             },
             "end": {
               "line": 43,
-              "column": 88
+              "column": 89
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts",
           "resolved": "__unresolved_40",
           "loc": {
             "start": {
@@ -1255,12 +1255,12 @@
             },
             "end": {
               "line": 44,
-              "column": 97
+              "column": 80
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/LevelTransitionManager.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts",
           "resolved": "__unresolved_41",
           "loc": {
             "start": {
@@ -1269,12 +1269,12 @@
             },
             "end": {
               "line": 45,
-              "column": 97
+              "column": 89
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuButton.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/LevelTransitionManager.ts",
           "resolved": "__unresolved_42",
           "loc": {
             "start": {
@@ -1288,7 +1288,7 @@
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuController.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/MainMenuButton.ts",
           "resolved": "__unresolved_43",
           "loc": {
             "start": {
@@ -1297,12 +1297,12 @@
             },
             "end": {
               "line": 47,
-              "column": 93
+              "column": 81
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/RelicUI.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/MainMenuController.ts",
           "resolved": "__unresolved_44",
           "loc": {
             "start": {
@@ -1311,12 +1311,12 @@
             },
             "end": {
               "line": 48,
-              "column": 82
+              "column": 85
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts",
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/RelicUI.ts",
           "resolved": "__unresolved_45",
           "loc": {
             "start": {
@@ -1325,7 +1325,21 @@
             },
             "end": {
               "line": 49,
-              "column": 100
+              "column": 74
+            }
+          }
+        },
+        {
+          "value": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts",
+          "resolved": "__unresolved_46",
+          "loc": {
+            "start": {
+              "line": 50,
+              "column": 7
+            },
+            "end": {
+              "line": 50,
+              "column": 92
             }
           }
         }
@@ -1335,322 +1349,329 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+            "url": "file:///D:/cocos/Creator/3.8.6/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/AbyssBackground.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/AbyssBackground.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/ForestThemeBackground.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/ForestThemeBackground.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/SnowMountainBackground.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/SnowMountainBackground.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/background/StarFieldBackground.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/background/StarFieldBackground.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Ball.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/Ball.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Brick.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/Brick.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/CameraVisibilityAnalyzer.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/CameraVisibilityAnalyzer.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/DeathZone.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/DeathZone.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/PaddleController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/PaddleController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/effects/AdvancedEffectSystem.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/debug/RuntimeDebugPanel.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/DynamicLevelGenerator.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/effects/AdvancedEffectSystem.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBall.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/DynamicLevelGenerator.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBossController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBall.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBossController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedPaddleController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedPaddleController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/ProceduralLevelGenerator.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/AdManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/ProceduralLevelGenerator.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/AudioManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/AdManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/BossController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/AudioManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/CoreController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/BossController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/EliteAndHiddenBossManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/CoreController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/EliteAndHiddenBossManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MonetizationManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/MapManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/MonetizationManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ShopManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/Laser.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/ShopManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/Laser.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/LevelTransitionManager.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuButton.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/LevelTransitionManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuController.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/MainMenuButton.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/RelicUI.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/MainMenuController.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts"
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/RelicUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts"
           },
           "messages": []
         }
@@ -3078,7 +3099,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1758767599856,
+      "mTimestamp": 1758815691502,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -8105,7 +8126,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Ball.ts": {
       "mTimestamp": {
-        "mtime": 1758763739701.469,
+        "mtime": 1758161483791.1252,
         "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
       },
       "chunkId": "8327df90437bd567230e0bf6a4a96cc297c41410",
@@ -8398,7 +8419,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/PaddleController.ts": {
       "mTimestamp": {
-        "mtime": 1758802541782.7861,
+        "mtime": 1758159313797.744,
         "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
       },
       "chunkId": "684964408a5d4f8f6f211556135619f1339e7408",
@@ -8414,11 +8435,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 141
+              "column": 118
             },
             "end": {
               "line": 1,
-              "column": 145
+              "column": 122
             }
           }
         }
@@ -8849,7 +8870,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1758800981810.417,
+        "mtime": 1758161854088.4934,
         "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
       },
       "chunkId": "4f2eb3711eac796d9e7bc719d425692f51dd2058",
@@ -8869,11 +8890,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 128
+              "column": 81
             },
             "end": {
               "line": 1,
-              "column": 132
+              "column": 85
             }
           }
         },
@@ -8916,20 +8937,6 @@
             "end": {
               "line": 4,
               "column": 59
-            }
-          }
-        },
-        {
-          "value": "../core/Ball",
-          "resolved": "__unresolved_4",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 21
-            },
-            "end": {
-              "line": 5,
-              "column": 35
             }
           }
         }
@@ -8982,13 +8989,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/CoreController.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/core/Ball.ts"
           },
           "messages": []
         }
@@ -11205,7 +11205,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/Ball.ts": {
       "mTimestamp": {
-        "mtime": 1758728058213.6472,
+        "mtime": 1758817255915.367,
         "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
       },
       "chunkId": "8289eaea4af947d7a21a7c5fad334ffda7578b96",
@@ -11221,11 +11221,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 109
+              "column": 141
             },
             "end": {
               "line": 1,
-              "column": 113
+              "column": 145
             }
           }
         }
@@ -11498,7 +11498,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/core/PaddleController.ts": {
       "mTimestamp": {
-        "mtime": 1758725328622.2915,
+        "mtime": 1758817715007.2104,
         "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
       },
       "chunkId": "a60eb0958b76330d58362f4187b6da61690b5626",
@@ -11514,11 +11514,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 118
+              "column": 154
             },
             "end": {
               "line": 1,
-              "column": 122
+              "column": 158
             }
           }
         }
@@ -11917,7 +11917,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts": {
       "mTimestamp": {
-        "mtime": 1758037289212.6206,
+        "mtime": 1758811295142.7998,
         "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
       },
       "chunkId": "5d29f701e0c6c43cd630e5da270a1ecea1ed73b4",
@@ -12127,7 +12127,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1758730250130.7007,
+        "mtime": 1758817910361.4438,
         "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
       },
       "chunkId": "41cb27b694788051d071d7ef99fc9f0fcbb9b240",
@@ -12147,11 +12147,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 111
+              "column": 113
             },
             "end": {
               "line": 1,
-              "column": 115
+              "column": 117
             }
           }
         },
@@ -12170,22 +12170,8 @@
           }
         },
         {
-          "value": "./LevelManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 40
-            },
-            "end": {
-              "line": 3,
-              "column": 56
-            }
-          }
-        },
-        {
           "value": "../managers/CoreController",
-          "resolved": "__unresolved_3",
+          "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 4,
@@ -12199,7 +12185,7 @@
         },
         {
           "value": "../core/Ball",
-          "resolved": "__unresolved_4",
+          "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
@@ -12252,13 +12238,6 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
             "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/CoreController.ts"
           },
           "messages": []
@@ -12274,7 +12253,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/LevelManager.ts": {
       "mTimestamp": {
-        "mtime": 1758725328625.2915,
+        "mtime": 1758815707801.7412,
         "uuid": "8d0483df-9ce6-4739-ba61-8c812f09a6eb"
       },
       "chunkId": "c722030254e9cf637a8ec6d589ffdb597d5e5905",
@@ -12303,22 +12282,8 @@
           }
         },
         {
-          "value": "./GameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 39
-            },
-            "end": {
-              "line": 2,
-              "column": 54
-            }
-          }
-        },
-        {
           "value": "../managers/BossController",
-          "resolved": "__unresolved_2",
+          "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 3,
@@ -12358,13 +12323,6 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
           },
           "messages": []
         },
@@ -13373,7 +13331,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts": {
       "mTimestamp": {
-        "mtime": 1758037289472.7449,
+        "mtime": 1758810962821.5994,
         "uuid": "4ec1537e-9cf8-4bd6-9e33-63b95c117749"
       },
       "chunkId": "733faa8133a89e686bf1d2413283447c9f383e81",
@@ -13407,11 +13365,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 24
+              "column": 37
             },
             "end": {
               "line": 2,
-              "column": 35
+              "column": 48
             }
           }
         }
@@ -13457,7 +13415,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts": {
       "mTimestamp": {
-        "mtime": 1758037289472.7449,
+        "mtime": 1758810962822.5984,
         "uuid": "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0"
       },
       "chunkId": "7ca07af40e4bb87d5c56149ed523835925225c4e",
@@ -13491,11 +13449,11 @@
           "loc": {
             "start": {
               "line": 2,
-              "column": 24
+              "column": 37
             },
             "end": {
               "line": 2,
-              "column": 35
+              "column": 48
             }
           }
         }
@@ -13541,7 +13499,7 @@
     },
     "file:///E:/work_space/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts": {
       "mTimestamp": {
-        "mtime": 1758037289474.7441,
+        "mtime": 1758812399930.0256,
         "uuid": "3cb63be2-0d80-430c-8d7b-44aa16452edd"
       },
       "chunkId": "4171d71a28c93706088634afc55346512d6f259b",
@@ -13561,11 +13519,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 90
+              "column": 111
             },
             "end": {
               "line": 1,
-              "column": 94
+              "column": 115
             }
           }
         },
@@ -14090,6 +14048,58 @@
           "resolved": {
             "type": "module",
             "url": "file:///E:/work_space/wx/Cat_Journey/assets/scripts/managers/MapManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/work_space/wx/Cat_Journey/assets/scripts/debug/RuntimeDebugPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1758814984740.9875,
+        "uuid": "fefbfc8e-0a71-4ab4-8ee8-ac20e590d4d3"
+      },
+      "chunkId": "3bcf7077c9cd39f0d8d554eadd3fbc899c16b9be",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
           },
           "messages": []
         }

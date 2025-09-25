@@ -32,12 +32,15 @@
       "enableCollisionMatrix": true,
       "enableContactListener": true,
       "collisionGroups": [
-        "Default",
-        "Wall",
-        "Ball",
-        "Brick",
-        "DeathZone",
-        "PowerUp"
+        "Default",        
+        "Wall",           
+        "Ball",           
+        "Brick",          
+        "DeathZone",      
+        "PowerUp",        
+        "Reserved6",      
+        "Reserved7",      
+        "Paddle"          
       ],
       "collisionMatrix": [
         [
@@ -46,28 +49,18 @@
           false,
           false,
           false,
-          false
-        ],
-        [
           false,
-          true,
-          true,
           false,
-          true,
-          false
-        ],
-        [
           false,
-          true,
-          false,
-          true,
-          true,
           false
         ],
         [
           false,
           false,
           true,
+          false,
+          false,
+          false,
           false,
           false,
           false
@@ -75,12 +68,73 @@
         [
           false,
           true,
+          false,
           true,
+          true,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
           false,
           false,
           false
         ],
         [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
           false,
           false,
           false,
@@ -89,29 +143,7 @@
           false
         ]
       ]
-    },
-    "collisionGroups": [
-      {
-        "index": 1,
-        "name": "BALL"
-      },
-      {
-        "index": 2,
-        "name": "BRICK"
-      },
-      {
-        "index": 3,
-        "name": "PADDLE"
-      },
-      {
-        "index": 4,
-        "name": "WALL"
-      },
-      {
-        "index": 5,
-        "name": "DEADZONE"
-      }
-    ]
+    }
   },
   "custom_joint_texture_layouts": []
 }

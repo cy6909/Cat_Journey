@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, input, Input, EventTouch, Vec3, UITransform, Canvas, Camera, Vec2, Touch, BoxCollider2D, Sprite } from 'cc';
+import { _decorator, Component, Node, input, Input, EventTouch, Vec3, UITransform, Canvas, Camera, Vec2, Touch, BoxCollider2D, Sprite, RigidBody2D } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('PaddleController')
@@ -23,6 +23,13 @@ export class PaddleController extends Component {
     private _currentWidth: number = 120; // 当前实际宽度
     private _boxCollider: BoxCollider2D | null = null;
     private _sprite: Sprite | null = null;
+    private _rigidBody: RigidBody2D | null = null;
+    
+    // 惯性移动相关 - 添加重量感 (public for debugging)
+    public _targetX: number = 0;        // 目标X位置
+    public _currentVelocity: number = 0; // 当前速度
+    public _dampingFactor: number = 0.15; // 阻尼系数，控制惯性感
+    public _maxSpeed: number = 800;      // 最大移动速度
     
     private _canvasComponent: Canvas | null = null;
     private _uiTransform: UITransform | null = null;
@@ -30,6 +37,7 @@ export class PaddleController extends Component {
     private _isTouching: boolean = false;
     private _lastTouchX: number = 0;
     private _screenWidth: number = 640; // 竖屏宽度640，不是960
+    private _fixedY: number = -300; // 固定的Y位置，防止被球推动
     
     protected onLoad(): void {
         this._uiTransform = this.getComponent(UITransform);
@@ -39,9 +47,20 @@ export class PaddleController extends Component {
         // 获取组件引用
         this._boxCollider = this.getComponent(BoxCollider2D);
         this._sprite = this.getComponent(Sprite);
+        this._rigidBody = this.getComponent(RigidBody2D);
+        
+        // 确保RigidBody2D配置正确
+        if (this._rigidBody) {
+            this._rigidBody.type = 2; // Kinematic
+            this._rigidBody.gravityScale = 0;
+            this._rigidBody.fixedRotation = true;
+            console.log('Paddle RigidBody2D configured: Kinematic, no gravity, fixed rotation');
+        }
         
         // 初始化尺寸
         this._currentWidth = this.basePaddleWidth;
+        this._targetX = this.node.position.x; // 初始化目标位置
+        this._fixedY = this.node.position.y; // 记录初始Y位置
         this.updatePaddleSize();
     }
 
@@ -58,20 +77,45 @@ export class PaddleController extends Component {
         input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
         input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
     }
+    
+    protected update(dt: number): void {
+        // 强制锁定Y轴位置，防止被球推动
+        const currentPos = this.node.position;
+        if (Math.abs(currentPos.y - this._fixedY) > 0.01) {
+            console.log(`Paddle Y corrected: ${currentPos.y.toFixed(2)} -> ${this._fixedY}`);
+        }
+        
+        // 平滑移动到目标位置 - 好品味：简单的物理模拟
+        const deltaX = this._targetX - currentPos.x;
+        
+        // 计算加速度 (简单弹簧阻尼系统)
+        const acceleration = deltaX * 10; // 弹簧力
+        this._currentVelocity += acceleration * dt;
+        this._currentVelocity *= (1 - this._dampingFactor); // 阻尼
+        
+        // 限制最大速度
+        if (Math.abs(this._currentVelocity) > this._maxSpeed) {
+            this._currentVelocity = Math.sign(this._currentVelocity) * this._maxSpeed;
+        }
+        
+        // 更新位置 - 强制使用固定的Y坐标
+        const newX = currentPos.x + this._currentVelocity * dt;
+        this.node.setPosition(newX, this._fixedY, currentPos.z);
+    }
 
     // 测试需要的移动方法
     public moveLeft(deltaTime: number): void {
         const currentPos = this.node.getPosition();
         const newX = currentPos.x - this.speed * deltaTime;
         const clampedX = this.clampToScreenBounds(newX);
-        this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+        this.node.setPosition(clampedX, this._fixedY, currentPos.z);
     }
 
     public moveRight(deltaTime: number): void {
         const currentPos = this.node.getPosition();
         const newX = currentPos.x + this.speed * deltaTime;
         const clampedX = this.clampToScreenBounds(newX);
-        this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+        this.node.setPosition(clampedX, this._fixedY, currentPos.z);
     }
 
     private clampToScreenBounds(x: number): number {
@@ -107,8 +151,8 @@ export class PaddleController extends Component {
         const worldPos = this._camera.screenToWorld(new Vec3(screenPos.x, screenPos.y, 0));
         const localPos = this.node.parent?.getComponent(UITransform)?.convertToNodeSpaceAR(worldPos) || worldPos;
 
-        const clampedX = this.clampToScreenBounds(localPos.x);
-        this.node.setPosition(clampedX, this.node.position.y, this.node.position.z);
+        // 设置目标位置而不是直接移动 - 添加惯性感
+        this._targetX = this.clampToScreenBounds(localPos.x);
     }
 
     // 公共访问器供测试使用

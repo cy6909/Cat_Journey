@@ -220,9 +220,9 @@
     "__prefab": {
       "__id__": 11
     },
-    "initialSpeed": 100,
-    "maxSpeed": 600,
-    "minSpeed": 100,
+    "initialSpeed": 20,
+    "maxSpeed": 200,
+    "minSpeed": 10,
     "_id": ""
   },
   {

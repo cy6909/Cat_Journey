@@ -1,5 +1,5 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, director } from 'cc';
-import { GameManager, GameState } from './GameManager';
+// import { GameManager, GameState } from './GameManager';  // 移除循环依赖
 import { BossController } from '../managers/BossController';
 
 const { ccclass, property } = _decorator;

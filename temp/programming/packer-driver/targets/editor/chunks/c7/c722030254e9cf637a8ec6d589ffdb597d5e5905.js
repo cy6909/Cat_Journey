@@ -1,17 +1,13 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, GameManager, BossController, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _crd, ccclass, property, LevelType, DifficultyTier, LevelManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, BossController, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _class3, _crd, ccclass, property, LevelType, DifficultyTier, LevelManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
-
-  function _reportPossibleCrUseOfGameManager(extras) {
-    _reporterNs.report("GameManager", "./GameManager", _context.meta, extras);
-  }
 
   function _reportPossibleCrUseOfBossController(extras) {
     _reporterNs.report("BossController", "../managers/BossController", _context.meta, extras);
@@ -31,15 +27,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       instantiate = _cc.instantiate;
       director = _cc.director;
     }, function (_unresolved_2) {
-      GameManager = _unresolved_2.GameManager;
-    }, function (_unresolved_3) {
-      BossController = _unresolved_3.BossController;
+      BossController = _unresolved_2.BossController;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "8d048PfnOZHObphjIEvCabr", "LevelManager", undefined);
 
+      // import { GameManager, GameState } from './GameManager';  // 移除循环依赖
       __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director']);
 
       ({
@@ -119,9 +114,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._levelStartTime = director.getTotalTime();
           this._pressureTimer = 0;
           this._pressureActive = false;
-          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance();
+          const gameManager = GameManager.getInstance();
           if (!gameManager) return;
           const currentLevel = gameManager.getLevel();
           this._currentLevelType = this.determineLevelType(currentLevel);
@@ -185,9 +178,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           }), BossController) : BossController);
 
           if (bossScript) {
-            const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-              error: Error()
-            }), GameManager) : GameManager).getInstance();
+            const gameManager = GameManager.getInstance();
             const level = gameManager ? gameManager.getLevel() : 1; // Scale boss health and damage with level
 
             const healthMultiplier = 1 + level / 10;
@@ -214,9 +205,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         applyBrickPressure(dt) {
           if (!this.brickContainer) return;
-          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance();
+          const gameManager = GameManager.getInstance();
           if (!gameManager) return;
           const level = gameManager.getLevel();
           const adjustedSpeed = this.pressureMoveSpeed * Math.pow(this.pressureAcceleration, level / 5); // Move all bricks down
@@ -237,9 +226,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onBricksReachPaddle() {
-          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance();
+          const gameManager = GameManager.getInstance();
           if (!gameManager) return; // Calculate damage based on remaining brick rows
 
           const remainingBricks = this.countRemainingBricks();
@@ -290,9 +277,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         onBossDefeated() {
           console.log('Boss defeated! Level complete!');
-          const gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
-            error: Error()
-          }), GameManager) : GameManager).getInstance();
+          const gameManager = GameManager.getInstance();
 
           if (gameManager) {
             // Boss levels give extra rewards

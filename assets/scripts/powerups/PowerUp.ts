@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Collider2D, Contact2DType, RigidBody2D, Vec2, Sprite, Color, UITransform } from 'cc';
+import { _decorator, Component, Node, Collider2D, Contact2DType, Sprite, Color, UITransform, Vec3, Enum } from 'cc';
 import { GameManager } from '../gameplay/GameManager';
 const { ccclass, property } = _decorator;
 
@@ -19,15 +19,13 @@ export abstract class PowerUp extends Component {
     @property
     public duration: number = 10.0;
     
-    @property({type: PowerUpType})
+    @property({type: Enum(PowerUpType)})
     public powerUpType: PowerUpType = PowerUpType.MULTI_BALL;
 
-    private _rigidBody: RigidBody2D | null = null;
     private _isCollected: boolean = false;
     private _sprite: Sprite | null = null;
 
     protected onLoad(): void {
-        this._rigidBody = this.getComponent(RigidBody2D);
         this._sprite = this.getComponent(Sprite);
         
         // Initialize programmatic visual appearance
@@ -37,10 +35,30 @@ export abstract class PowerUp extends Component {
         if (collider) {
             collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
         }
-
-        if (this._rigidBody) {
-            this._rigidBody.linearVelocity = new Vec2(0, -this.fallSpeed);
+    }
+    
+    protected start(): void {
+        // 使用简单的位置移动代替物理速度，避免物理世界初始化问题
+        console.log(`PowerUp started, using position-based movement`);
+    }
+    
+    protected update(dt: number): void {
+        // 使用简单的位置更新实现掉落效果
+        if (this.node && this.node.isValid) {
+            const currentPos = this.node.position;
+            const newY = currentPos.y - this.fallSpeed * dt;
+            this.node.setPosition(currentPos.x, newY, currentPos.z);
+            
+            // 检查是否掉出屏幕底部
+            if (newY < -500) { // 屏幕底部大约是-480
+                this.node.destroy();
+            }
         }
+    }
+    
+    private initializePhysics(): void {
+        // 不再需要设置linearVelocity，使用位置更新
+        console.log(`PowerUp using position-based movement, no physics velocity needed`);
     }
     
     /**

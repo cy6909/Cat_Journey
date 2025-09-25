@@ -27,9 +27,6 @@
         "__id__": 4
       },
       {
-        "__id__": 6
-      },
-      {
         "__id__": 8
       },
       {
@@ -137,36 +134,6 @@
   {
     "__type__": "cc.CompPrefabInfo",
     "fileId": "laser-sprite-id"
-  },
-  {
-    "__type__": "cc.RigidBody2D",
-    "_name": "",
-    "_objFlags": 0,
-    "__editorExtras__": {},
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "__prefab": {
-      "__id__": 7
-    },
-    "enabledContactListener": true,
-    "bullet": false,
-    "awakeOnLoad": true,
-    "_group": 1,
-    "_type": 2,
-    "_allowSleep": true,
-    "_gravityScale": 1,
-    "_linearDamping": 0,
-    "_angularDamping": 0,
-    "_linearVelocity": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_angularVelocity": 0,
-    "_fixedRotation": false,
-    "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
