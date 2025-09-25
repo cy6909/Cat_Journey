@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, BoxCollider2D } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, BoxCollider2D, PhysicsSystem2D } from 'cc';
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
@@ -92,6 +92,11 @@ export class GameManager extends Component {
 
     private initializeGame(): void {
         this.setState(GameState.PRE_START);
+        
+        // 启用物理调试显示
+        PhysicsSystem2D.instance.debugDrawFlags = 1; // 启用调试绘制
+        console.log('Physics debug draw enabled');
+        
         this.createBoundaryWalls();
         this.createPaddle();
         this.createBall();
@@ -129,7 +134,7 @@ export class GameManager extends Component {
             
             this._paddleNode = instantiate(this.paddlePrefab);
             if (this._paddleNode) {
-                this._paddleNode.setPosition(0, -250, 0);
+                this._paddleNode.setPosition(0, -300, 0);
                 // 统一添加到Canvas下
                 const canvas = this.node.parent;
                 if (canvas) {
@@ -248,9 +253,8 @@ export class GameManager extends Component {
     }
 
     private setupLevel(): void {
-        console.log('SetupLevel called - temporarily skipping brick creation for physics testing');
-        // 暂时注释掉brick创建，专注测试Ball和Wall物理
-        /*
+        console.log('SetupLevel called - restoring brick creation for full game testing');
+        // 恢复brick创建，测试完整游戏交互
         this.clearBricks();
         
         if (this._levelManager) {
@@ -265,7 +269,6 @@ export class GameManager extends Component {
             const layout = this.getLevelLayout(this.level);
             this.createBricksFromLayout(layout);
         }
-        */
     }
 
     private getLevelLayout(level: number): number[][] {
