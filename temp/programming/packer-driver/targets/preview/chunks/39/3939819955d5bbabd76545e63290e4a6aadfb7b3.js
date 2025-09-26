@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Prefab, instantiate, input, Input, PowerUp, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, LaserPaddlePowerUp;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Prefab, instantiate, input, Input, PowerUp, PowerUpType, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, LaserPaddlePowerUp;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _reportPossibleCrUseOfPowerUp(extras) {
     _reporterNs.report("PowerUp", "./PowerUp", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPowerUpType(extras) {
+    _reporterNs.report("PowerUpType", "./PowerUp", _context.meta, extras);
   }
 
   return {
@@ -27,6 +31,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Input = _cc.Input;
     }, function (_unresolved_2) {
       PowerUp = _unresolved_2.PowerUp;
+      PowerUpType = _unresolved_2.PowerUpType;
     }],
     execute: function () {
       _crd = true;
@@ -56,10 +61,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           this._canFire = true;
         }
 
+        onLoad() {
+          // Set power-up type before calling parent onLoad
+          this.powerUpType = (_crd && PowerUpType === void 0 ? (_reportPossibleCrUseOfPowerUpType({
+            error: Error()
+          }), PowerUpType) : PowerUpType).LASER_PADDLE;
+          super.onLoad();
+        }
+
         activateEffect() {
           var gameManager = this.getGameManager();
           if (!gameManager) return;
-          this._paddleNode = gameManager.node.getChildByName('Paddle');
+          this._paddleNode = gameManager.getPaddleNode();
           if (!this._paddleNode) return;
           input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
           input.on(Input.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -88,7 +101,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           var gameManager = this.getGameManager();
 
           if (gameManager) {
-            gameManager.node.addChild(laser);
+            // Add to Canvas for consistent coordinate system
+            var canvas = gameManager.node.parent;
+
+            if (canvas) {
+              canvas.addChild(laser);
+            } else {
+              gameManager.node.addChild(laser);
+            }
           }
 
           var laserScript = laser.getComponent('Laser');

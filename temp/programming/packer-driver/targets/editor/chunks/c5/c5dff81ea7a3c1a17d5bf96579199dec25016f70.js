@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Vec3, PowerUp, _dec, _class, _class2, _descriptor, _crd, ccclass, property, MultiBallPowerUp;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, instantiate, Vec3, PowerUp, PowerUpType, _dec, _class, _class2, _descriptor, _crd, ccclass, property, MultiBallPowerUp;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -11,6 +11,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
   function _reportPossibleCrUseOfPowerUp(extras) {
     _reporterNs.report("PowerUp", "./PowerUp", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPowerUpType(extras) {
+    _reporterNs.report("PowerUpType", "./PowerUp", _context.meta, extras);
   }
 
   return {
@@ -25,6 +29,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       Vec3 = _cc.Vec3;
     }, function (_unresolved_2) {
       PowerUp = _unresolved_2.PowerUp;
+      PowerUpType = _unresolved_2.PowerUpType;
     }],
     execute: function () {
       _crd = true;
@@ -47,12 +52,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           _initializerDefineProperty(this, "extraBalls", _descriptor, this);
         }
 
+        onLoad() {
+          // Set power-up type before calling parent onLoad
+          this.powerUpType = (_crd && PowerUpType === void 0 ? (_reportPossibleCrUseOfPowerUpType({
+            error: Error()
+          }), PowerUpType) : PowerUpType).MULTI_BALL;
+          super.onLoad();
+        }
+
         activateEffect() {
           const gameManager = this.getGameManager();
           if (!gameManager) return;
           const ballPrefab = gameManager.getBallPrefab();
           if (!ballPrefab) return;
-          const currentBall = gameManager.node.getChildByName('Ball');
+          const currentBall = gameManager.getBallNode();
           if (!currentBall) return;
           const currentPos = currentBall.position;
 
@@ -60,8 +73,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             const newBall = instantiate(ballPrefab);
             const angle = Math.PI / 6 * (i - this.extraBalls / 2 + 0.5);
             const offset = new Vec3(Math.sin(angle) * 50, Math.cos(angle) * 50, 0);
-            newBall.setPosition(currentPos.add(offset));
-            gameManager.node.addChild(newBall);
+            newBall.setPosition(currentPos.add(offset)); // Add to Canvas instead of GameManager for consistent coordinate system
+
+            const canvas = gameManager.node.parent;
+
+            if (canvas) {
+              canvas.addChild(newBall);
+            } else {
+              gameManager.node.addChild(newBall);
+            }
+
             const ballScript = newBall.getComponent('Ball');
 
             if (ballScript) {

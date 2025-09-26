@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, BoxCollider2D, Sprite, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, PaddleController;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, BoxCollider2D, Sprite, RigidBody2D, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, PaddleController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,13 +23,14 @@ System.register(["cc"], function (_export, _context) {
       Canvas = _cc.Canvas;
       BoxCollider2D = _cc.BoxCollider2D;
       Sprite = _cc.Sprite;
+      RigidBody2D = _cc.RigidBody2D;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "a1b2cPU5fZ4kKvN7xI0VniQ", "PaddleController", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2', 'Touch', 'BoxCollider2D', 'Sprite']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2', 'Touch', 'BoxCollider2D', 'Sprite', 'RigidBody2D']);
 
       ({
         ccclass,
@@ -59,15 +60,27 @@ System.register(["cc"], function (_export, _context) {
           // 当前实际宽度
           this._boxCollider = null;
           this._sprite = null;
+          this._rigidBody = null;
+          // 惯性移动相关 - 添加重量感 (public for debugging)
+          this._targetX = 0;
+          // 目标X位置
+          this._currentVelocity = 0;
+          // 当前速度
+          this._dampingFactor = 0.15;
+          // 阻尼系数，控制惯性感
+          this._maxSpeed = 800;
+          // 最大移动速度
           this._canvasComponent = null;
           this._uiTransform = null;
           this._camera = null;
           this._isTouching = false;
           this._lastTouchX = 0;
           this._screenWidth = 640;
+          // 竖屏宽度640，不是960
+          this._fixedY = -300;
         }
 
-        // 竖屏宽度640，不是960
+        // 固定的Y位置，防止被球推动
         onLoad() {
           var _this$node$parent, _this$_canvasComponen;
 
@@ -76,9 +89,23 @@ System.register(["cc"], function (_export, _context) {
           this._camera = ((_this$_canvasComponen = this._canvasComponent) == null ? void 0 : _this$_canvasComponen.cameraComponent) || null; // 获取组件引用
 
           this._boxCollider = this.getComponent(BoxCollider2D);
-          this._sprite = this.getComponent(Sprite); // 初始化尺寸
+          this._sprite = this.getComponent(Sprite);
+          this._rigidBody = this.getComponent(RigidBody2D); // 确保RigidBody2D配置正确
+
+          if (this._rigidBody) {
+            this._rigidBody.type = 2; // Kinematic
+
+            this._rigidBody.gravityScale = 0;
+            this._rigidBody.fixedRotation = true;
+            console.log('Paddle RigidBody2D configured: Kinematic, no gravity, fixed rotation');
+          } // 初始化尺寸
+
 
           this._currentWidth = this.basePaddleWidth;
+          this._targetX = this.node.position.x; // 初始化目标位置
+
+          this._fixedY = this.node.position.y; // 记录初始Y位置
+
           this.updatePaddleSize();
         }
 
@@ -94,6 +121,32 @@ System.register(["cc"], function (_export, _context) {
           input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
           input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
           input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+        }
+
+        update(dt) {
+          // 强制锁定Y轴位置，防止被球推动
+          const currentPos = this.node.position;
+
+          if (Math.abs(currentPos.y - this._fixedY) > 0.01) {
+            console.log(`Paddle Y corrected: ${currentPos.y.toFixed(2)} -> ${this._fixedY}`);
+          } // 平滑移动到目标位置 - 好品味：简单的物理模拟
+
+
+          const deltaX = this._targetX - currentPos.x; // 计算加速度 (简单弹簧阻尼系统)
+
+          const acceleration = deltaX * 10; // 弹簧力
+
+          this._currentVelocity += acceleration * dt;
+          this._currentVelocity *= 1 - this._dampingFactor; // 阻尼
+          // 限制最大速度
+
+          if (Math.abs(this._currentVelocity) > this._maxSpeed) {
+            this._currentVelocity = Math.sign(this._currentVelocity) * this._maxSpeed;
+          } // 更新位置 - 强制使用固定的Y坐标
+
+
+          const newX = currentPos.x + this._currentVelocity * dt;
+          this.node.setPosition(newX, this._fixedY, currentPos.z);
         } // 测试需要的移动方法
 
 
@@ -101,14 +154,14 @@ System.register(["cc"], function (_export, _context) {
           const currentPos = this.node.getPosition();
           const newX = currentPos.x - this.speed * deltaTime;
           const clampedX = this.clampToScreenBounds(newX);
-          this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+          this.node.setPosition(clampedX, this._fixedY, currentPos.z);
         }
 
         moveRight(deltaTime) {
           const currentPos = this.node.getPosition();
           const newX = currentPos.x + this.speed * deltaTime;
           const clampedX = this.clampToScreenBounds(newX);
-          this.node.setPosition(clampedX, currentPos.y, currentPos.z);
+          this.node.setPosition(clampedX, this._fixedY, currentPos.z);
         }
 
         clampToScreenBounds(x) {
@@ -146,9 +199,9 @@ System.register(["cc"], function (_export, _context) {
 
           const worldPos = this._camera.screenToWorld(new Vec3(screenPos.x, screenPos.y, 0));
 
-          const localPos = ((_this$node$parent2 = this.node.parent) == null || (_this$node$parent2 = _this$node$parent2.getComponent(UITransform)) == null ? void 0 : _this$node$parent2.convertToNodeSpaceAR(worldPos)) || worldPos;
-          const clampedX = this.clampToScreenBounds(localPos.x);
-          this.node.setPosition(clampedX, this.node.position.y, this.node.position.z);
+          const localPos = ((_this$node$parent2 = this.node.parent) == null || (_this$node$parent2 = _this$node$parent2.getComponent(UITransform)) == null ? void 0 : _this$node$parent2.convertToNodeSpaceAR(worldPos)) || worldPos; // 设置目标位置而不是直接移动 - 添加惯性感
+
+          this._targetX = this.clampToScreenBounds(localPos.x);
         } // 公共访问器供测试使用
 
 

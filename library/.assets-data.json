@@ -114,22 +114,12 @@
   },
   "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e": {
     "url": "db://assets/prefabs/LaserPaddlePowerUp.prefab",
-    "value": {
-      "depends": [],
-      "dependScripts": [
-        "4ec1537e-9cf8-4bd6-9e33-63b95c117749"
-      ]
-    },
+    "value": {},
     "versionCode": 1
   },
   "55e1ab56-d880-4407-a9d5-795c509dcee3": {
     "url": "db://assets/prefabs/MultiBallPowerUp.prefab",
-    "value": {
-      "depends": [],
-      "dependScripts": [
-        "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0"
-      ]
-    },
+    "value": {},
     "versionCode": 1
   },
   "7ec887bc-b20e-429d-8e28-08067520a25c": {

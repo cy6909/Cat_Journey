@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, director, Color, Sprite, PhysicsSystem2D, RelicManager, LevelManager, LevelType, CoreController, Ball, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, RelicManager, CoreController, Ball, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -15,10 +15,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfLevelManager(extras) {
     _reporterNs.report("LevelManager", "./LevelManager", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLevelType(extras) {
-    _reporterNs.report("LevelType", "./LevelManager", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfCoreController(extras) {
@@ -41,6 +37,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Node = _cc.Node;
       Prefab = _cc.Prefab;
       instantiate = _cc.instantiate;
+      Vec3 = _cc.Vec3;
       director = _cc.director;
       Color = _cc.Color;
       Sprite = _cc.Sprite;
@@ -48,20 +45,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_2) {
       RelicManager = _unresolved_2.RelicManager;
     }, function (_unresolved_3) {
-      LevelManager = _unresolved_3.LevelManager;
-      LevelType = _unresolved_3.LevelType;
+      CoreController = _unresolved_3.CoreController;
     }, function (_unresolved_4) {
-      CoreController = _unresolved_4.CoreController;
-    }, function (_unresolved_5) {
-      Ball = _unresolved_5.Ball;
+      Ball = _unresolved_4.Ball;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "1112eqYJQlDHrb6soEdZnHr", "GameManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director', 'Color', 'Sprite', 'BoxCollider2D', 'PhysicsSystem2D']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director', 'Color', 'Sprite', 'PhysicsSystem2D']);
 
+      // import { RuntimeDebugPanel } from '../debug/RuntimeDebugPanel';
       ({
         ccclass,
         property
@@ -137,8 +132,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         start() {
           this.initializeGame();
-          this.initializeCore();
-          this.initializeLevelManager();
+          this.initializeCore(); // this.initializeLevelManager(); // 暂时注释掉
         }
 
         initializeGame() {
@@ -148,14 +142,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           console.log('Physics debug draw enabled');
           this.createBoundaryWalls();
-          this.createPaddle();
-          this.createBall();
-          this.setupLevel(); // 延迟发射球，确保所有物理对象都已初始化
+          this.createPaddle(); // 延迟创建Ball，确保Paddle完全初始化
 
           this.scheduleOnce(() => {
-            this.launchBall();
-            this.setState(GameState.PLAYING);
-          }, 2.0);
+            this.createBallBasedOnPaddle();
+          }, 0.1);
+          this.setupLevel(); // this.createDebugPanel(); // 暂时注释掉，先修复场景加载问题
+          // Ball现在由鼠标点击控制发射，不需要自动延迟发射
+
+          this.setState(GameState.PLAYING);
         }
 
         initializeCore() {
@@ -169,16 +164,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
           }
         }
-
-        initializeLevelManager() {
-          this._levelManager = (_crd && LevelManager === void 0 ? (_reportPossibleCrUseOfLevelManager({
-            error: Error()
-          }), LevelManager) : LevelManager).getInstance();
-
-          if (!this._levelManager) {
-            console.warn('LevelManager instance not found');
-          }
+        /*
+        private initializeLevelManager(): void {
+            this._levelManager = LevelManager.getInstance();
+            if (!this._levelManager) {
+                console.warn('LevelManager instance not found');
+            }
         }
+        */
+
 
         createPaddle() {
           try {
@@ -210,6 +204,55 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
         }
 
+        createBallBasedOnPaddle() {
+          try {
+            if (!this.ballPrefab) {
+              console.warn('Ball prefab not assigned - skipping ball creation');
+              return;
+            }
+
+            if (!this._paddleNode) {
+              console.error('Cannot create ball - paddle not found');
+              return;
+            } // 获取Paddle的实际位置
+
+
+            var paddlePos = this._paddleNode.position;
+            console.log("Paddle actual position: (" + paddlePos.x + ", " + paddlePos.y + ", " + paddlePos.z + ")");
+            this._ballNode = instantiate(this.ballPrefab);
+
+            if (this._ballNode) {
+              // Ball位置基于Paddle实际位置，上方20像素
+              var ballPos = new Vec3(paddlePos.x, paddlePos.y + 20, paddlePos.z);
+
+              this._ballNode.setPosition(ballPos);
+
+              console.log("Ball positioned at: (" + ballPos.x + ", " + ballPos.y + ", " + ballPos.z + ")"); // 将Ball添加到Canvas下，与Paddle同级
+
+              var canvas = this.node.parent;
+
+              if (canvas) {
+                canvas.addChild(this._ballNode);
+                console.log('Ball created successfully and added to Canvas');
+              } else {
+                this.node.addChild(this._ballNode);
+                console.log('Ball created successfully and added to GameManager');
+              } // 通知Ball找到Paddle引用
+
+
+              var ballScript = this._ballNode.getComponent('Ball');
+
+              if (ballScript && typeof ballScript.setPaddleReference === 'function') {
+                ballScript.setPaddleReference(this._paddleNode);
+              }
+            } else {
+              console.error('Failed to instantiate ball prefab');
+            }
+          } catch (error) {
+            console.error('Error creating ball based on paddle:', error);
+          }
+        }
+
         createBall() {
           try {
             if (!this.ballPrefab) {
@@ -220,7 +263,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this._ballNode = instantiate(this.ballPrefab);
 
             if (this._ballNode) {
-              this._ballNode.setPosition(0, -100, 0); // 相对Canvas中心的位置
+              this._ballNode.setPosition(0, -250, 0); // 与跟随逻辑一致：-300 + 50 = -250
               // 将Ball添加到Canvas下，而不是GameManager下
 
 
@@ -306,6 +349,28 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             console.error('Error creating boundary walls:', error);
           }
         }
+        /*
+        private createDebugPanel(): void {
+            try {
+                // 创建调试面板节点
+                const debugNode = new Node('RuntimeDebugPanel');
+                const debugPanel = debugNode.addComponent(RuntimeDebugPanel);
+                
+                // 添加到Canvas下，确保在UI层次结构中
+                const canvas = this.node.parent;
+                if (canvas) {
+                    canvas.addChild(debugNode);
+                    console.log('✅ Runtime debug panel created and added to Canvas');
+                } else {
+                    this.node.addChild(debugNode);
+                    console.log('✅ Runtime debug panel created and added to GameManager');
+                }
+            } catch (error) {
+                console.error('Error creating debug panel:', error);
+            }
+        }
+        */
+
 
         launchBall() {
           if (this._ballNode) {
@@ -327,28 +392,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         setupLevel() {
           console.log('SetupLevel called - restoring brick creation for full game testing'); // 恢复brick创建，测试完整游戏交互
 
-          this.clearBricks();
+          this.clearBricks(); // 暂时直接创建砖块，不依赖LevelManager
 
+          var layout = this.getLevelLayout(this.level);
+          this.createBricksFromLayout(layout);
+          /*
           if (this._levelManager) {
-            this._levelManager.initializeLevel();
-
-            var levelType = this._levelManager.getCurrentLevelType();
-
-            if (levelType !== (_crd && LevelType === void 0 ? (_reportPossibleCrUseOfLevelType({
-              error: Error()
-            }), LevelType) : LevelType).BOSS) {
-              var layout = this.getLevelLayout(this.level);
-              this.createBricksFromLayout(layout);
-            }
+              this._levelManager.initializeLevel();
+              
+              const levelType = this._levelManager.getCurrentLevelType();
+              if (levelType !== LevelType.BOSS) {
+                  const layout = this.getLevelLayout(this.level);
+                  this.createBricksFromLayout(layout);
+              }
           } else {
-            var _layout = this.getLevelLayout(this.level);
-
-            this.createBricksFromLayout(_layout);
+              const layout = this.getLevelLayout(this.level);
+              this.createBricksFromLayout(layout);
           }
+          */
         }
 
         getLevelLayout(level) {
-          var basicLayout = [[1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1]];
+          // 更多砖块：从8x4增加到12x6，提升内容密度
+          var basicLayout = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]];
 
           if (level > 1) {
             for (var row = 0; row < basicLayout.length; row++) {
@@ -364,29 +430,66 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         createBricksFromLayout(layout) {
-          if (!this.brickPrefab || !this.brickContainer) return;
-          var startX = -280;
-          var startY = 200;
-          var brickWidth = 80;
-          var brickHeight = 40;
-          var spacing = 10;
+          if (!this.brickPrefab || !this.brickContainer) return; // 基于真实砖块尺寸计算布局 - 消除缩放特殊情况
 
-          for (var row = 0; row < layout.length; row++) {
-            for (var col = 0; col < layout[row].length; col++) {
-              var brickType = layout[row][col];
+          var wallInnerBoundary = 320; // 墙壁内边界 (325-5)
+
+          var actualBrickWidth = 80 * 0.625; // 50像素实际宽度
+
+          var actualBrickHeight = 40 * 0.625; // 25像素实际高度
+
+          var spacing = 4; // 减小间距适应更多砖块
+
+          var cols = layout[0] ? layout[0].length : 0;
+          var totalBrickArea = cols * actualBrickWidth + (cols - 1) * spacing; // 如果12列太宽，减少到10列
+
+          var finalCols = cols;
+          var finalLayout = layout;
+
+          if (totalBrickArea > wallInnerBoundary * 2) {
+            console.log("12\u5217\u592A\u5BBD(" + totalBrickArea + ")\uFF0C\u51CF\u5C11\u523010\u5217");
+            finalCols = 10;
+            finalLayout = layout.map(row => row.slice(0, 10)); // 截取前10列
+          }
+
+          var finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing;
+          var startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
+          var startY = 300;
+          console.log("Creating " + finalLayout.length + "x" + finalCols + " brick grid, total width: " + finalTotalWidth.toFixed(1) + ", wall boundary: \xB1" + wallInnerBoundary);
+
+          for (var row = 0; row < finalLayout.length; row++) {
+            for (var col = 0; col < finalCols; col++) {
+              var brickType = finalLayout[row][col];
               if (brickType === 0) continue;
               var brick = instantiate(this.brickPrefab);
-              var x = startX + col * (brickWidth + spacing);
-              var y = startY - row * (brickHeight + spacing);
-              brick.setPosition(x, y, 0);
-              var brickScript = brick.getComponent('Brick');
+              var x = startX + col * (actualBrickWidth + spacing);
+              var y = startY - row * (actualBrickHeight + spacing);
+              brick.setPosition(x, y, 0); // 缩放砖块到新尺寸
+
+              brick.setScale(0.625, 0.625, 1); // Use EnhancedBrick component with programmatic types
+
+              var brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
 
               if (brickScript) {
-                brickScript.setHealth(brickType); // Some bricks drop experience orbs
+                // Convert layout value to diverse brick types
+                var enhancedBrickType = this.getBrickTypeFromValue(brickType, row, col);
+
+                if (brickScript.brickType !== undefined) {
+                  // EnhancedBrick system
+                  brickScript.brickType = enhancedBrickType; // Trigger initialization after type assignment
+
+                  if (brickScript.initializeBrickType) {
+                    brickScript.initializeBrickType();
+                  }
+                } else {
+                  // Legacy Brick system fallback
+                  brickScript.setHealth(brickType);
+                } // Some bricks drop experience orbs
+
 
                 if (Math.random() < 0.1) {
                   // 10% chance
-                  brickScript.setDropsExperience(true);
+                  brickScript.setDropsExperience && brickScript.setDropsExperience(true);
                 }
               }
 
@@ -395,6 +498,97 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this._bricks.push(brick);
             }
           }
+
+          console.log("Created " + this._bricks.length + " bricks with diverse types");
+        }
+        /**
+         * Convert layout value to enhanced brick type with strategic diversity
+         * 为每个砖块分配有意义的类型，而不是简单的随机化
+         */
+
+
+        getBrickTypeFromValue(layoutValue, row, col) {
+          // Import BrickType enum values  
+          var BrickType = {
+            NORMAL: 0,
+            REINFORCED: 1,
+            EXPLOSIVE: 2,
+            ELECTRIC: 3,
+            EXPERIENCE: 4,
+            REGENERATING: 5,
+            PHASE: 6,
+            MAGNETIC: 7,
+            REFLECTIVE: 8,
+            POISON: 9,
+            ICE: 10,
+            FIRE: 11,
+            SPLITTING: 12,
+            TELEPORT: 13,
+            SHIELD: 14,
+            GRAVITY: 15,
+            TIME: 16,
+            HEALING: 17,
+            CURSED: 18,
+            CRYSTAL: 19,
+            RUBBER: 20,
+            METAL: 21,
+            VOID: 22,
+            LIGHT: 23,
+            DARK: 24
+          }; // Strategic brick placement based on position and level
+
+          var totalPositions = row * 8 + col; // Unique position identifier
+
+          var levelDifficulty = this.level; // Base distribution: mostly normal bricks
+
+          if (layoutValue === 1) {
+            // Row-based strategy
+            switch (row) {
+              case 0:
+                // Top row - defensive types
+                if (col % 3 === 0) return BrickType.SHIELD;
+                if (col % 4 === 1) return BrickType.REINFORCED;
+                return BrickType.NORMAL;
+
+              case 1:
+                // Second row - special effects
+                if (col % 5 === 0) return BrickType.EXPLOSIVE;
+                if (col % 5 === 2) return BrickType.ELECTRIC;
+                if (col % 7 === 3) return BrickType.EXPERIENCE;
+                return BrickType.NORMAL;
+
+              case 2:
+                // Third row - element effects
+                if (col % 4 === 0) return BrickType.FIRE;
+                if (col % 4 === 2) return BrickType.ICE;
+                if (col % 6 === 1) return BrickType.POISON;
+                return BrickType.NORMAL;
+
+              default:
+                // Bottom rows - utility and rare types
+                if (col === 0 || col === 7) return BrickType.HEALING; // Corner healing
+
+                if (totalPositions % 11 === 0) return BrickType.TELEPORT;
+                if (totalPositions % 13 === 0) return BrickType.CRYSTAL;
+                return BrickType.NORMAL;
+            }
+          } // Enhanced bricks for higher layout values
+
+
+          if (layoutValue === 2) {
+            var rareTypes = [BrickType.GRAVITY, BrickType.TIME, BrickType.VOID, BrickType.METAL, BrickType.PHASE, BrickType.MAGNETIC]; // Add level scaling for rare types
+
+            if (levelDifficulty > 2) {
+              var typeIndex = (totalPositions + levelDifficulty) % rareTypes.length;
+              return rareTypes[typeIndex];
+            } else {
+              // Early levels: safer special types
+              var earlySpecial = [BrickType.REINFORCED, BrickType.EXPERIENCE, BrickType.HEALING];
+              return earlySpecial[totalPositions % earlySpecial.length];
+            }
+          }
+
+          return BrickType.NORMAL;
         }
 
         clearBricks() {
@@ -445,8 +639,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (randomPowerUp) {
             var powerUpNode = instantiate(randomPowerUp);
-            powerUpNode.setPosition(position);
-            this.node.addChild(powerUpNode);
+            powerUpNode.setPosition(position); // Add to Canvas for consistent coordinate system
+
+            var canvas = this.node.parent;
+
+            if (canvas) {
+              canvas.addChild(powerUpNode);
+              console.log('PowerUp dropped and added to Canvas');
+            } else {
+              this.node.addChild(powerUpNode);
+              console.log('PowerUp dropped and added to GameManager');
+            }
           }
         }
 
@@ -504,18 +707,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         checkLevelComplete() {
-          var levelType = this._levelManager ? this._levelManager.getCurrentLevelType() : (_crd && LevelType === void 0 ? (_reportPossibleCrUseOfLevelType({
-            error: Error()
-          }), LevelType) : LevelType).NORMAL;
-
-          if (levelType === (_crd && LevelType === void 0 ? (_reportPossibleCrUseOfLevelType({
-            error: Error()
-          }), LevelType) : LevelType).BOSS) {
-            // Boss levels complete when boss is defeated (handled in onBossDefeated)
-            return;
-          }
-
+          // 暂时简化：直接完成关卡，不检查Boss类型
           this.onLevelComplete();
+          /*
+          const levelType = this._levelManager ? this._levelManager.getCurrentLevelType() : LevelType.NORMAL;
+          
+          if (levelType === LevelType.BOSS) {
+              // Boss levels complete when boss is defeated (handled in onBossDefeated)
+              return;
+          }
+          
+          this.onLevelComplete();
+          */
         }
 
         onLevelComplete() {
