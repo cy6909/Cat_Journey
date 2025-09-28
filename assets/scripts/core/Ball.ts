@@ -1,4 +1,8 @@
 import { _decorator, Component, Node, RigidBody2D, Vec2, Collider2D, IPhysics2DContact, Contact2DType, Vec3, input, Input, EventMouse } from 'cc';
+import { LaunchStrategy, LaunchContext, LaunchParams } from './LaunchStrategy';
+import { AimingLaunchStrategy } from './strategies/AimingLaunchStrategy';
+import { RandomLaunchStrategy } from './strategies/RandomLaunchStrategy';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('Ball')
@@ -21,6 +25,8 @@ export class Ball extends Component {
     private _isAttachedToPaddle: boolean = true;  // 初始状态：粘在挡板上
     private _paddleNode: Node | null = null;
     private _initialBallY: number = 0; // 记录Ball的初始Y位置，不再跟随Paddle的Y
+    private _launchStrategy: LaunchStrategy = new RandomLaunchStrategy();
+    private _aimDirection: Vec2 | null = null;
 
     protected onLoad(): void {
         this._rigidBody = this.getComponent(RigidBody2D);
@@ -113,6 +119,14 @@ export class Ball extends Component {
         input.off(Input.EventType.MOUSE_UP, this.onMouseUp, this);
     }
     
+    public setLaunchStrategy(strategy: LaunchStrategy): void {
+        this._launchStrategy = strategy;
+    }
+
+    public setAimDirection(direction: Vec2): void {
+        this._aimDirection = direction;
+    }
+
     // GameManager调用此方法直接设置Paddle引用，避免查找延迟
     public setPaddleReference(paddleNode: Node): void {
         this._paddleNode = paddleNode;
@@ -174,18 +188,16 @@ export class Ball extends Component {
             this._rigidBody.enabled = true;
         }
         
-        // 在Y轴总计30度内随机发射 (向上75-105度)
-        const baseAngle = Math.PI / 2; // 90度，向上
-        const randomOffset = (Math.random() - 0.5) * (Math.PI / 6); // ±15度 = 30度范围
-        const angle = baseAngle + randomOffset;
+        const context: LaunchContext = {
+            paddlePosition: this._paddleNode? new Vec2(this._paddleNode.position.x, this._paddleNode.position.y) : new Vec2(0, 0),
+            ballPosition: new Vec2(0,0),
+            mousePosition: new Vec2(0,0),
+            aimDirection: this._aimDirection || new Vec2(0, 1)
+        };
+        const params = this._launchStrategy.calculateLaunchParams(context);
         
-        const direction = new Vec2(
-            Math.cos(angle),
-            Math.sin(angle)
-        );
-        
-        this.launch(direction);
-        console.log(`Ball launched at angle: ${(angle * 180 / Math.PI).toFixed(1)}°`);
+        this.launch(params.direction);
+        console.log('Aiming relic activated - Ball launch strategy changed');
     }
 
     public launch(direction?: Vec2): void {
