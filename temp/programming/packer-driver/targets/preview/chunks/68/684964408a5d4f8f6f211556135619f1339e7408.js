@@ -1,7 +1,7 @@
 System.register(["cc"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, BoxCollider2D, Sprite, RigidBody2D, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, PaddleController;
+  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, Vec2, BoxCollider2D, Sprite, RigidBody2D, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _crd, ccclass, property, PaddleController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -21,6 +21,7 @@ System.register(["cc"], function (_export, _context) {
       Vec3 = _cc.Vec3;
       UITransform = _cc.UITransform;
       Canvas = _cc.Canvas;
+      Vec2 = _cc.Vec2;
       BoxCollider2D = _cc.BoxCollider2D;
       Sprite = _cc.Sprite;
       RigidBody2D = _cc.RigidBody2D;
@@ -90,14 +91,22 @@ System.register(["cc"], function (_export, _context) {
 
           this._boxCollider = this.getComponent(BoxCollider2D);
           this._sprite = this.getComponent(Sprite);
-          this._rigidBody = this.getComponent(RigidBody2D); // 确保RigidBody2D配置正确
+          this._rigidBody = this.getComponent(RigidBody2D); // 确保RigidBody2D配置正确 - 完全锁定物理
 
           if (this._rigidBody) {
-            this._rigidBody.type = 2; // Kinematic
+            this._rigidBody.type = 2; // Kinematic - 不受物理影响
 
-            this._rigidBody.gravityScale = 0;
-            this._rigidBody.fixedRotation = true;
-            console.log('Paddle RigidBody2D configured: Kinematic, no gravity, fixed rotation');
+            this._rigidBody.gravityScale = 0; // 无重力
+
+            this._rigidBody.fixedRotation = true; // 不旋转
+
+            this._rigidBody.linearDamping = 0; // 无阻尼
+
+            this._rigidBody.angularDamping = 0; // 无角阻尼
+            // 锁定Y轴速度
+
+            this._rigidBody.linearVelocity = new Vec2(0, 0);
+            console.log('Paddle RigidBody2D configured: Kinematic, fully locked');
           } // 初始化尺寸
 
 
@@ -124,28 +133,25 @@ System.register(["cc"], function (_export, _context) {
         }
 
         update(dt) {
-          // 强制锁定Y轴位置，防止被球推动
+          // 🔒 强制锁定Y轴位置，防止被球推动
           var currentPos = this.node.position;
 
           if (Math.abs(currentPos.y - this._fixedY) > 0.01) {
-            console.log("Paddle Y corrected: " + currentPos.y.toFixed(2) + " -> " + this._fixedY);
-          } // 平滑移动到目标位置 - 好品味：简单的物理模拟
+            console.log("\u26A0\uFE0F Paddle Y corrected: " + currentPos.y.toFixed(2) + " -> " + this._fixedY);
+          } // 🔒 如果有RigidBody，强制清除任何速度
 
 
-          var deltaX = this._targetX - currentPos.x; // 计算加速度 (简单弹簧阻尼系统)
+          if (this._rigidBody) {
+            var velocity = this._rigidBody.linearVelocity;
 
-          var acceleration = deltaX * 10; // 弹簧力
-
-          this._currentVelocity += acceleration * dt;
-          this._currentVelocity *= 1 - this._dampingFactor; // 阻尼
-          // 限制最大速度
-
-          if (Math.abs(this._currentVelocity) > this._maxSpeed) {
-            this._currentVelocity = Math.sign(this._currentVelocity) * this._maxSpeed;
-          } // 更新位置 - 强制使用固定的Y坐标
+            if (velocity && (Math.abs(velocity.x) > 0.01 || Math.abs(velocity.y) > 0.01)) {
+              console.log("\u26A0\uFE0F Paddle velocity cleared: (" + velocity.x.toFixed(2) + ", " + velocity.y.toFixed(2) + ") -> (0, 0)");
+              this._rigidBody.linearVelocity = new Vec2(0, 0);
+            }
+          } // 直接跟随鼠标位置 - 无惯性
 
 
-          var newX = currentPos.x + this._currentVelocity * dt;
+          var newX = this._targetX;
           this.node.setPosition(newX, this._fixedY, currentPos.z);
         } // 测试需要的移动方法
 

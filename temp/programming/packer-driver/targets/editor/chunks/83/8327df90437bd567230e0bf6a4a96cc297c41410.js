@@ -1,7 +1,7 @@
-System.register(["cc"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec2, Collider2D, Contact2DType, Vec3, input, Input, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, Ball;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec2, Collider2D, Contact2DType, Vec3, input, Input, RandomLaunchStrategy, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _crd, ccclass, property, Ball;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -9,8 +9,22 @@ System.register(["cc"], function (_export, _context) {
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfLaunchStrategy(extras) {
+    _reporterNs.report("LaunchStrategy", "./LaunchStrategy", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLaunchContext(extras) {
+    _reporterNs.report("LaunchContext", "./LaunchStrategy", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfRandomLaunchStrategy(extras) {
+    _reporterNs.report("RandomLaunchStrategy", "./strategies/RandomLaunchStrategy", _context.meta, extras);
+  }
+
   return {
-    setters: [function (_cc) {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       __checkObsolete__ = _cc.__checkObsolete__;
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
@@ -23,6 +37,8 @@ System.register(["cc"], function (_export, _context) {
       Vec3 = _cc.Vec3;
       input = _cc.input;
       Input = _cc.Input;
+    }, function (_unresolved_2) {
+      RandomLaunchStrategy = _unresolved_2.RandomLaunchStrategy;
     }],
     execute: function () {
       _crd = true;
@@ -55,9 +71,13 @@ System.register(["cc"], function (_export, _context) {
           // 初始状态：粘在挡板上
           this._paddleNode = null;
           this._initialBallY = 0;
+          // 记录Ball的初始Y位置，不再跟随Paddle的Y
+          this._launchStrategy = new (_crd && RandomLaunchStrategy === void 0 ? (_reportPossibleCrUseOfRandomLaunchStrategy({
+            error: Error()
+          }), RandomLaunchStrategy) : RandomLaunchStrategy)();
+          this._aimDirection = null;
         }
 
-        // 记录Ball的初始Y位置，不再跟随Paddle的Y
         onLoad() {
           this._rigidBody = this.getComponent(RigidBody2D); // 查找挡板节点
 
@@ -73,7 +93,13 @@ System.register(["cc"], function (_export, _context) {
               collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
             }); // 设置刚体属性以实现无摩擦完美弹性碰撞
 
-            console.log('Ball initialized with collision detection and paddle following');
+            this._rigidBody.gravityScale = 0; // 无重力！Breakout游戏不需要重力
+
+            this._rigidBody.linearDamping = 0; // 无阻尼，保持恒定速度
+
+            this._rigidBody.angularDamping = 0; // 无角阻尼
+
+            console.log('Ball initialized: no gravity, no damping, perfect bouncing');
           }
         }
 
@@ -146,6 +172,14 @@ System.register(["cc"], function (_export, _context) {
           // 清理鼠标事件监听
           input.off(Input.EventType.MOUSE_DOWN, this.onMouseDown, this);
           input.off(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+        }
+
+        setLaunchStrategy(strategy) {
+          this._launchStrategy = strategy;
+        }
+
+        setAimDirection(direction) {
+          this._aimDirection = direction;
         } // GameManager调用此方法直接设置Paddle引用，避免查找延迟
 
 
@@ -208,17 +242,19 @@ System.register(["cc"], function (_export, _context) {
 
           if (this._rigidBody) {
             this._rigidBody.enabled = true;
-          } // 在Y轴总计30度内随机发射 (向上75-105度)
+          }
 
+          const context = {
+            paddlePosition: this._paddleNode ? new Vec2(this._paddleNode.position.x, this._paddleNode.position.y) : new Vec2(0, 0),
+            ballPosition: new Vec2(0, 0),
+            mousePosition: new Vec2(0, 0),
+            aimDirection: this._aimDirection || new Vec2(0, 1)
+          };
 
-          const baseAngle = Math.PI / 2; // 90度，向上
+          const params = this._launchStrategy.calculateLaunchParams(context);
 
-          const randomOffset = (Math.random() - 0.5) * (Math.PI / 6); // ±15度 = 30度范围
-
-          const angle = baseAngle + randomOffset;
-          const direction = new Vec2(Math.cos(angle), Math.sin(angle));
-          this.launch(direction);
-          console.log(`Ball launched at angle: ${(angle * 180 / Math.PI).toFixed(1)}°`);
+          this.launch(params.direction);
+          console.log('Aiming relic activated - Ball launch strategy changed');
         }
 
         launch(direction) {
@@ -296,13 +332,41 @@ System.register(["cc"], function (_export, _context) {
         }
 
         onPaddleHit(paddleNode) {
-          if (!this._rigidBody || !paddleNode) return;
-          const velocity = this._rigidBody.linearVelocity; // 修复测试失败的问题：确保球向上反弹
+          var _paddleNode$getCompon;
 
-          if (velocity.y < 0) {
-            velocity.y = Math.abs(velocity.y);
-            this._rigidBody.linearVelocity = velocity;
+          if (!this._rigidBody || !paddleNode) return;
+          const velocity = this._rigidBody.linearVelocity;
+          const ballPos = this.node.position;
+          const paddlePos = paddleNode.position; // 计算球相对于挡板中心的偏移量 (-1到1之间)
+
+          const paddleWidth = ((_paddleNode$getCompon = paddleNode.getComponent('UITransform')) == null ? void 0 : _paddleNode$getCompon.width) || 100;
+          const offsetX = (ballPos.x - paddlePos.x) / (paddleWidth / 2);
+          const clampedOffset = Math.max(-1, Math.min(1, offsetX)); // 根据碰撞位置调整反弹角度 (20度到160度之间)
+
+          const minAngle = 20 * Math.PI / 180; // 最小角度20度
+
+          const maxAngle = 160 * Math.PI / 180; // 最大角度160度
+
+          const targetAngle = minAngle + (1 - (clampedOffset + 1) / 2) * (maxAngle - minAngle); // 保持当前速度大小，只改变方向
+
+          const speed = velocity.length();
+          const newVelocity = new Vec2(Math.cos(targetAngle) * speed, Math.sin(targetAngle) * speed); // 确保Y方向始终向上
+
+          if (newVelocity.y < 0) {
+            newVelocity.y = Math.abs(newVelocity.y);
+          } // 防止完全垂直（90度）的情况
+
+
+          if (Math.abs(newVelocity.x) < speed * 0.1) {
+            newVelocity.x = speed * 0.1 * (Math.random() > 0.5 ? 1 : -1); // 重新归一化并恢复速度
+
+            const normalized = newVelocity.normalize();
+            newVelocity.x = normalized.x * speed;
+            newVelocity.y = normalized.y * speed;
           }
+
+          this._rigidBody.linearVelocity = newVelocity;
+          console.log(`Paddle hit - Offset: ${clampedOffset.toFixed(2)}, Angle: ${(targetAngle * 180 / Math.PI).toFixed(1)}°, Velocity: (${newVelocity.x.toFixed(1)}, ${newVelocity.y.toFixed(1)})`);
         }
 
         get velocity() {

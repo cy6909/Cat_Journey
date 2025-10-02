@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, input, Input, EventTouch, Vec3, UITransform, Canvas, Camera, Vec2, Collider2D, Contact2DType, IPhysics2DContact, Color, Sprite, Label, tween } from 'cc';
+import { _decorator, Component, Node, input, Input, EventTouch, Vec3, UITransform, Canvas, Camera, Vec2, Collider2D, Contact2DType, IPhysics2DContact, Color, Sprite, Label, tween, RigidBody2D } from 'cc';
 import { GameManager } from './GameManager';
 import { CoreController } from '../managers/CoreController';
 
@@ -31,6 +31,7 @@ export class EnhancedPaddleController extends Component {
     private _uiTransform: UITransform | null = null;
     private _camera: Camera | null = null;
     private _sprite: Sprite | null = null;
+    private _rigidBody: RigidBody2D | null = null; // 🔒 缓存RigidBody引用，每帧清零速度
     
     // Durability system
     private _currentDurability: number = 0;
@@ -46,34 +47,82 @@ export class EnhancedPaddleController extends Component {
     private _durabilityMultiplier: number = 1.0;
     private _repairEfficiency: number = 1.0;
     
+    // Y轴锁定机制 - 防止Paddle被球推动
+    private _fixedY: number = -300; // 固定Y位置，永不改变
+    
     protected onLoad(): void {
         this._uiTransform = this.getComponent(UITransform);
         this._canvasComponent = this.node.parent?.getComponent(Canvas) || null;
         this._camera = this._canvasComponent?.cameraComponent || null;
         this._sprite = this.getComponent(Sprite);
         this._currentDurability = this.maxDurability;
-        
+
+        // 🔒 固定Y位置为-300，永不改变
+        this._fixedY = -300;
+
         if (this._sprite) {
             this._originalColor = this._sprite.color.clone();
         }
-        
+
         const collider = this.getComponent(Collider2D);
         if (collider) {
             collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
         }
+
+        // 🔒 关键：获取并缓存RigidBody2D引用，每帧清零速度
+        this._rigidBody = this.getComponent(RigidBody2D);
+        if (this._rigidBody) {
+            this._rigidBody.type = 2; // Kinematic类型
+            this._rigidBody.gravityScale = 0;
+            this._rigidBody.linearDamping = 0;
+            this._rigidBody.angularDamping = 0;
+            this._rigidBody.fixedRotation = true;
+            this._rigidBody.allowSleep = false; // 防止进入睡眠状态
+            this._rigidBody.enabledContactListener = false; // 禁用接触监听避免物理影响
+            this._rigidBody.linearVelocity = new Vec2(0, 0);
+            console.log('✅ Paddle RigidBody2D cached and locked, Y=-300');
+        } else {
+            console.error('❌ Paddle RigidBody2D not found!');
+        }
+
+        // 🔒 立即强制设置位置
+        this.node.setPosition(this.node.position.x, this._fixedY, this.node.position.z);
     }
 
     protected onEnable(): void {
-        input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+        // 监听鼠标移动事件，直接跟随鼠标X位置
         input.on(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+        input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
     }
 
     protected onDisable(): void {
-        input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
         input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+        input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
     }
     
     protected update(dt: number): void {
+        // 🔒 每帧第一优先级：强制清零RigidBody2D的速度
+        if (this._rigidBody) {
+            const vel = this._rigidBody.linearVelocity;
+            // 检测是否有异常速度，如果有则清零并输出警告
+            if (vel.x !== 0 || vel.y !== 0) {
+                console.warn(`⚠️ Paddle velocity detected and cleared: (${vel.x.toFixed(3)}, ${vel.y.toFixed(3)}) -> (0, 0)`);
+                this._rigidBody.linearVelocity = new Vec2(0, 0);
+            } else {
+                // 即使是0也强制设置，确保100%清零
+                this._rigidBody.linearVelocity = new Vec2(0, 0);
+            }
+            this._rigidBody.angularVelocity = 0;
+        }
+
+        // 🔒 每帧第二优先级：强制锁定Y轴位置为-300
+        const currentPos = this.node.position;
+        if (currentPos.y !== -300) {
+            console.warn(`⚠️ Paddle Y position corrected: ${currentPos.y.toFixed(3)} -> -300`);
+        }
+        this.node.setPosition(currentPos.x, -300, currentPos.z);
+
+        // 其他更新逻辑
         this.updateRepair(dt);
         this.updateVisualState();
         this.updateDurabilityLabel();
@@ -100,7 +149,9 @@ export class EnhancedPaddleController extends Component {
         const rightBound = canvasWidth / 2 - paddleHalfWidth;
 
         const clampedX = Math.max(leftBound, Math.min(rightBound, localPos.x));
-        this.node.setPosition(clampedX, this.node.position.y, this.node.position.z);
+
+        // 🔒 直接设置位置，Y永远是-300
+        this.node.setPosition(clampedX, -300, 0);
     }
     
     private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null): void {

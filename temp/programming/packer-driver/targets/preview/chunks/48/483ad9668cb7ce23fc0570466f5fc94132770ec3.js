@@ -317,8 +317,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onBeginContact(selfCollider, otherCollider, contact) {
-          var ball = otherCollider.getComponent('Ball');
-          if (!ball) return; // Handle phase bricks
+          console.log('🔥 Brick collision detected with:', otherCollider.node.name); // 调试日志
+          // 检查是否是Ball - 兼容两种组件名称
+
+          var ball = otherCollider.getComponent('Ball') || otherCollider.getComponent('EnhancedBall');
+
+          if (!ball) {
+            console.log('⚠️ Not a ball collision, skipping');
+            return;
+          }
+
+          console.log('✅ Ball detected, processing collision'); // Handle phase bricks
 
           if (this.brickType === BrickType.PHASE && Math.random() < this.phaseProbability) {
             console.log('Ball phased through brick!');
@@ -364,18 +373,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         takeDamage(damage, impactPosition) {
+          console.log("\uD83C\uDFAF Brick taking " + damage + " damage. Health: " + this.health + " -> " + (this.health - damage));
           this.health -= damage;
           this._lastHitTime = 0;
 
           if (this.health <= 0) {
+            console.log('💥 Brick health depleted, destroying...');
             this.onDestroyed(impactPosition);
           } else {
+            console.log("\uD83D\uDD27 Brick damaged but not destroyed. Remaining health: " + this.health);
             this.showDamageEffect();
             this.updateVisualState();
           }
         }
 
         onDestroyed(impactPosition) {
+          console.log('🧱 Brick destruction started');
           var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance();
@@ -395,10 +408,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var dropsExperience = this.brickType === BrickType.EXPERIENCE || Math.random() < 0.3;
 
           if (gameManager) {
+            console.log("\uD83D\uDCC8 Notifying GameManager: score=" + this.scoreValue + ", drops=" + dropsExperience);
             gameManager.onBrickDestroyed(this.scoreValue, brickPosition, dropsExperience);
+          } else {
+            console.warn('⚠️ GameManager not found, cannot update score');
           } // Destroy the brick
 
 
+          console.log('🗑️ Destroying brick node');
           this.node.destroy();
         }
 

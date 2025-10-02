@@ -46,7 +46,10 @@ export class Ball extends Component {
             });
             
             // 设置刚体属性以实现无摩擦完美弹性碰撞
-            console.log('Ball initialized with collision detection and paddle following');
+            this._rigidBody.gravityScale = 0; // 无重力！Breakout游戏不需要重力
+            this._rigidBody.linearDamping = 0; // 无阻尼，保持恒定速度
+            this._rigidBody.angularDamping = 0; // 无角阻尼
+            console.log('Ball initialized: no gravity, no damping, perfect bouncing');
         }
     }
 
@@ -283,13 +286,45 @@ export class Ball extends Component {
 
     private onPaddleHit(paddleNode: Node): void {
         if (!this._rigidBody || !paddleNode) return;
-        
+
         const velocity = this._rigidBody.linearVelocity;
-        // 修复测试失败的问题：确保球向上反弹
-        if (velocity.y < 0) {
-            velocity.y = Math.abs(velocity.y);
-            this._rigidBody.linearVelocity = velocity;
+        const ballPos = this.node.position;
+        const paddlePos = paddleNode.position;
+
+        // 计算球相对于挡板中心的偏移量 (-1到1之间)
+        const paddleWidth = paddleNode.getComponent('UITransform')?.width || 100;
+        const offsetX = (ballPos.x - paddlePos.x) / (paddleWidth / 2);
+        const clampedOffset = Math.max(-1, Math.min(1, offsetX));
+
+        // 根据碰撞位置调整反弹角度 (20度到160度之间)
+        const minAngle = 20 * Math.PI / 180;  // 最小角度20度
+        const maxAngle = 160 * Math.PI / 180; // 最大角度160度
+        const targetAngle = minAngle + (1 - (clampedOffset + 1) / 2) * (maxAngle - minAngle);
+
+        // 保持当前速度大小，只改变方向
+        const speed = velocity.length();
+        const newVelocity = new Vec2(
+            Math.cos(targetAngle) * speed,
+            Math.sin(targetAngle) * speed
+        );
+
+        // 确保Y方向始终向上
+        if (newVelocity.y < 0) {
+            newVelocity.y = Math.abs(newVelocity.y);
         }
+
+        // 防止完全垂直（90度）的情况
+        if (Math.abs(newVelocity.x) < speed * 0.1) {
+            newVelocity.x = speed * 0.1 * (Math.random() > 0.5 ? 1 : -1);
+            // 重新归一化并恢复速度
+            const normalized = newVelocity.normalize();
+            newVelocity.x = normalized.x * speed;
+            newVelocity.y = normalized.y * speed;
+        }
+
+        this._rigidBody.linearVelocity = newVelocity;
+
+        console.log(`Paddle hit - Offset: ${clampedOffset.toFixed(2)}, Angle: ${(targetAngle * 180 / Math.PI).toFixed(1)}°, Velocity: (${newVelocity.x.toFixed(1)}, ${newVelocity.y.toFixed(1)})`);
     }
 
     public get velocity(): Vec2 {

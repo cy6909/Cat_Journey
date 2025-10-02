@@ -87,7 +87,7 @@
         "372a30b9-2c2c-400a-9907-bc667a7aaba6"
       ],
       "dependScripts": [
-        "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
+        "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
       ]
     },
     "versionCode": 1
@@ -95,9 +95,12 @@
   "c7ab9736-f219-419f-9172-9ecc23c3e405": {
     "url": "db://assets/prefabs/Brick.prefab",
     "value": {
-      "depends": [],
+      "depends": [
+        "104daebd-5903-4488-8a7c-86cc0740738e@91ec0",
+        "104daebd-5903-4488-8a7c-86cc0740738e"
+      ],
       "dependScripts": [
-        "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
+        "acecf8a0-1634-4bc4-8fc6-9696319f6607"
       ]
     },
     "versionCode": 1
@@ -130,7 +133,7 @@
         "104daebd-5903-4488-8a7c-86cc0740738e"
       ],
       "dependScripts": [
-        "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+        "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
       ]
     },
     "versionCode": 1
@@ -148,15 +151,19 @@
         "c7ab9736-f219-419f-9172-9ecc23c3e405",
         "7ec887bc-b20e-429d-8e28-08067520a25c",
         "58f8e17d-e23d-439d-8aea-d766a9c88be0",
-        "55e1ab56-d880-4407-a9d5-795c509dcee3",
-        "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e",
         "08ab0291-515e-45dd-9d6f-032cd02586f0",
         "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
+        "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
+        "bd1bcaba-bd7d-4a71-b143-997c882383e4@f9941",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
       ],
       "dependScripts": [
-        "1112ea98-2509-431e-b6fa-b2811d6671eb"
+        "1112ea98-2509-431e-b6fa-b2811d6671eb",
+        "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf"
       ]
     },
     "versionCode": 1
@@ -9251,6 +9258,41 @@
   },
   "ee27c8c9-125a-43a3-a28f-f3526d4fbb53": {
     "url": "db://assets/scripts/debug",
+    "value": {},
+    "versionCode": 1
+  },
+  "45e16a5c-7f1c-48b7-ab3d-97a3635373c6": {
+    "url": "db://assets/scripts/core/strategies",
+    "value": {},
+    "versionCode": 1
+  },
+  "57356679-edbe-420d-884a-bb366e09e95a": {
+    "url": "db://assets/scripts/core/LaunchStrategy.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1d937221-cea8-4c82-ab80-b8d63c4adffe": {
+    "url": "db://assets/scripts/core/strategies/AimingLaunchStrategy.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5f0dbd01-e61d-4079-aeb1-60a7115a32bf": {
+    "url": "db://assets/scripts/core/strategies/RandomLaunchStrategy.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "810fe9fe-0e0f-4257-8f8b-f573a932a156": {
+    "url": "db://assets/scripts/gameplay/DifficultySystem.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "daa5e7e3-4e4e-4220-9862-ca1c0f600af0": {
+    "url": "db://assets/scripts/gameplay/LayoutGenerator.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf": {
+    "url": "db://assets/scripts/ui/DevToolsUI.ts",
     "value": {},
     "versionCode": 1
   }

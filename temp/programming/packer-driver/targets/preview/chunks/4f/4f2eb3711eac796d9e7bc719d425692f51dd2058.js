@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, RelicManager, CoreController, Ball, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, input, Input, KeyCode, Vec2, RelicManager, CoreController, Ball, DifficultyCalculator, LayoutGenerator, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -25,6 +25,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("Ball", "../core/Ball", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfDifficultyCalculator(extras) {
+    _reporterNs.report("DifficultyCalculator", "./DifficultySystem", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfDifficultyConfig(extras) {
+    _reporterNs.report("DifficultyConfig", "./DifficultySystem", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBrickDistribution(extras) {
+    _reporterNs.report("BrickDistribution", "./DifficultySystem", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfLayoutGenerator(extras) {
+    _reporterNs.report("LayoutGenerator", "./LayoutGenerator", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBrickData(extras) {
+    _reporterNs.report("BrickData", "./LayoutGenerator", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -42,19 +62,27 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       Color = _cc.Color;
       Sprite = _cc.Sprite;
       PhysicsSystem2D = _cc.PhysicsSystem2D;
+      input = _cc.input;
+      Input = _cc.Input;
+      KeyCode = _cc.KeyCode;
+      Vec2 = _cc.Vec2;
     }, function (_unresolved_2) {
       RelicManager = _unresolved_2.RelicManager;
     }, function (_unresolved_3) {
       CoreController = _unresolved_3.CoreController;
     }, function (_unresolved_4) {
       Ball = _unresolved_4.Ball;
+    }, function (_unresolved_5) {
+      DifficultyCalculator = _unresolved_5.DifficultyCalculator;
+    }, function (_unresolved_6) {
+      LayoutGenerator = _unresolved_6.LayoutGenerator;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "1112eqYJQlDHrb6soEdZnHr", "GameManager", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director', 'Color', 'Sprite', 'PhysicsSystem2D']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'Prefab', 'instantiate', 'Vec3', 'director', 'Color', 'Sprite', 'PhysicsSystem2D', 'input', 'Input', 'EventKeyboard', 'KeyCode', 'Vec2']);
 
       // import { RuntimeDebugPanel } from '../debug/RuntimeDebugPanel';
       ({
@@ -108,6 +136,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this._paddleNode = null;
           this._coreController = null;
           this._levelManager = null;
+          this._currentDifficulty = null;
+          this._brickDistribution = null;
         }
 
         static getInstance() {
@@ -115,10 +145,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         onLoad() {
+          console.log('🎮 GameManager onLoad called');
+
           if (GameManager._instance === null) {
             GameManager._instance = this;
-            director.addPersistRootNode(this.node);
+            director.addPersistRootNode(this.node); // 添加键盘监听用于测试BallType切换
+
+            input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+            console.log('✅ GameManager: Keyboard listener registered for ball type switching');
+            console.log('✅ GameManager instance created and keyboard listener active');
           } else {
+            console.log('⚠️ GameManager instance already exists, destroying duplicate');
             this.node.destroy();
             return;
           }
@@ -126,21 +163,83 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         onDestroy() {
           if (GameManager._instance === this) {
-            GameManager._instance = null;
+            GameManager._instance = null; // 移除键盘监听
+
+            input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
           }
         }
 
         start() {
+          console.log('🎮 GameManager start called');
           this.initializeGame();
           this.initializeCore(); // this.initializeLevelManager(); // 暂时注释掉
+          // 🔧 测试：添加全局键盘监听
+
+          window.addEventListener('keydown', e => {
+            console.log('🌐 Window keydown event:', e.key, e.code, e.keyCode);
+
+            if (e.code === 'Space' || e.keyCode === 32) {
+              console.log('🔑 SPACE detected via window listener');
+              this.cycleBallType();
+            }
+          });
+          console.log('🔧 Added window.addEventListener for keyboard testing');
+        }
+
+        onKeyDown(event) {
+          console.log('⌨️ Key pressed:', event.keyCode, 'SPACE keyCode:', KeyCode.SPACE);
+
+          switch (event.keyCode) {
+            case KeyCode.SPACE:
+              // 空格键：切换Ball类型来验证25种颜色
+              console.log('🔑 SPACE key detected, attempting to cycle ball type...');
+              this.cycleBallType();
+              break;
+
+            default:
+              console.log('Other key pressed:', event.keyCode);
+              break;
+          }
+        }
+
+        cycleBallType() {
+          if (this._ballNode) {
+            console.log('Ball node exists:', this._ballNode.name); // 尝试获取EnhancedBall组件
+
+            var ballScript = this._ballNode.getComponent('EnhancedBall'); // 如果没有EnhancedBall，尝试获取Ball组件
+
+
+            if (!ballScript) {
+              console.log('EnhancedBall not found, trying Ball component...');
+              ballScript = this._ballNode.getComponent('Ball');
+            }
+
+            if (ballScript) {
+              console.log('Ball script found:', ballScript.constructor.name); // 检查是否有cycleToNextBallType方法
+
+              if (typeof ballScript.cycleToNextBallType === 'function') {
+                console.log('✅ Calling cycleToNextBallType()');
+                ballScript.cycleToNextBallType();
+              } else {
+                console.warn('❌ Ball script does not have cycleToNextBallType method');
+                console.log('Available methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(ballScript)));
+              }
+            } else {
+              console.error('❌ No ball script found on ball node');
+              console.log('Ball node components:', this._ballNode.components.map(c => c.constructor.name));
+            }
+          } else {
+            console.error('❌ Ball node is null, ballNode value:', this._ballNode);
+          }
         }
 
         initializeGame() {
-          this.setState(GameState.PRE_START); // 启用物理调试显示
+          this.setState(GameState.PRE_START); // 关闭物理调试显示
 
-          PhysicsSystem2D.instance.debugDrawFlags = 1; // 启用调试绘制
+          PhysicsSystem2D.instance.debugDrawFlags = 0; // 设置物理系统重力为0 - Breakout游戏不需要重力！
 
-          console.log('Physics debug draw enabled');
+          PhysicsSystem2D.instance.gravity = new Vec2(0, 0);
+          console.log('Physics system: Debug draw disabled, gravity set to 0');
           this.createBoundaryWalls();
           this.createPaddle(); // 延迟创建Ball，确保Paddle完全初始化
 
@@ -390,29 +489,149 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         setupLevel() {
-          console.log('SetupLevel called - restoring brick creation for full game testing'); // 恢复brick创建，测试完整游戏交互
+          console.log("\uD83C\uDFAF SetupLevel called - Level " + this.level); // 计算当前关卡难度
 
-          this.clearBricks(); // 暂时直接创建砖块，不依赖LevelManager
+          this._currentDifficulty = (_crd && DifficultyCalculator === void 0 ? (_reportPossibleCrUseOfDifficultyCalculator({
+            error: Error()
+          }), DifficultyCalculator) : DifficultyCalculator).calculateDifficulty(this.level);
+          this._brickDistribution = (_crd && DifficultyCalculator === void 0 ? (_reportPossibleCrUseOfDifficultyCalculator({
+            error: Error()
+          }), DifficultyCalculator) : DifficultyCalculator).getBrickDistribution();
+          console.log('📊 Difficulty config:', (_crd && DifficultyCalculator === void 0 ? (_reportPossibleCrUseOfDifficultyCalculator({
+            error: Error()
+          }), DifficultyCalculator) : DifficultyCalculator).formatConfig(this._currentDifficulty)); // 清除旧砖块
 
-          var layout = this.getLevelLayout(this.level);
-          this.createBricksFromLayout(layout);
-          /*
-          if (this._levelManager) {
-              this._levelManager.initializeLevel();
-              
-              const levelType = this._levelManager.getCurrentLevelType();
-              if (levelType !== LevelType.BOSS) {
-                  const layout = this.getLevelLayout(this.level);
-                  this.createBricksFromLayout(layout);
-              }
-          } else {
-              const layout = this.getLevelLayout(this.level);
-              this.createBricksFromLayout(layout);
+          this.clearBricks(); // 使用新的布局生成系统
+
+          var brickData = (_crd && LayoutGenerator === void 0 ? (_reportPossibleCrUseOfLayoutGenerator({
+            error: Error()
+          }), LayoutGenerator) : LayoutGenerator).generateLayout(this._currentDifficulty);
+          this.createBricksFromData(brickData);
+        }
+        /**
+         * 从BrickData数组创建砖块 - 替代旧的createBricksFromLayout
+         */
+
+
+        createBricksFromData(brickDataArray) {
+          if (!this.brickPrefab || !this.brickContainer || !this._currentDifficulty) {
+            console.error('Missing prefab, container, or difficulty config');
+            return;
           }
-          */
+
+          var config = this._currentDifficulty; // 基于真实砖块尺寸计算布局
+
+          var wallInnerBoundary = 320; // 墙壁内边界
+
+          var actualBrickWidth = 80 * 0.625; // 50像素实际宽度
+
+          var actualBrickHeight = 30 * 0.625; // 18.75像素实际高度
+
+          var spacing = 4; // 间距
+
+          var finalTotalWidth = config.gridCols * actualBrickWidth + (config.gridCols - 1) * spacing;
+          var startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
+          var startY = 300;
+          console.log("\uD83D\uDCE6 Creating " + brickDataArray.length + " bricks from " + config.gridRows + "x" + config.gridCols + " grid"); // 应用难度系统: 随机分配特殊砖块类型
+
+          this.applyDifficultyToBricks(brickDataArray);
+
+          for (var data of brickDataArray) {
+            var brick = instantiate(this.brickPrefab);
+            var x = startX + data.col * (actualBrickWidth + spacing);
+            var y = startY - data.row * (actualBrickHeight + spacing);
+            brick.setPosition(x, y, 0);
+            brick.setScale(0.625, 0.625, 1); // 配置砖块类型和生命值
+
+            var brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
+
+            if (brickScript) {
+              brickScript.brickType = data.type;
+              brickScript.health = data.health;
+              brickScript.maxHealth = data.health; // 触发颜色更新
+
+              if (typeof brickScript.updateBrickColor === 'function') {
+                brickScript.updateBrickColor();
+              }
+            }
+
+            this.brickContainer.addChild(brick);
+
+            this._bricks.push(brick);
+          }
+
+          console.log("\u2705 Created " + this._bricks.length + " bricks successfully");
+        }
+        /**
+         * 应用难度配置到砖块数据 - 根据概率分配特殊砖块类型
+         */
+
+
+        applyDifficultyToBricks(brickDataArray) {
+          if (!this._currentDifficulty || !this._brickDistribution) return;
+          var config = this._currentDifficulty;
+          var dist = this._brickDistribution; // 记录已使用的reactive砖块位置
+
+          var reactiveBricks = [];
+
+          for (var brick of brickDataArray) {
+            var finalType = brick.type; // 1. 检查是否应该是有益砖块
+
+            if (Math.random() < config.beneficialBrickChance) {
+              finalType = (_crd && DifficultyCalculator === void 0 ? (_reportPossibleCrUseOfDifficultyCalculator({
+                error: Error()
+              }), DifficultyCalculator) : DifficultyCalculator).selectBrickTypeByWeight(dist.beneficial.types, dist.beneficial.weights);
+            } // 2. 检查是否应该是减益砖块
+            else if (Math.random() < config.harmfulBrickChance) {
+              finalType = (_crd && DifficultyCalculator === void 0 ? (_reportPossibleCrUseOfDifficultyCalculator({
+                error: Error()
+              }), DifficultyCalculator) : DifficultyCalculator).selectBrickTypeByWeight(dist.harmful.types, dist.harmful.weights);
+            } // 3. 检查是否应该是爆炸性砖块
+            else if (Math.random() < dist.reactive.chance) {
+              // 检查与其他reactive砖块的距离
+              var tooClose = false;
+
+              for (var pos of reactiveBricks) {
+                var distance = Math.abs(brick.row - pos.row) + Math.abs(brick.col - pos.col);
+
+                if (distance < dist.reactive.minDistance) {
+                  tooClose = true;
+                  break;
+                }
+              }
+
+              if (!tooClose) {
+                finalType = dist.reactive.types[Math.floor(Math.random() * dist.reactive.types.length)];
+                reactiveBricks.push({
+                  row: brick.row,
+                  col: brick.col
+                });
+              }
+            }
+
+            brick.type = finalType;
+          }
+
+          console.log("\uD83C\uDFB2 Applied difficulty: " + reactiveBricks.length + " reactive bricks placed");
+        }
+        /**
+         * 公开方法 - 供DevTools调用，加载指定关卡
+         */
+
+
+        loadLevel(level, customConfig) {
+          console.log("\uD83D\uDD04 Loading level " + level + (customConfig ? ' with custom config' : ''));
+          this.level = level;
+
+          if (customConfig) {
+            this._currentDifficulty = customConfig;
+          }
+
+          this.setupLevel();
         }
 
         getLevelLayout(level) {
+          // 已废弃 - 保留用于向后兼容
           // 更多砖块：从8x4增加到12x6，提升内容密度
           var basicLayout = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]];
 

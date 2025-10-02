@@ -204,8 +204,10 @@ export class EnhancedBall extends Component {
         this._physicsMaterial.friction = 0.0;
         this._physicsMaterial.restitution = this.bounciness;
         
-        // Apply weight scaling
-        this._rigidBody.gravityScale = this.weight;
+        // Breakout游戏不需要重力！
+        this._rigidBody.gravityScale = 0; // 无重力
+        this._rigidBody.linearDamping = 0; // 无阻尼
+        this._rigidBody.angularDamping = 0; // 无角阻尼
         
         // Apply physics material (Cocos Creator handles this automatically)
     }
@@ -498,14 +500,44 @@ export class EnhancedBall extends Component {
         return this._rigidBody?.linearVelocity.length() || 0;
     }
     
-    public get rigidBody(): RigidBody2D | null {
-        return this._rigidBody;
+    /**
+     * 动态切换BallType - 用于验证25种球类型和颜色
+     */
+    public changeBallType(newType: BallType): void {
+        console.log(`🔄 Changing ball type from ${BallType[this.ballType]} to ${BallType[newType]}`);
+
+        // 保存当前物理状态
+        const currentVelocity = this._rigidBody ? this._rigidBody.linearVelocity.clone() : null;
+        const isPhysicsEnabled = this._rigidBody ? this._rigidBody.enabled : false;
+
+        this.ballType = newType;
+        this.initializeBallType(); // 重新初始化颜色和属性
+
+        // 恢复物理状态 - 防止切换时Ball穿透或物理失效
+        if (this._rigidBody && currentVelocity && isPhysicsEnabled) {
+            // 保持速度方向和大小，只更新Ball类型特有的属性
+            this._rigidBody.linearVelocity = currentVelocity;
+            console.log(`✅ Ball physics state preserved after type change`);
+        }
     }
     
-    public changeBallType(newType: BallType): void {
-        this.ballType = newType;
-        this.initializeBallType();
-        this.setupPhysics();
+    /**
+     * 循环切换到下一个BallType - 用于测试
+     */
+    public cycleToNextBallType(): void {
+        console.log('🔄 cycleToNextBallType called!');
+        const allTypes = Object.values(BallType).filter(v => typeof v === 'number') as BallType[];
+        console.log('All ball types:', allTypes);
+        console.log('Current ball type:', this.ballType, BallType[this.ballType]);
+        const currentIndex = allTypes.indexOf(this.ballType);
+        console.log('Current index:', currentIndex);
+        const nextIndex = (currentIndex + 1) % allTypes.length;
+        console.log('Next index:', nextIndex, 'Next type:', BallType[allTypes[nextIndex]]);
+        this.changeBallType(allTypes[nextIndex]);
+    }
+    
+    public get rigidBody(): RigidBody2D | null {
+        return this._rigidBody;
     }
     
     // Effect scheduling methods

@@ -29,11 +29,11 @@
       "time": 1757648002933.372
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Ball.prefab": {
-      "time": 1758852488425.7754,
+      "time": 1759412946196.7625,
       "uuid": "58f8e17d-e23d-439d-8aea-d766a9c88be0"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Brick.prefab": {
-      "time": 1758870528991.9524,
+      "time": 1759412967135.932,
       "uuid": "c7ab9736-f219-419f-9172-9ecc23c3e405"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Laser.prefab": {
@@ -41,7 +41,7 @@
       "uuid": "bfb94b91-bf3b-4cce-84c2-57f71523c96f"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Paddle.prefab": {
-      "time": 1758852488428.2705,
+      "time": 1759378072556.6768,
       "uuid": "7ec887bc-b20e-429d-8e28-08067520a25c"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Ball.prefab.meta": {
@@ -168,14 +168,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\Laser.prefab": {
       "time": 1757686088772.8113,
       "uuid": "bfb94b91-bf3b-4cce-84c2-57f71523c96f"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\LaserPaddlePowerUp.prefab": {
-      "time": 1758812382206.9592,
-      "uuid": "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab": {
-      "time": 1758812355603.8174,
-      "uuid": "55e1ab56-d880-4407-a9d5-795c509dcee3"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\Paddle.prefab": {
       "time": 1758817678560.7202,
@@ -3676,7 +3668,7 @@
       "time": 1757894233917.2788
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene": {
-      "time": 1758870839510.2183,
+      "time": 1759417097527.3772,
       "uuid": "71e1758f-1876-43b5-935d-bc2e35d0d6e1"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist": {
@@ -5228,11 +5220,11 @@
       "uuid": "28283523-483e-4296-828a-f595e2de5bd4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core": {
-      "time": 1758852488429.275,
+      "time": 1759386468815.2146,
       "uuid": "5ef012af-ca27-4b85-b817-8c3f7d3d5891"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay": {
-      "time": 1758852488433.007,
+      "time": 1759415831576.4368,
       "uuid": "15a172f0-61d5-4189-be33-2546a13584c8"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers": {
@@ -5244,7 +5236,7 @@
       "uuid": "8ae27d6b-8125-4668-89ec-1f48168e93e4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui": {
-      "time": 1758162561666.532,
+      "time": 1759415831577.5903,
       "uuid": "833570eb-f6b5-4a66-8a1c-487e5fc88fcb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\background\\AbyssBackground.ts": {
@@ -5264,7 +5256,7 @@
       "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.ts": {
-      "time": 1758852488429.275,
+      "time": 1759385493806.1692,
       "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.ts": {
@@ -5280,11 +5272,11 @@
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.ts": {
-      "time": 1758852488429.275,
+      "time": 1759386468813.724,
       "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBall.ts": {
-      "time": 1757987255240.0515,
+      "time": 1759387764733.6936,
       "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBossController.ts": {
@@ -5292,15 +5284,15 @@
       "uuid": "27557649-ef41-41bd-8182-c1f866e06f1c"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBrick.ts": {
-      "time": 1758852488432.5017,
+      "time": 1759378306969.2693,
       "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedPaddleController.ts": {
-      "time": 1758014380162.052,
+      "time": 1759387164738.129,
       "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\GameManager.ts": {
-      "time": 1758852488433.007,
+      "time": 1759414191591.373,
       "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LevelManager.ts": {
@@ -6156,6 +6148,55 @@
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\Wall.prefab.meta": {
       "time": 1758763739700.4678
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies": {
+      "time": 1759376479388.806,
+      "uuid": "45e16a5c-7f1c-48b7-ab3d-97a3635373c6"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\LaunchStrategy.ts": {
+      "time": 1759042701993.7986,
+      "uuid": "57356679-edbe-420d-884a-bb366e09e95a"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies\\AimingLaunchStrategy.ts": {
+      "time": 1759043141319.782,
+      "uuid": "1d937221-cea8-4c82-ab80-b8d63c4adffe"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies\\RandomLaunchStrategy.ts": {
+      "time": 1759043025359.4966,
+      "uuid": "5f0dbd01-e61d-4079-aeb1-60a7115a32bf"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies.meta": {
+      "time": 1759376479393.5994
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\LaunchStrategy.ts.meta": {
+      "time": 1759376479401.5896
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies\\AimingLaunchStrategy.ts.meta": {
+      "time": 1759376479401.5896
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\strategies\\RandomLaunchStrategy.ts.meta": {
+      "time": 1759376479401.5896
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DifficultySystem.ts.meta": {
+      "time": 1759415831583.3015
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LayoutGenerator.ts.meta": {
+      "time": 1759415831584.301
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\DevToolsUI.ts.meta": {
+      "time": 1759415831585.3015
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\DifficultySystem.ts": {
+      "time": 1759414034958.3804,
+      "uuid": "810fe9fe-0e0f-4257-8f8b-f573a932a156"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LayoutGenerator.ts": {
+      "time": 1759414086107.6304,
+      "uuid": "daa5e7e3-4e4e-4220-9862-ca1c0f600af0"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\DevToolsUI.ts": {
+      "time": 1759414235514.048,
+      "uuid": "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf"
     }
   },
   "missing": {
@@ -6465,14 +6506,14 @@
       "removeTime": 1758014867915
     },
     "4e1c15c3-9e30-4f32-be20-29afb6c0ac3e": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\LaserPaddlePowerUp.prefab",
-      "time": 1758852488427.0112,
-      "removeTime": 1758871499458
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\LaserPaddlePowerUp.prefab",
+      "time": 1758812382206.9592,
+      "removeTime": 1759376481606
     },
     "55e1ab56-d880-4407-a9d5-795c509dcee3": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab",
-      "time": 1758852488428.2705,
-      "removeTime": 1758871508008
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\prefabs\\MultiBallPowerUp.prefab",
+      "time": 1758812355603.8174,
+      "removeTime": 1759376481607
     }
   }
 }

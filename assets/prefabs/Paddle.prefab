@@ -213,7 +213,7 @@
     "fileId": "paddle-collider-id"
   },
   {
-    "__type__": "a1b2cPU5fZ4kKvN7xI0VniQ",
+    "__type__": "edadbH+JDBPm5gXX41/4PyE",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -224,16 +224,18 @@
     "__prefab": {
       "__id__": 11
     },
-    "speed": 100,
-    "basePaddleWidth": 120,
-    "basePaddleHeight": 24,
-    "boundaryMargin": 50,
     "moveSpeed": 100,
+    "maxDurability": 100,
+    "durabilityLossPerHit": 5,
+    "repairRate": 2,
+    "repairDelay": 3,
+    "criticalDurabilityThreshold": 25,
+    "durabilityLabel": null,
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "3b6jwzGUVIkq7LJ89yt0Vr"
+    "fileId": "52WZ4IN5BBNaozyEQaftkE"
   },
   {
     "__type__": "cc.PrefabInfo",

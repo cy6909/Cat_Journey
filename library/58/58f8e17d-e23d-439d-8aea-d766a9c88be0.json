@@ -209,7 +209,7 @@
     "fileId": "ball-collider-id"
   },
   {
-    "__type__": "ba31691v+lEpIX5npg55beq",
+    "__type__": "5e6d2nrg9hJyKLzZFD65mxC",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -220,14 +220,19 @@
     "__prefab": {
       "__id__": 11
     },
-    "initialSpeed": 20,
-    "maxSpeed": 200,
-    "minSpeed": 10,
+    "ballType": 0,
+    "initialSpeed": 50,
+    "damage": 1,
+    "weight": 1,
+    "bounciness": 1,
+    "penetrationCount": 0,
+    "effectDuration": 5,
+    "areaRadius": 50,
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "3dJonVZ35A56Y+sB7+ZYQh"
+    "fileId": "e9MoyasxtN2K3NW7R60/Sa"
   },
   {
     "__type__": "cc.PrefabInfo",

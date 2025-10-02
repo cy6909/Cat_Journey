@@ -1,8 +1,11 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, input, Input, EventKeyboard, KeyCode, Vec2 } from 'cc';
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
 import { Ball } from '../core/Ball';
+import { DifficultyCalculator, DifficultyConfig, BrickDistribution } from './DifficultySystem';
+import { LayoutGenerator, BrickData } from './LayoutGenerator';
+import { BrickType } from '../core/Brick';
 // import { RuntimeDebugPanel } from '../debug/RuntimeDebugPanel';
 const { ccclass, property } = _decorator;
 
@@ -64,16 +67,25 @@ export class GameManager extends Component {
     private _paddleNode: Node | null = null;
     private _coreController: CoreController | null = null;
     private _levelManager: LevelManager | null = null;
+    private _currentDifficulty: DifficultyConfig | null = null;
+    private _brickDistribution: BrickDistribution | null = null;
 
     public static getInstance(): GameManager | null {
         return GameManager._instance;
     }
 
     protected onLoad(): void {
+        console.log('🎮 GameManager onLoad called');
         if (GameManager._instance === null) {
             GameManager._instance = this;
             director.addPersistRootNode(this.node);
+
+            // 添加键盘监听用于测试BallType切换
+            input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+            console.log('✅ GameManager: Keyboard listener registered for ball type switching');
+            console.log('✅ GameManager instance created and keyboard listener active');
         } else {
+            console.log('⚠️ GameManager instance already exists, destroying duplicate');
             this.node.destroy();
             return;
         }
@@ -82,21 +94,84 @@ export class GameManager extends Component {
     protected onDestroy(): void {
         if (GameManager._instance === this) {
             GameManager._instance = null;
+            // 移除键盘监听
+            input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         }
     }
 
     protected start(): void {
+        console.log('🎮 GameManager start called');
         this.initializeGame();
         this.initializeCore();
         // this.initializeLevelManager(); // 暂时注释掉
+
+        // 🔧 测试：添加全局键盘监听
+        window.addEventListener('keydown', (e) => {
+            console.log('🌐 Window keydown event:', e.key, e.code, e.keyCode);
+            if (e.code === 'Space' || e.keyCode === 32) {
+                console.log('🔑 SPACE detected via window listener');
+                this.cycleBallType();
+            }
+        });
+        console.log('🔧 Added window.addEventListener for keyboard testing');
+    }
+    
+    private onKeyDown(event: EventKeyboard): void {
+        console.log('⌨️ Key pressed:', event.keyCode, 'SPACE keyCode:', KeyCode.SPACE);
+
+        switch (event.keyCode) {
+            case KeyCode.SPACE:
+                // 空格键：切换Ball类型来验证25种颜色
+                console.log('🔑 SPACE key detected, attempting to cycle ball type...');
+                this.cycleBallType();
+                break;
+            default:
+                console.log('Other key pressed:', event.keyCode);
+                break;
+        }
+    }
+
+    private cycleBallType(): void {
+        if (this._ballNode) {
+            console.log('Ball node exists:', this._ballNode.name);
+
+            // 尝试获取EnhancedBall组件
+            let ballScript = this._ballNode.getComponent('EnhancedBall');
+
+            // 如果没有EnhancedBall，尝试获取Ball组件
+            if (!ballScript) {
+                console.log('EnhancedBall not found, trying Ball component...');
+                ballScript = this._ballNode.getComponent('Ball');
+            }
+
+            if (ballScript) {
+                console.log('Ball script found:', ballScript.constructor.name);
+
+                // 检查是否有cycleToNextBallType方法
+                if (typeof (ballScript as any).cycleToNextBallType === 'function') {
+                    console.log('✅ Calling cycleToNextBallType()');
+                    (ballScript as any).cycleToNextBallType();
+                } else {
+                    console.warn('❌ Ball script does not have cycleToNextBallType method');
+                    console.log('Available methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(ballScript)));
+                }
+            } else {
+                console.error('❌ No ball script found on ball node');
+                console.log('Ball node components:', this._ballNode.components.map(c => c.constructor.name));
+            }
+        } else {
+            console.error('❌ Ball node is null, ballNode value:', this._ballNode);
+        }
     }
 
     private initializeGame(): void {
         this.setState(GameState.PRE_START);
         
-        // 启用物理调试显示
-        PhysicsSystem2D.instance.debugDrawFlags = 1; // 启用调试绘制
-        console.log('Physics debug draw enabled');
+        // 关闭物理调试显示
+        PhysicsSystem2D.instance.debugDrawFlags = 0; 
+        // 设置物理系统重力为0 - Breakout游戏不需要重力！
+        PhysicsSystem2D.instance.gravity = new Vec2(0, 0);
+        console.log('Physics system: Debug draw disabled, gravity set to 0');
         
         this.createBoundaryWalls();
         this.createPaddle();
@@ -329,31 +404,146 @@ export class GameManager extends Component {
     }
 
     private setupLevel(): void {
-        console.log('SetupLevel called - restoring brick creation for full game testing');
-        // 恢复brick创建，测试完整游戏交互
+        console.log(`🎯 SetupLevel called - Level ${this.level}`);
+
+        // 计算当前关卡难度
+        this._currentDifficulty = DifficultyCalculator.calculateDifficulty(this.level);
+        this._brickDistribution = DifficultyCalculator.getBrickDistribution();
+
+        console.log('📊 Difficulty config:', DifficultyCalculator.formatConfig(this._currentDifficulty));
+
+        // 清除旧砖块
         this.clearBricks();
-        
-        // 暂时直接创建砖块，不依赖LevelManager
-        const layout = this.getLevelLayout(this.level);
-        this.createBricksFromLayout(layout);
-        
-        /*
-        if (this._levelManager) {
-            this._levelManager.initializeLevel();
-            
-            const levelType = this._levelManager.getCurrentLevelType();
-            if (levelType !== LevelType.BOSS) {
-                const layout = this.getLevelLayout(this.level);
-                this.createBricksFromLayout(layout);
-            }
-        } else {
-            const layout = this.getLevelLayout(this.level);
-            this.createBricksFromLayout(layout);
+
+        // 使用新的布局生成系统
+        const brickData = LayoutGenerator.generateLayout(this._currentDifficulty);
+        this.createBricksFromData(brickData);
+    }
+
+    /**
+     * 从BrickData数组创建砖块 - 替代旧的createBricksFromLayout
+     */
+    private createBricksFromData(brickDataArray: BrickData[]): void {
+        if (!this.brickPrefab || !this.brickContainer || !this._currentDifficulty) {
+            console.error('Missing prefab, container, or difficulty config');
+            return;
         }
-        */
+
+        const config = this._currentDifficulty;
+
+        // 基于真实砖块尺寸计算布局
+        const wallInnerBoundary = 320; // 墙壁内边界
+        const actualBrickWidth = 80 * 0.625;  // 50像素实际宽度
+        const actualBrickHeight = 30 * 0.625; // 18.75像素实际高度
+        const spacing = 4;  // 间距
+
+        const finalTotalWidth = config.gridCols * actualBrickWidth + (config.gridCols - 1) * spacing;
+        const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
+        const startY = 300;
+
+        console.log(`📦 Creating ${brickDataArray.length} bricks from ${config.gridRows}x${config.gridCols} grid`);
+
+        // 应用难度系统: 随机分配特殊砖块类型
+        this.applyDifficultyToBricks(brickDataArray);
+
+        for (const data of brickDataArray) {
+            const brick = instantiate(this.brickPrefab);
+            const x = startX + data.col * (actualBrickWidth + spacing);
+            const y = startY - data.row * (actualBrickHeight + spacing);
+
+            brick.setPosition(x, y, 0);
+            brick.setScale(0.625, 0.625, 1);
+
+            // 配置砖块类型和生命值
+            const brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
+            if (brickScript) {
+                (brickScript as any).brickType = data.type;
+                (brickScript as any).health = data.health;
+                (brickScript as any).maxHealth = data.health;
+
+                // 触发颜色更新
+                if (typeof (brickScript as any).updateBrickColor === 'function') {
+                    (brickScript as any).updateBrickColor();
+                }
+            }
+
+            this.brickContainer.addChild(brick);
+            this._bricks.push(brick);
+        }
+
+        console.log(`✅ Created ${this._bricks.length} bricks successfully`);
+    }
+
+    /**
+     * 应用难度配置到砖块数据 - 根据概率分配特殊砖块类型
+     */
+    private applyDifficultyToBricks(brickDataArray: BrickData[]): void {
+        if (!this._currentDifficulty || !this._brickDistribution) return;
+
+        const config = this._currentDifficulty;
+        const dist = this._brickDistribution;
+
+        // 记录已使用的reactive砖块位置
+        const reactiveBricks: { row: number, col: number }[] = [];
+
+        for (const brick of brickDataArray) {
+            let finalType = brick.type;
+
+            // 1. 检查是否应该是有益砖块
+            if (Math.random() < config.beneficialBrickChance) {
+                finalType = DifficultyCalculator.selectBrickTypeByWeight(
+                    dist.beneficial.types,
+                    dist.beneficial.weights
+                );
+            }
+            // 2. 检查是否应该是减益砖块
+            else if (Math.random() < config.harmfulBrickChance) {
+                finalType = DifficultyCalculator.selectBrickTypeByWeight(
+                    dist.harmful.types,
+                    dist.harmful.weights
+                );
+            }
+            // 3. 检查是否应该是爆炸性砖块
+            else if (Math.random() < dist.reactive.chance) {
+                // 检查与其他reactive砖块的距离
+                let tooClose = false;
+                for (const pos of reactiveBricks) {
+                    const distance = Math.abs(brick.row - pos.row) + Math.abs(brick.col - pos.col);
+                    if (distance < dist.reactive.minDistance) {
+                        tooClose = true;
+                        break;
+                    }
+                }
+
+                if (!tooClose) {
+                    finalType = dist.reactive.types[Math.floor(Math.random() * dist.reactive.types.length)];
+                    reactiveBricks.push({ row: brick.row, col: brick.col });
+                }
+            }
+
+            brick.type = finalType;
+        }
+
+        console.log(`🎲 Applied difficulty: ${reactiveBricks.length} reactive bricks placed`);
+    }
+
+    /**
+     * 公开方法 - 供DevTools调用，加载指定关卡
+     */
+    public loadLevel(level: number, customConfig?: DifficultyConfig): void {
+        console.log(`🔄 Loading level ${level}${customConfig ? ' with custom config' : ''}`);
+
+        this.level = level;
+
+        if (customConfig) {
+            this._currentDifficulty = customConfig;
+        }
+
+        this.setupLevel();
     }
 
     private getLevelLayout(level: number): number[][] {
+        // 已废弃 - 保留用于向后兼容
         // 更多砖块：从8x4增加到12x6，提升内容密度
         const basicLayout = [
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],

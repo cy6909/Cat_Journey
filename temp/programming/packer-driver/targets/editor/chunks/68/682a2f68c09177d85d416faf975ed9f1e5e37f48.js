@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, Collider2D, Contact2DType, Color, Sprite, Label, tween, GameManager, CoreController, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, EnhancedPaddleController;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, input, Input, Vec3, UITransform, Canvas, Vec2, Collider2D, Contact2DType, Color, Sprite, Label, tween, RigidBody2D, GameManager, CoreController, _dec, _dec2, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _crd, ccclass, property, EnhancedPaddleController;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -31,12 +31,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       Vec3 = _cc.Vec3;
       UITransform = _cc.UITransform;
       Canvas = _cc.Canvas;
+      Vec2 = _cc.Vec2;
       Collider2D = _cc.Collider2D;
       Contact2DType = _cc.Contact2DType;
       Color = _cc.Color;
       Sprite = _cc.Sprite;
       Label = _cc.Label;
       tween = _cc.tween;
+      RigidBody2D = _cc.RigidBody2D;
     }, function (_unresolved_2) {
       GameManager = _unresolved_2.GameManager;
     }, function (_unresolved_3) {
@@ -47,7 +49,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       _cclegacy._RF.push({}, "edadbH+JDBPm5gXX41/4PyE", "EnhancedPaddleController", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Color', 'Sprite', 'Label', 'tween']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'input', 'Input', 'EventTouch', 'Vec3', 'UITransform', 'Canvas', 'Camera', 'Vec2', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'Color', 'Sprite', 'Label', 'tween', 'RigidBody2D']);
 
       ({
         ccclass,
@@ -81,6 +83,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._uiTransform = null;
           this._camera = null;
           this._sprite = null;
+          this._rigidBody = null;
+          // 🔒 缓存RigidBody引用，每帧清零速度
           // Durability system
           this._currentDurability = 0;
           this._lastDamageTime = 0;
@@ -93,8 +97,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._speedMultiplier = 1.0;
           this._durabilityMultiplier = 1.0;
           this._repairEfficiency = 1.0;
+          // Y轴锁定机制 - 防止Paddle被球推动
+          this._fixedY = -300;
         }
 
+        // 固定Y位置，永不改变
         onLoad() {
           var _this$node$parent, _this$_canvasComponen;
 
@@ -102,7 +109,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._canvasComponent = ((_this$node$parent = this.node.parent) == null ? void 0 : _this$node$parent.getComponent(Canvas)) || null;
           this._camera = ((_this$_canvasComponen = this._canvasComponent) == null ? void 0 : _this$_canvasComponen.cameraComponent) || null;
           this._sprite = this.getComponent(Sprite);
-          this._currentDurability = this.maxDurability;
+          this._currentDurability = this.maxDurability; // 🔒 固定Y位置为-300，永不改变
+
+          this._fixedY = -300;
 
           if (this._sprite) {
             this._originalColor = this._sprite.color.clone();
@@ -112,20 +121,68 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           if (collider) {
             collider.on(Contact2DType.BEGIN_CONTACT, this.onBeginContact, this);
-          }
+          } // 🔒 关键：获取并缓存RigidBody2D引用，每帧清零速度
+
+
+          this._rigidBody = this.getComponent(RigidBody2D);
+
+          if (this._rigidBody) {
+            this._rigidBody.type = 2; // Kinematic类型
+
+            this._rigidBody.gravityScale = 0;
+            this._rigidBody.linearDamping = 0;
+            this._rigidBody.angularDamping = 0;
+            this._rigidBody.fixedRotation = true;
+            this._rigidBody.allowSleep = false; // 防止进入睡眠状态
+
+            this._rigidBody.enabledContactListener = false; // 禁用接触监听避免物理影响
+
+            this._rigidBody.linearVelocity = new Vec2(0, 0);
+            console.log('✅ Paddle RigidBody2D cached and locked, Y=-300');
+          } else {
+            console.error('❌ Paddle RigidBody2D not found!');
+          } // 🔒 立即强制设置位置
+
+
+          this.node.setPosition(this.node.position.x, this._fixedY, this.node.position.z);
         }
 
         onEnable() {
-          input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+          // 监听鼠标移动事件，直接跟随鼠标X位置
           input.on(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+          input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
         }
 
         onDisable() {
-          input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
           input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
+          input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
         }
 
         update(dt) {
+          // 🔒 每帧第一优先级：强制清零RigidBody2D的速度
+          if (this._rigidBody) {
+            const vel = this._rigidBody.linearVelocity; // 检测是否有异常速度，如果有则清零并输出警告
+
+            if (vel.x !== 0 || vel.y !== 0) {
+              console.warn(`⚠️ Paddle velocity detected and cleared: (${vel.x.toFixed(3)}, ${vel.y.toFixed(3)}) -> (0, 0)`);
+              this._rigidBody.linearVelocity = new Vec2(0, 0);
+            } else {
+              // 即使是0也强制设置，确保100%清零
+              this._rigidBody.linearVelocity = new Vec2(0, 0);
+            }
+
+            this._rigidBody.angularVelocity = 0;
+          } // 🔒 每帧第二优先级：强制锁定Y轴位置为-300
+
+
+          const currentPos = this.node.position;
+
+          if (currentPos.y !== -300) {
+            console.warn(`⚠️ Paddle Y position corrected: ${currentPos.y.toFixed(3)} -> -300`);
+          }
+
+          this.node.setPosition(currentPos.x, -300, currentPos.z); // 其他更新逻辑
+
           this.updateRepair(dt);
           this.updateVisualState();
           this.updateDurabilityLabel();
@@ -152,8 +209,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           const canvasWidth = ((_this$_canvasComponen2 = this._canvasComponent) == null || (_this$_canvasComponen2 = _this$_canvasComponen2.getComponent(UITransform)) == null ? void 0 : _this$_canvasComponen2.width) || 960;
           const leftBound = -canvasWidth / 2 + paddleHalfWidth;
           const rightBound = canvasWidth / 2 - paddleHalfWidth;
-          const clampedX = Math.max(leftBound, Math.min(rightBound, localPos.x));
-          this.node.setPosition(clampedX, this.node.position.y, this.node.position.z);
+          const clampedX = Math.max(leftBound, Math.min(rightBound, localPos.x)); // 🔒 直接设置位置，Y永远是-300
+
+          this.node.setPosition(clampedX, -300, 0);
         }
 
         onBeginContact(selfCollider, otherCollider, contact) {

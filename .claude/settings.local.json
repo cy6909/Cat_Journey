@@ -25,7 +25,8 @@
       "Bash(npm install:*)",
       "mcp__ide__getDiagnostics",
       "Bash(echo:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": [],
