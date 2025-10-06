@@ -1,4 +1,4 @@
-import { BrickType } from "../core/Brick";
+import { BrickType } from "./EnhancedBrick";
 import { DifficultyConfig } from "./DifficultySystem";
 
 /**

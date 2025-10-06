@@ -2,10 +2,9 @@ import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
-import { Ball } from '../core/Ball';
 import { DifficultyCalculator, DifficultyConfig, BrickDistribution } from './DifficultySystem';
 import { LayoutGenerator, BrickData } from './LayoutGenerator';
-import { BrickType } from '../core/Brick';
+import { BrickType } from './EnhancedBrick';
 // import { RuntimeDebugPanel } from '../debug/RuntimeDebugPanel';
 const { ccclass, property } = _decorator;
 
@@ -269,7 +268,7 @@ export class GameManager extends Component {
                 }
                 
                 // 通知Ball找到Paddle引用
-                const ballScript = this._ballNode.getComponent('Ball');
+                const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
                 if (ballScript && typeof (ballScript as any).setPaddleReference === 'function') {
                     (ballScript as any).setPaddleReference(this._paddleNode);
                 }
@@ -391,9 +390,9 @@ export class GameManager extends Component {
 
     private launchBall(): void {
         if (this._ballNode) {
-            const ballScript = this._ballNode.getComponent(Ball);
-            if (ballScript && typeof ballScript.launch === 'function') {
-                ballScript.launch();
+            const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
+            if (ballScript && typeof (ballScript as any).launch === 'function') {
+                (ballScript as any).launch();
                 console.log('Ball launched after physics initialization');
             } else {
                 console.warn('Ball script not found or launch method not available');
@@ -432,21 +431,36 @@ export class GameManager extends Component {
         const config = this._currentDifficulty;
 
         // 基于真实砖块尺寸计算布局
-        const wallInnerBoundary = 320; // 墙壁内边界
+        const wallInnerBoundary = 310; // 墙壁内边界 (325 wall - 15 safety margin)
         const actualBrickWidth = 80 * 0.625;  // 50像素实际宽度
         const actualBrickHeight = 30 * 0.625; // 18.75像素实际高度
         const spacing = 4;  // 间距
 
-        const finalTotalWidth = config.gridCols * actualBrickWidth + (config.gridCols - 1) * spacing;
+        // 计算可用宽度和实际可放置的列数
+        const availableWidth = wallInnerBoundary * 2; // 左右各310，总共620
+        let finalCols = config.gridCols;
+        let finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing;
+
+        // 如果砖块网格超出边界，减少列数
+        while (finalTotalWidth > availableWidth && finalCols > 1) {
+            finalCols--;
+            finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing;
+        }
+
+        // 过滤掉超出列数的砖块
+        const filteredBricks = finalCols < config.gridCols
+            ? brickDataArray.filter(brick => brick.col < finalCols)
+            : brickDataArray;
+
         const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
         const startY = 300;
 
-        console.log(`📦 Creating ${brickDataArray.length} bricks from ${config.gridRows}x${config.gridCols} grid`);
+        console.log(`📦 Creating ${filteredBricks.length} bricks from ${config.gridRows}x${finalCols} grid (available width: ${availableWidth}, used: ${finalTotalWidth.toFixed(1)})`);
 
         // 应用难度系统: 随机分配特殊砖块类型
-        this.applyDifficultyToBricks(brickDataArray);
+        this.applyDifficultyToBricks(filteredBricks);
 
-        for (const data of brickDataArray) {
+        for (const data of filteredBricks) {
             const brick = instantiate(this.brickPrefab);
             const x = startX + data.col * (actualBrickWidth + spacing);
             const y = startY - data.row * (actualBrickHeight + spacing);
@@ -457,13 +471,20 @@ export class GameManager extends Component {
             // 配置砖块类型和生命值
             const brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
             if (brickScript) {
+                // 先设置类型
                 (brickScript as any).brickType = data.type;
-                (brickScript as any).health = data.health;
-                (brickScript as any).maxHealth = data.health;
 
-                // 触发颜色更新
-                if (typeof (brickScript as any).updateBrickColor === 'function') {
-                    (brickScript as any).updateBrickColor();
+                // 调用initializeBrickType初始化颜色和默认属性
+                if (typeof (brickScript as any).initializeBrickType === 'function') {
+                    (brickScript as any).initializeBrickType();
+                }
+
+                // 检查是否需要覆盖生命值 (只覆盖不硬编码生命值的类型)
+                const typesWithHardcodedHealth = [1, 5, 14, 21]; // REINFORCED, REGENERATING, SHIELD, METAL
+                if (!typesWithHardcodedHealth.includes(data.type)) {
+                    // 对于其他类型，使用难度系统计算的生命值
+                    (brickScript as any).health = data.health;
+                    (brickScript as any)._maxHealth = data.health;
                 }
             }
 
@@ -811,8 +832,8 @@ export class GameManager extends Component {
 
     private resetBall(): void {
         if (this._ballNode) {
-            const ballScript = this._ballNode.getComponent('Ball');
-            if (ballScript) {
+            const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
+            if (ballScript && typeof (ballScript as any).resetBall === 'function') {
                 (ballScript as any).resetBall();
             }
         }

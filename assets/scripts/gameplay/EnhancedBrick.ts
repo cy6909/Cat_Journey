@@ -72,6 +72,8 @@ export class EnhancedBrick extends Component {
     private _isElectric: boolean = false;
     private _isShielded: boolean = false;
     private _regenerationTimer: number = 0;
+    private _electricChainProcessed: boolean = false;  // 防止电击链无限递归
+    private _explosionProcessed: boolean = false;      // 防止爆炸链无限递归
     
     protected onLoad(): void {
         this._maxHealth = this.health;
@@ -350,36 +352,57 @@ export class EnhancedBrick extends Component {
     }
     
     private createExplosion(center?: Vec3): void {
+        // 防止无限递归: 如果已经处理过，直接返回
+        if (this._explosionProcessed) {
+            return;
+        }
+
+        // 标记为已处理
+        this._explosionProcessed = true;
+
         if (!center) center = this.node.getWorldPosition();
-        
+
         // Find all bricks within explosion radius
         const allBricks = this.node.parent?.getComponentsInChildren(EnhancedBrick) || [];
-        
+
+        let affectedCount = 0;
         for (const brick of allBricks) {
             if (brick === this) continue;
-            
+
             const distance = Vec3.distance(center, brick.node.getWorldPosition());
             if (distance <= this.explosionRadius) {
                 // Damage decreases with distance
                 const damage = Math.max(1, Math.floor(3 * (1 - distance / this.explosionRadius)));
                 brick.takeDamage(damage);
                 brick.showExplosionEffect();
+                affectedCount++;
             }
         }
-        
-        console.log(`Explosion at ${center} with radius ${this.explosionRadius}`);
+
+        console.log(`Explosion at ${center} with radius ${this.explosionRadius}, affected ${affectedCount} bricks`);
     }
     
     private triggerElectricChain(): void {
+        // 防止无限递归: 如果已经处理过，直接返回
+        if (this._electricChainProcessed) {
+            return;
+        }
+
+        // 标记为已处理
+        this._electricChainProcessed = true;
+
         const nearbyBricks = this.findNearbyBricks(this.electricChainDistance);
-        
+
         for (const brick of nearbyBricks) {
-            if (brick.brickType === BrickType.ELECTRIC || brick._isElectric) {
-                brick._isElectric = true;
+            // 只传播给未处理过的电击砖
+            if (brick.brickType === BrickType.ELECTRIC && !brick._electricChainProcessed) {
+                brick._electricChainProcessed = true;  // 先标记，防止循环
                 brick.takeDamage(1);
                 brick.showElectricEffect();
             }
         }
+
+        console.log(`Electric chain triggered, affected ${nearbyBricks.length} bricks`);
     }
     
     private applyMagneticEffect(ballCollider: Collider2D): void {

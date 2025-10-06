@@ -121,8 +121,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._isElectric = false;
           this._isShielded = false;
           this._regenerationTimer = 0;
+          this._electricChainProcessed = false;
+          // 防止电击链无限递归
+          this._explosionProcessed = false;
         }
 
+        // 防止爆炸链无限递归
         onLoad() {
           this._maxHealth = this.health;
           this._sprite = this.getComponent(Sprite);
@@ -458,9 +462,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         createExplosion(center) {
           var _this$node$parent;
 
+          // 防止无限递归: 如果已经处理过，直接返回
+          if (this._explosionProcessed) {
+            return;
+          } // 标记为已处理
+
+
+          this._explosionProcessed = true;
           if (!center) center = this.node.getWorldPosition(); // Find all bricks within explosion radius
 
           const allBricks = ((_this$node$parent = this.node.parent) == null ? void 0 : _this$node$parent.getComponentsInChildren(EnhancedBrick)) || [];
+          let affectedCount = 0;
 
           for (const brick of allBricks) {
             if (brick === this) continue;
@@ -471,22 +483,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               const damage = Math.max(1, Math.floor(3 * (1 - distance / this.explosionRadius)));
               brick.takeDamage(damage);
               brick.showExplosionEffect();
+              affectedCount++;
             }
           }
 
-          console.log(`Explosion at ${center} with radius ${this.explosionRadius}`);
+          console.log(`Explosion at ${center} with radius ${this.explosionRadius}, affected ${affectedCount} bricks`);
         }
 
         triggerElectricChain() {
+          // 防止无限递归: 如果已经处理过，直接返回
+          if (this._electricChainProcessed) {
+            return;
+          } // 标记为已处理
+
+
+          this._electricChainProcessed = true;
           const nearbyBricks = this.findNearbyBricks(this.electricChainDistance);
 
           for (const brick of nearbyBricks) {
-            if (brick.brickType === BrickType.ELECTRIC || brick._isElectric) {
-              brick._isElectric = true;
+            // 只传播给未处理过的电击砖
+            if (brick.brickType === BrickType.ELECTRIC && !brick._electricChainProcessed) {
+              brick._electricChainProcessed = true; // 先标记，防止循环
+
               brick.takeDamage(1);
               brick.showElectricEffect();
             }
           }
+
+          console.log(`Electric chain triggered, affected ${nearbyBricks.length} bricks`);
         }
 
         applyMagneticEffect(ballCollider) {

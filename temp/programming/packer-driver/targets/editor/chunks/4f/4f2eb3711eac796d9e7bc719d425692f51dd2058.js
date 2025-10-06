@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, input, Input, KeyCode, Vec2, RelicManager, CoreController, Ball, DifficultyCalculator, LayoutGenerator, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color, Sprite, PhysicsSystem2D, input, Input, KeyCode, Vec2, RelicManager, CoreController, DifficultyCalculator, LayoutGenerator, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _class3, _crd, ccclass, property, GameState, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -19,10 +19,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
   function _reportPossibleCrUseOfCoreController(extras) {
     _reporterNs.report("CoreController", "../managers/CoreController", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfBall(extras) {
-    _reporterNs.report("Ball", "../core/Ball", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfDifficultyCalculator(extras) {
@@ -71,11 +67,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     }, function (_unresolved_3) {
       CoreController = _unresolved_3.CoreController;
     }, function (_unresolved_4) {
-      Ball = _unresolved_4.Ball;
+      DifficultyCalculator = _unresolved_4.DifficultyCalculator;
     }, function (_unresolved_5) {
-      DifficultyCalculator = _unresolved_5.DifficultyCalculator;
-    }, function (_unresolved_6) {
-      LayoutGenerator = _unresolved_6.LayoutGenerator;
+      LayoutGenerator = _unresolved_5.LayoutGenerator;
     }],
     execute: function () {
       _crd = true;
@@ -339,7 +333,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               } // 通知Ball找到Paddle引用
 
 
-              const ballScript = this._ballNode.getComponent('Ball');
+              const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
 
               if (ballScript && typeof ballScript.setPaddleReference === 'function') {
                 ballScript.setPaddleReference(this._paddleNode);
@@ -473,9 +467,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         launchBall() {
           if (this._ballNode) {
-            const ballScript = this._ballNode.getComponent(_crd && Ball === void 0 ? (_reportPossibleCrUseOfBall({
-              error: Error()
-            }), Ball) : Ball);
+            const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
 
             if (ballScript && typeof ballScript.launch === 'function') {
               ballScript.launch();
@@ -521,22 +513,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           const config = this._currentDifficulty; // 基于真实砖块尺寸计算布局
 
-          const wallInnerBoundary = 320; // 墙壁内边界
+          const wallInnerBoundary = 310; // 墙壁内边界 (325 wall - 15 safety margin)
 
           const actualBrickWidth = 80 * 0.625; // 50像素实际宽度
 
           const actualBrickHeight = 30 * 0.625; // 18.75像素实际高度
 
           const spacing = 4; // 间距
+          // 计算可用宽度和实际可放置的列数
 
-          const finalTotalWidth = config.gridCols * actualBrickWidth + (config.gridCols - 1) * spacing;
+          const availableWidth = wallInnerBoundary * 2; // 左右各310，总共620
+
+          let finalCols = config.gridCols;
+          let finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing; // 如果砖块网格超出边界，减少列数
+
+          while (finalTotalWidth > availableWidth && finalCols > 1) {
+            finalCols--;
+            finalTotalWidth = finalCols * actualBrickWidth + (finalCols - 1) * spacing;
+          } // 过滤掉超出列数的砖块
+
+
+          const filteredBricks = finalCols < config.gridCols ? brickDataArray.filter(brick => brick.col < finalCols) : brickDataArray;
           const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
           const startY = 300;
-          console.log(`📦 Creating ${brickDataArray.length} bricks from ${config.gridRows}x${config.gridCols} grid`); // 应用难度系统: 随机分配特殊砖块类型
+          console.log(`📦 Creating ${filteredBricks.length} bricks from ${config.gridRows}x${finalCols} grid (available width: ${availableWidth}, used: ${finalTotalWidth.toFixed(1)})`); // 应用难度系统: 随机分配特殊砖块类型
 
-          this.applyDifficultyToBricks(brickDataArray);
+          this.applyDifficultyToBricks(filteredBricks);
 
-          for (const data of brickDataArray) {
+          for (const data of filteredBricks) {
             const brick = instantiate(this.brickPrefab);
             const x = startX + data.col * (actualBrickWidth + spacing);
             const y = startY - data.row * (actualBrickHeight + spacing);
@@ -546,12 +550,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             const brickScript = brick.getComponent('EnhancedBrick') || brick.getComponent('Brick');
 
             if (brickScript) {
-              brickScript.brickType = data.type;
-              brickScript.health = data.health;
-              brickScript.maxHealth = data.health; // 触发颜色更新
+              // 先设置类型
+              brickScript.brickType = data.type; // 调用initializeBrickType初始化颜色和默认属性
 
-              if (typeof brickScript.updateBrickColor === 'function') {
-                brickScript.updateBrickColor();
+              if (typeof brickScript.initializeBrickType === 'function') {
+                brickScript.initializeBrickType();
+              } // 检查是否需要覆盖生命值 (只覆盖不硬编码生命值的类型)
+
+
+              const typesWithHardcodedHealth = [1, 5, 14, 21]; // REINFORCED, REGENERATING, SHIELD, METAL
+
+              if (!typesWithHardcodedHealth.includes(data.type)) {
+                // 对于其他类型，使用难度系统计算的生命值
+                brickScript.health = data.health;
+                brickScript._maxHealth = data.health;
               }
             }
 
@@ -909,9 +921,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         resetBall() {
           if (this._ballNode) {
-            const ballScript = this._ballNode.getComponent('Ball');
+            const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
 
-            if (ballScript) {
+            if (ballScript && typeof ballScript.resetBall === 'function') {
               ballScript.resetBall();
             }
           }

@@ -8928,9 +8928,7 @@
   },
   "e01b4cd3-fec4-47b4-b078-2d36c18f7a59": {
     "url": "db://assets/scripts/core/Ball.des",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "425842cc-7cbb-449c-a501-8f2ca1738860": {
@@ -8942,9 +8940,7 @@
   },
   "7b9a6d27-dcfb-427a-98eb-094f06616a6a": {
     "url": "db://assets/scripts/core/Brick.des",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "0bbd4585-b172-44ba-aafd-fdc87df994ef": {
@@ -9026,9 +9022,7 @@
   },
   "25799f56-843b-4bfa-9104-cd6cc632836f": {
     "url": "db://assets/scripts/core/PaddleController.des",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "f9106822-a496-48db-bc30-f08eefe33661": {

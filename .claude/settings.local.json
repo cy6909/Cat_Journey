@@ -26,7 +26,8 @@
       "mcp__ide__getDiagnostics",
       "Bash(echo:*)",
       "Bash(powershell:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": [],

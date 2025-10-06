@@ -4,7 +4,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   var _reporterNs, _cclegacy, BrickType, LayoutGenerator, StandardGridLayout, SymmetricPatternLayout, ClusterRandomLayout, FortressLayout, LayeredDefenseLayout, _crd;
 
   function _reportPossibleCrUseOfBrickType(extras) {
-    _reporterNs.report("BrickType", "../core/Brick", _context.meta, extras);
+    _reporterNs.report("BrickType", "./EnhancedBrick", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfDifficultyConfig(extras) {
