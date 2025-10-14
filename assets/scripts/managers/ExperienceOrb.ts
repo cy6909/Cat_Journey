@@ -1,4 +1,6 @@
-import { _decorator, Component, Node, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, IPhysics2DContact } from 'cc';
+import { _decorator, Component, Node, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, IPhysics2DContact, find } from 'cc';
+import { GameManager } from '../gameplay/GameManager';
+import { ExperienceManager } from './ExperienceManager';
 
 const { ccclass, property } = _decorator;
 
@@ -48,10 +50,10 @@ export class ExperienceOrb extends Component {
     
     private findTargets(): void {
         // Find paddle and core nodes for magnetism
-        const gameManager = require('./GameManager').GameManager.getInstance();
+        const gameManager = GameManager.getInstance();
         if (gameManager) {
-            this._paddleNode = (gameManager as any)._paddleNode;
-            this._coreNode = (gameManager as any).coreNode;
+            this._paddleNode = gameManager.getPaddleNode();
+            this._coreNode = gameManager.getCoreController()?.node || null;
         }
     }
     
@@ -122,18 +124,14 @@ export class ExperienceOrb extends Component {
     }
     
     private onCollected(): void {
-        console.log(`Experience orb collected! Value: ${this.experienceValue}`);
-        
-        // Find core controller and add experience
-        if (this._coreNode) {
-            const coreController = this._coreNode.getComponent('CoreController');
-            if (coreController) {
-                (coreController as any).addExperience(this.experienceValue);
-            }
+        // Add experience to ExperienceManager
+        const expManager = ExperienceManager.getInstance();
+        if (expManager) {
+            expManager.addExperience(this.experienceValue);
         }
-        
+
         this.showCollectionEffect();
-        
+
         // Destroy the orb
         this.node.destroy();
     }
@@ -145,9 +143,8 @@ export class ExperienceOrb extends Component {
             // Quick flash before destruction
             (sprite as any).color = { r: 255, g: 255, b: 255, a: 255 };
         }
-        
+
         // Could add particle effect or sound here
-        console.log('Experience orb collection effect played');
     }
     
     public getExperienceValue(): number {

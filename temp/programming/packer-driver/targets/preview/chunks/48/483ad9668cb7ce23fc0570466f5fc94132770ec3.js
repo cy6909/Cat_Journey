@@ -321,27 +321,21 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         onBeginContact(selfCollider, otherCollider, contact) {
-          console.log('🔥 Brick collision detected with:', otherCollider.node.name); // 调试日志
           // 检查是否是Ball - 兼容两种组件名称
-
           var ball = otherCollider.getComponent('Ball') || otherCollider.getComponent('EnhancedBall');
 
           if (!ball) {
-            console.log('⚠️ Not a ball collision, skipping');
             return;
-          }
+          } // Handle phase bricks
 
-          console.log('✅ Ball detected, processing collision'); // Handle phase bricks
 
           if (this.brickType === BrickType.PHASE && Math.random() < this.phaseProbability) {
-            console.log('Ball phased through brick!');
             this.showPhaseEffect();
             return; // Ball passes through
           } // Handle shielded bricks
 
 
           if (this._isShielded) {
-            console.log('Attack blocked by shield!');
             this.showShieldEffect();
             return;
           } // Apply brick-specific pre-hit effects
@@ -377,22 +371,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }
 
         takeDamage(damage, impactPosition) {
-          console.log("\uD83C\uDFAF Brick taking " + damage + " damage. Health: " + this.health + " -> " + (this.health - damage));
           this.health -= damage;
           this._lastHitTime = 0;
 
           if (this.health <= 0) {
-            console.log('💥 Brick health depleted, destroying...');
             this.onDestroyed(impactPosition);
           } else {
-            console.log("\uD83D\uDD27 Brick damaged but not destroyed. Remaining health: " + this.health);
             this.showDamageEffect();
             this.updateVisualState();
           }
         }
 
         onDestroyed(impactPosition) {
-          console.log('🧱 Brick destruction started');
           var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
             error: Error()
           }), GameManager) : GameManager).getInstance();
@@ -412,14 +402,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var dropsExperience = this.brickType === BrickType.EXPERIENCE || Math.random() < 0.3;
 
           if (gameManager) {
-            console.log("\uD83D\uDCC8 Notifying GameManager: score=" + this.scoreValue + ", drops=" + dropsExperience);
             gameManager.onBrickDestroyed(this.scoreValue, brickPosition, dropsExperience);
-          } else {
-            console.warn('⚠️ GameManager not found, cannot update score');
           } // Destroy the brick
 
 
-          console.log('🗑️ Destroying brick node');
           this.node.destroy();
         }
 
@@ -486,8 +472,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               affectedCount++;
             }
           }
-
-          console.log("Explosion at " + center + " with radius " + this.explosionRadius + ", affected " + affectedCount + " bricks");
         }
 
         triggerElectricChain() {
@@ -509,8 +493,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               brick.showElectricEffect();
             }
           }
-
-          console.log("Electric chain triggered, affected " + nearbyBricks.length + " bricks");
         }
 
         applyMagneticEffect(ballCollider) {
@@ -519,15 +501,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var direction = Vec3.subtract(new Vec3(), this.node.getWorldPosition(), ballCollider.node.getWorldPosition()).normalize();
           var force = Vec2.multiplyScalar(new Vec2(), new Vec2(direction.x, direction.y), this.magneticForce);
           ballRigidBody.applyForceToCenter(force, true);
-          console.log('Magnetic force applied to ball');
         }
 
         applyIceEffect(ball) {
           // Slow down the ball temporarily
           if (ball && ball.setSpeedMultiplier) {
             ball.setSpeedMultiplier(0.5, 3.0); // 50% speed for 3 seconds
-
-            console.log('Ball slowed by ice brick');
           }
         }
 
@@ -535,8 +514,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           // Speed up the ball temporarily  
           if (ball && ball.setSpeedMultiplier) {
             ball.setSpeedMultiplier(1.5, 3.0); // 150% speed for 3 seconds
-
-            console.log('Ball accelerated by fire brick');
           }
         }
 
@@ -547,7 +524,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           if (paddle && paddle.instantRepair) {
             paddle.instantRepair(25);
-            console.log('Paddle healed by healing brick');
           }
         }
 
@@ -556,7 +532,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var orb = instantiate(this.experienceOrbPrefab);
           orb.setParent(this.node.parent);
           orb.setWorldPosition(this.node.getWorldPosition());
-          console.log("Dropped experience orb worth " + this.experienceValue + " XP");
         }
 
         findNearbyBricks(radius) {
@@ -661,32 +636,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         } // Additional effect implementations would go here...
 
 
-        createSplitBricks() {
-          console.log('Brick split into smaller pieces');
+        createSplitBricks() {// TODO: Implement brick splitting logic
         }
 
-        teleportBall() {
-          console.log('Ball teleported to random location');
+        teleportBall() {// TODO: Implement ball teleportation
         }
 
-        applyCurse() {
-          console.log('Curse applied to player');
+        applyCurse() {// TODO: Implement curse effect
         }
 
-        triggerCrystalChain() {
-          console.log('Crystal chain reaction triggered');
+        triggerCrystalChain() {// TODO: Implement crystal chain reaction
         }
 
-        consumeBall() {
-          console.log('Ball consumed by void brick');
+        consumeBall() {// TODO: Implement void consumption effect
         }
 
-        applyGravityEffect() {
-          console.log('Gravity modified');
+        applyGravityEffect() {// TODO: Implement gravity modification
         }
 
-        applyTimeEffect() {
-          console.log('Time flow modified');
+        applyTimeEffect() {// TODO: Implement time flow modification
         }
 
         explodeAdjacent(center) {

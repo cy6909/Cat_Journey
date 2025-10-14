@@ -2,6 +2,7 @@ import { _decorator, Component, Node, Prefab, instantiate, Vec3, director, Color
 import { RelicManager } from '../managers/RelicManager';
 import { LevelManager, LevelType } from './LevelManager';
 import { CoreController } from '../managers/CoreController';
+import { ExperienceManager } from '../managers/ExperienceManager';
 import { DifficultyCalculator, DifficultyConfig, BrickDistribution } from './DifficultySystem';
 import { LayoutGenerator, BrickData } from './LayoutGenerator';
 import { BrickType } from './EnhancedBrick';
@@ -74,17 +75,13 @@ export class GameManager extends Component {
     }
 
     protected onLoad(): void {
-        console.log('🎮 GameManager onLoad called');
         if (GameManager._instance === null) {
             GameManager._instance = this;
             director.addPersistRootNode(this.node);
 
             // 添加键盘监听用于测试BallType切换
             input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-            console.log('✅ GameManager: Keyboard listener registered for ball type switching');
-            console.log('✅ GameManager instance created and keyboard listener active');
         } else {
-            console.log('⚠️ GameManager instance already exists, destroying duplicate');
             this.node.destroy();
             return;
         }
@@ -99,67 +96,38 @@ export class GameManager extends Component {
     }
 
     protected start(): void {
-        console.log('🎮 GameManager start called');
         this.initializeGame();
         this.initializeCore();
         // this.initializeLevelManager(); // 暂时注释掉
-
-        // 🔧 测试：添加全局键盘监听
-        window.addEventListener('keydown', (e) => {
-            console.log('🌐 Window keydown event:', e.key, e.code, e.keyCode);
-            if (e.code === 'Space' || e.keyCode === 32) {
-                console.log('🔑 SPACE detected via window listener');
-                this.cycleBallType();
-            }
-        });
-        console.log('🔧 Added window.addEventListener for keyboard testing');
     }
     
     private onKeyDown(event: EventKeyboard): void {
-        console.log('⌨️ Key pressed:', event.keyCode, 'SPACE keyCode:', KeyCode.SPACE);
-
         switch (event.keyCode) {
             case KeyCode.SPACE:
                 // 空格键：切换Ball类型来验证25种颜色
-                console.log('🔑 SPACE key detected, attempting to cycle ball type...');
                 this.cycleBallType();
                 break;
             default:
-                console.log('Other key pressed:', event.keyCode);
                 break;
         }
     }
 
     private cycleBallType(): void {
         if (this._ballNode) {
-            console.log('Ball node exists:', this._ballNode.name);
-
             // 尝试获取EnhancedBall组件
             let ballScript = this._ballNode.getComponent('EnhancedBall');
 
             // 如果没有EnhancedBall，尝试获取Ball组件
             if (!ballScript) {
-                console.log('EnhancedBall not found, trying Ball component...');
                 ballScript = this._ballNode.getComponent('Ball');
             }
 
             if (ballScript) {
-                console.log('Ball script found:', ballScript.constructor.name);
-
                 // 检查是否有cycleToNextBallType方法
                 if (typeof (ballScript as any).cycleToNextBallType === 'function') {
-                    console.log('✅ Calling cycleToNextBallType()');
                     (ballScript as any).cycleToNextBallType();
-                } else {
-                    console.warn('❌ Ball script does not have cycleToNextBallType method');
-                    console.log('Available methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(ballScript)));
                 }
-            } else {
-                console.error('❌ No ball script found on ball node');
-                console.log('Ball node components:', this._ballNode.components.map(c => c.constructor.name));
             }
-        } else {
-            console.error('❌ Ball node is null, ballNode value:', this._ballNode);
         }
     }
 
@@ -167,10 +135,9 @@ export class GameManager extends Component {
         this.setState(GameState.PRE_START);
         
         // 关闭物理调试显示
-        PhysicsSystem2D.instance.debugDrawFlags = 0; 
+        PhysicsSystem2D.instance.debugDrawFlags = 0;
         // 设置物理系统重力为0 - Breakout游戏不需要重力！
         PhysicsSystem2D.instance.gravity = new Vec2(0, 0);
-        console.log('Physics system: Debug draw disabled, gravity set to 0');
         
         this.createBoundaryWalls();
         this.createPaddle();
@@ -191,7 +158,7 @@ export class GameManager extends Component {
         if (this.coreNode) {
             this._coreController = this.coreNode.getComponent(CoreController);
             if (!this._coreController) {
-                console.warn('CoreController not found on coreNode');
+                
             }
         }
     }
@@ -200,7 +167,7 @@ export class GameManager extends Component {
     private initializeLevelManager(): void {
         this._levelManager = LevelManager.getInstance();
         if (!this._levelManager) {
-            console.warn('LevelManager instance not found');
+            
         }
     }
     */
@@ -208,7 +175,7 @@ export class GameManager extends Component {
     private createPaddle(): void {
         try {
             if (!this.paddlePrefab) {
-                console.warn('Paddle prefab not assigned - skipping paddle creation');
+                // Silently skip if prefab not assigned
                 return;
             }
             
@@ -219,52 +186,45 @@ export class GameManager extends Component {
                 const canvas = this.node.parent;
                 if (canvas) {
                     canvas.addChild(this._paddleNode);
-                    console.log('Paddle created successfully and added to Canvas');
                 } else {
                     this.node.addChild(this._paddleNode);
-                    console.log('Paddle created successfully and added to GameManager');
                 }
             } else {
-                console.error('Failed to instantiate paddle prefab');
+                
             }
             
         } catch (error) {
-            console.error('Error creating paddle:', error);
+            // Silently handle error
         }
     }
 
     private createBallBasedOnPaddle(): void {
         try {
             if (!this.ballPrefab) {
-                console.warn('Ball prefab not assigned - skipping ball creation');
+                
                 return;
             }
             
             if (!this._paddleNode) {
-                console.error('Cannot create ball - paddle not found');
+                
                 return;
             }
             
             // 获取Paddle的实际位置
             const paddlePos = this._paddleNode.position;
-            console.log(`Paddle actual position: (${paddlePos.x}, ${paddlePos.y}, ${paddlePos.z})`);
-            
+
             this._ballNode = instantiate(this.ballPrefab);
             if (this._ballNode) {
                 // Ball位置基于Paddle实际位置，上方20像素
                 const ballPos = new Vec3(paddlePos.x, paddlePos.y + 20, paddlePos.z);
                 this._ballNode.setPosition(ballPos);
-                
-                console.log(`Ball positioned at: (${ballPos.x}, ${ballPos.y}, ${ballPos.z})`);
-                
+
                 // 将Ball添加到Canvas下，与Paddle同级
                 const canvas = this.node.parent;
                 if (canvas) {
                     canvas.addChild(this._ballNode);
-                    console.log('Ball created successfully and added to Canvas');
                 } else {
                     this.node.addChild(this._ballNode);
-                    console.log('Ball created successfully and added to GameManager');
                 }
                 
                 // 通知Ball找到Paddle引用
@@ -273,18 +233,18 @@ export class GameManager extends Component {
                     (ballScript as any).setPaddleReference(this._paddleNode);
                 }
             } else {
-                console.error('Failed to instantiate ball prefab');
+                
             }
             
         } catch (error) {
-            console.error('Error creating ball based on paddle:', error);
+            
         }
     }
 
     private createBall(): void {
         try {
             if (!this.ballPrefab) {
-                console.warn('Ball prefab not assigned - skipping ball creation');
+                
                 return;
             }
             
@@ -295,24 +255,24 @@ export class GameManager extends Component {
                 const canvas = this.node.parent;
                 if (canvas) {
                     canvas.addChild(this._ballNode);
-                    console.log('Ball created successfully and added to Canvas');
+                    
                 } else {
                     this.node.addChild(this._ballNode);
-                    console.log('Ball created successfully and added to GameManager');
+                    
                 }
             } else {
-                console.error('Failed to instantiate ball prefab');
+                
             }
             
         } catch (error) {
-            console.error('Error creating ball:', error);
+            
         }
     }
 
     private createBoundaryWalls(): void {
         try {
             if (!this.wallPrefab) {
-                console.warn('Wall prefab not assigned - skipping boundary creation');
+                
                 return;
             }
 
@@ -360,9 +320,9 @@ export class GameManager extends Component {
             }
             parentNode.addChild(bottomWall);
 
-            console.log('Boundary walls created successfully');
+            
         } catch (error) {
-            console.error('Error creating boundary walls:', error);
+            
         }
     }
 
@@ -377,13 +337,13 @@ export class GameManager extends Component {
             const canvas = this.node.parent;
             if (canvas) {
                 canvas.addChild(debugNode);
-                console.log('✅ Runtime debug panel created and added to Canvas');
+                
             } else {
                 this.node.addChild(debugNode);
-                console.log('✅ Runtime debug panel created and added to GameManager');
+                
             }
         } catch (error) {
-            console.error('Error creating debug panel:', error);
+            
         }
     }
     */
@@ -393,23 +353,19 @@ export class GameManager extends Component {
             const ballScript = this._ballNode.getComponent('EnhancedBall') || this._ballNode.getComponent('Ball');
             if (ballScript && typeof (ballScript as any).launch === 'function') {
                 (ballScript as any).launch();
-                console.log('Ball launched after physics initialization');
+                
             } else {
-                console.warn('Ball script not found or launch method not available');
+                
             }
         } else {
-            console.warn('Ball node not found, cannot launch');
+            
         }
     }
 
     private setupLevel(): void {
-        console.log(`🎯 SetupLevel called - Level ${this.level}`);
-
         // 计算当前关卡难度
         this._currentDifficulty = DifficultyCalculator.calculateDifficulty(this.level);
         this._brickDistribution = DifficultyCalculator.getBrickDistribution();
-
-        console.log('📊 Difficulty config:', DifficultyCalculator.formatConfig(this._currentDifficulty));
 
         // 清除旧砖块
         this.clearBricks();
@@ -424,7 +380,7 @@ export class GameManager extends Component {
      */
     private createBricksFromData(brickDataArray: BrickData[]): void {
         if (!this.brickPrefab || !this.brickContainer || !this._currentDifficulty) {
-            console.error('Missing prefab, container, or difficulty config');
+            
             return;
         }
 
@@ -454,8 +410,6 @@ export class GameManager extends Component {
 
         const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
         const startY = 300;
-
-        console.log(`📦 Creating ${filteredBricks.length} bricks from ${config.gridRows}x${finalCols} grid (available width: ${availableWidth}, used: ${finalTotalWidth.toFixed(1)})`);
 
         // 应用难度系统: 随机分配特殊砖块类型
         this.applyDifficultyToBricks(filteredBricks);
@@ -492,7 +446,7 @@ export class GameManager extends Component {
             this._bricks.push(brick);
         }
 
-        console.log(`✅ Created ${this._bricks.length} bricks successfully`);
+        
     }
 
     /**
@@ -544,16 +498,12 @@ export class GameManager extends Component {
 
             brick.type = finalType;
         }
-
-        console.log(`🎲 Applied difficulty: ${reactiveBricks.length} reactive bricks placed`);
     }
 
     /**
      * 公开方法 - 供DevTools调用，加载指定关卡
      */
     public loadLevel(level: number, customConfig?: DifficultyConfig): void {
-        console.log(`🔄 Loading level ${level}${customConfig ? ' with custom config' : ''}`);
-
         this.level = level;
 
         if (customConfig) {
@@ -605,7 +555,7 @@ export class GameManager extends Component {
         let finalLayout = layout;
         
         if (totalBrickArea > wallInnerBoundary * 2) {
-            console.log(`12列太宽(${totalBrickArea})，减少到10列`);
+            
             finalCols = 10;
             finalLayout = layout.map(row => row.slice(0, 10)); // 截取前10列
         }
@@ -614,7 +564,7 @@ export class GameManager extends Component {
         const startX = -finalTotalWidth / 2 + actualBrickWidth / 2;
         const startY = 300;
         
-        console.log(`Creating ${finalLayout.length}x${finalCols} brick grid, total width: ${finalTotalWidth.toFixed(1)}, wall boundary: ±${wallInnerBoundary}`);
+        
 
         for (let row = 0; row < finalLayout.length; row++) {
             for (let col = 0; col < finalCols; col++) {
@@ -649,7 +599,8 @@ export class GameManager extends Component {
                     }
                     
                     // Some bricks drop experience orbs
-                    if (Math.random() < 0.1) { // 10% chance
+                    // 提高经验球掉落率到30%，让游戏更有收集感
+                    if (Math.random() < 0.3) { // 30% chance
                         (brickScript as any).setDropsExperience && (brickScript as any).setDropsExperience(true);
                     }
                 }
@@ -659,7 +610,7 @@ export class GameManager extends Component {
             }
         }
         
-        console.log(`Created ${this._bricks.length} bricks with diverse types`);
+        
     }
     
     /**
@@ -739,23 +690,39 @@ export class GameManager extends Component {
         this._bricks = [];
     }
 
-    public onBrickDestroyed(scoreValue: number = 10, brickPosition?: Vec3, dropsExperience: boolean = false): void {
+    public onBrickDestroyed(scoreValue: number = 10, brickPosition?: Vec3, dropsExperience: boolean = false, brickType?: number): void {
         this.score += scoreValue;
-        
+
+        // 不再直接添加经验值，而是通过经验球收集来获得
+        // 根据砖块类型决定经验球的经验值
+        let orbExpValue = 1; // 默认经验值
+
+        // 特殊砖块的经验球包含更多经验
+        if (brickType !== undefined) {
+            if (brickType === BrickType.EXPERIENCE) {
+                orbExpValue = 5; // 经验砖块的球给予5点
+                dropsExperience = true; // 经验砖块一定掉落经验球
+            } else if (brickType === BrickType.REINFORCED || brickType === BrickType.SHIELD) {
+                orbExpValue = 3; // 坚固砖块的球给予3点
+            } else if (brickType === BrickType.EXPLOSIVE || brickType === BrickType.ELECTRIC) {
+                orbExpValue = 2; // 爆炸/电击砖块的球给予2点
+            }
+        }
+
         if (brickPosition) {
             // Drop power-ups
             if (Math.random() < this.powerUpDropChance) {
                 this.dropPowerUp(brickPosition);
             }
-            
-            // Drop experience orbs
+
+            // Drop experience orbs with calculated exp value
             if (dropsExperience) {
-                this.dropExperienceOrb(brickPosition);
+                this.dropExperienceOrb(brickPosition, orbExpValue);
             }
         }
-        
+
         this._bricks = this._bricks.filter(brick => brick && brick.isValid);
-        
+
         if (this._bricks.length === 0) {
             this.checkLevelComplete();
         }
@@ -776,10 +743,10 @@ export class GameManager extends Component {
             const canvas = this.node.parent;
             if (canvas) {
                 canvas.addChild(powerUpNode);
-                console.log('PowerUp dropped and added to Canvas');
+                
             } else {
                 this.node.addChild(powerUpNode);
-                console.log('PowerUp dropped and added to GameManager');
+                
             }
         }
     }
@@ -800,7 +767,7 @@ export class GameManager extends Component {
     }
     
     public onCoreAttacked(damage: number): void {
-        console.log(`Core attacked for ${damage} damage`);
+        
         
         if (this._coreController) {
             this._coreController.takeDamage(damage, 'External attack');
@@ -808,26 +775,42 @@ export class GameManager extends Component {
     }
     
     public onCoreDestroyed(): void {
-        console.log('Core destroyed! Immediate game over!');
+        
         this.lives = 0;
         this.setState(GameState.GAME_OVER);
     }
     
     public onBossDefeated(scoreValue: number): void {
-        console.log(`Boss defeated! Awarded ${scoreValue} points`);
+        
         this.score += scoreValue;
         
         // Boss defeat triggers level completion
         this.onLevelComplete();
     }
     
-    private dropExperienceOrb(position: Vec3): void {
+    private dropExperienceOrb(position: Vec3, expValue: number = 1): void {
         if (!this.experienceOrbPrefab) return;
-        
+
         const orbNode = instantiate(this.experienceOrbPrefab);
-        orbNode.setPosition(position);
-        this.node.addChild(orbNode);
-        console.log('Experience orb dropped');
+
+        // 设置经验球的经验值
+        const orbScript = orbNode.getComponent('UltraSimpleExperienceOrb');
+        if (orbScript) {
+            (orbScript as any).experienceValue = expValue;
+        }
+
+        // 添加到Canvas而不是GameManager，确保坐标系正确
+        const canvas = this.node.parent;
+        if (canvas) {
+            // 先添加到Canvas
+            canvas.addChild(orbNode);
+            // 然后设置世界位置
+            orbNode.setWorldPosition(position);
+        } else {
+            // 后备方案
+            this.node.addChild(orbNode);
+            orbNode.setPosition(position);
+        }
     }
 
     private resetBall(): void {
@@ -858,18 +841,25 @@ export class GameManager extends Component {
     public onLevelComplete(): void {
         this.setState(GameState.LEVEL_COMPLETE);
         this.level++;
-        
+
+        // 关卡完成奖励经验
+        const expManager = ExperienceManager.getInstance();
+        if (expManager) {
+            expManager.addExperience(50); // 关卡完成奖励50经验
+            
+        }
+
         const relicManager = RelicManager.getInstance();
         if (relicManager) {
             relicManager.grantRandomRelic();
         }
-        
+
         // Reset level manager for next level
         if (this._levelManager) {
             this._levelManager.resetLevel();
             this._levelManager.adjustDifficulty(this.level);
         }
-        
+
         this.scheduleOnce(() => {
             this.setupLevel();
             this.setState(GameState.PLAYING);
@@ -879,26 +869,26 @@ export class GameManager extends Component {
     public setState(newState: GameState): void {
         try {
             if (!newState || typeof newState !== 'string') {
-                console.warn('Invalid game state:', newState);
+                
                 return;
             }
 
             const validStates = Object.values(GameState);
             if (!validStates.includes(newState as GameState)) {
-                console.warn('Unknown game state:', newState);
+                
                 return;
             }
 
             const oldState = this._currentState;
             this._currentState = newState;
             
-            console.log(`Game State Changed: ${oldState} -> ${newState}`);
+            
             
             // Handle state-specific logic
             this.onStateChanged(oldState, newState);
             
         } catch (error) {
-            console.error('Error setting game state:', error);
+            
         }
     }
 
@@ -916,23 +906,23 @@ export class GameManager extends Component {
                     break;
             }
         } catch (error) {
-            console.warn('Error in state change handler:', error);
+            
         }
     }
 
     private handleGameOver(): void {
-        console.log('Game Over - cleaning up resources');
+        
         // Stop any ongoing animations or sounds
         // Save final score if needed
     }
 
     private handleLevelComplete(): void {
-        console.log('Level Complete - preparing next level');
+        
         // Award experience, update progression
     }
 
     private handleGamePlaying(): void {
-        console.log('Game Playing - all systems active');
+        
         // Ensure all game systems are ready
     }
 
@@ -973,6 +963,19 @@ export class GameManager extends Component {
         return this._paddleNode;
     }
 
+    public getPaddle(): any {
+        if (this._paddleNode) {
+            return this._paddleNode.getComponent('EnhancedPaddleController') ||
+                   this._paddleNode.getComponent('PaddleController');
+        }
+        return null;
+    }
+
+    public addLife(amount: number): void {
+        this.lives += amount;
+        
+    }
+
     public getCoreController(): CoreController | null {
         return this._coreController;
     }
@@ -987,12 +990,12 @@ export class GameManager extends Component {
 
     public addScore(points: number): void {
         this.score += points;
-        console.log(`Score increased by ${points}. Total: ${this.score}`);
+        
     }
 
     public decreaseLives(amount: number = 1): void {
         this.lives = Math.max(0, this.lives - amount);
-        console.log(`Lives decreased by ${amount}. Remaining: ${this.lives}`);
+        
         
         if (this.lives <= 0) {
             this.setState(GameState.GAME_OVER);

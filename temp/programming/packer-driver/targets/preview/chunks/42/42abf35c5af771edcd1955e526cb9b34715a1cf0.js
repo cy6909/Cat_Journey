@@ -1,7 +1,7 @@
-System.register(["cc"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, ExperienceOrb;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, _decorator, Component, RigidBody2D, Vec3, Vec2, Collider2D, Contact2DType, GameManager, ExperienceManager, _dec, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _crd, ccclass, property, ExperienceOrb;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -9,8 +9,18 @@ System.register(["cc"], function (_export, _context) {
 
   function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
 
+  function _reportPossibleCrUseOfGameManager(extras) {
+    _reporterNs.report("GameManager", "../gameplay/GameManager", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfExperienceManager(extras) {
+    _reporterNs.report("ExperienceManager", "./ExperienceManager", _context.meta, extras);
+  }
+
   return {
-    setters: [function (_cc) {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
       _cclegacy = _cc.cclegacy;
       __checkObsolete__ = _cc.__checkObsolete__;
       __checkObsoleteInNamespace__ = _cc.__checkObsoleteInNamespace__;
@@ -21,13 +31,17 @@ System.register(["cc"], function (_export, _context) {
       Vec2 = _cc.Vec2;
       Collider2D = _cc.Collider2D;
       Contact2DType = _cc.Contact2DType;
+    }, function (_unresolved_2) {
+      GameManager = _unresolved_2.GameManager;
+    }, function (_unresolved_3) {
+      ExperienceManager = _unresolved_3.ExperienceManager;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "f1f1dhJWA9GYZ4McpDTfBhR", "ExperienceOrb", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec3', 'Vec2', 'Collider2D', 'Contact2DType', 'IPhysics2DContact']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'RigidBody2D', 'Vec3', 'Vec2', 'Collider2D', 'Contact2DType', 'IPhysics2DContact', 'find']);
 
       ({
         ccclass,
@@ -81,11 +95,15 @@ System.register(["cc"], function (_export, _context) {
 
         findTargets() {
           // Find paddle and core nodes for magnetism
-          var gameManager = require('./GameManager').GameManager.getInstance();
+          var gameManager = (_crd && GameManager === void 0 ? (_reportPossibleCrUseOfGameManager({
+            error: Error()
+          }), GameManager) : GameManager).getInstance();
 
           if (gameManager) {
-            this._paddleNode = gameManager._paddleNode;
-            this._coreNode = gameManager.coreNode;
+            var _gameManager$getCoreC;
+
+            this._paddleNode = gameManager.getPaddleNode();
+            this._coreNode = ((_gameManager$getCoreC = gameManager.getCoreController()) == null ? void 0 : _gameManager$getCoreC.node) || null;
           }
         }
 
@@ -153,14 +171,13 @@ System.register(["cc"], function (_export, _context) {
         }
 
         onCollected() {
-          console.log("Experience orb collected! Value: " + this.experienceValue); // Find core controller and add experience
+          // Add experience to ExperienceManager
+          var expManager = (_crd && ExperienceManager === void 0 ? (_reportPossibleCrUseOfExperienceManager({
+            error: Error()
+          }), ExperienceManager) : ExperienceManager).getInstance();
 
-          if (this._coreNode) {
-            var coreController = this._coreNode.getComponent('CoreController');
-
-            if (coreController) {
-              coreController.addExperience(this.experienceValue);
-            }
+          if (expManager) {
+            expManager.addExperience(this.experienceValue);
           }
 
           this.showCollectionEffect(); // Destroy the orb
@@ -182,8 +199,6 @@ System.register(["cc"], function (_export, _context) {
             };
           } // Could add particle effect or sound here
 
-
-          console.log('Experience orb collection effect played');
         }
 
         getExperienceValue() {

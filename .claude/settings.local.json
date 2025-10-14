@@ -27,7 +27,9 @@
       "Bash(echo:*)",
       "Bash(powershell:*)",
       "Bash(mkdir:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git -C \"D:\\project\\claudecode\\wx\\Cat_Journey\" log --oneline -10)",
+      "Bash(git -C \"D:\\project\\claudecode\\wx\\Cat_Journey\" diff --stat)"
     ],
     "deny": [],
     "ask": [],

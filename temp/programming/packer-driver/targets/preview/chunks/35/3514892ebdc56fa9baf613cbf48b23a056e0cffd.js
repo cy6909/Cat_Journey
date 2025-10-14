@@ -632,37 +632,23 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         } // Visual effect methods  
 
 
-        createTrailEffect() {
-          console.log('Trail effect created');
-        }
+        createTrailEffect() {}
 
         updateGlowEffect(dt) {
           /* Implement glow effect */
         }
 
-        createExplosionEffect(position) {
-          console.log('Explosion visual effect');
-        }
+        createExplosionEffect(position) {}
 
-        createLightningEffect(from, to) {
-          console.log('Lightning effect');
-        }
+        createLightningEffect(from, to) {}
 
-        showPhaseEffect() {
-          console.log('Phase visual effect');
-        }
+        showPhaseEffect() {}
 
-        updateQuantumEffect(dt) {
-          console.log('Quantum effect update');
-        }
+        updateQuantumEffect(dt) {}
 
-        updatePlasmaEffect(dt) {
-          console.log('Plasma effect update');
-        }
+        updatePlasmaEffect(dt) {}
 
-        onHitTarget(collider) {
-          console.log('Ball hit target');
-        }
+        onHitTarget(collider) {}
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "ballType", [_dec2], {
         configurable: true,

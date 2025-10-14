@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "map": {
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs": {
-      "time": 1758871508000.0425,
+      "time": 1760446290990.0334,
       "uuid": "69d34246-67e3-47c1-a855-d26975876954"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes": {
@@ -71,14 +71,6 @@
       "time": 1758815322417.7097,
       "uuid": "886d6f13-f395-4a7e-a603-8861f50cfffe"
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.ts": {
-      "time": 1757681247110.4568,
-      "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Brick.ts": {
-      "time": 1757766821221.7893,
-      "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\DeathZone.ts": {
       "time": 1757681247123.3608,
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
@@ -98,10 +90,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MultiBallPowerUp.ts": {
       "time": 1757681247125.3623,
       "uuid": "e98c908d-5b76-4ec4-9fa9-cbeb76f104b0"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.ts": {
-      "time": 1757681247126.3618,
-      "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.ts": {
       "time": 1757681247126.3618,
@@ -2666,10 +2654,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ShopManager.des.meta": {
       "time": 1757816370759.8127
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Ball.des": {
-      "time": 1757766981066.9446,
-      "uuid": "e01b4cd3-fec4-47b4-b078-2d36c18f7a59"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\BossController.des": {
       "time": 1757771581445.9395,
       "uuid": "425842cc-7cbb-449c-a501-8f2ca1738860"
@@ -2681,10 +2665,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\AdManager.des": {
       "time": 1757769853046.166,
       "uuid": "9de2dcc6-41dd-4d0a-9d89-80eb5d3a7a2f"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\Brick.des": {
-      "time": 1757767015111.368,
-      "uuid": "7b9a6d27-dcfb-427a-98eb-094f06616a6a"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\EliteAndHiddenBossManager.des": {
       "time": 1757768836101.345,
@@ -2725,10 +2705,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\MonetizationManager.des": {
       "time": 1757769460234.151,
       "uuid": "d8144d91-88d1-4446-bea9-01d73b7d6533"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PaddleController.des": {
-      "time": 1757766948974.0066,
-      "uuid": "25799f56-843b-4bfa-9104-cd6cc632836f"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.des": {
       "time": 1757768109880.1377,
@@ -3668,7 +3644,7 @@
       "time": 1757894233917.2788
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scenes\\testscene.scene": {
-      "time": 1759452800318.5042,
+      "time": 1760450428264.1614,
       "uuid": "71e1758f-1876-43b5-935d-bc2e35d0d6e1"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\resources\\texture\\ctrl\\ctrl.plist": {
@@ -5215,11 +5191,11 @@
       "uuid": "5ef012af-ca27-4b85-b817-8c3f7d3d5891"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay": {
-      "time": 1759453931915.739,
+      "time": 1760449993636.2007,
       "uuid": "15a172f0-61d5-4189-be33-2546a13584c8"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers": {
-      "time": 1758162934489.4946,
+      "time": 1760448958982.9316,
       "uuid": "3f789d68-aab5-4f46-9fca-9ffe35a8b292"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\powerups": {
@@ -5227,7 +5203,7 @@
       "uuid": "8ae27d6b-8125-4668-89ec-1f48168e93e4"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui": {
-      "time": 1759415831577.5903,
+      "time": 1760443659929.772,
       "uuid": "833570eb-f6b5-4a66-8a1c-487e5fc88fcb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\background\\AbyssBackground.ts": {
@@ -5255,7 +5231,7 @@
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBall.ts": {
-      "time": 1759387764733.6936,
+      "time": 1760447644342.401,
       "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBossController.ts": {
@@ -5263,15 +5239,15 @@
       "uuid": "27557649-ef41-41bd-8182-c1f866e06f1c"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedBrick.ts": {
-      "time": 1759452700586.2056,
+      "time": 1760448122729.2104,
       "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\EnhancedPaddleController.ts": {
-      "time": 1759387164738.129,
+      "time": 1760447735960.7678,
       "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\GameManager.ts": {
-      "time": 1759453931892.0283,
+      "time": 1760449993632.7505,
       "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LevelManager.ts": {
@@ -5303,7 +5279,7 @@
       "uuid": "b292370e-104f-4642-9f1b-2018c49d54ae"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\ExperienceOrb.ts": {
-      "time": 1757894233941.0632,
+      "time": 1760446502297.3118,
       "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\MapManager.ts": {
@@ -5594,14 +5570,6 @@
       "time": 1758037289082.1836,
       "uuid": "d38601e9-2bee-4fb4-af7e-00d3fccec3b9"
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.ts": {
-      "time": 1758817255915.367,
-      "uuid": "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.ts": {
-      "time": 1758037289107.6982,
-      "uuid": "74d2391c-448c-4e12-8af9-f4c2982fd9c1"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\CameraVisibilityAnalyzer.ts": {
       "time": 1758037289118.6975,
       "uuid": "3048b321-b844-45ca-8fe4-f5ccf124ded0"
@@ -5609,10 +5577,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\DeathZone.ts": {
       "time": 1758037289119.6982,
       "uuid": "73047f13-6a72-44ef-84d6-162a11e62ad6"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.ts": {
-      "time": 1758817715007.2104,
-      "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
     },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts": {
       "time": 1758725328623.292,
@@ -5879,18 +5843,6 @@
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\ui\\SlayTheSpireMapVisualizer.ts.meta": {
       "time": 1758725328666.2917
     },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.des": {
-      "time": 1758037289102.6975,
-      "uuid": "e01b4cd3-fec4-47b4-b078-2d36c18f7a59"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.des": {
-      "time": 1758037289106.6975,
-      "uuid": "7b9a6d27-dcfb-427a-98eb-094f06616a6a"
-    },
-    "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.des": {
-      "time": 1758037289132.6985,
-      "uuid": "25799f56-843b-4bfa-9104-cd6cc632836f"
-    },
     "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\effects\\AdvancedEffectSystem.ts.des": {
       "time": 1758110847930.845,
       "uuid": "375161eb-a03c-4d83-a1ea-5014539f0fbd"
@@ -6149,12 +6101,47 @@
       "uuid": "810fe9fe-0e0f-4257-8f8b-f573a932a156"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\gameplay\\LayoutGenerator.ts": {
-      "time": 1759451180268.3125,
+      "time": 1760444435917.8296,
       "uuid": "daa5e7e3-4e4e-4220-9862-ca1c0f600af0"
     },
     "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\DevToolsUI.ts": {
       "time": 1759414235514.048,
       "uuid": "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\ExperienceManager.ts.meta": {
+      "time": 1760443659936.7656
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\ExperienceBar.ts.meta": {
+      "time": 1760443659938.0093
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\ExperienceManager.ts": {
+      "time": 1760448669503.6997,
+      "uuid": "0d90362d-b606-4a9a-a927-aee7a0b18c47"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\ui\\ExperienceBar.ts": {
+      "time": 1760432761075.5027,
+      "uuid": "55724077-d517-4efa-8b2b-95a574501f1a"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\ExperienceOrb.prefab.meta": {
+      "time": 1760446290994.4993
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\prefabs\\ExperienceOrb.prefab": {
+      "time": 1760447409890.8523,
+      "uuid": "959ea620-4989-45ed-8c1e-f1f1398046bf"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SimpleExperienceOrb.ts.meta": {
+      "time": 1760446860196.3027
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\SimpleExperienceOrb.ts": {
+      "time": 1760446741244.9236,
+      "uuid": "d4af8b40-5bfb-4665-93e1-461ac3d687d2"
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\UltraSimpleExperienceOrb.ts.meta": {
+      "time": 1760447383147.005
+    },
+    "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\managers\\UltraSimpleExperienceOrb.ts": {
+      "time": 1760448958980.9304,
+      "uuid": "3d5f8818-7703-4db8-8e26-fa104a2f7f2c"
     }
   },
   "missing": {
@@ -6204,9 +6191,9 @@
       "removeTime": 1758157475301
     },
     "ba316f75-bfe9-44a4-85f9-9e9839e5b7aa": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.ts",
-      "time": 1759385493806.1692,
-      "removeTime": 1759451918128
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.ts",
+      "time": 1758817255915.367,
+      "removeTime": 1760432388393
     },
     "cb177592-4af2-4364-aa4f-151cf2468684": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\BossController.ts",
@@ -6214,9 +6201,9 @@
       "removeTime": 1758014867908
     },
     "74d2391c-448c-4e12-8af9-f4c2982fd9c1": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.ts",
-      "time": 1758014288487.632,
-      "removeTime": 1759451918133
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.ts",
+      "time": 1758037289107.6982,
+      "removeTime": 1760432388393
     },
     "3048b321-b844-45ca-8fe4-f5ccf124ded0": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\CameraVisibilityAnalyzer.ts",
@@ -6314,9 +6301,9 @@
       "removeTime": 1758014867912
     },
     "a1b2c3d4-e5f6-7890-abcd-ef1234567890": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.ts",
-      "time": 1759386468813.724,
-      "removeTime": 1759451918134
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.ts",
+      "time": 1758817715007.2104,
+      "removeTime": 1760432388394
     },
     "3cb63be2-0d80-430c-8d7b-44aa16452edd": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.ts",
@@ -6369,9 +6356,9 @@
       "removeTime": 1758014867913
     },
     "e01b4cd3-fec4-47b4-b078-2d36c18f7a59": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.des",
-      "time": 1757894233926.288,
-      "removeTime": 1759451918134
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Ball.des",
+      "time": 1758037289102.6975,
+      "removeTime": 1760432388394
     },
     "425842cc-7cbb-449c-a501-8f2ca1738860": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\BossController.des",
@@ -6379,9 +6366,9 @@
       "removeTime": 1758014867914
     },
     "7b9a6d27-dcfb-427a-98eb-094f06616a6a": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.des",
-      "time": 1757894233929.5435,
-      "removeTime": 1759451918138
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\Brick.des",
+      "time": 1758037289106.6975,
+      "removeTime": 1760432388394
     },
     "0bbd4585-b172-44ba-aafd-fdc87df994ef": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\CoreController.des",
@@ -6439,9 +6426,9 @@
       "removeTime": 1758014867915
     },
     "25799f56-843b-4bfa-9104-cd6cc632836f": {
-      "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.des",
-      "time": 1757894233950.3872,
-      "removeTime": 1759451918139
+      "path": "E:\\work_space\\wx\\Cat_Journey\\assets\\scripts\\core\\PaddleController.des",
+      "time": 1758037289132.6985,
+      "removeTime": 1760432388394
     },
     "f9106822-a496-48db-bc30-f08eefe33661": {
       "path": "D:\\project\\claudecode\\wx\\Cat_Journey\\assets\\scripts\\PowerUp.des",

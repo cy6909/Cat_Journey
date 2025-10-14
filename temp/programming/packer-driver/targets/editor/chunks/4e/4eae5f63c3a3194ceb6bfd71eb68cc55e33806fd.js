@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, BrickType, LayoutGenerator, StandardGridLayout, SymmetricPatternLayout, ClusterRandomLayout, FortressLayout, LayeredDefenseLayout, _crd;
+  var _reporterNs, _cclegacy, BrickType, LayoutGenerator, StandardGridLayout, SymmetricPatternLayout, TriangleLayout, DiamondLayout, PyramidLayout, SpiralLayout, CrossLayout, HexagonLayout, CheckerboardLayout, ChaosLayout, ClusterRandomLayout, FortressLayout, LayeredDefenseLayout, _crd;
 
   function _reportPossibleCrUseOfBrickType(extras) {
     _reporterNs.report("BrickType", "./EnhancedBrick", _context.meta, extras);
@@ -36,61 +36,39 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       /**
        * 布局生成器 - 根据难度配置生成砖块布局
+       *
+       * Linus式设计：简单直接，关卡递进有明确结构感
+       * - 1-3关: 基础矩形
+       * - 4-6关: 简单图案
+       * - 7-9关: 复杂图案
+       * - 10+关: 特殊布局
        */
       _export("LayoutGenerator", LayoutGenerator = class LayoutGenerator {
         /**
          * 根据难度配置选择并生成布局
+         * 关卡渐进式设计，而非完全随机
          */
         static generateLayout(config) {
-          if (config.layoutType === 'normal') {
-            return this.generateNormalLayout(config);
+          const level = config.level || 1; // 根据关卡选择布局类型 - 有明确的进阶感
+
+          if (level <= 3) {
+            // 初级关卡 - 整齐的矩形
+            return new StandardGridLayout().generate(config);
+          } else if (level <= 6) {
+            // 中级关卡 - 简单图案
+            const patterns = [new TriangleLayout(), new DiamondLayout(), new PyramidLayout()];
+            return patterns[level % patterns.length].generate(config);
+          } else if (level <= 9) {
+            // 高级关卡 - 复杂图案
+            const patterns = [new SpiralLayout(), new CrossLayout(), new HexagonLayout()];
+            return patterns[level % patterns.length].generate(config);
+          } else if (level <= 15) {
+            // 专家关卡 - 防御型布局
+            const patterns = [new FortressLayout(), new LayeredDefenseLayout(), new CheckerboardLayout()];
+            return patterns[level % patterns.length].generate(config);
           } else {
-            return this.generateSpecialLayout(config);
-          }
-        }
-        /**
-         * 生成Normal布局 (关卡1-9)
-         */
-
-
-        static generateNormalLayout(config) {
-          // 随机选择Normal布局类型
-          const layoutTypes = ['STANDARD_GRID', 'SYMMETRIC_PATTERN', 'CLUSTER_RANDOM'];
-          const selectedType = layoutTypes[Math.floor(Math.random() * layoutTypes.length)];
-
-          switch (selectedType) {
-            case 'STANDARD_GRID':
-              return new StandardGridLayout().generate(config);
-
-            case 'SYMMETRIC_PATTERN':
-              return new SymmetricPatternLayout().generate(config);
-
-            case 'CLUSTER_RANDOM':
-              return new ClusterRandomLayout().generate(config);
-
-            default:
-              return new StandardGridLayout().generate(config);
-          }
-        }
-        /**
-         * 生成Special布局 (关卡10+)
-         */
-
-
-        static generateSpecialLayout(config) {
-          // 随机选择Special布局类型
-          const layoutTypes = ['FORTRESS', 'LAYERED_DEFENSE'];
-          const selectedType = layoutTypes[Math.floor(Math.random() * layoutTypes.length)];
-
-          switch (selectedType) {
-            case 'FORTRESS':
-              return new FortressLayout().generate(config);
-
-            case 'LAYERED_DEFENSE':
-              return new LayeredDefenseLayout().generate(config);
-
-            default:
-              return new FortressLayout().generate(config);
+            // 大师关卡 - 混合型布局
+            return new ChaosLayout().generate(config);
           }
         }
 
@@ -130,30 +108,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       };
       /**
-       * 对称图案布局 - 三角形/菱形/十字形
+       * 对称图案布局 - 已废弃，拆分为独立布局类
        */
 
       SymmetricPatternLayout = class SymmetricPatternLayout {
         generate(config) {
-          const patterns = ['triangle', 'diamond', 'cross'];
-          const selectedPattern = patterns[Math.floor(Math.random() * patterns.length)];
-
-          switch (selectedPattern) {
-            case 'triangle':
-              return this.generateTriangle(config);
-
-            case 'diamond':
-              return this.generateDiamond(config);
-
-            case 'cross':
-              return this.generateCross(config);
-
-            default:
-              return this.generateTriangle(config);
-          }
+          // 向后兼容 - 使用三角形布局
+          return new TriangleLayout().generate(config);
         }
 
-        generateTriangle(config) {
+      };
+      /**
+       * 三角形布局
+       */
+
+      TriangleLayout = class TriangleLayout {
+        generate(config) {
           const bricks = [];
           const {
             gridRows,
@@ -168,21 +138,29 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
             const startCol = centerCol - Math.floor(width / 2);
 
             for (let i = 0; i < width && startCol + i < gridCols; i++) {
-              bricks.push({
-                type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
-                  error: Error()
-                }), BrickType) : BrickType).NORMAL,
-                health: baseHealth,
-                row,
-                col: startCol + i
-              });
+              if (startCol + i >= 0) {
+                bricks.push({
+                  type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+                    error: Error()
+                  }), BrickType) : BrickType).NORMAL,
+                  health: baseHealth,
+                  row,
+                  col: startCol + i
+                });
+              }
             }
           }
 
           return bricks;
         }
 
-        generateDiamond(config) {
+      };
+      /**
+       * 菱形布局
+       */
+
+      DiamondLayout = class DiamondLayout {
+        generate(config) {
           const bricks = [];
           const {
             gridRows,
@@ -212,7 +190,124 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
           return bricks;
         }
 
-        generateCross(config) {
+      };
+      /**
+       * 金字塔布局 - 倒三角形
+       */
+
+      PyramidLayout = class PyramidLayout {
+        generate(config) {
+          const bricks = [];
+          const {
+            gridRows,
+            gridCols,
+            baseHealth
+          } = config;
+          const centerCol = Math.floor(gridCols / 2);
+
+          for (let row = 0; row < gridRows; row++) {
+            const width = gridRows - row; // 每行宽度递减
+
+            const startCol = centerCol - Math.floor(width / 2);
+
+            for (let i = 0; i < width && startCol + i < gridCols; i++) {
+              if (startCol + i >= 0) {
+                bricks.push({
+                  type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+                    error: Error()
+                  }), BrickType) : BrickType).NORMAL,
+                  health: baseHealth,
+                  row,
+                  col: startCol + i
+                });
+              }
+            }
+          }
+
+          return bricks;
+        }
+
+      };
+      /**
+       * 螺旋布局 - 从中心向外螺旋
+       */
+
+      SpiralLayout = class SpiralLayout {
+        generate(config) {
+          const bricks = [];
+          const {
+            gridRows,
+            gridCols,
+            baseHealth
+          } = config;
+          const centerRow = Math.floor(gridRows / 2);
+          const centerCol = Math.floor(gridCols / 2); // 螺旋生成
+
+          let row = centerRow,
+              col = centerCol;
+          let steps = 1;
+          let direction = 0; // 0=right, 1=down, 2=left, 3=up
+
+          bricks.push({
+            type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+              error: Error()
+            }), BrickType) : BrickType).NORMAL,
+            health: baseHealth,
+            row,
+            col
+          });
+
+          while (bricks.length < gridRows * gridCols * 0.6) {
+            // 填充60%
+            for (let i = 0; i < 2; i++) {
+              // 每个步长走两个方向
+              for (let j = 0; j < steps; j++) {
+                switch (direction) {
+                  case 0:
+                    col++;
+                    break;
+
+                  case 1:
+                    row++;
+                    break;
+
+                  case 2:
+                    col--;
+                    break;
+
+                  case 3:
+                    row--;
+                    break;
+                }
+
+                if (row >= 0 && row < gridRows && col >= 0 && col < gridCols) {
+                  bricks.push({
+                    type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+                      error: Error()
+                    }), BrickType) : BrickType).NORMAL,
+                    health: baseHealth,
+                    row,
+                    col
+                  });
+                }
+              }
+
+              direction = (direction + 1) % 4;
+            }
+
+            steps++;
+          }
+
+          return bricks;
+        }
+
+      };
+      /**
+       * 十字布局
+       */
+
+      CrossLayout = class CrossLayout {
+        generate(config) {
           const bricks = [];
           const {
             gridRows,
@@ -247,7 +342,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
               const row = centerRow + offset;
 
               if (row >= 0 && row < gridRows) {
-                // 避免重复添加中心交叉部分
                 const exists = bricks.some(b => b.row === row && b.col === col);
 
                 if (!exists) {
@@ -261,6 +355,117 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
                   });
                 }
               }
+            }
+          }
+
+          return bricks;
+        }
+
+      };
+      /**
+       * 六边形布局
+       */
+
+      HexagonLayout = class HexagonLayout {
+        generate(config) {
+          const bricks = [];
+          const {
+            gridRows,
+            gridCols,
+            baseHealth
+          } = config;
+          const centerRow = Math.floor(gridRows / 2);
+          const centerCol = Math.floor(gridCols / 2);
+          const radius = Math.min(gridRows, gridCols) / 2;
+
+          for (let row = 0; row < gridRows; row++) {
+            for (let col = 0; col < gridCols; col++) {
+              const distance = Math.abs(row - centerRow) + Math.abs(col - centerCol);
+
+              if (distance <= radius) {
+                bricks.push({
+                  type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+                    error: Error()
+                  }), BrickType) : BrickType).NORMAL,
+                  health: baseHealth,
+                  row,
+                  col
+                });
+              }
+            }
+          }
+
+          return bricks;
+        }
+
+      };
+      /**
+       * 棋盘布局 - 黑白相间
+       */
+
+      CheckerboardLayout = class CheckerboardLayout {
+        generate(config) {
+          const bricks = [];
+          const {
+            gridRows,
+            gridCols,
+            baseHealth
+          } = config;
+
+          for (let row = 0; row < gridRows; row++) {
+            for (let col = 0; col < gridCols; col++) {
+              // 棋盘格：行列和为偶数放砖块
+              if ((row + col) % 2 === 0) {
+                bricks.push({
+                  type: (_crd && BrickType === void 0 ? (_reportPossibleCrUseOfBrickType({
+                    error: Error()
+                  }), BrickType) : BrickType).NORMAL,
+                  health: baseHealth,
+                  row,
+                  col
+                });
+              }
+            }
+          }
+
+          return bricks;
+        }
+
+      };
+      /**
+       * 混沌布局 - 大师关卡的终极挑战
+       */
+
+      ChaosLayout = class ChaosLayout {
+        generate(config) {
+          const bricks = [];
+          const {
+            gridRows,
+            gridCols,
+            baseHealth
+          } = config; // 混合多种模式
+
+          const patterns = [new DiamondLayout(), new SpiralLayout(), new CheckerboardLayout()]; // 获取每种模式的砖块
+
+          const allPatterns = patterns.map(p => p.generate(config)); // 合并并去重
+
+          const brickMap = new Map();
+
+          for (const pattern of allPatterns) {
+            for (const brick of pattern) {
+              const key = `${brick.row}-${brick.col}`;
+
+              if (!brickMap.has(key) || Math.random() > 0.5) {
+                brickMap.set(key, brick);
+              }
+            }
+          } // 随机移除一些砖块制造空洞
+
+
+          for (const [key, brick] of brickMap) {
+            if (Math.random() > 0.3) {
+              // 70%保留率
+              bricks.push(brick);
             }
           }
 

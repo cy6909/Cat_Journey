@@ -223,27 +223,21 @@ export class EnhancedBrick extends Component {
     }
     
     private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null): void {
-        console.log('🔥 Brick collision detected with:', otherCollider.node.name); // 调试日志
-        
         // 检查是否是Ball - 兼容两种组件名称
         const ball = otherCollider.getComponent('Ball') || otherCollider.getComponent('EnhancedBall');
         if (!ball) {
-            console.log('⚠️ Not a ball collision, skipping');
             return;
         }
         
-        console.log('✅ Ball detected, processing collision');
         
         // Handle phase bricks
         if (this.brickType === BrickType.PHASE && Math.random() < this.phaseProbability) {
-            console.log('Ball phased through brick!');
             this.showPhaseEffect();
             return; // Ball passes through
         }
         
         // Handle shielded bricks
         if (this._isShielded) {
-            console.log('Attack blocked by shield!');
             this.showShieldEffect();
             return;
         }
@@ -276,23 +270,19 @@ export class EnhancedBrick extends Component {
     }
     
     public takeDamage(damage: number, impactPosition?: Vec3): void {
-        console.log(`🎯 Brick taking ${damage} damage. Health: ${this.health} -> ${this.health - damage}`);
         
         this.health -= damage;
         this._lastHitTime = 0;
         
         if (this.health <= 0) {
-            console.log('💥 Brick health depleted, destroying...');
             this.onDestroyed(impactPosition);
         } else {
-            console.log(`🔧 Brick damaged but not destroyed. Remaining health: ${this.health}`);
             this.showDamageEffect();
             this.updateVisualState();
         }
     }
     
     private onDestroyed(impactPosition?: Vec3): void {
-        console.log('🧱 Brick destruction started');
         
         const gameManager = GameManager.getInstance();
         const relicManager = RelicManager.getInstance();
@@ -311,14 +301,9 @@ export class EnhancedBrick extends Component {
         const dropsExperience = this.brickType === BrickType.EXPERIENCE || Math.random() < 0.3;
         
         if (gameManager) {
-            console.log(`📈 Notifying GameManager: score=${this.scoreValue}, drops=${dropsExperience}`);
             gameManager.onBrickDestroyed(this.scoreValue, brickPosition, dropsExperience);
-        } else {
-            console.warn('⚠️ GameManager not found, cannot update score');
-        }
-        
+        } 
         // Destroy the brick
-        console.log('🗑️ Destroying brick node');
         this.node.destroy();
     }
     
@@ -379,7 +364,6 @@ export class EnhancedBrick extends Component {
             }
         }
 
-        console.log(`Explosion at ${center} with radius ${this.explosionRadius}, affected ${affectedCount} bricks`);
     }
     
     private triggerElectricChain(): void {
@@ -402,7 +386,6 @@ export class EnhancedBrick extends Component {
             }
         }
 
-        console.log(`Electric chain triggered, affected ${nearbyBricks.length} bricks`);
     }
     
     private applyMagneticEffect(ballCollider: Collider2D): void {
@@ -413,14 +396,12 @@ export class EnhancedBrick extends Component {
         const force = Vec2.multiplyScalar(new Vec2(), new Vec2(direction.x, direction.y), this.magneticForce);
         
         ballRigidBody.applyForceToCenter(force, true);
-        console.log('Magnetic force applied to ball');
     }
     
     private applyIceEffect(ball: any): void {
         // Slow down the ball temporarily
         if (ball && ball.setSpeedMultiplier) {
             ball.setSpeedMultiplier(0.5, 3.0); // 50% speed for 3 seconds
-            console.log('Ball slowed by ice brick');
         }
     }
     
@@ -428,7 +409,6 @@ export class EnhancedBrick extends Component {
         // Speed up the ball temporarily  
         if (ball && ball.setSpeedMultiplier) {
             ball.setSpeedMultiplier(1.5, 3.0); // 150% speed for 3 seconds
-            console.log('Ball accelerated by fire brick');
         }
     }
     
@@ -436,7 +416,6 @@ export class EnhancedBrick extends Component {
         const paddle = this.node.parent?.getComponentInChildren('EnhancedPaddleController') as any;
         if (paddle && paddle.instantRepair) {
             paddle.instantRepair(25);
-            console.log('Paddle healed by healing brick');
         }
     }
     
@@ -447,7 +426,6 @@ export class EnhancedBrick extends Component {
         orb.setParent(this.node.parent);
         orb.setWorldPosition(this.node.getWorldPosition());
         
-        console.log(`Dropped experience orb worth ${this.experienceValue} XP`);
     }
     
     private findNearbyBricks(radius: number): EnhancedBrick[] {
@@ -550,13 +528,33 @@ export class EnhancedBrick extends Component {
     }
     
     // Additional effect implementations would go here...
-    private createSplitBricks(): void { console.log('Brick split into smaller pieces'); }
-    private teleportBall(): void { console.log('Ball teleported to random location'); }
-    private applyCurse(): void { console.log('Curse applied to player'); }
-    private triggerCrystalChain(): void { console.log('Crystal chain reaction triggered'); }
-    private consumeBall(): void { console.log('Ball consumed by void brick'); }
-    private applyGravityEffect(): void { console.log('Gravity modified'); }
-    private applyTimeEffect(): void { console.log('Time flow modified'); }
+    private createSplitBricks(): void {
+        // TODO: Implement brick splitting logic
+    }
+
+    private teleportBall(): void {
+        // TODO: Implement ball teleportation
+    }
+
+    private applyCurse(): void {
+        // TODO: Implement curse effect
+    }
+
+    private triggerCrystalChain(): void {
+        // TODO: Implement crystal chain reaction
+    }
+
+    private consumeBall(): void {
+        // TODO: Implement void consumption effect
+    }
+
+    private applyGravityEffect(): void {
+        // TODO: Implement gravity modification
+    }
+
+    private applyTimeEffect(): void {
+        // TODO: Implement time flow modification
+    }
     private explodeAdjacent(center?: Vec3): void { 
         // Implementation from original Brick.ts
         this.createExplosion(center);

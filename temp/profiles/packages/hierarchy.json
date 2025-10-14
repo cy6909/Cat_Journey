@@ -130,7 +130,8 @@
       "0_1_4",
       "0_1_4_0",
       "0_1_4_1",
-      "0_1_4_2"
+      "0_1_4_2",
+      "0_1_6"
     ]
   },
   "9daac89b-055f-44ab-be17-090032b9912d": {
@@ -178,6 +179,13 @@
   },
   "654236d3-132f-43e6-a1c3-7dccb0eb9f73": {
     "assetUuid": "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
+    "animationUuid": "",
+    "expandLevels": [
+      "0"
+    ]
+  },
+  "959ea620-4989-45ed-8c1e-f1f1398046bf": {
+    "assetUuid": "959ea620-4989-45ed-8c1e-f1f1398046bf",
     "animationUuid": "",
     "expandLevels": [
       "0"

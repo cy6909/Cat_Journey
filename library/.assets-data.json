@@ -153,17 +153,22 @@
         "58f8e17d-e23d-439d-8aea-d766a9c88be0",
         "08ab0291-515e-45dd-9d6f-032cd02586f0",
         "654236d3-132f-43e6-a1c3-7dccb0eb9f73",
+        "959ea620-4989-45ed-8c1e-f1f1398046bf",
         "57520716-48c8-4a19-8acf-41c9f8777fb0@f9941",
         "bd1bcaba-bd7d-4a71-b143-997c882383e4@f9941",
         "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
         "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
+        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
       ],
       "dependScripts": [
         "1112ea98-2509-431e-b6fa-b2811d6671eb",
-        "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf"
+        "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf",
+        "0d90362d-b606-4a9a-a927-aee7a0b18c47",
+        "55724077-d517-4efa-8b2b-95a574501f1a"
       ]
     },
     "versionCode": 1
@@ -9287,6 +9292,38 @@
   },
   "5b8df0f2-6421-4ed9-9bd0-1d3322af61cf": {
     "url": "db://assets/scripts/ui/DevToolsUI.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "0d90362d-b606-4a9a-a927-aee7a0b18c47": {
+    "url": "db://assets/scripts/managers/ExperienceManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "55724077-d517-4efa-8b2b-95a574501f1a": {
+    "url": "db://assets/scripts/ui/ExperienceBar.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "959ea620-4989-45ed-8c1e-f1f1398046bf": {
+    "url": "db://assets/prefabs/ExperienceOrb.prefab",
+    "value": {
+      "depends": [
+        "24c419ea-63a8-4ea1-a9d0-7fc469489bbc@f9941"
+      ],
+      "dependScripts": [
+        "3d5f8818-7703-4db8-8e26-fa104a2f7f2c"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d4af8b40-5bfb-4665-93e1-461ac3d687d2": {
+    "url": "db://assets/scripts/managers/SimpleExperienceOrb.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3d5f8818-7703-4db8-8e26-fa104a2f7f2c": {
+    "url": "db://assets/scripts/managers/UltraSimpleExperienceOrb.ts",
     "value": {},
     "versionCode": 1
   }

@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 8067.985,
+      "mTimestamp": 9183.1663,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -976,7 +976,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 360071218.2604,
+      "mTimestamp": 17885647.1904,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1428,7 +1428,7 @@
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts",
           "resolved": "__unresolved_32",
           "loc": {
             "start": {
@@ -1437,17 +1437,17 @@
             },
             "end": {
               "line": 5,
-              "column": 3856
+              "column": 3860
             }
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
               "line": 5,
-              "column": 3872
+              "column": 3876
             },
             "end": {
               "line": 5,
@@ -1456,7 +1456,7 @@
           }
         },
         {
-          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts",
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/LevelSoundManager.ts",
           "resolved": "__unresolved_34",
           "loc": {
             "start": {
@@ -1465,217 +1465,273 @@
             },
             "end": {
               "line": 5,
-              "column": 4063
+              "column": 4070
+            }
+          }
+        },
+        {
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MapManager.ts",
+          "resolved": "__unresolved_35",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 4086
+            },
+            "end": {
+              "line": 5,
+              "column": 4170
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/MonetizationManager.ts",
-          "resolved": "__unresolved_35",
+          "resolved": "__unresolved_36",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4079
+              "column": 4186
             },
             "end": {
               "line": 5,
-              "column": 4172
+              "column": 4279
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/RelicManager.ts",
-          "resolved": "__unresolved_36",
+          "resolved": "__unresolved_37",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4188
+              "column": 4295
             },
             "end": {
               "line": 5,
-              "column": 4274
+              "column": 4381
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SaveManager.ts",
-          "resolved": "__unresolved_37",
+          "resolved": "__unresolved_38",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4290
+              "column": 4397
             },
             "end": {
               "line": 5,
-              "column": 4375
+              "column": 4482
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ShopManager.ts",
-          "resolved": "__unresolved_38",
+          "resolved": "__unresolved_39",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4391
+              "column": 4498
             },
             "end": {
               "line": 5,
-              "column": 4476
+              "column": 4583
+            }
+          }
+        },
+        {
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SimpleExperienceOrb.ts",
+          "resolved": "__unresolved_40",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 4599
+            },
+            "end": {
+              "line": 5,
+              "column": 4692
+            }
+          }
+        },
+        {
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/UltraSimpleExperienceOrb.ts",
+          "resolved": "__unresolved_41",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 4708
+            },
+            "end": {
+              "line": 5,
+              "column": 4806
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/Laser.ts",
-          "resolved": "__unresolved_39",
+          "resolved": "__unresolved_42",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4492
+              "column": 4822
             },
             "end": {
               "line": 5,
-              "column": 4571
+              "column": 4901
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/LaserPaddlePowerUp.ts",
-          "resolved": "__unresolved_40",
+          "resolved": "__unresolved_43",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4587
+              "column": 4917
             },
             "end": {
               "line": 5,
-              "column": 4679
+              "column": 5009
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/MultiBallPowerUp.ts",
-          "resolved": "__unresolved_41",
+          "resolved": "__unresolved_44",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4695
+              "column": 5025
             },
             "end": {
               "line": 5,
-              "column": 4785
+              "column": 5115
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/PowerUp.ts",
-          "resolved": "__unresolved_42",
+          "resolved": "__unresolved_45",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4801
+              "column": 5131
             },
             "end": {
               "line": 5,
-              "column": 4882
+              "column": 5212
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/DevToolsUI.ts",
-          "resolved": "__unresolved_43",
+          "resolved": "__unresolved_46",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4898
+              "column": 5228
             },
             "end": {
               "line": 5,
-              "column": 4976
+              "column": 5306
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts",
-          "resolved": "__unresolved_44",
+          "resolved": "__unresolved_47",
           "loc": {
             "start": {
               "line": 5,
-              "column": 4992
+              "column": 5322
             },
             "end": {
               "line": 5,
-              "column": 5082
+              "column": 5412
+            }
+          }
+        },
+        {
+          "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/ExperienceBar.ts",
+          "resolved": "__unresolved_48",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 5428
+            },
+            "end": {
+              "line": 5,
+              "column": 5509
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/LevelTransitionManager.ts",
-          "resolved": "__unresolved_45",
+          "resolved": "__unresolved_49",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5098
+              "column": 5525
             },
             "end": {
               "line": 5,
-              "column": 5188
+              "column": 5615
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuButton.ts",
-          "resolved": "__unresolved_46",
+          "resolved": "__unresolved_50",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5204
+              "column": 5631
             },
             "end": {
               "line": 5,
-              "column": 5286
+              "column": 5713
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/MainMenuController.ts",
-          "resolved": "__unresolved_47",
+          "resolved": "__unresolved_51",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5302
+              "column": 5729
             },
             "end": {
               "line": 5,
-              "column": 5388
+              "column": 5815
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/RelicUI.ts",
-          "resolved": "__unresolved_48",
+          "resolved": "__unresolved_52",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5404
+              "column": 5831
             },
             "end": {
               "line": 5,
-              "column": 5479
+              "column": 5906
             }
           }
         },
         {
           "value": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/SlayTheSpireMapVisualizer.ts",
-          "resolved": "__unresolved_49",
+          "resolved": "__unresolved_53",
           "loc": {
             "start": {
               "line": 5,
-              "column": 5495
+              "column": 5922
             },
             "end": {
               "line": 5,
-              "column": 5588
+              "column": 6015
             }
           }
         }
@@ -1909,6 +1965,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts"
           },
           "messages": []
@@ -1958,6 +2021,20 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SimpleExperienceOrb.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/UltraSimpleExperienceOrb.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/powerups/Laser.ts"
           },
           "messages": []
@@ -1994,6 +2071,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/EnhancedParticleEffect.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/ExperienceBar.ts"
           },
           "messages": []
         },
@@ -3413,7 +3497,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBall.ts": {
       "mTimestamp": {
-        "mtime": 1759387764733.6936,
+        "mtime": 1760447644342.401,
         "uuid": "5e6d29eb-83d8-49c8-a2f3-6450fae66c42"
       },
       "chunkId": "3514892ebdc56fa9baf613cbf48b23a056e0cffd",
@@ -3602,7 +3686,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts": {
       "mTimestamp": {
-        "mtime": 1759452700586.2056,
+        "mtime": 1760448122729.2104,
         "uuid": "acecf8a0-1634-4bc4-8fc6-9696319f6607"
       },
       "chunkId": "483ad9668cb7ce23fc0570466f5fc94132770ec3",
@@ -3707,7 +3791,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedPaddleController.ts": {
       "mTimestamp": {
-        "mtime": 1759387164738.129,
+        "mtime": 1760447735960.7678,
         "uuid": "edadb1fe-2430-4f9b-9817-5f8d7fe0fc84"
       },
       "chunkId": "682a2f68c09177d85d416faf975ed9f1e5e37f48",
@@ -3812,7 +3896,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts": {
       "mTimestamp": {
-        "mtime": 1759453931892.0283,
+        "mtime": 1760449993632.7505,
         "uuid": "1112ea98-2509-431e-b6fa-b2811d6671eb"
       },
       "chunkId": "4f2eb3711eac796d9e7bc719d425692f51dd2058",
@@ -3869,30 +3953,58 @@
           }
         },
         {
-          "value": "./DifficultySystem",
+          "value": "../managers/ExperienceManager",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
-              "column": 74
+              "column": 34
             },
             "end": {
               "line": 5,
+              "column": 65
+            }
+          }
+        },
+        {
+          "value": "./DifficultySystem",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 74
+            },
+            "end": {
+              "line": 6,
               "column": 94
             }
           }
         },
         {
           "value": "./LayoutGenerator",
-          "resolved": "__unresolved_4",
+          "resolved": "__unresolved_5",
           "loc": {
             "start": {
-              "line": 6,
+              "line": 7,
               "column": 43
             },
             "end": {
-              "line": 6,
+              "line": 7,
               "column": 62
+            }
+          }
+        },
+        {
+          "value": "./EnhancedBrick",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 26
+            },
+            "end": {
+              "line": 8,
+              "column": 43
             }
           }
         }
@@ -3944,6 +4056,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/DifficultySystem.ts"
           },
           "messages": []
@@ -3952,6 +4071,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/LayoutGenerator.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/EnhancedBrick.ts"
           },
           "messages": []
         }
@@ -4525,11 +4651,15 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceOrb.ts": {
       "mTimestamp": {
-        "mtime": 1757894233941.0632,
+        "mtime": 1760446502297.3118,
         "uuid": "f1f1d849-580f-4661-9e0c-7290d37c1851"
       },
       "chunkId": "42abf35c5af771edcd1955e526cb9b34715a1cf0",
       "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
         {
           "value": "cc"
         },
@@ -4541,11 +4671,39 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 115
+              "column": 121
             },
             "end": {
               "line": 1,
-              "column": 119
+              "column": 125
+            }
+          }
+        },
+        {
+          "value": "../gameplay/GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./ExperienceManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 34
+            },
+            "end": {
+              "line": 3,
+              "column": 55
             }
           }
         }
@@ -4555,7 +4713,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "cce:/internal/x/cc"
+            "url": "cce:/internal/code-quality/cr.mjs"
           },
           "messages": []
         },
@@ -4570,6 +4728,27 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
           },
           "messages": []
         }
@@ -5760,7 +5939,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1759376471472,
+      "mTimestamp": 1760432377415,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -5980,7 +6159,7 @@
     },
     "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/LayoutGenerator.ts": {
       "mTimestamp": {
-        "mtime": 1759451180268.3125,
+        "mtime": 1760444435917.8296,
         "uuid": "daa5e7e3-4e4e-4220-9862-ca1c0f600af0"
       },
       "chunkId": "4eae5f63c3a3194ceb6bfd71eb68cc55e33806fd",
@@ -6132,6 +6311,384 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/DifficultySystem.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts": {
+      "mTimestamp": {
+        "mtime": 1760448669503.6997,
+        "uuid": "0d90362d-b606-4a9a-a927-aee7a0b18c47"
+      },
+      "chunkId": "260e802023d65c58c37293fd58ecea261ccee853",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 57
+            },
+            "end": {
+              "line": 1,
+              "column": 61
+            }
+          }
+        },
+        {
+          "value": "../gameplay/GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/ui/ExperienceBar.ts": {
+      "mTimestamp": {
+        "mtime": 1760432761075.5027,
+        "uuid": "55724077-d517-4efa-8b2b-95a574501f1a"
+      },
+      "chunkId": "aef6f3fa296e65b8823c61b50bca8a048571da13",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 88
+            },
+            "end": {
+              "line": 1,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "../managers/ExperienceManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 34
+            },
+            "end": {
+              "line": 2,
+              "column": 65
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/SimpleExperienceOrb.ts": {
+      "mTimestamp": {
+        "mtime": 1760446741244.9236,
+        "uuid": "d4af8b40-5bfb-4665-93e1-461ac3d687d2"
+      },
+      "chunkId": "18e2d5a3b471d6635d936c2c6f4b5061c68562a4",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 117
+            },
+            "end": {
+              "line": 1,
+              "column": 121
+            }
+          }
+        },
+        {
+          "value": "../gameplay/GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./ExperienceManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 34
+            },
+            "end": {
+              "line": 3,
+              "column": 55
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/UltraSimpleExperienceOrb.ts": {
+      "mTimestamp": {
+        "mtime": 1760448958980.9304,
+        "uuid": "3d5f8818-7703-4db8-8e26-fa104a2f7f2c"
+      },
+      "chunkId": "f2462285db90f142907e93500820a0be734391ef",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 56
+            },
+            "end": {
+              "line": 1,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "../gameplay/GameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./ExperienceManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 34
+            },
+            "end": {
+              "line": 3,
+              "column": 55
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/gameplay/GameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/project/claudecode/wx/Cat_Journey/assets/scripts/managers/ExperienceManager.ts"
           },
           "messages": []
         }

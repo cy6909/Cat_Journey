@@ -564,12 +564,12 @@ export class EnhancedBall extends Component {
     }
     
     // Visual effect methods  
-    private createTrailEffect(): void { console.log('Trail effect created'); }
+    private createTrailEffect(): void { }
     private updateGlowEffect(dt: number): void { /* Implement glow effect */ }
-    private createExplosionEffect(position: Vec3): void { console.log('Explosion visual effect'); }
-    private createLightningEffect(from: Vec3, to: Vec3): void { console.log('Lightning effect'); }
-    private showPhaseEffect(): void { console.log('Phase visual effect'); }
-    private updateQuantumEffect(dt: number): void { console.log('Quantum effect update'); }
-    private updatePlasmaEffect(dt: number): void { console.log('Plasma effect update'); }
-    private onHitTarget(collider: Collider2D): void { console.log('Ball hit target'); }
+    private createExplosionEffect(position: Vec3): void {  }
+    private createLightningEffect(from: Vec3, to: Vec3): void {  }
+    private showPhaseEffect(): void {  }
+    private updateQuantumEffect(dt: number): void {  }
+    private updatePlasmaEffect(dt: number): void { }
+    private onHitTarget(collider: Collider2D): void {  }
 }

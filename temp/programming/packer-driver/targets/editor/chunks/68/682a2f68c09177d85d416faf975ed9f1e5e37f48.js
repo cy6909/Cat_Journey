@@ -138,7 +138,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             this._rigidBody.enabledContactListener = false; // 禁用接触监听避免物理影响
 
             this._rigidBody.linearVelocity = new Vec2(0, 0);
-            console.log('✅ Paddle RigidBody2D cached and locked, Y=-300');
           } else {
             console.error('❌ Paddle RigidBody2D not found!');
           } // 🔒 立即强制设置位置
@@ -164,7 +163,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             const vel = this._rigidBody.linearVelocity; // 检测是否有异常速度，如果有则清零并输出警告
 
             if (vel.x !== 0 || vel.y !== 0) {
-              console.warn(`⚠️ Paddle velocity detected and cleared: (${vel.x.toFixed(3)}, ${vel.y.toFixed(3)}) -> (0, 0)`);
               this._rigidBody.linearVelocity = new Vec2(0, 0);
             } else {
               // 即使是0也强制设置，确保100%清零
@@ -176,11 +174,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
 
           const currentPos = this.node.position;
-
-          if (currentPos.y !== -300) {
-            console.warn(`⚠️ Paddle Y position corrected: ${currentPos.y.toFixed(3)} -> -300`);
-          }
-
           this.node.setPosition(currentPos.x, -300, currentPos.z); // 其他更新逻辑
 
           this.updateRepair(dt);
@@ -246,15 +239,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           if (this._currentDurability <= 0) {
             this.onPaddleDestroyed();
           }
-
-          console.log(`Paddle took ${actualDamage} damage. Durability: ${this._currentDurability}/${this.maxDurability * this._durabilityMultiplier}`);
         }
 
         updateRepair(dt) {
           if (this._lastDamageTime >= this.repairDelay && this._currentDurability < this.maxDurability * this._durabilityMultiplier) {
             if (!this._isRepairing) {
               this._isRepairing = true;
-              console.log('Paddle repair started');
             }
 
             this._currentDurability = Math.min(this.maxDurability * this._durabilityMultiplier, this._currentDurability + this.repairRate * this._repairEfficiency * dt);
@@ -325,7 +315,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         gainExperience(xp) {
           this._experience += xp;
-          console.log(`Paddle gained ${xp} XP. Total: ${this._experience}/${this._experienceToNextLevel}`);
 
           while (this._experience >= this._experienceToNextLevel) {
             this.levelUp();
@@ -342,7 +331,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this._repairEfficiency += 0.15; // Heal paddle on level up
 
           this._currentDurability = Math.min(this.maxDurability * this._durabilityMultiplier, this._currentDurability + this.maxDurability * 0.5);
-          console.log(`Paddle leveled up to ${this._level}! Stats increased.`);
         }
 
         getDamageReduction() {
@@ -353,8 +341,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         onPaddleDestroyed() {
           var _this$node$parent3;
 
-          console.log('Paddle destroyed! Core is now exposed.'); // Find and damage the core directly
-
+          // Find and damage the core directly
           const coreController = (_this$node$parent3 = this.node.parent) == null ? void 0 : _this$node$parent3.getComponentInChildren(_crd && CoreController === void 0 ? (_reportPossibleCrUseOfCoreController({
             error: Error()
           }), CoreController) : CoreController);
@@ -403,12 +390,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
         instantRepair(amount) {
           this._currentDurability = Math.min(this.maxDurability * this._durabilityMultiplier, this._currentDurability + amount);
-          console.log(`Paddle repaired for ${amount} durability`);
         }
 
         fullRepair() {
           this._currentDurability = this.maxDurability * this._durabilityMultiplier;
-          console.log('Paddle fully repaired');
         }
 
       }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "moveSpeed", [property], {

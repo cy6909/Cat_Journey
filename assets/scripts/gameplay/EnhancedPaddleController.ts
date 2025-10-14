@@ -80,7 +80,6 @@ export class EnhancedPaddleController extends Component {
             this._rigidBody.allowSleep = false; // 防止进入睡眠状态
             this._rigidBody.enabledContactListener = false; // 禁用接触监听避免物理影响
             this._rigidBody.linearVelocity = new Vec2(0, 0);
-            console.log('✅ Paddle RigidBody2D cached and locked, Y=-300');
         } else {
             console.error('❌ Paddle RigidBody2D not found!');
         }
@@ -106,7 +105,6 @@ export class EnhancedPaddleController extends Component {
             const vel = this._rigidBody.linearVelocity;
             // 检测是否有异常速度，如果有则清零并输出警告
             if (vel.x !== 0 || vel.y !== 0) {
-                console.warn(`⚠️ Paddle velocity detected and cleared: (${vel.x.toFixed(3)}, ${vel.y.toFixed(3)}) -> (0, 0)`);
                 this._rigidBody.linearVelocity = new Vec2(0, 0);
             } else {
                 // 即使是0也强制设置，确保100%清零
@@ -117,9 +115,6 @@ export class EnhancedPaddleController extends Component {
 
         // 🔒 每帧第二优先级：强制锁定Y轴位置为-300
         const currentPos = this.node.position;
-        if (currentPos.y !== -300) {
-            console.warn(`⚠️ Paddle Y position corrected: ${currentPos.y.toFixed(3)} -> -300`);
-        }
         this.node.setPosition(currentPos.x, -300, currentPos.z);
 
         // 其他更新逻辑
@@ -185,15 +180,12 @@ export class EnhancedPaddleController extends Component {
         if (this._currentDurability <= 0) {
             this.onPaddleDestroyed();
         }
-        
-        console.log(`Paddle took ${actualDamage} damage. Durability: ${this._currentDurability}/${this.maxDurability * this._durabilityMultiplier}`);
     }
     
     private updateRepair(dt: number): void {
         if (this._lastDamageTime >= this.repairDelay && this._currentDurability < this.maxDurability * this._durabilityMultiplier) {
             if (!this._isRepairing) {
                 this._isRepairing = true;
-                console.log('Paddle repair started');
             }
             
             this._currentDurability = Math.min(
@@ -269,7 +261,6 @@ export class EnhancedPaddleController extends Component {
     
     public gainExperience(xp: number): void {
         this._experience += xp;
-        console.log(`Paddle gained ${xp} XP. Total: ${this._experience}/${this._experienceToNextLevel}`);
         
         while (this._experience >= this._experienceToNextLevel) {
             this.levelUp();
@@ -292,7 +283,6 @@ export class EnhancedPaddleController extends Component {
             this._currentDurability + (this.maxDurability * 0.5)
         );
         
-        console.log(`Paddle leveled up to ${this._level}! Stats increased.`);
     }
     
     private getDamageReduction(): number {
@@ -301,7 +291,6 @@ export class EnhancedPaddleController extends Component {
     }
     
     private onPaddleDestroyed(): void {
-        console.log('Paddle destroyed! Core is now exposed.');
         
         // Find and damage the core directly
         const coreController = this.node.parent?.getComponentInChildren(CoreController);
@@ -339,11 +328,9 @@ export class EnhancedPaddleController extends Component {
             this.maxDurability * this._durabilityMultiplier,
             this._currentDurability + amount
         );
-        console.log(`Paddle repaired for ${amount} durability`);
     }
     
     public fullRepair(): void {
         this._currentDurability = this.maxDurability * this._durabilityMultiplier;
-        console.log('Paddle fully repaired');
     }
 }

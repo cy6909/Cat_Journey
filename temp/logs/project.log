@@ -1,12 +1,18 @@
-2025-10-2 11:41:11 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
-2025-10-2 11:41:11 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
-2025-10-2 11:41:12 - log: Request namespace: device-list
-2025-10-2 11:41:22 - log: [Scene] meshopt wasm decoder initialized
-2025-10-2 11:41:22 - log: [Scene] [bullet]:bullet wasm lib loaded.
-2025-10-2 11:41:22 - log: [Scene] [box2d]:box2d wasm lib loaded.
-2025-10-2 11:41:22 - log: [Scene] [PHYSICS]: using builtin.
-2025-10-2 11:41:22 - log: [Scene] Cocos Creator v3.8.6
-2025-10-2 11:41:23 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 16:59:36 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
+2025-10-14 16:59:37 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
+2025-10-14 16:59:38 - log: Request namespace: device-list
+2025-10-14 16:59:44 - warn: [Window] Message does not exist: scene.editor-preview-call-methodError: [Window] Message does not exist: scene.editor-preview-call-method
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:4978)
+    at EventEmitter.emit (node:events:519:28)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-base-ipc\dist\renderer.ccc:1:3858)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+2025-10-14 16:59:49 - log: [Scene] meshopt wasm decoder initialized
+2025-10-14 16:59:49 - log: [Scene] [box2d]:box2d wasm lib loaded.
+2025-10-14 16:59:49 - log: [Scene] [bullet]:bullet wasm lib loaded.
+2025-10-14 16:59:49 - log: [Scene] [PHYSICS]: using builtin.
+2025-10-14 16:59:49 - log: [Scene] Cocos Creator v3.8.6
+2025-10-14 16:59:49 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -28,7 +34,7 @@
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-10-2 11:41:23 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 16:59:50 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -50,10 +56,10 @@
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-2025-10-2 11:41:23 - log: [Scene] Using custom pipeline: Builtin
-2025-10-2 11:41:23 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
-2025-10-2 11:41:23 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
-2025-10-2 11:57:51 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 16:59:50 - log: [Scene] Using custom pipeline: Builtin
+2025-10-14 16:59:50 - log: [Scene] [PHYSICS]: switch from builtin to bullet.
+2025-10-14 16:59:50 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to box2d.
+2025-10-14 20:07:40 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -74,7 +80,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 11:57:51 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 20:07:40 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -95,7 +101,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 12:13:15 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 20:07:41 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -116,7 +122,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 12:13:15 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 20:07:41 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -137,7 +143,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 12:18:40 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 20:36:15 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -158,7 +164,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 12:18:40 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 20:36:15 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -179,7 +185,21 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:06:11 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 20:49:37 - error: [Window] Cannot read properties of undefined (reading 'find')TypeError: Cannot read properties of undefined (reading 'find')
+    at VueComponent.saveEdit (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\project\dist\contributions\project-physics.ccc:1:1782)
+    at click (eval at createFunction (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:11632:18), <anonymous>:3:1543)
+    at invokeWithErrorHandling (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:3700:32)
+    at Kt.invoker (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:1529:22)
+    at Kt.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:8013:37)
+    at Kt.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\browser\cjs\helpers.js:93:17)
+2025-10-14 20:49:41 - error: [Window] Cannot read properties of undefined (reading 'find')TypeError: Cannot read properties of undefined (reading 'find')
+    at VueComponent.saveEdit (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\project\dist\contributions\project-physics.ccc:1:1782)
+    at click (eval at createFunction (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:11632:18), <anonymous>:3:1543)
+    at invokeWithErrorHandling (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:3700:32)
+    at Kt.invoker (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:1529:22)
+    at Kt.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\vue\dist\vue.js:8013:37)
+    at Kt.sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\browser\cjs\helpers.js:93:17)
+2025-10-14 20:57:52 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -200,7 +220,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:06:11 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 20:57:52 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -221,7 +241,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:23:01 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:01:00 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -242,7 +262,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:23:01 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:01:00 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -263,7 +283,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:30:09 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:09:43 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -284,7 +304,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:30:09 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:09:43 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -305,7 +325,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:35:09 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:13:07 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -326,7 +346,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:35:09 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:13:07 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -347,7 +367,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:40:24 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:14:08 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -368,7 +388,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:40:24 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:14:08 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -389,7 +409,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:46:59 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:15:39 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -410,7 +430,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:46:59 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:15:39 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -431,7 +451,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:49:49 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:26:59 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -452,7 +472,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:49:49 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:26:59 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -473,7 +493,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:52:05 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:32:37 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -494,7 +514,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:52:05 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:32:37 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -515,7 +535,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:54:19 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:37:48 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -536,7 +556,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 14:54:19 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:37:48 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -557,7 +577,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 22:37:12 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
+2025-10-14 21:57:43 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -578,259 +598,7 @@
     at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 22:37:12 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 22:37:13 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-2 22:37:13 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:38:39 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:38:39 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:38:40 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:38:40 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:43:59 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:43:59 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:53:20 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-3 08:53:20 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at Array.eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271299:11)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127744:27)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-6 15:42:13 - warn: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.Error: [Scene] The type of "EnhancedParticleEffect.effectType" must be CCString, not String.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:271975:11)
-    at preprocessAttrs (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:272090:11)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127901:7)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/df/dfbe37f3b80bceb42dc4aafc219c31f5bc9be3ff.js:49:11)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:8:13
-    at Object.execute (file:///D:/project/claudecode/wx/Cat_Journey/temp/programming/packer-driver/targets/editor/chunks/6d/cce:/internal/x/prerequisite-imports:4:1)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-2025-10-6 15:42:13 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
+2025-10-14 21:57:43 - warn: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.Error: [Scene] No needs to indicate the 'cc.String' attribute for "EnhancedParticleEffect.effectType", which its default value is type of String.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)

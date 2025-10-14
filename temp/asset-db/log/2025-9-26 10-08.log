@@ -1,218 +1,0 @@
-2025-9-26 10:08:32-log: Cannot access game frame or container.
-2025-9-26 10:08:33-debug: asset-db:require-engine-code (545ms)
-2025-9-26 10:08:33-log: [box2d]:box2d wasm lib loaded.
-2025-9-26 10:08:33-log: meshopt wasm decoder initialized
-2025-9-26 10:08:33-log: [bullet]:bullet wasm lib loaded.
-2025-9-26 10:08:33-log: Cocos Creator v3.8.6
-2025-9-26 10:08:33-log: Using legacy pipeline
-2025-9-26 10:08:33-log: Forward render pipeline initialized.
-2025-9-26 10:08:33-debug: [Assets Memory track]: asset-db-plugin-register: programming start:80.99MB, end 84.38MB, increase: 3.39MB
-2025-9-26 10:08:34-debug: [Assets Memory track]: asset-db-plugin-register: builder start:84.42MB, end 224.83MB, increase: 140.41MB
-2025-9-26 10:08:33-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:31.04MB, end 80.12MB, increase: 49.08MB
-2025-9-26 10:08:34-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:225.08MB, end 228.24MB, increase: 3.16MB
-2025-9-26 10:08:34-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:80.15MB, end 228.46MB, increase: 148.32MB
-2025-9-26 10:08:34-debug: [Assets Memory track]: asset-db-plugin-register: project start:80.84MB, end 228.43MB, increase: 147.60MB
-2025-9-26 10:08:34-debug: run package(native) handler(enable) start
-2025-9-26 10:08:34-debug: run package(native) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(ohos) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(oppo-mini-game) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(ohos) handler(enable) start
-2025-9-26 10:08:34-debug: run package(runtime-dev-tools) handler(enable) start
-2025-9-26 10:08:34-debug: run package(runtime-dev-tools) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(taobao-mini-game) handler(enable) start
-2025-9-26 10:08:34-debug: run package(oppo-mini-game) handler(enable) start
-2025-9-26 10:08:34-debug: run package(taobao-mini-game) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(vivo-mini-game) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(web-desktop) handler(enable) start
-2025-9-26 10:08:34-debug: run package(vivo-mini-game) handler(enable) start
-2025-9-26 10:08:34-debug: run package(web-mobile) handler(enable) start
-2025-9-26 10:08:34-debug: run package(web-desktop) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(wechatgame) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(wechatgame) handler(enable) start
-2025-9-26 10:08:34-debug: run package(wechatprogram) handler(enable) start
-2025-9-26 10:08:34-debug: run package(wechatprogram) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(web-mobile) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(windows) handler(enable) start
-2025-9-26 10:08:34-debug: run package(windows) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(xiaomi-quick-game) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(xiaomi-quick-game) handler(enable) start
-2025-9-26 10:08:34-debug: run package(cocos-service) handler(enable) start
-2025-9-26 10:08:34-debug: run package(im-plugin) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(cocos-service) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(im-plugin) handler(enable) start
-2025-9-26 10:08:34-debug: run package(fix-asset-default-userdata) handler(enable) start
-2025-9-26 10:08:34-debug: run package(fix-asset-default-userdata) handler(enable) success!
-2025-9-26 10:08:34-debug: run package(placeholder) handler(enable) start
-2025-9-26 10:08:34-debug: run package(placeholder) handler(enable) success!
-2025-9-26 10:08:34-debug: asset-db:worker-init: initPlugin (1676ms)
-2025-9-26 10:08:34-debug: [Assets Memory track]: asset-db:worker-init start:31.04MB, end 225.39MB, increase: 194.35MB
-2025-9-26 10:08:34-debug: Run asset db hook programming:beforePreStart success!
-2025-9-26 10:08:34-debug: Run asset db hook engine-extends:beforePreStart success!
-2025-9-26 10:08:34-debug: Run asset db hook engine-extends:beforePreStart ...
-2025-9-26 10:08:34-debug: Run asset db hook programming:beforePreStart ...
-2025-9-26 10:08:35-debug: asset-db:worker-init (2444ms)
-2025-9-26 10:08:35-debug: asset-db-hook-programming-beforePreStart (90ms)
-2025-9-26 10:08:35-debug: asset-db-hook-engine-extends-beforePreStart (90ms)
-2025-9-26 10:08:35-debug: Preimport db internal success
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenesbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scriptsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\artbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\corebackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\debugbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerupsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplaybackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\Ball.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\core\PaddleController.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\debug\RuntimeDebugPanel.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\EnhancedBrick.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\GameManager.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\gameplay\LevelManager.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\LaserPaddlePowerUp.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\MultiBallPowerUp.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scripts\powerups\PowerUp.tsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:35-debug: Preimport db assets success
-2025-9-26 10:08:35-debug: Run asset db hook programming:afterPreStart ...
-2025-9-26 10:08:35-debug: starting packer-driver...
-2025-9-26 10:08:45-debug: initialize scripting environment...
-2025-9-26 10:08:45-debug: [[Executor]] prepare before lock
-2025-9-26 10:08:45-debug: Set detail map pack:///resolution-detail-map.json: {}
-2025-9-26 10:08:45-debug: [[Executor]] prepare after unlock
-2025-9-26 10:08:45-debug: Run asset db hook engine-extends:afterPreStart ...
-2025-9-26 10:08:45-debug: [Assets Memory track]: asset-db:worker-init: preStart start:225.40MB, end 234.30MB, increase: 8.90MB
-2025-9-26 10:08:45-debug: Run asset db hook programming:afterPreStart success!
-2025-9-26 10:08:45-debug: Start up the 'internal' database...
-2025-9-26 10:08:45-debug: Run asset db hook engine-extends:afterPreStart success!
-2025-9-26 10:08:45-debug: asset-db-hook-programming-afterPreStart (10522ms)
-2025-9-26 10:08:45-debug: asset-db:worker-effect-data-processing (426ms)
-2025-9-26 10:08:45-debug: asset-db-hook-engine-extends-afterPreStart (426ms)
-2025-9-26 10:08:45-debug: Start up the 'assets' database...
-2025-9-26 10:08:45-debug: asset-db:worker-startup-database[internal] (10923ms)
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Ball.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\DeathZone.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Brick.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\LaserPaddlePowerUp.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\MultiBallPowerUp.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Paddle.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\scenes\testscene.scenebackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Wall.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 10:08:45-debug: lazy register asset handler *
-2025-9-26 10:08:45-debug: lazy register asset handler directory
-2025-9-26 10:08:45-debug: lazy register asset handler spine-data
-2025-9-26 10:08:45-debug: lazy register asset handler dragonbones
-2025-9-26 10:08:45-debug: lazy register asset handler dragonbones-atlas
-2025-9-26 10:08:45-debug: lazy register asset handler terrain
-2025-9-26 10:08:45-debug: lazy register asset handler javascript
-2025-9-26 10:08:45-debug: lazy register asset handler json
-2025-9-26 10:08:45-debug: lazy register asset handler typescript
-2025-9-26 10:08:45-debug: lazy register asset handler scene
-2025-9-26 10:08:45-debug: lazy register asset handler prefab
-2025-9-26 10:08:45-debug: lazy register asset handler sprite-frame
-2025-9-26 10:08:45-debug: lazy register asset handler buffer
-2025-9-26 10:08:45-debug: lazy register asset handler image
-2025-9-26 10:08:45-debug: lazy register asset handler text
-2025-9-26 10:08:45-debug: lazy register asset handler sign-image
-2025-9-26 10:08:45-debug: lazy register asset handler alpha-image
-2025-9-26 10:08:45-debug: lazy register asset handler texture
-2025-9-26 10:08:45-debug: lazy register asset handler texture-cube
-2025-9-26 10:08:45-debug: lazy register asset handler render-texture
-2025-9-26 10:08:45-debug: lazy register asset handler erp-texture-cube
-2025-9-26 10:08:45-debug: lazy register asset handler texture-cube-face
-2025-9-26 10:08:45-debug: lazy register asset handler rt-sprite-frame
-2025-9-26 10:08:45-debug: lazy register asset handler tiled-map
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-mesh
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-animation
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-skeleton
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-material
-2025-9-26 10:08:45-debug: lazy register asset handler gltf
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-embeded-image
-2025-9-26 10:08:45-debug: lazy register asset handler gltf-scene
-2025-9-26 10:08:45-debug: lazy register asset handler material
-2025-9-26 10:08:45-debug: lazy register asset handler fbx
-2025-9-26 10:08:45-debug: lazy register asset handler physics-material
-2025-9-26 10:08:45-debug: lazy register asset handler effect-header
-2025-9-26 10:08:45-debug: lazy register asset handler effect
-2025-9-26 10:08:45-debug: lazy register asset handler audio-clip
-2025-9-26 10:08:45-debug: lazy register asset handler animation-clip
-2025-9-26 10:08:45-debug: lazy register asset handler animation-graph
-2025-9-26 10:08:45-debug: lazy register asset handler animation-graph-variant
-2025-9-26 10:08:45-debug: lazy register asset handler ttf-font
-2025-9-26 10:08:45-debug: lazy register asset handler animation-mask
-2025-9-26 10:08:45-debug: lazy register asset handler particle
-2025-9-26 10:08:45-debug: lazy register asset handler bitmap-font
-2025-9-26 10:08:45-debug: lazy register asset handler sprite-atlas
-2025-9-26 10:08:45-debug: lazy register asset handler auto-atlas
-2025-9-26 10:08:45-debug: lazy register asset handler label-atlas
-2025-9-26 10:08:45-debug: lazy register asset handler render-flow
-2025-9-26 10:08:45-debug: lazy register asset handler render-pipeline
-2025-9-26 10:08:45-debug: lazy register asset handler instantiation-material
-2025-9-26 10:08:45-debug: lazy register asset handler render-stage
-2025-9-26 10:08:45-debug: lazy register asset handler instantiation-mesh
-2025-9-26 10:08:45-debug: lazy register asset handler instantiation-skeleton
-2025-9-26 10:08:45-debug: lazy register asset handler video-clip
-2025-9-26 10:08:45-debug: lazy register asset handler instantiation-animation
-2025-9-26 10:08:45-debug: asset-db:worker-startup-database[assets] (10899ms)
-2025-9-26 10:08:45-debug: asset-db:start-database (11042ms)
-2025-9-26 10:08:45-debug: asset-db:ready (15483ms)
-2025-9-26 10:08:45-debug: fix the bug of updateDefaultUserData
-2025-9-26 10:08:45-debug: init worker message success
-2025-9-26 10:08:45-debug: programming:execute-script (10ms)
-2025-9-26 10:08:46-debug: [Build Memory track]: builder:worker-init start:193.00MB, end 201.45MB, increase: 8.44MB
-2025-9-26 10:08:46-debug: builder:worker-init (607ms)
-2025-9-26 10:09:58-debug: refresh db internal success
-2025-9-26 10:09:59-debug: refresh db assets success
-2025-9-26 10:09:59-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 10:09:59-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 10:09:59-debug: asset-db:refresh-all-database (185ms)
-2025-9-26 10:09:59-debug: asset-db:worker-effect-data-processing (2ms)
-2025-9-26 10:09:59-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
-2025-9-26 14:53:19-debug: refresh db internal success
-2025-9-26 14:53:19-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 14:53:19-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 14:53:19-debug: refresh db assets success
-2025-9-26 14:53:19-debug: asset-db:worker-effect-data-processing (8ms)
-2025-9-26 14:53:19-debug: asset-db-hook-engine-extends-afterRefresh (15ms)
-2025-9-26 14:53:19-debug: asset-db:refresh-all-database (551ms)
-2025-9-26 14:53:52-debug: refresh db internal success
-2025-9-26 14:53:52-debug: refresh db assets success
-2025-9-26 14:53:52-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 14:53:52-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 14:53:52-debug: asset-db:refresh-all-database (194ms)
-2025-9-26 14:53:52-debug: asset-db:worker-effect-data-processing (1ms)
-2025-9-26 14:53:52-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
-2025-9-26 14:54:07-debug: refresh db internal success
-2025-9-26 14:54:07-debug: refresh db assets success
-2025-9-26 14:54:07-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 14:54:07-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 14:54:07-debug: asset-db:refresh-all-database (174ms)
-2025-9-26 14:54:07-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
-2025-9-26 14:58:50-debug: refresh db internal success
-2025-9-26 14:58:50-debug: refresh db assets success
-2025-9-26 14:58:50-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 14:58:50-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 14:58:50-debug: asset-db:refresh-all-database (133ms)
-2025-9-26 14:58:50-debug: asset-db:worker-effect-data-processing (1ms)
-2025-9-26 14:58:50-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
-2025-9-26 15:07:29-debug: refresh db internal success
-2025-9-26 15:07:29-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabsbackground: #aaff85; color: #000;color: #000;
-2025-9-26 15:07:29-debug: %cImport%c: D:\project\claudecode\wx\Cat_Journey\assets\prefabs\Brick.prefabbackground: #aaff85; color: #000;color: #000;
-2025-9-26 15:07:29-debug: refresh db assets success
-2025-9-26 15:07:29-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 15:07:29-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 15:07:29-debug: asset-db:refresh-all-database (258ms)
-2025-9-26 15:07:29-debug: asset-db:worker-effect-data-processing (1ms)
-2025-9-26 15:07:29-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
-2025-9-26 15:08:02-debug: refresh db internal success
-2025-9-26 15:08:02-debug: refresh db assets success
-2025-9-26 15:08:02-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 15:08:02-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 15:08:02-debug: asset-db:refresh-all-database (154ms)
-2025-9-26 15:08:02-debug: asset-db:worker-effect-data-processing (1ms)
-2025-9-26 15:08:02-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
-2025-9-26 15:08:19-debug: refresh db internal success
-2025-9-26 15:08:19-debug: Run asset db hook engine-extends:afterRefresh ...
-2025-9-26 15:08:19-debug: Run asset db hook engine-extends:afterRefresh success!
-2025-9-26 15:08:19-debug: refresh db assets success
-2025-9-26 15:08:19-debug: asset-db:refresh-all-database (178ms)
-2025-9-26 15:08:19-debug: asset-db:worker-effect-data-processing (2ms)
-2025-9-26 15:08:19-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
